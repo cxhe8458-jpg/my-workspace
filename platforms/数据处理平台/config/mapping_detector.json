@@ -1,0 +1,1913 @@
+{
+  "Photodetector": {
+    "zh": "光电探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Photo Detector": {
+    "zh": "光电探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Detector": {
+    "zh": "光探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Light Detector": {
+    "zh": "光探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Photoreceiver": {
+    "zh": "光电接收器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Receiver": {
+    "zh": "光接收机",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Detector Module": {
+    "zh": "探测器模块",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Sensor Module": {
+    "zh": "光传感模块",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Photodiode": {
+    "zh": "光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Photo Diode": {
+    "zh": "光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PIN Photodiode": {
+    "zh": "PIN光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PIN Diode": {
+    "zh": "PIN二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Avalanche Photodiode": {
+    "zh": "雪崩光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "APD": {
+    "zh": "雪崩光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Si Photodiode": {
+    "zh": "硅光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "InGaAs Photodiode": {
+    "zh": "铟镓砷光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "UV Photodiode": {
+    "zh": "紫外光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Large Area Photodiode": {
+    "zh": "大面积光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Quadrant Photodiode": {
+    "zh": "四象限光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Position Sensitive Detector": {
+    "zh": "位置灵敏探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "PSD": {
+    "zh": "位置灵敏探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Phototransistor": {
+    "zh": "光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Photo Transistor Module": {
+    "zh": "光电晶体管模块",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Image Sensor": {
+    "zh": "图像传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Image Sensors": {
+    "zh": "图像传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Industrial Image Sensor": {
+    "zh": "工业图像传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Vision Sensor": {
+    "zh": "视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Vision Sensors": {
+    "zh": "视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Machine Vision Sensor": {
+    "zh": "机器视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Vision System": {
+    "zh": "视觉系统",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Machine Vision System": {
+    "zh": "机器视觉系统",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Industrial Vision System": {
+    "zh": "工业视觉系统",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "3D Machine Vision Sensor": {
+    "zh": "三维机器视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Profile Sensor": {
+    "zh": "轮廓传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Line Profile Sensor": {
+    "zh": "线轮廓传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Presence Sensor": {
+    "zh": "存在检测传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Code Reader": {
+    "zh": "读码器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Barcode Reader": {
+    "zh": "条码读取器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "2D Code Reader": {
+    "zh": "二维码读取器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Pattern Matching Sensor": {
+    "zh": "图案匹配传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "Edge Detection Sensor": {
+    "zh": "边缘检测传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "Dimensional Measurement Sensor": {
+    "zh": "尺寸测量传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "Balanced Photodetector": {
+    "zh": "平衡光电探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Balanced Detector": {
+    "zh": "平衡探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Balanced Receiver": {
+    "zh": "平衡接收器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Speed Photodetector": {
+    "zh": "高速光电探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ultra High Speed Photodetector": {
+    "zh": "超高速光电探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Bandwidth Photodetector": {
+    "zh": "高带宽光电探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Coupled Photodetector": {
+    "zh": "光纤耦合光电探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Free Space Photodetector": {
+    "zh": "自由空间光电探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Amplified Photodetector": {
+    "zh": "放大型光电探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Photodetector Module": {
+    "zh": "光电探测模块",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Receiver Module": {
+    "zh": "光接收模块",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Receiver Module": {
+    "zh": "接收模块",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Infrared Detector": {
+    "zh": "红外探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "IR Detector": {
+    "zh": "红外探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "SWIR Detector": {
+    "zh": "短波红外探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MWIR Detector": {
+    "zh": "中波红外探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LWIR Detector": {
+    "zh": "长波红外探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "UV Detector": {
+    "zh": "紫外探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Visible Detector": {
+    "zh": "可见光探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Broadband Detector": {
+    "zh": "宽带探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Single Photon Detector": {
+    "zh": "单光子探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Single Photon Counting Module": {
+    "zh": "单光子计数模块",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "SPCM": {
+    "zh": "单光子计数模块",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Photoreceiver Module": {
+    "zh": "光电接收模块",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Integrated Photoreceiver": {
+    "zh": "集成光电接收器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Front End Receiver": {
+    "zh": "光前端接收器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Silicon PIN Photodiode": {
+    "zh": "硅PIN光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "InGaAs PIN Photodiode": {
+    "zh": "铟镓砷PIN光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Germanium Photodiode": {
+    "zh": "锗光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ge Photodiode": {
+    "zh": "锗光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "GaAs Photodiode": {
+    "zh": "砷化镓光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "GaN Photodiode": {
+    "zh": "氮化镓光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "SiC Photodiode": {
+    "zh": "碳化硅光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "InAs Photodiode": {
+    "zh": "砷化铟光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "InSb Photodiode": {
+    "zh": "锑化铟光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "HgCdTe Photodiode": {
+    "zh": "碲镉汞光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "MCT Photodiode": {
+    "zh": "碲镉汞光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Back Illuminated Photodiode": {
+    "zh": "背照式光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Front Illuminated Photodiode": {
+    "zh": "前照式光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Edge Illuminated Photodiode": {
+    "zh": "边照式光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Windowless Photodiode": {
+    "zh": "无窗光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Hermetic Photodiode": {
+    "zh": "气密封装光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Coupled Photodiode": {
+    "zh": "光纤耦合光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Free Space Photodiode": {
+    "zh": "自由空间光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Large Active Area Photodiode": {
+    "zh": "大有效面积光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Small Area Photodiode": {
+    "zh": "小面积光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Speed PIN Photodiode": {
+    "zh": "高速PIN光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "High Power Photodiode": {
+    "zh": "大功率光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Low Noise Photodiode": {
+    "zh": "低噪声光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Low Capacitance Photodiode": {
+    "zh": "低电容光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Sensitivity Photodiode": {
+    "zh": "高灵敏度光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Photodiode Array": {
+    "zh": "光电二极管阵列",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Linear Photodiode Array": {
+    "zh": "线阵光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "2D Photodiode Array": {
+    "zh": "二维光电二极管阵列",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Multi Element Photodiode": {
+    "zh": "多元光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Segmented Photodiode": {
+    "zh": "分段式光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Dual Photodiode": {
+    "zh": "双元光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "TO Can Photodiode": {
+    "zh": "TO封装光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Surface Mount Photodiode": {
+    "zh": "贴片式光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Chip Photodiode": {
+    "zh": "芯片式光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Bare Die Photodiode": {
+    "zh": "裸芯片光电二极管",
+    "category1": "光电器件",
+    "category2": "光电二极管",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Area Image Sensor": {
+    "zh": "面阵图像传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Area Scan Sensor": {
+    "zh": "面阵传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Line Scan Sensor": {
+    "zh": "线阵传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Linear Image Sensor": {
+    "zh": "线阵图像传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Linear CCD Sensor": {
+    "zh": "线阵CCD传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Linear CMOS Sensor": {
+    "zh": "线阵CMOS传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Global Shutter CMOS Sensor": {
+    "zh": "全局快门CMOS传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Rolling Shutter CMOS Sensor": {
+    "zh": "卷帘快门CMOS传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "BSI CMOS Sensor": {
+    "zh": "背照式CMOS传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Backside Illuminated CMOS Sensor": {
+    "zh": "背照式CMOS传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Frontside Illuminated CMOS Sensor": {
+    "zh": "前照式CMOS传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Stacked CMOS Sensor": {
+    "zh": "堆栈式CMOS传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Scientific CMOS Sensor": {
+    "zh": "科学级CMOS传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "sCMOS Sensor": {
+    "zh": "科学级CMOS传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "EMCCD Sensor": {
+    "zh": "电子倍增CCD传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Interline CCD Sensor": {
+    "zh": "行间转移CCD传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Full Frame CCD Sensor": {
+    "zh": "全帧CCD传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Frame Transfer CCD": {
+    "zh": "帧转移CCD",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Time of Flight Sensor": {
+    "zh": "飞行时间传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "ToF Image Sensor": {
+    "zh": "ToF图像传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Indirect ToF Sensor": {
+    "zh": "间接ToF传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Direct ToF Sensor": {
+    "zh": "直接ToF传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "SWIR Image Sensor": {
+    "zh": "短波红外图像传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "NIR Image Sensor": {
+    "zh": "近红外图像传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "UV Image Sensor": {
+    "zh": "紫外图像传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "X Ray Image Sensor": {
+    "zh": "X射线图像传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Dynamic Range Sensor": {
+    "zh": "高动态范围传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "HDR CMOS Sensor": {
+    "zh": "高动态CMOS传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Polarization Image Sensor": {
+    "zh": "偏振图像传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Event Vision Sensor": {
+    "zh": "事件视觉传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Event Camera Sensor": {
+    "zh": "事件相机传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Speed CMOS Sensor": {
+    "zh": "高速CMOS传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ultra High Speed Image Sensor": {
+    "zh": "超高速图像传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Machine Vision CMOS Sensor": {
+    "zh": "机器视觉CMOS传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Industrial CMOS Sensor": {
+    "zh": "工业CMOS传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Automotive Image Sensor": {
+    "zh": "车规级图像传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Automotive CMOS Sensor": {
+    "zh": "车规级CMOS传感器",
+    "category1": "光电器件",
+    "category2": "图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Smart Vision Sensor": {
+    "zh": "智能视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "AI Vision Sensor": {
+    "zh": "AI视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Industrial Vision Sensor": {
+    "zh": "工业视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Embedded Vision Sensor": {
+    "zh": "嵌入式视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Intelligent Vision Sensor": {
+    "zh": "智能视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Programmable Vision Sensor": {
+    "zh": "可编程视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Compact Vision Sensor": {
+    "zh": "紧凑型视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Miniature Vision Sensor": {
+    "zh": "微型视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Color Vision Sensor": {
+    "zh": "彩色视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Monochrome Vision Sensor": {
+    "zh": "黑白视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "RGB Vision Sensor": {
+    "zh": "RGB视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "3D Vision Sensor": {
+    "zh": "三维视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Stereo Vision Sensor": {
+    "zh": "立体视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Binocular Vision Sensor": {
+    "zh": "双目视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Depth Vision Sensor": {
+    "zh": "深度视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Vision Sensor": {
+    "zh": "激光视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Profile Vision Sensor": {
+    "zh": "轮廓视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Vision Inspection Sensor": {
+    "zh": "视觉检测传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Inspection Vision Sensor": {
+    "zh": "视觉检测传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Presence Detection Vision Sensor": {
+    "zh": "存在检测视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Pattern Recognition Sensor": {
+    "zh": "图案识别传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Code Reading Sensor": {
+    "zh": "读码视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Barcode Vision Sensor": {
+    "zh": "条码视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "OCR Vision Sensor": {
+    "zh": "OCR视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "AI Inspection Sensor": {
+    "zh": "AI检测传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Deep Learning Vision Sensor": {
+    "zh": "深度学习视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Robot Vision Sensor": {
+    "zh": "机器人视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Guidance Vision Sensor": {
+    "zh": "引导视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Pick and Place Vision Sensor": {
+    "zh": "抓取定位视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Measurement Vision Sensor": {
+    "zh": "测量视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Inline Vision Sensor": {
+    "zh": "在线视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Speed Vision Sensor": {
+    "zh": "高速视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Area Vision Sensor": {
+    "zh": "面阵视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Line Scan Vision Sensor": {
+    "zh": "线阵视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Multi Camera Vision Sensor": {
+    "zh": "多相机视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Edge AI Vision Sensor": {
+    "zh": "边缘AI视觉传感器",
+    "category1": "光电器件",
+    "category2": "视觉传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Silicon Phototransistor": {
+    "zh": "硅光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "NPN Phototransistor": {
+    "zh": "NPN光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PNP Phototransistor": {
+    "zh": "PNP光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Photodarlington": {
+    "zh": "光电达林顿管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Photodarlington Transistor": {
+    "zh": "光电达林顿晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Phototransistor Array": {
+    "zh": "光电晶体管阵列",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Linear Phototransistor Array": {
+    "zh": "线阵光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Dual Phototransistor": {
+    "zh": "双元光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Quad Phototransistor": {
+    "zh": "四元光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Speed Phototransistor": {
+    "zh": "高速光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Sensitivity Phototransistor": {
+    "zh": "高灵敏度光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Low Dark Current Phototransistor": {
+    "zh": "低暗电流光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Low Noise Phototransistor": {
+    "zh": "低噪声光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Infrared Phototransistor": {
+    "zh": "红外光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "IR Phototransistor": {
+    "zh": "红外光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Visible Light Phototransistor": {
+    "zh": "可见光光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Ambient Light Phototransistor": {
+    "zh": "环境光光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Phototransistor Module": {
+    "zh": "光电晶体管模块",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Surface Mount Phototransistor": {
+    "zh": "贴片式光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "SMD Phototransistor": {
+    "zh": "贴片光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Chip Phototransistor": {
+    "zh": "芯片式光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Bare Die Phototransistor": {
+    "zh": "裸芯片光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Switch Phototransistor": {
+    "zh": "光开关光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Reflective Phototransistor": {
+    "zh": "反射式光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Slotted Phototransistor": {
+    "zh": "槽型光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optocoupler Phototransistor": {
+    "zh": "光耦光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Photo IC Transistor": {
+    "zh": "光电集成晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Amplified Phototransistor": {
+    "zh": "放大型光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "High Gain Phototransistor": {
+    "zh": "高增益光电晶体管",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Phototransistor Receiver": {
+    "zh": "光电晶体管接收器",
+    "category1": "光电器件",
+    "category2": "光电晶体管",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Thermal Detector": {
+    "zh": "热探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Thermal Infrared Detector": {
+    "zh": "热红外探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Thermal Imaging Detector": {
+    "zh": "热成像探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Thermopile Detector": {
+    "zh": "热电堆探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Thermopile Sensor": {
+    "zh": "热电堆传感器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Thermoelectric Detector": {
+    "zh": "热电探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pyroelectric Detector": {
+    "zh": "热释电探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pyroelectric Sensor": {
+    "zh": "热释电传感器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pyroelectric Infrared Detector": {
+    "zh": "热释电红外探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pyroelectric IR Detector": {
+    "zh": "热释电红外探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Bolometer": {
+    "zh": "测辐射热计",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Infrared Bolometer": {
+    "zh": "红外测辐射热计",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Microbolometer": {
+    "zh": "微测辐射热计",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Uncooled Microbolometer": {
+    "zh": "非制冷微测辐射热计",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cooled Infrared Detector": {
+    "zh": "制冷型红外探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Uncooled Infrared Detector": {
+    "zh": "非制冷红外探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Thermal Sensor": {
+    "zh": "热传感器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Infrared Thermal Sensor": {
+    "zh": "红外热传感器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Heat Flux Detector": {
+    "zh": "热流探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Radiometric Detector": {
+    "zh": "辐射测量探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Broadband Thermal Detector": {
+    "zh": "宽带热探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Calorimetric Detector": {
+    "zh": "量热式探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Blackbody Detector": {
+    "zh": "黑体探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Power Detector": {
+    "zh": "激光功率探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Energy Detector": {
+    "zh": "激光能量探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Broadband Energy Detector": {
+    "zh": "宽带能量探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "IR Receiver": {
+    "zh": "红外接收器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Infrared Receiver": {
+    "zh": "红外接收器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Long Wave Infrared Detector": {
+    "zh": "长波红外探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Mid Wave Infrared Detector": {
+    "zh": "中波红外探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Short Wave Infrared Detector": {
+    "zh": "短波红外探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Quantum Infrared Detector": {
+    "zh": "量子红外探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Photon Detector": {
+    "zh": "光子探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Photomultiplier Tube": {
+    "zh": "光电倍增管",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PMT": {
+    "zh": "光电倍增管",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Miniature PMT": {
+    "zh": "微型光电倍增管",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Photon Multiplier Module": {
+    "zh": "光电倍增模块",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Microchannel Plate Detector": {
+    "zh": "微通道板探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Microchannel Plate": {
+    "zh": "微通道板",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MCP Detector": {
+    "zh": "微通道板探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Hybrid Photon Detector": {
+    "zh": "混合光子探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Hybrid Photodetector": {
+    "zh": "混合光电探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "HPD Detector": {
+    "zh": "混合光电探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Scintillation Detector": {
+    "zh": "闪烁探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Scintillation Counter": {
+    "zh": "闪烁计数器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Radiation Detector": {
+    "zh": "辐射探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Gamma Ray Detector": {
+    "zh": "伽马射线探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Gamma Detector": {
+    "zh": "伽马探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "X Ray Detector": {
+    "zh": "X射线探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "X Ray Sensor": {
+    "zh": "X射线传感器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Neutron Detector": {
+    "zh": "中子探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Alpha Particle Detector": {
+    "zh": "α粒子探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Beta Particle Detector": {
+    "zh": "β粒子探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Particle Detector": {
+    "zh": "粒子探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Semiconductor Radiation Detector": {
+    "zh": "半导体辐射探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Silicon Drift Detector": {
+    "zh": "硅漂移探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "SDD Detector": {
+    "zh": "硅漂移探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "CdTe Detector": {
+    "zh": "碲化镉探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "CdZnTe Detector": {
+    "zh": "碲锌镉探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "CZT Detector": {
+    "zh": "碲锌镉探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Photon Counting Detector": {
+    "zh": "光子计数探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Single Photon Avalanche Detector": {
+    "zh": "单光子雪崩探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "SPAD": {
+    "zh": "单光子雪崩二极管",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Avalanche Photon Detector": {
+    "zh": "雪崩光子探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cherenkov Detector": {
+    "zh": "切伦科夫探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Synchrotron Detector": {
+    "zh": "同步辐射探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Scientific Detector": {
+    "zh": "科学探测器",
+    "category1": "光电器件",
+    "category2": "光电探测器",
+    "enable": true,
+    "confidence": 0.98
+  }
+}
