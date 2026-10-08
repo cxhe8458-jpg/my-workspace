@@ -1,0 +1,1535 @@
+{
+  "Laser Diode": {
+    "zh": "激光二极管",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Diodes": {
+    "zh": "激光二极管",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Semiconductor Laser": {
+    "zh": "半导体激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Semiconductor Lasers": {
+    "zh": "半导体激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Diode Laser": {
+    "zh": "半导体激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Diode Lasers": {
+    "zh": "半导体激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Chip": {
+    "zh": "激光芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Chips": {
+    "zh": "激光芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Emitter": {
+    "zh": "激光发射器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Emitters": {
+    "zh": "激光发射器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Edge Emitting Laser": {
+    "zh": "边发射激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Edge Emitting Lasers": {
+    "zh": "边发射激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Edge Emitter": {
+    "zh": "边发射激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "EEL": {
+    "zh": "边发射激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "VCSEL": {
+    "zh": "垂直腔面发射激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "VCSEL Array": {
+    "zh": "垂直腔面发射激光器阵列",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "VCSEL Arrays": {
+    "zh": "垂直腔面发射激光器阵列",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "High Power VCSEL": {
+    "zh": "大功率垂直腔面发射激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "VCSEL Chip": {
+    "zh": "VCSEL芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "VCSEL Die": {
+    "zh": "VCSEL裸芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "DFB Laser": {
+    "zh": "分布反馈激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Distributed Feedback Laser": {
+    "zh": "分布反馈激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "DFB Laser Diode": {
+    "zh": "分布反馈激光二极管",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "DBR Laser": {
+    "zh": "分布布拉格反射激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Distributed Bragg Reflector Laser": {
+    "zh": "分布布拉格反射激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fabry-Perot Laser": {
+    "zh": "法布里-珀罗激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fabry Perot Laser": {
+    "zh": "法布里-珀罗激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "FP Laser": {
+    "zh": "法珀激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Gain Chip": {
+    "zh": "增益芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Gain Chips": {
+    "zh": "增益芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ridge Waveguide Laser": {
+    "zh": "脊形波导激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Broad Area Laser": {
+    "zh": "宽面激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Broad Stripe Laser": {
+    "zh": "宽条激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Tapered Laser": {
+    "zh": "锥形激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Seed Laser Diode": {
+    "zh": "种子激光二极管",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "High Power Laser Diode": {
+    "zh": "大功率激光二极管",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "CW Laser Diode": {
+    "zh": "连续波激光二极管",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pulsed Laser Diode": {
+    "zh": "脉冲激光二极管",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Module": {
+    "zh": "激光模块",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Modules": {
+    "zh": "激光模块",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser System": {
+    "zh": "激光系统",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Systems": {
+    "zh": "激光系统",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Subsystem": {
+    "zh": "激光子系统",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Engine": {
+    "zh": "激光引擎",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Source": {
+    "zh": "激光光源",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Light Source": {
+    "zh": "激光光源",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "OEM Laser": {
+    "zh": "OEM激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "OEM Laser Module": {
+    "zh": "OEM激光模块",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Laser": {
+    "zh": "光纤激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Lasers": {
+    "zh": "光纤激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "CW Fiber Laser": {
+    "zh": "连续波光纤激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "QCW Fiber Laser": {
+    "zh": "准连续光纤激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MOPA Fiber Laser": {
+    "zh": "MOPA光纤激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pulsed Fiber Laser": {
+    "zh": "脉冲光纤激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Continuous Wave Fiber Laser": {
+    "zh": "连续波光纤激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ultrafast Laser": {
+    "zh": "超快激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Femtosecond Laser": {
+    "zh": "飞秒激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Picosecond Laser": {
+    "zh": "皮秒激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "DPSS Laser": {
+    "zh": "半导体泵浦固体激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Diode Pumped Solid State Laser": {
+    "zh": "半导体泵浦固体激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Solid State Laser": {
+    "zh": "固体激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Nd:YAG Laser": {
+    "zh": "Nd:YAG激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "CO2 Laser": {
+    "zh": "二氧化碳激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Excimer Laser": {
+    "zh": "准分子激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "HeNe Laser": {
+    "zh": "氦氖激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Medical Laser": {
+    "zh": "医用激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Industrial Laser": {
+    "zh": "工业激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Scientific Laser": {
+    "zh": "科研激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Research Laser": {
+    "zh": "科研激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "激光器模块和系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pump Source": {
+    "zh": "泵浦源",
+    "category1": "激光器和发光二极管",
+    "category2": "泵浦源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pump Sources": {
+    "zh": "泵浦源",
+    "category1": "激光器和发光二极管",
+    "category2": "泵浦源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pump Module": {
+    "zh": "泵浦模块",
+    "category1": "激光器和发光二极管",
+    "category2": "泵浦源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pump Modules": {
+    "zh": "泵浦模块",
+    "category1": "激光器和发光二极管",
+    "category2": "泵浦源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Pump Module": {
+    "zh": "激光泵浦模块",
+    "category1": "激光器和发光二极管",
+    "category2": "泵浦源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Pump Module": {
+    "zh": "光纤泵浦模块",
+    "category1": "激光器和发光二极管",
+    "category2": "泵浦源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pump Laser": {
+    "zh": "泵浦激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "泵浦源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pump Lasers": {
+    "zh": "泵浦激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "泵浦源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Pump Laser": {
+    "zh": "光纤泵浦激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "泵浦源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pump Laser Module": {
+    "zh": "泵浦激光模块",
+    "category1": "激光器和发光二极管",
+    "category2": "泵浦源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pump Combiner": {
+    "zh": "泵浦合束器",
+    "category1": "激光器和发光二极管",
+    "category2": "泵浦源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pump Combiner Module": {
+    "zh": "泵浦合束模块",
+    "category1": "激光器和发光二极管",
+    "category2": "泵浦源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pump Combiner System": {
+    "zh": "泵浦合束系统",
+    "category1": "激光器和发光二极管",
+    "category2": "泵浦源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "High Power Pump Source": {
+    "zh": "大功率泵浦源",
+    "category1": "激光器和发光二极管",
+    "category2": "泵浦源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "High Brightness Pump Module": {
+    "zh": "高亮度泵浦模块",
+    "category1": "激光器和发光二极管",
+    "category2": "泵浦源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "976nm Pump Module": {
+    "zh": "976nm泵浦模块",
+    "category1": "激光器和发光二极管",
+    "category2": "泵浦源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "915nm Pump Module": {
+    "zh": "915nm泵浦模块",
+    "category1": "激光器和发光二极管",
+    "category2": "泵浦源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "808nm Pump Module": {
+    "zh": "808nm泵浦模块",
+    "category1": "激光器和发光二极管",
+    "category2": "泵浦源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Coupled Pump Module": {
+    "zh": "光纤耦合泵浦模块",
+    "category1": "激光器和发光二极管",
+    "category2": "泵浦源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Coupled Pump Laser": {
+    "zh": "光纤耦合泵浦激光器",
+    "category1": "激光器和发光二极管",
+    "category2": "泵浦源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Driver": {
+    "zh": "激光驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Drivers": {
+    "zh": "激光驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Diode Driver": {
+    "zh": "激光二极管驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Diode Drivers": {
+    "zh": "激光二极管驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LD Driver": {
+    "zh": "激光二极管驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LD Drivers": {
+    "zh": "激光二极管驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Driver Module": {
+    "zh": "激光驱动模块",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Driver Board": {
+    "zh": "激光驱动板",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Driver Controller": {
+    "zh": "激光驱动控制器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Current Driver": {
+    "zh": "电流驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Current Drivers": {
+    "zh": "电流驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Constant Current Driver": {
+    "zh": "恒流驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Current Source": {
+    "zh": "激光电流源",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Current Controller": {
+    "zh": "激光电流控制器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "TEC Driver": {
+    "zh": "半导体制冷驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "TEC Drivers": {
+    "zh": "半导体制冷驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "TEC Controller": {
+    "zh": "半导体制冷控制器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "TEC Temperature Controller": {
+    "zh": "半导体制冷温控器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Controller": {
+    "zh": "激光控制器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Control Unit": {
+    "zh": "激光控制单元",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Benchtop Laser Driver": {
+    "zh": "台式激光驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "OEM Laser Driver": {
+    "zh": "OEM激光驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Diode Package": {
+    "zh": "激光二极管封装",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Diode Packages": {
+    "zh": "激光二极管封装",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Diode Mount": {
+    "zh": "激光二极管支架",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Diode Mounts": {
+    "zh": "激光二极管支架",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Diode Housing": {
+    "zh": "激光二极管外壳",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Diode Socket": {
+    "zh": "激光二极管插座",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Diode Holder": {
+    "zh": "激光二极管夹持器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Diode Adapter": {
+    "zh": "激光二极管适配器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Diode Fixture": {
+    "zh": "激光二极管夹具",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Diode Heat Sink": {
+    "zh": "激光二极管散热器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Heat Sink": {
+    "zh": "激光器散热器",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Cooling Plate": {
+    "zh": "激光器冷却板",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Collimator Assembly": {
+    "zh": "激光准直组件",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Beam Expander Assembly": {
+    "zh": "激光扩束组件",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Protection Window": {
+    "zh": "激光保护窗口",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Output Window": {
+    "zh": "激光输出窗口",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Dust Cover": {
+    "zh": "激光器防尘盖",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Connector Kit": {
+    "zh": "激光器连接器套件",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Accessory Kit": {
+    "zh": "激光器配件套件",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Alignment Tool": {
+    "zh": "激光校准工具",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "SLED": {
+    "zh": "超辐射发光二极管",
+    "category1": "激光器和发光二极管",
+    "category2": "超辐射发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "SLD": {
+    "zh": "超辐射发光二极管",
+    "category1": "激光器和发光二极管",
+    "category2": "超辐射发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Superluminescent Diode": {
+    "zh": "超辐射发光二极管",
+    "category1": "激光器和发光二极管",
+    "category2": "超辐射发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Superluminescent Diodes": {
+    "zh": "超辐射发光二极管",
+    "category1": "激光器和发光二极管",
+    "category2": "超辐射发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Superluminescent LED": {
+    "zh": "超辐射发光二极管",
+    "category1": "激光器和发光二极管",
+    "category2": "超辐射发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "SLD Module": {
+    "zh": "超辐射发光二极管模块",
+    "category1": "激光器和发光二极管",
+    "category2": "超辐射发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "SLED Module": {
+    "zh": "超辐射发光二极管模块",
+    "category1": "激光器和发光二极管",
+    "category2": "超辐射发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "SLD Source": {
+    "zh": "超辐射光源",
+    "category1": "激光器和发光二极管",
+    "category2": "超辐射发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "SLED Source": {
+    "zh": "超辐射光源",
+    "category1": "激光器和发光二极管",
+    "category2": "超辐射发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Broadband SLED": {
+    "zh": "宽带超辐射发光二极管",
+    "category1": "激光器和发光二极管",
+    "category2": "超辐射发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Broadband SLD": {
+    "zh": "宽带超辐射发光二极管",
+    "category1": "激光器和发光二极管",
+    "category2": "超辐射发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "ASE Source": {
+    "zh": "ASE宽带光源",
+    "category1": "激光器和发光二极管",
+    "category2": "超辐射发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "ASE Sources": {
+    "zh": "ASE宽带光源",
+    "category1": "激光器和发光二极管",
+    "category2": "超辐射发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "ASE Module": {
+    "zh": "ASE模块",
+    "category1": "激光器和发光二极管",
+    "category2": "超辐射发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "ASE Broadband Source": {
+    "zh": "ASE宽带光源",
+    "category1": "激光器和发光二极管",
+    "category2": "超辐射发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Broadband ASE Source": {
+    "zh": "宽带ASE光源",
+    "category1": "激光器和发光二极管",
+    "category2": "超辐射发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Broadband Light Source": {
+    "zh": "宽带光源",
+    "category1": "激光器和发光二极管",
+    "category2": "超辐射发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Broadband Optical Source": {
+    "zh": "宽带光源",
+    "category1": "激光器和发光二极管",
+    "category2": "超辐射发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Low Coherence Light Source": {
+    "zh": "低相干光源",
+    "category1": "激光器和发光二极管",
+    "category2": "超辐射发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Low Coherence Optical Source": {
+    "zh": "低相干光源",
+    "category1": "激光器和发光二极管",
+    "category2": "超辐射发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED": {
+    "zh": "发光二极管",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LEDs": {
+    "zh": "发光二极管",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Light Emitting Diode": {
+    "zh": "发光二极管",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Light Emitting Diodes": {
+    "zh": "发光二极管",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Chip": {
+    "zh": "LED芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Chips": {
+    "zh": "LED芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Die": {
+    "zh": "LED裸芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Array": {
+    "zh": "LED阵列",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Arrays": {
+    "zh": "LED阵列",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "High Power LED": {
+    "zh": "大功率LED",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "High Brightness LED": {
+    "zh": "高亮度LED",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Infrared LED": {
+    "zh": "红外发光二极管",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "IR LED": {
+    "zh": "红外发光二极管",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Visible LED": {
+    "zh": "可见光LED",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "White LED": {
+    "zh": "白光LED",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Red LED": {
+    "zh": "红光LED",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Green LED": {
+    "zh": "绿光LED",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Blue LED": {
+    "zh": "蓝光LED",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "UV LED": {
+    "zh": "紫外LED",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Deep UV LED": {
+    "zh": "深紫外LED",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "UVC LED": {
+    "zh": "UVC紫外LED",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "RGB LED": {
+    "zh": "RGB LED",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Micro LED": {
+    "zh": "Micro LED",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mini LED": {
+    "zh": "Mini LED",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Surface Mount LED": {
+    "zh": "贴片式LED",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "SMD LED": {
+    "zh": "贴片LED",
+    "category1": "激光器和发光二极管",
+    "category2": "发光二极管",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Driver": {
+    "zh": "LED驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Drivers": {
+    "zh": "LED驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Driver Module": {
+    "zh": "LED驱动模块",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Driver Modules": {
+    "zh": "LED驱动模块",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Driver Board": {
+    "zh": "LED驱动板",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Driver Unit": {
+    "zh": "LED驱动单元",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Driver Power Supply": {
+    "zh": "LED驱动电源",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Power Supply": {
+    "zh": "LED电源",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Constant Current LED Driver": {
+    "zh": "恒流LED驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Constant Voltage LED Driver": {
+    "zh": "恒压LED驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Dimmable LED Driver": {
+    "zh": "可调光LED驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PWM LED Driver": {
+    "zh": "PWM LED驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "RGB LED Driver": {
+    "zh": "RGB LED驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Multi-channel LED Driver": {
+    "zh": "多通道LED驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Programmable LED Driver": {
+    "zh": "可编程LED驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "OEM LED Driver": {
+    "zh": "OEM LED驱动器",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Controller": {
+    "zh": "LED控制器",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Control Module": {
+    "zh": "LED控制模块",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Power Module": {
+    "zh": "LED电源模块",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Driving Module": {
+    "zh": "LED驱动模块",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Driver IC": {
+    "zh": "LED驱动芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动器芯片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Driver ICs": {
+    "zh": "LED驱动芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动器芯片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Driver Chip": {
+    "zh": "LED驱动芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动器芯片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Driver Chips": {
+    "zh": "LED驱动芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动器芯片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Controller IC": {
+    "zh": "LED控制芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动器芯片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Control IC": {
+    "zh": "LED控制芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动器芯片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Constant Current LED Driver IC": {
+    "zh": "恒流LED驱动芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动器芯片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Constant Voltage LED Driver IC": {
+    "zh": "恒压LED驱动芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动器芯片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Buck LED Driver IC": {
+    "zh": "降压型LED驱动芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动器芯片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Boost LED Driver IC": {
+    "zh": "升压型LED驱动芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动器芯片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Buck-Boost LED Driver IC": {
+    "zh": "升降压型LED驱动芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动器芯片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Linear LED Driver IC": {
+    "zh": "线性LED驱动芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动器芯片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PWM LED Driver IC": {
+    "zh": "PWM调光LED驱动芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动器芯片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Dimmable LED Driver IC": {
+    "zh": "可调光LED驱动芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动器芯片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "RGB LED Driver IC": {
+    "zh": "RGB LED驱动芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动器芯片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Matrix LED Driver IC": {
+    "zh": "矩阵式LED驱动芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动器芯片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Multi-channel LED Driver IC": {
+    "zh": "多通道LED驱动芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动器芯片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Programmable LED Driver IC": {
+    "zh": "可编程LED驱动芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动器芯片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED PMIC": {
+    "zh": "LED电源管理芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动器芯片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Power Management IC for LED": {
+    "zh": "LED电源管理芯片",
+    "category1": "激光器和发光二极管",
+    "category2": "LED驱动器芯片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Coupled Diode Module ZH": {
+    "zh": "光纤耦合模块",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Array Bar ZH": {
+    "zh": "光纤密排",
+    "category1": "激光器和发光二极管",
+    "category2": "半导体激光器配件",
+    "enable": true,
+    "confidence": 1.0
+  }
+}
