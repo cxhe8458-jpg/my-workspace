@@ -1,0 +1,1388 @@
+{
+  "Technical Service": {
+    "zh": "技术服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Engineering Service": {
+    "zh": "工程服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Application Engineering": {
+    "zh": "应用工程",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Engineering Support": {
+    "zh": "工程支持",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Calibration": {
+    "zh": "校准",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Factory Calibration": {
+    "zh": "工厂校准",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "NIST Calibration": {
+    "zh": "NIST校准",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Repair": {
+    "zh": "维修",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Maintenance": {
+    "zh": "维护",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Installation": {
+    "zh": "安装",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Commissioning": {
+    "zh": "调试",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Training": {
+    "zh": "培训",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Technical Training": {
+    "zh": "技术培训",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Operator Training": {
+    "zh": "操作员培训",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Consulting": {
+    "zh": "咨询",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Technical Consulting": {
+    "zh": "技术咨询",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Application Consulting": {
+    "zh": "应用咨询",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Testing Service": {
+    "zh": "测试服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Measurement Service": {
+    "zh": "测量服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Characterization Service": {
+    "zh": "表征服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Evaluation Service": {
+    "zh": "评估服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Acceptance Testing": {
+    "zh": "验收测试",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Software": {
+    "zh": "软件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Software Suite": {
+    "zh": "软件套件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Application Software": {
+    "zh": "应用软件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Control Software": {
+    "zh": "控制软件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Configuration Software": {
+    "zh": "配置软件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Operating Software": {
+    "zh": "操作软件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "SDK": {
+    "zh": "软件开发工具包",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Software Development Kit": {
+    "zh": "软件开发工具包",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "API": {
+    "zh": "应用编程接口",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "REST API": {
+    "zh": "REST API",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Driver": {
+    "zh": "驱动程序",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Device Driver": {
+    "zh": "设备驱动",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Firmware": {
+    "zh": "固件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Firmware Update": {
+    "zh": "固件更新",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Plugin": {
+    "zh": "插件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Software Plugin": {
+    "zh": "软件插件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cloud Platform": {
+    "zh": "云平台",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cloud Service": {
+    "zh": "云服务",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Remote Monitoring": {
+    "zh": "远程监控",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Data Analysis": {
+    "zh": "数据分析",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Analysis Software": {
+    "zh": "分析软件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Image Analysis": {
+    "zh": "图像分析",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Spectral Analysis": {
+    "zh": "光谱分析",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Machine Vision Software": {
+    "zh": "机器视觉软件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "AI Software": {
+    "zh": "人工智能软件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Artificial Intelligence": {
+    "zh": "人工智能",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Digital Twin": {
+    "zh": "数字孪生",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Database Service": {
+    "zh": "数据库服务",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Data Management": {
+    "zh": "数据管理",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Cloud Analytics": {
+    "zh": "云分析",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "OEM": {
+    "zh": "OEM代工",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "ODM": {
+    "zh": "ODM代工",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Custom Solution": {
+    "zh": "定制解决方案",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Custom Design": {
+    "zh": "定制设计",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Custom Engineering": {
+    "zh": "定制工程",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Custom Optics": {
+    "zh": "定制光学",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Custom Laser": {
+    "zh": "定制激光",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Custom Imaging": {
+    "zh": "定制成像",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "System Integration": {
+    "zh": "系统集成",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Integrated Solution": {
+    "zh": "集成解决方案",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Complete Solution": {
+    "zh": "整体解决方案",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Prototype": {
+    "zh": "样机",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Prototype Development": {
+    "zh": "样机开发",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Proof of Concept": {
+    "zh": "概念验证",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Certification": {
+    "zh": "认证",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Product Certification": {
+    "zh": "产品认证",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Compliance Testing": {
+    "zh": "合规测试",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Warranty": {
+    "zh": "质保",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Rental": {
+    "zh": "租赁",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Equipment Rental": {
+    "zh": "设备租赁",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Leasing": {
+    "zh": "租赁",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Logistics": {
+    "zh": "物流",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Global Logistics": {
+    "zh": "全球物流",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Financing": {
+    "zh": "融资",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Trade-in Program": {
+    "zh": "以旧换新",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Design Service": {
+    "zh": "设计服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Design": {
+    "zh": "光学设计",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Engineering": {
+    "zh": "光学工程",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mechanical Design": {
+    "zh": "机械设计",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Mechanical Engineering": {
+    "zh": "机械工程",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Electrical Engineering": {
+    "zh": "电气工程",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "System Design": {
+    "zh": "系统设计",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "System Engineering": {
+    "zh": "系统工程",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Application Development": {
+    "zh": "应用开发",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Algorithm Development": {
+    "zh": "算法开发",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Image Processing Service": {
+    "zh": "图像处理服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Vision System Integration": {
+    "zh": "视觉系统集成",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Alignment": {
+    "zh": "光学对准",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Alignment": {
+    "zh": "激光对准",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Alignment Service": {
+    "zh": "对准服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Assembly Service": {
+    "zh": "装配服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Assembly": {
+    "zh": "光学装配",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Integration Service": {
+    "zh": "集成服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Verification Service": {
+    "zh": "验证服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Validation Service": {
+    "zh": "确认服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Qualification Service": {
+    "zh": "认证服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Failure Analysis": {
+    "zh": "失效分析",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Root Cause Analysis": {
+    "zh": "根因分析",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Reliability Testing": {
+    "zh": "可靠性测试",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Life Testing": {
+    "zh": "寿命测试",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Burn-in Service": {
+    "zh": "老化服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Environmental Testing": {
+    "zh": "环境测试",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "EMC Testing": {
+    "zh": "电磁兼容测试",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "EMI Testing": {
+    "zh": "电磁干扰测试",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Desktop Software": {
+    "zh": "桌面软件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PC Software": {
+    "zh": "PC软件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mobile App": {
+    "zh": "移动应用",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Web Application": {
+    "zh": "网页应用",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Web Portal": {
+    "zh": "网页门户",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Remote Access": {
+    "zh": "远程访问",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Remote Control": {
+    "zh": "远程控制",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Remote Service": {
+    "zh": "远程服务",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Remote Support": {
+    "zh": "远程支持",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Device Management": {
+    "zh": "设备管理",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Asset Management": {
+    "zh": "资产管理",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fleet Management": {
+    "zh": "设备群管理",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Data Logging": {
+    "zh": "数据记录",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Data Acquisition Software": {
+    "zh": "数据采集软件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Visualization Software": {
+    "zh": "可视化软件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Reporting Software": {
+    "zh": "报表软件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Automation Software": {
+    "zh": "自动化软件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Workflow Software": {
+    "zh": "工作流软件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Simulation Software": {
+    "zh": "仿真软件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Simulation": {
+    "zh": "光学仿真",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Image Processing Software": {
+    "zh": "图像处理软件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Deep Learning Software": {
+    "zh": "深度学习软件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "AI Vision Software": {
+    "zh": "AI视觉软件",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Edge AI": {
+    "zh": "边缘AI",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Machine Learning": {
+    "zh": "机器学习",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Cloud Dashboard": {
+    "zh": "云仪表盘",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Predictive Maintenance": {
+    "zh": "预测性维护",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "IoT Platform": {
+    "zh": "物联网平台",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Industrial IoT": {
+    "zh": "工业物联网",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "OEM Service": {
+    "zh": "OEM服务",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "ODM Service": {
+    "zh": "ODM服务",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Private Label": {
+    "zh": "贴牌",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Contract Manufacturing": {
+    "zh": "合同制造",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Manufacturing Service": {
+    "zh": "制造服务",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Build to Print": {
+    "zh": "来图加工",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Build to Specification": {
+    "zh": "按规格制造",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Custom Manufacturing": {
+    "zh": "定制制造",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Custom Production": {
+    "zh": "定制生产",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Custom Fabrication": {
+    "zh": "定制加工",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Precision Manufacturing": {
+    "zh": "精密制造",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Precision Machining": {
+    "zh": "精密加工",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Prototype Manufacturing": {
+    "zh": "样机制造",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Rapid Prototyping": {
+    "zh": "快速成型",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pilot Production": {
+    "zh": "试产",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Low Volume Production": {
+    "zh": "小批量生产",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Volume Production": {
+    "zh": "批量生产",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Turnkey Manufacturing": {
+    "zh": "交钥匙制造",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Turnkey Solution": {
+    "zh": "交钥匙解决方案",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Custom Optical Assembly": {
+    "zh": "定制光学装配",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optomechanical Assembly": {
+    "zh": "光机装配",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "System Assembly": {
+    "zh": "系统装配",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cleanroom Assembly": {
+    "zh": "洁净室装配",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Custom Packaging": {
+    "zh": "定制封装",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "White Label Service": {
+    "zh": "白牌服务",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Product Customization": {
+    "zh": "产品定制",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Engineering Prototype": {
+    "zh": "工程样机",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "New Product Introduction": {
+    "zh": "新产品导入",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "NPI Service": {
+    "zh": "新产品导入服务",
+    "category1": "增值服务",
+    "category2": "定制与其他服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Customer Support": {
+    "zh": "客户支持",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Technical Support": {
+    "zh": "技术支持",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Application Support": {
+    "zh": "应用支持",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Product Support": {
+    "zh": "产品支持",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Installation Service": {
+    "zh": "安装服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Commissioning Service": {
+    "zh": "调试服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Field Service": {
+    "zh": "现场服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "On-site Service": {
+    "zh": "现场服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Remote Diagnostics": {
+    "zh": "远程诊断",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Health Check": {
+    "zh": "健康检查",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Preventive Maintenance": {
+    "zh": "预防性维护",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Corrective Maintenance": {
+    "zh": "纠正性维护",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Repair Service": {
+    "zh": "维修服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Depot Repair": {
+    "zh": "返厂维修",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Repair Center": {
+    "zh": "维修中心",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Return Material Authorization": {
+    "zh": "退货授权",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "RMA": {
+    "zh": "退货授权",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Warranty Service": {
+    "zh": "质保服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Extended Warranty": {
+    "zh": "延长质保",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Service Contract": {
+    "zh": "服务合同",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Maintenance Contract": {
+    "zh": "维护合同",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Calibration Service": {
+    "zh": "校准服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "ISO 17025 Calibration": {
+    "zh": "ISO 17025校准",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Accredited Calibration": {
+    "zh": "认可校准",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Traceable Calibration": {
+    "zh": "可溯源校准",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Training Service": {
+    "zh": "培训服务",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Customer Training": {
+    "zh": "客户培训",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "On-site Training": {
+    "zh": "现场培训",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Online Training": {
+    "zh": "在线培训",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Certification Training": {
+    "zh": "认证培训",
+    "category1": "增值服务",
+    "category2": "技术服务",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Documentation": {
+    "zh": "技术文档",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Knowledge Base": {
+    "zh": "知识库",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "FAQ": {
+    "zh": "常见问题",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Download Center": {
+    "zh": "下载中心",
+    "category1": "增值服务",
+    "category2": "软件与数据服务",
+    "enable": true,
+    "confidence": 0.99
+  }
+}
