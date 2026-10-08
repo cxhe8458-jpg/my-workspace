@@ -1,0 +1,455 @@
+/* ==========================================================================
+   公司信息采集平台 —— iOS 液态玻璃（Liquid Glass）
+   --------------------------------------------------------------------------
+   玻璃的观感来自三层叠加，缺一层就会"塑料感"：
+     ① 底层彩色渐变（body::before）—— backdrop-filter 需要有东西可透，
+        底下是纯色的话模糊出来只是一片灰，看不出玻璃；
+     ② 玻璃面本身 —— 半透明 + blur + saturate（提高饱和度才有"透光"的味道）；
+     ③ 高光与发丝边 —— 顶部 inset 白色高光 + 0.5px 边框，模拟玻璃厚度的镜面反射。
+   明暗跟随系统：只在 @media 里改 token，不重写任何布局规则。
+   ========================================================================== */
+
+:root {
+  color-scheme: light dark;
+
+  --accent: #007AFF;
+  --accent-2: #5E5CE6;
+  --green: #34C759;
+  --red: #FF3B30;
+  --orange: #FF9500;
+
+  --r-xl: 26px;
+  --r: 18px;
+  --r-sm: 12px;
+
+  --glass: rgba(255, 255, 255, .58);
+  --glass-2: rgba(255, 255, 255, .78);
+  --glass-3: rgba(255, 255, 255, .42);
+  --hairline: rgba(255, 255, 255, .70);
+  --spec: rgba(255, 255, 255, .55);          /* 顶部镜面高光 */
+
+  --text: #1c1c1e;
+  --text-2: #3a3a3c;
+  --muted: #8a8a8e;
+  --sep: rgba(60, 60, 67, .13);
+  --fill: rgba(120, 120, 128, .12);          /* iOS 的"填充"灰 */
+  --fill-2: rgba(120, 120, 128, .20);
+
+  --shadow: 0 12px 44px rgba(0, 0, 0, .10), 0 2px 8px rgba(0, 0, 0, .05);
+  --blur: blur(30px) saturate(180%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #0A84FF;
+    --accent-2: #7D7AFF;
+    --green: #30D158;
+    --red: #FF453A;
+    --orange: #FF9F0A;
+
+    --glass: rgba(28, 28, 30, .55);
+    --glass-2: rgba(44, 44, 46, .74);
+    --glass-3: rgba(28, 28, 30, .38);
+    --hairline: rgba(255, 255, 255, .13);
+    --spec: rgba(255, 255, 255, .10);
+
+    --text: #f5f5f7;
+    --text-2: #d1d1d6;
+    --muted: #8e8e93;
+    --sep: rgba(255, 255, 255, .10);
+    --fill: rgba(120, 120, 128, .24);
+    --fill-2: rgba(120, 120, 128, .36);
+
+    --shadow: 0 12px 44px rgba(0, 0, 0, .5), 0 2px 8px rgba(0, 0, 0, .35);
+  }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  background: #eef1f7;
+  color: var(--text);
+  font: 14px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Microsoft YaHei", "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+@media (prefers-color-scheme: dark) { body { background: #0b0b0f; } }
+
+/* ---- ① 底层彩色渐变：玻璃的"可透之物" ---- */
+body::before {
+  content: ""; position: fixed; inset: -25%; z-index: -2; pointer-events: none;
+  background:
+    radial-gradient(42% 42% at 16% 20%, #6fc4ff 0%, transparent 62%),
+    radial-gradient(38% 38% at 84% 14%, #ff9ad5 0%, transparent 62%),
+    radial-gradient(46% 46% at 74% 84%, #a78bfa 0%, transparent 62%),
+    radial-gradient(40% 40% at 22% 88%, #5eead4 0%, transparent 62%);
+  filter: blur(30px) saturate(150%);
+  animation: drift 30s ease-in-out infinite alternate;
+}
+@media (prefers-color-scheme: dark) { body::before { opacity: .42; } }
+@keyframes drift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(-3%, 2%, 0) scale(1.06); }
+  100% { transform: translate3d(3%, -2%, 0) scale(1.02); }
+}
+/* 动效敏感的人（系统里开了"减弱动态效果"）不该被背景晃到 */
+@media (prefers-reduced-motion: reduce) {
+  body::before { animation: none; }
+  * { transition: none !important; }
+}
+
+/* ---- ② + ③ 玻璃面 ---- */
+.glass {
+  background: var(--glass);
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
+  border: .5px solid var(--hairline);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow), inset 0 1px 0 var(--spec);
+}
+
+/* ==========================================================================
+   顶栏
+   ========================================================================== */
+#topbar {
+  position: sticky; top: 0; z-index: 60;
+  display: flex; align-items: center; gap: 16px;
+  padding: 10px 20px; margin: 12px 16px 0;
+  border-radius: 22px;
+}
+#topbar h1 {
+  font-size: 16px; font-weight: 700; letter-spacing: -.01em;
+  display: flex; align-items: center; gap: 9px; white-space: nowrap;
+}
+#topbar h1 .dot {
+  width: 22px; height: 22px; border-radius: 7px; flex-shrink: 0;
+  background: linear-gradient(145deg, var(--accent), var(--accent-2));
+  box-shadow: 0 2px 8px rgba(0, 122, 255, .4), inset 0 1px 0 rgba(255, 255, 255, .5);
+}
+.spacer { flex: 1; }
+
+/* iOS 分段控件：滑块用 transform 平移，缓动曲线取 iOS 的弹性感 */
+.seg { position: relative; display: inline-flex; padding: 3px; border-radius: 999px; background: var(--fill); }
+.seg > button {
+  position: relative; z-index: 1; border: 0; background: transparent; cursor: pointer;
+  padding: 6px 20px; border-radius: 999px; font: inherit; font-weight: 590;
+  color: var(--text-2); transition: color .2s;
+}
+.seg > button.active { color: var(--text); }
+.seg .thumb {
+  position: absolute; top: 3px; bottom: 3px; left: 3px; border-radius: 999px;
+  background: var(--glass-2); box-shadow: 0 2px 8px rgba(0, 0, 0, .14), inset 0 1px 0 var(--spec);
+  transition: transform .34s cubic-bezier(.32, .72, 0, 1), width .34s cubic-bezier(.32, .72, 0, 1);
+}
+
+/* ==========================================================================
+   通用控件
+   ========================================================================== */
+main { max-width: 1360px; margin: 0 auto; padding: 16px; }
+.view { display: none; }
+.view.active { display: block; }
+
+.card { padding: 20px 22px; margin-bottom: 16px; }
+.card > h2 {
+  font-size: 15px; font-weight: 700; margin-bottom: 14px;
+  display: flex; align-items: center; gap: 10px; letter-spacing: -.01em;
+}
+.card > h2 .n {
+  width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: linear-gradient(145deg, var(--accent), var(--accent-2));
+  color: #fff; font-size: 12px; font-weight: 700;
+  box-shadow: 0 2px 6px rgba(0, 122, 255, .35), inset 0 1px 0 rgba(255, 255, 255, .45);
+}
+.muted { color: var(--muted); font-size: 12.5px; }
+.ellipsis { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 13px; }
+label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 5px; font-weight: 500; }
+
+input, textarea, select {
+  width: 100%; padding: 9px 13px; font: inherit; color: var(--text);
+  background: var(--glass-3); border: .5px solid var(--sep);
+  border-radius: var(--r-sm); transition: border-color .18s, box-shadow .18s;
+}
+input:focus, textarea:focus {
+  outline: none; border-color: var(--accent);
+  box-shadow: 0 0 0 3.5px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+textarea { min-height: 120px; resize: vertical; line-height: 1.6; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  padding: 8px 17px; border: .5px solid var(--hairline); border-radius: 999px;
+  background: var(--glass-2); color: var(--text); font: inherit; font-weight: 590;
+  cursor: pointer; white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .07), inset 0 1px 0 var(--spec);
+  transition: transform .16s cubic-bezier(.32,.72,0,1), filter .16s, background .16s;
+}
+.btn:hover { filter: brightness(1.05); }
+.btn:active { transform: scale(.965); }
+.btn:disabled { opacity: .42; cursor: not-allowed; transform: none; filter: none; }
+.btn.primary {
+  background: linear-gradient(160deg, var(--accent), color-mix(in srgb, var(--accent) 72%, var(--accent-2)));
+  color: #fff; border-color: transparent;
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--accent) 42%, transparent), inset 0 1px 0 rgba(255,255,255,.4);
+}
+.btn.green {
+  background: linear-gradient(160deg, var(--green), color-mix(in srgb, var(--green) 78%, #0a8));
+  color: #fff; border-color: transparent;
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--green) 40%, transparent), inset 0 1px 0 rgba(255,255,255,.4);
+}
+.btn.danger {
+  background: linear-gradient(160deg, var(--red), color-mix(in srgb, var(--red) 76%, #b00));
+  color: #fff; border-color: transparent;
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--red) 38%, transparent), inset 0 1px 0 rgba(255,255,255,.35);
+}
+.btn.small { padding: 4px 12px; font-size: 12.5px; }
+.btn.ghost { background: var(--fill); border-color: transparent; box-shadow: none; }
+.row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 14px; }
+
+.msg { margin-top: 12px; padding: 11px 14px; border-radius: var(--r-sm); font-size: 13px;
+       display: none; white-space: pre-wrap; border: .5px solid transparent; }
+.msg.ok   { display: block; background: color-mix(in srgb, var(--green) 14%, transparent); border-color: color-mix(in srgb, var(--green) 30%, transparent); }
+.msg.err  { display: block; background: color-mix(in srgb, var(--red) 13%, transparent);  border-color: color-mix(in srgb, var(--red) 30%, transparent); }
+.msg.info { display: block; background: color-mix(in srgb, var(--accent) 12%, transparent); border-color: color-mix(in srgb, var(--accent) 28%, transparent); }
+
+.pill { display: inline-flex; align-items: center; gap: 5px; padding: 3px 11px;
+        border-radius: 999px; font-size: 12px; font-weight: 590; background: var(--fill); color: var(--text-2); }
+.pill.green { background: color-mix(in srgb, var(--green) 18%, transparent); color: color-mix(in srgb, var(--green) 72%, var(--text)); }
+.pill.red   { background: color-mix(in srgb, var(--red) 16%, transparent);   color: color-mix(in srgb, var(--red) 78%, var(--text)); }
+.pill.orange{ background: color-mix(in srgb, var(--orange) 20%, transparent); color: color-mix(in srgb, var(--orange) 76%, var(--text)); }
+.pill.blue  { background: color-mix(in srgb, var(--accent) 16%, transparent); color: color-mix(in srgb, var(--accent) 82%, var(--text)); }
+
+.progress { height: 7px; border-radius: 999px; background: var(--fill); overflow: hidden; margin-top: 12px; }
+.progress > div { height: 100%; width: 0; border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transition: width .4s cubic-bezier(.32,.72,0,1); }
+
+/* ==========================================================================
+   审核工作台
+   ========================================================================== */
+#review-bar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 13px 18px; margin-bottom: 14px; }
+
+#review-split { display: grid; grid-template-columns: 310px minmax(0, 1fr); gap: 14px; align-items: start; }
+@media (max-width: 980px) { #review-split { grid-template-columns: 1fr; } }
+
+/* ---- 左侧公司清单 ---- */
+#rv-list { padding: 12px; position: sticky; top: 84px; max-height: calc(100vh - 104px); display: flex; flex-direction: column; }
+#rv-filter { margin-bottom: 10px; }
+#rv-filter .seg { width: 100%; }
+#rv-filter .seg > button { flex: 1; padding: 5px 6px; font-size: 12.5px; }
+#rv-items { overflow-y: auto; flex: 1; margin: 0 -4px; padding: 0 4px; }
+.rv-item input.sel { width: 15px; height: 15px; flex-shrink: 0; accent-color: var(--accent); cursor: pointer; }
+.rv-item {
+  display: flex; align-items: center; gap: 9px; padding: 9px 11px; margin-bottom: 5px;
+  border-radius: 13px; cursor: pointer; transition: background .16s;
+  border: .5px solid transparent;
+}
+.rv-item:hover { background: var(--fill); }
+.rv-item.on { background: var(--glass-2); border-color: var(--hairline); box-shadow: inset 0 1px 0 var(--spec); }
+.rv-item .sdot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; background: var(--muted); }
+.rv-item .sdot.通过 { background: var(--green); box-shadow: 0 0 8px color-mix(in srgb, var(--green) 60%, transparent); }
+.rv-item .sdot.有问题 { background: var(--red); box-shadow: 0 0 8px color-mix(in srgb, var(--red) 60%, transparent); }
+.rv-item .nm { flex: 1; min-width: 0; font-size: 13px; font-weight: 500; }
+.rv-item .tag { font-size: 10.5px; padding: 1px 6px; border-radius: 999px; background: var(--fill-2); color: var(--muted); }
+
+/* ---- 右侧详情 ---- */
+#rv-detail { min-width: 0; }
+#rv-head { padding: 18px 22px; margin-bottom: 14px; display: flex; gap: 16px; align-items: flex-start; }
+/* 抓到的 logo 直接摆在公司名旁边，一眼就能看出抓没抓对。
+   ⚠ 底色必须是**中灰棋盘格**，不能用白色或玻璃底：实测灵犀微光的 logo 是
+   512×173 的 RGBA 图，86.4% 像素全透明、不透明部分 100% 接近纯白——
+   白底上就是一张"空白框"，看着像没抓到，其实抓对了只是看不见。
+   中灰棋盘让白色 logo 和深色 logo 都能看清，同时表明"这块是透明的"。 */
+#rv-head .logo {
+  /* 高度固定、宽度随 logo 自身比例伸缩：超宽 logo（实测有 1688×256 = 6.6:1 的）
+     塞进方框会被压得看不清字，自适应后能占满允许的宽度。 */
+  height: 78px; width: auto; max-width: 230px; min-width: 112px;
+  border-radius: 14px; flex-shrink: 0; object-fit: contain;
+  border: .5px solid var(--hairline); padding: 7px; cursor: zoom-in;
+  background-color: #9aa1a8;
+  background-image:
+    linear-gradient(45deg, rgba(255,255,255,.16) 25%, transparent 25%, transparent 75%, rgba(255,255,255,.16) 75%),
+    linear-gradient(45deg, rgba(255,255,255,.16) 25%, transparent 25%, transparent 75%, rgba(255,255,255,.16) 75%);
+  background-size: 14px 14px;
+  background-position: 0 0, 7px 7px;
+}
+#rv-head .logo.none {
+  width: 148px;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  font-size: 11.5px; color: #fff; cursor: default; line-height: 1.5;
+  background-image: none; background-color: var(--fill-2);
+}
+#rv-head h2 { font-size: 19px; font-weight: 700; letter-spacing: -.02em; line-height: 1.35; }
+.badge { font-size: 11.5px; padding: 2px 10px; border-radius: 999px; font-weight: 600; vertical-align: middle; }
+.badge.未检 { background: var(--fill-2); color: var(--muted); }
+.badge.通过 { background: color-mix(in srgb, var(--green) 20%, transparent); color: color-mix(in srgb, var(--green) 75%, var(--text)); }
+.badge.有问题 { background: color-mix(in srgb, var(--red) 18%, transparent); color: color-mix(in srgb, var(--red) 80%, var(--text)); }
+
+.chips { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 10px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 5px; padding: 4px 11px; border-radius: 999px;
+  font-size: 12px; text-decoration: none; color: var(--text-2); cursor: pointer;
+  background: var(--fill); border: .5px solid transparent; transition: background .16s;
+}
+.chip:hover { background: var(--fill-2); }
+.chip.warn { background: color-mix(in srgb, var(--orange) 18%, transparent); color: color-mix(in srgb, var(--orange) 80%, var(--text)); }
+.chip.off { opacity: .45; cursor: not-allowed; }
+
+/* ---- 字段表 ---- */
+.fgroup { padding: 6px 8px 8px; margin-bottom: 12px; }
+.fgroup > h3 {
+  font-size: 13px; font-weight: 700; color: var(--text-2); padding: 9px 13px 8px;
+  display: flex; align-items: center; gap: 8px; cursor: pointer; user-select: none;
+}
+.fgroup > h3 .arrow { font-size: 10px; color: var(--muted); transition: transform .2s; }
+.fgroup.collapsed > h3 .arrow { transform: rotate(-90deg); }
+.fgroup.collapsed .frows { display: none; }
+.frows { display: flex; flex-direction: column; }
+
+.frow { display: grid; grid-template-columns: 132px minmax(0, 1fr) auto; gap: 14px;
+        align-items: start; padding: 8px 13px; border-radius: 10px; transition: background .15s; }
+.frow + .frow { border-top: .5px solid var(--sep); }
+.frow:hover { background: var(--fill); }
+.frow.ok { background: color-mix(in srgb, var(--green) 8%, transparent); }
+.frow.problem { background: color-mix(in srgb, var(--red) 9%, transparent); }
+.fname { font-size: 12.5px; color: var(--text-2); font-weight: 590; padding-top: 2px; word-break: break-word; }
+.fname .risk { display: inline-block; margin-left: 5px; font-size: 9.5px; padding: 0 5px; border-radius: 999px;
+               background: color-mix(in srgb, var(--orange) 24%, transparent);
+               color: color-mix(in srgb, var(--orange) 80%, var(--text)); vertical-align: 1px; }
+.fname .k { display: block; font-size: 10.5px; color: var(--muted); font-weight: 400; }
+/* ⚠ pre-wrap 只能加在真正的值文本（.vtext）上，不能加在 .fval 容器上：
+   容器里还有模板字符串带来的换行与缩进，pre-wrap 会把它们当成内容渲染出来——
+   表现就是每一行被撑到几倍高、值还平白多出一段左缩进。 */
+.fval { font-size: 13px; word-break: break-word; min-width: 0; }
+.fval .vtext { white-space: pre-wrap; }
+.empty-val { color: var(--muted); }
+.fval .vtext.clamp { max-height: 4.8em; overflow: hidden;
+  -webkit-mask-image: linear-gradient(#000 60%, transparent);
+  mask-image: linear-gradient(#000 60%, transparent); }
+.fval .more { display: inline-block; margin-top: 4px; font-size: 12px; color: var(--accent); cursor: pointer; }
+.fval .was { display: block; margin-top: 5px; font-size: 11.5px; color: var(--muted); }
+.facts { display: flex; gap: 4px; opacity: .28; transition: opacity .16s; }
+.frow:hover .facts, .frow.ok .facts, .frow.problem .facts { opacity: 1; }
+.facts button {
+  width: 26px; height: 26px; border-radius: 8px; border: 0; cursor: pointer;
+  background: var(--fill); color: var(--text-2); font-size: 12px; line-height: 1;
+  transition: background .15s, transform .15s;
+}
+.facts button:hover { background: var(--fill-2); }
+.facts button:active { transform: scale(.9); }
+.facts button.on-ok { background: var(--green); color: #fff; }
+.facts button.on-problem { background: var(--red); color: #fff; }
+.fedit { display: flex; gap: 8px; align-items: flex-start; }
+.fedit textarea { min-height: 62px; font-size: 13px; }
+
+/* ---- 底部标记栏（常驻） ---- */
+/* 底栏浮在内容之上，必须**接近不透明**：半透明的话下面的字段文字会透上来，
+   和按钮文案糊在一起，越是长表格越明显。玻璃感靠边框高光与模糊保留，不靠透明度。 */
+#rv-dock { position: sticky; bottom: 14px; margin-top: 14px; padding: 13px 18px; z-index: 40;
+           background: rgba(255, 255, 255, .93); }
+@media (prefers-color-scheme: dark) { #rv-dock { background: rgba(36, 36, 40, .94); } }
+#rv-dock .dockrow { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+#rv-note { display: none; margin-bottom: 11px; }
+#rv-note.show { display: block; }
+kbd { font: 11px/1 ui-monospace, monospace; padding: 2px 5px; border-radius: 5px;
+      background: rgba(120,120,128,.28); margin-left: 5px; }
+
+/* ---- 原始字段 ---- */
+table.raw { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+table.raw th, table.raw td { padding: 7px 11px; text-align: left; vertical-align: top;
+                             border-bottom: .5px solid var(--sep); word-break: break-word; }
+table.raw th { width: 130px; color: var(--text-2); font-weight: 590; }
+table.raw tr.key td { font-weight: 600; }
+table.raw tr.key th { color: var(--accent); }
+
+/* ---- 原网页对比面板（并排常驻，不是弹窗） ---- */
+/* 关键决策：**没有遮罩、点面板外不关闭**。审核就是"对着原网页改字段"，
+   一点左边就把参照物关掉，等于每改一个字段都要重开一次。
+   面板固定在右侧、页面主体相应右收，两边各自独立滚动、同时可交互。 */
+:root { --cmp-w: 620px; }
+
+#cmp-pane {
+  position: fixed; top: 0; right: 0; bottom: 0; width: var(--cmp-w);
+  display: none; flex-direction: column; overflow: hidden; padding: 0;
+  border-radius: 20px 0 0 20px; border-right: 0; z-index: 55;
+}
+body.cmp-on #cmp-pane { display: flex; }
+/* 主体右收，绝不让面板盖住内容——盖住的话被挡的字段就永远点不到 */
+body.cmp-on #topbar, body.cmp-on main { margin-right: calc(var(--cmp-w) + 8px); }
+body.cmp-on #toast { left: calc((100vw - var(--cmp-w)) / 2); }
+
+#cmp-grip { position: absolute; left: 0; top: 0; bottom: 0; width: 7px; cursor: col-resize; z-index: 2; }
+#cmp-grip:hover, #cmp-grip.dragging { background: linear-gradient(90deg, var(--accent), transparent); }
+body.cmp-resizing { user-select: none; cursor: col-resize; }
+body.cmp-resizing #cmp-frame { pointer-events: none; }   /* 拖动时别让 iframe 吞掉鼠标事件 */
+
+.cmp-head { display: flex; align-items: center; gap: 9px; padding: 9px 13px 9px 16px;
+            border-bottom: .5px solid var(--sep); flex-shrink: 0; }
+.cmp-head .seg > button { padding: 5px 13px; font-size: 12.5px; }
+.cmp-head .seg > button:disabled { opacity: .35; cursor: not-allowed; }
+.cmp-tip { display: none; padding: 7px 14px; font-size: 12px; flex-shrink: 0;
+           background: color-mix(in srgb, var(--orange) 16%, transparent);
+           color: color-mix(in srgb, var(--orange) 82%, var(--text)); }
+.cmp-tip.show { display: block; }
+#cmp-frame { flex: 1; width: 100%; border: 0; background: #fff; }
+
+@media (max-width: 1100px) {
+  /* 屏幕不够宽时并排会把两边都挤扁，改成盖住右半屏，但仍然不加遮罩、不点外即关 */
+  body.cmp-on #topbar, body.cmp-on main { margin-right: 0; }
+  #cmp-pane { box-shadow: -8px 0 40px rgba(0, 0, 0, .22); }
+}
+
+/* ---- 导出字段选择弹层 ---- */
+.fmodal { position: fixed; inset: 0; z-index: 250; }
+.fmodal-mask { position: absolute; inset: 0; background: rgba(0,0,0,.35);
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+.fmodal-panel {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: min(700px, 92vw); max-height: 82vh; display: flex; flex-direction: column;
+  padding: 18px 20px;
+}
+.fmodal-panel h3 { font-size: 15px; margin-bottom: 12px; }
+.fmodal-list { overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+  gap: 3px 12px; margin-bottom: 12px; }
+.fmodal-item { display: flex; align-items: center; gap: 8px; padding: 5px 8px;
+  border-radius: 8px; font-size: 13px; cursor: pointer; }
+.fmodal-item:hover { background: var(--fill); }
+.fmodal-item input { width: 15px; height: 15px; flex-shrink: 0; accent-color: var(--accent); cursor: pointer; }
+.fmodal-item .nm { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fmodal-item .k { font-size: 11px; color: var(--muted); font-family: ui-monospace, Consolas, monospace; }
+.fmodal-item.is-skip .nm { color: var(--muted); }
+
+/* logo 盒子：图片 + 下载按钮（下载文件名 = 公司记录 id） */
+.logo-box { display: flex; flex-direction: column; align-items: center; gap: 7px; flex-shrink: 0; }
+.logo-box .btn { font-size: 12px; padding: 3px 12px; }
+.logo-actions { display: flex; gap: 5px; }
+.logo-actions .btn { flex-shrink: 0; }
+
+/* logo 粘贴替换框：点击聚焦后 Ctrl+V 粘贴新图 */
+.logo-paste {
+  width: 100%; max-width: 150px; padding: 6px 10px; text-align: center;
+  font-size: 12px; color: var(--text-2); border: 1px dashed var(--hairline);
+  border-radius: 9px; background: var(--fill); cursor: text;
+  transition: border-color .18s, background .18s;
+}
+.logo-paste:focus { outline: none; border-color: var(--accent); background: var(--fill-2); }
+
+/* ---- 提示条 ---- */
+#toast {
+  position: fixed; left: 50%; bottom: 30px; transform: translate(-50%, 20px);
+  padding: 11px 20px; border-radius: 999px; font-size: 13.5px; font-weight: 500;
+  background: var(--glass-2); -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur);
+  border: .5px solid var(--hairline); box-shadow: var(--shadow), inset 0 1px 0 var(--spec);
+  opacity: 0; pointer-events: none; z-index: 300; max-width: 76vw; text-align: center;
+  transition: opacity .26s, transform .34s cubic-bezier(.32,.72,0,1);
+}
+#toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+.empty { color: var(--muted); font-size: 13px; padding: 22px; text-align: center; }
+details summary { cursor: pointer; color: var(--accent); font-size: 12.5px; padding: 6px 0; }
+pre.raw-json { background: var(--fill); padding: 12px; border-radius: var(--r-sm);
+               overflow: auto; font-size: 11.5px; max-height: 300px; line-height: 1.5; }
+a { color: var(--accent); }
