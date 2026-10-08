@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#eef1f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
+<title>公司信息采集平台</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23007AFF'/%3E%3Cpath d='M9 17l4.5 4.5L23 12' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+
+<header id="topbar" class="glass">
+  <h1><span class="dot"></span>公司信息采集平台</h1>
+  <div class="seg" id="nav">
+    <div class="thumb"></div>
+    <button data-view="collect" class="active">采集</button>
+    <button data-view="review">人工审核</button>
+    <button data-view="settings">设置</button>
+  </div>
+  <div class="spacer"></div>
+  <span class="pill" id="top-stat">未抓取</span>
+</header>
+
+<main>
+
+<!-- ==================== 采集 ==================== -->
+<section id="view-collect" class="view active">
+
+  <section class="card glass">
+    <h2><span class="n">1</span>批量抓取<span class="muted" style="font-weight:400">最多 8 家并发</span></h2>
+    <label>官网网址（每行一个，可写「网址,公司名」）</label>
+    <textarea id="urls" placeholder="https://www.example.com&#10;https://www.xxx.cn,某某光电科技有限公司"></textarea>
+    <div class="row">
+      <button class="btn" id="btn-import">导入名单文件</button>
+      <input type="file" id="file-input" accept=".xlsx,.xls,.csv,.txt" hidden>
+      <span class="muted" id="import-state">支持 Excel / CSV / TXT，自动识别网址列与公司名称列</span>
+    </div>
+    <div class="row">
+      <button class="btn primary" id="btn-crawl">开始抓取</button>
+      <span class="muted" id="crawl-state">空闲</span>
+    </div>
+    <div class="progress" id="progress" style="display:none"><div id="progress-bar"></div></div>
+    <div class="msg" id="crawl-msg"></div>
+  </section>
+
+  <section class="card glass">
+    <h2><span class="n">2</span>抓完之后</h2>
+    <p class="muted" style="line-height:1.9">
+      抓到的 25 个字段<b>全部由大模型从 HTML 里读出</b>，其中「中文名称 / 国别 / 属性 / 产品一二级分类」还是必填项——
+      没有人核对过就直接进生产库，错了只能事后去库里收拾。<br>
+      所以抓取完成后请到 <b>「人工审核」</b> 逐条核对：每个字段都能对照抓取时留下的首页 / 关于页 / 联系页原文，
+      发现错值可当场修正（改动留痕、原值可还原）。<b>只有标记「通过」的记录才会被写入数据库。</b>
+    </p>
+    <div class="row">
+      <button class="btn primary" id="btn-goto-review">前往人工审核 →</button>
+      <button class="btn" id="btn-export" title="导出清单里全部公司（含未检、有问题），首列标明审核状态；只要已通过的请到「人工审核」页导出">导出 Excel（全部）</button>
+    </div>
+    <div class="msg" id="write-msg"></div>
+  </section>
+
+</section>
+
+<!-- ==================== 人工审核 ==================== -->
+<section id="view-review" class="view">
+
+  <div id="review-bar" class="glass">
+    <span class="pill blue" id="c-total">共 0 家</span>
+    <span class="pill" id="c-un">未检 0</span>
+    <span class="pill green" id="c-pass">通过 0</span>
+    <span class="pill red" id="c-prob">有问题 0</span>
+    <span class="spacer"></span>
+    <button class="btn small" id="btn-rv-refresh">刷新</button>
+    <button class="btn small" id="btn-rv-clear">清空清单</button>
+    <button class="btn small" id="btn-rv-fields" title="选择导出哪些字段（默认排除系统维护字段）">导出字段</button>
+    <label class="chk" title="勾选后导出时，把各公司 logo 与 Excel 打包成一个 zip，解压后都在你选的同一个文件夹里"
+           style="display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--text);white-space:nowrap;cursor:pointer">
+      <input type="checkbox" id="exp-logos" style="width:15px;height:15px;accent-color:var(--accent);cursor:pointer"> 同时导出 logo
+    </label>
+    <button class="btn small" id="btn-rv-export-sel" title="勾选左侧清单里的公司，只导出所选" disabled>导出所选（0 家）</button>
+    <button class="btn small" id="btn-rv-export-all" title="导出清单里全部公司，含未检与有问题的，首列标明审核状态">导出全部</button>
+    <button class="btn primary" id="btn-rv-export">导出已通过（0 家）</button>
+    <button class="btn green" id="btn-write">写入数据库（0 家）</button>
+  </div>
+
+  <div id="review-split">
+    <aside id="rv-list" class="glass">
+      <div id="rv-filter">
+        <div class="seg" id="rv-seg">
+          <div class="thumb"></div>
+          <button data-f="" class="active">全部</button>
+          <button data-f="未检">未检</button>
+          <button data-f="通过">通过</button>
+          <button data-f="有问题">有问题</button>
+        </div>
+      </div>
+      <div id="rv-items"></div>
+    </aside>
+
+    <div id="rv-detail">
+      <div class="glass empty" id="rv-empty">左侧选择一家公司开始核对。<br>没有数据？先到「采集」抓一批。</div>
+      <div id="rv-body" style="display:none">
+        <div id="rv-head" class="glass"></div>
+        <div id="rv-fields"></div>
+        <div class="card glass" id="rv-raw"></div>
+        <div id="rv-dock" class="glass">
+          <div id="rv-note">
+            <label>问题说明（必填，会记进审核历史）</label>
+            <textarea id="rv-note-text" style="min-height:64px"
+              placeholder="例：中文名称是网站标题不是公司名；国别应为 US；一级分类错了，应是「光学元件」…"></textarea>
+          </div>
+          <div class="dockrow">
+            <span class="muted" id="rv-dock-tip">核对完成后给出结论 —— 只有「通过」的才会入库</span>
+            <span class="spacer"></span>
+            <button class="btn danger" id="btn-problem">有问题<kbd>D</kbd></button>
+            <button class="btn green" id="btn-pass">通过<kbd>A</kbd></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ==================== 设置 ==================== -->
+<section id="view-settings" class="view">
+
+  <section class="card glass">
+    <h2><span class="n">AI</span>AI 模型接口
+      <span class="muted" style="font-weight:400">抓取解析与中英互译都走这里；改完立刻生效，不用重启</span></h2>
+    <div class="grid">
+      <div>
+        <label>供应商预设</label>
+        <select id="ai-provider"></select>
+      </div>
+      <div style="grid-column:span 2">
+        <label>接口地址（完整的 chat/completions 地址）</label>
+        <input id="ai-url" placeholder="https://api.deepseek.com/chat/completions">
+      </div>
+      <div>
+        <label>API Key</label>
+        <input id="ai-key" type="password" placeholder="留空则用 script.py 里的默认 Key">
+      </div>
+      <div>
+        <label>模型名</label>
+        <input id="ai-model" list="ai-model-list" placeholder="deepseek-v4-flash">
+        <datalist id="ai-model-list"></datalist>
+      </div>
+      <div>
+        <label>max_tokens（正文长度上限）</label>
+        <input id="ai-maxtokens" type="number" placeholder="8192">
+      </div>
+      <div>
+        <label>温度 temperature</label>
+        <input id="ai-temp" type="number" step="0.1" placeholder="0">
+      </div>
+      <div>
+        <label>超时（秒）</label>
+        <input id="ai-timeout" type="number" placeholder="180">
+      </div>
+      <div>
+        <label>思维链 reasoning_effort</label>
+        <select id="ai-reasoning">
+          <option value="none">none（关闭，推荐）</option>
+          <option value="low">low</option>
+          <option value="medium">medium</option>
+          <option value="high">high</option>
+          <option value="">不发这个参数</option>
+        </select>
+      </div>
+      <div>
+        <label>强制 JSON 输出</label>
+        <select id="ai-jsonmode">
+          <option value="1">开（response_format=json_object）</option>
+          <option value="0">关（靠提示词约束，兼容更多服务）</option>
+        </select>
+      </div>
+    </div>
+    <div class="muted" id="ai-note" style="margin-top:10px"></div>
+    <div class="row">
+      <button class="btn primary" id="btn-ai-save">保存</button>
+      <button class="btn" id="btn-ai-test">测试连接</button>
+      <button class="btn" id="btn-ai-models">拉取模型列表</button>
+    </div>
+    <div class="msg" id="ai-msg"></div>
+    <div class="muted" style="margin-top:12px;line-height:1.9">
+      任何 <b>OpenAI 兼容</b> 的 <code>/chat/completions</code> 接口都能接（DeepSeek / 通义千问 / Kimi /
+      智谱 / 硅基流动 / 火山方舟 / OpenRouter / 本地 Ollama…）。<br>
+      <b>思维链那一项别乱动</b>：推理模型的思维链<b>计入 max_tokens</b>，开着的话长提示词会把额度烧光、
+      正文一个字都吐不出来（HTTP 还是 200，只表现为抓取失败）。本项目是照着 HTML 填固定字段，
+      推理没有收益——实测关掉后快约 6 倍、字段完全一致。
+    </div>
+  </section>
+
+  <section class="card glass">
+    <h2><span class="n">DB</span>数据库连接
+      <span class="muted" style="font-weight:400">连不上也没关系，可在「人工审核」页导出 Excel 后人工导库</span></h2>
+    <div class="grid">
+      <div><label>服务器地址</label><input id="db-host" placeholder="127.0.0.1"></div>
+      <div><label>端口</label><input id="db-port" type="number" placeholder="3306"></div>
+      <div><label>数据库名</label><input id="db-database" placeholder="数据库名"></div>
+      <div><label>用户名</label><input id="db-username" placeholder="root"></div>
+      <div><label>密码</label><input id="db-password" type="password" placeholder="密码"></div>
+      <div><label>表名</label><input id="db-table" placeholder="company"></div>
+    </div>
+    <div class="row">
+      <button class="btn primary" id="btn-save">保存配置</button>
+      <button class="btn" id="btn-test">测试连接</button>
+    </div>
+    <div class="msg" id="db-msg"></div>
+  </section>
+
+</section>
+
+</main>
+
+<!-- 原网页对比面板：**并排常驻，不是弹窗**。
+     审核的本质就是"对着原网页改字段"，两边必须同时可用——所以没有遮罩、
+     点左侧任何地方都不会关闭它，只有「关闭」按钮才关。左边缘可拖动改宽度。 -->
+<aside id="cmp-pane" class="glass">
+  <div id="cmp-grip" title="拖动调整宽度"></div>
+  <div class="cmp-head">
+    <div class="seg" id="cmp-tabs">
+      <div class="thumb"></div>
+      <button data-k="home">首页</button>
+      <button data-k="about">关于页</button>
+      <button data-k="contact">联系页</button>
+    </div>
+    <span class="muted ellipsis" id="cmp-sub" style="flex:1"></span>
+    <a class="btn small" id="cmp-open" target="_blank" rel="noopener" title="在浏览器新标签打开这份存档">↗</a>
+    <button class="btn small ghost" id="cmp-close" title="关闭对比面板">✕</button>
+  </div>
+  <div class="cmp-tip" id="cmp-tip"></div>
+  <iframe id="cmp-frame" referrerpolicy="no-referrer"></iframe>
+</aside>
+
+<!-- 导出字段选择：勾选哪些字段进 Excel；审核三列始终导出 -->
+<div id="fmodal" class="fmodal" style="display:none">
+  <div class="fmodal-mask" id="fmodal-mask"></div>
+  <div class="fmodal-panel glass">
+    <h3>选择导出字段
+      <span class="muted" style="font-weight:400">「审核状态 / 问题说明 / 人工修正字段」始终导出</span></h3>
+    <div id="fmodal-list" class="fmodal-list"></div>
+    <div class="row" style="justify-content:flex-end;margin-top:0">
+      <button class="btn small" id="fmodal-all">全选</button>
+      <button class="btn small" id="fmodal-default">恢复默认</button>
+      <button class="btn" id="fmodal-cancel">取消</button>
+      <button class="btn primary" id="fmodal-save">保存</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script src="/static/app.js"></script>
+
+<!-- 旧进程自检：/static/* 是后来才加的路由，后端没重启的话 CSS 与 JS 会双双 404，
+     页面表现为"完全没有样式、两个视图叠在一起"——看着像整个平台坏了，
+     实际只差一次重启。这段内联脚本不依赖任何外部资源，专门把这件事说清楚。 -->
+<script>
+window.addEventListener("load", function () {
+  var cssOK = getComputedStyle(document.getElementById("topbar")).position === "sticky";
+  // ⚠ 不能用 typeof loadReview === "function" 判断：函数声明会被提升，
+  //   模块中途抛异常时它照样是 function，检测不出来。必须看末尾的哨兵。
+  var jsOK = window.__APP_READY__ === true;
+  if (cssOK && jsOK) return;
+  var b = document.createElement("div");
+  b.style.cssText = "position:fixed;left:0;right:0;top:0;z-index:9999;padding:14px 18px;"
+    + "background:#ffedd5;color:#7c2d12;border-bottom:2px solid #fb923c;font:14px/1.7 sans-serif";
+  b.innerHTML = "<b>⚠ 后端还在跑旧进程，前端资源没加载出来（"
+    + (cssOK ? "" : "app.css ") + (jsOK ? "" : "app.js ") + "有问题）。</b><br>"
+    + "若是刚改过后端：关掉 <code>start_server.bat</code> 的窗口再双击一次。若关不掉或提示端口被占，"
+    + "先在 cmd 里跑 <code>netstat -ano | findstr :8000</code> 找到 PID，"
+    + "再 <code>taskkill /PID &lt;PID&gt; /F</code>，然后重新启动。";
+  document.body.prepend(b);
+});
+</script>
+</body>
+</html>
