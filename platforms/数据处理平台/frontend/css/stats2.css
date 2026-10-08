@@ -1,0 +1,152 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   统计页 v3 专属样式（stats.html 单独引入，style.css 不动）
+   · 占比列 .bp           —— drawBars 的 pct:true 选项对应的列
+   · hero 构成条          —— 全产品部分-整体堆叠（Top6+其他，彩色图例常开）
+   · 公司透视 KPI 行      —— R3 单公司的关键指标
+   · 对比抽屉             —— 勾选 2-4 家并排比较一级构成
+   全部沿用 :root token；色板 --d1..--d6 是数据色，不表状态。
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* 占比列：等宽、faint、右对齐，与 .bv 数值并排成账簿 */
+.brow .bp{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:11.5px;
+  color:var(--faint);white-space:nowrap;min-width:50px;text-align:right}
+
+/* ── hero 构成条：全产品一级分布的部分-整体全景 ─────────────────────────── */
+.hero{background:var(--panel2);border:1px solid var(--line);border-radius:var(--r-sm);
+  padding:15px 18px;margin-top:14px}
+.hero .hero-bar{display:flex;gap:2px;height:50px;border-radius:6px;overflow:hidden;margin:10px 0 5px}
+.hero .hseg{display:grid;place-items:center;min-width:3px;font-size:12px;font-weight:600;color:#fff;
+  cursor:default;transition:filter .15s;white-space:nowrap;overflow:hidden}
+.hero.hov .hseg{filter:brightness(.86)}
+.hero.hov .hseg.on{filter:brightness(1)}
+.hero .hero-total{font-family:var(--mono);font-size:11.5px;color:var(--muted);text-align:center}
+.hero .lg{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:8px}
+.hero .lg span{display:inline-flex;align-items:center;gap:6px}
+.hero .lg i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.hero .lg b{font-family:var(--mono);color:var(--ink);font-weight:600}
+
+/* ── R3 公司透视 ───────────────────────────────────────────────────────── */
+.sechead{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  flex-wrap:wrap;margin-bottom:8px}
+.sechead h2{font-size:14px;font-weight:650;display:flex;align-items:center;gap:8px;margin:0;flex-wrap:wrap}
+.sechead-act{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.cmp-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:4px 0 14px}
+.cmp-kpi{background:var(--panel2);border:1px solid var(--line);border-radius:var(--r-sm);padding:10px 13px}
+.cmp-kpi .v{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:20px;font-weight:650;
+  line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cmp-kpi .v small{font-family:var(--font);font-size:11px;color:var(--muted);font-weight:500;margin-left:2px}
+.cmp-kpi .v.top3{font-size:12.5px;font-family:var(--font);line-height:1.5;color:var(--ink2)}
+.cmp-kpi .k{color:var(--muted);font-size:11.5px;margin-top:1px}
+
+/* ── 对比抽屉：右滑面板，勾选 2-4 家并排比较 ───────────────────────────── */
+.cmp-mask{position:fixed;inset:0;background:rgba(20,24,29,.45);z-index:75;display:none}
+.cmp-mask.open{display:block}
+.cmp-drawer{position:fixed;top:0;right:0;bottom:0;width:min(720px,100vw);background:var(--panel);
+  z-index:80;transform:translateX(102%);transition:transform .24s cubic-bezier(.22,.61,.36,1);
+  display:flex;flex-direction:column;box-shadow:-18px 0 48px rgba(20,24,29,.2)}
+.cmp-drawer.open{transform:translateX(0)}
+.cmp-drawer .dh{display:flex;align-items:center;gap:10px;padding:13px 18px;border-bottom:1px solid var(--line)}
+.cmp-drawer .dh h3{font-size:14px;font-weight:650;flex:1;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.cmp-drawer .dh .x{background:none;border:0;color:var(--faint);font-size:20px;line-height:1;
+  padding:2px 8px;border-radius:var(--r-sm)}
+.cmp-drawer .dh .x:hover{color:var(--ink);background:var(--panel2)}
+.cmp-drawer .db{flex:1;overflow:auto;padding:14px 18px}
+.cmp-search{width:100%;padding:7px 11px;border:1px solid var(--line);border-radius:var(--r-sm);
+  font-size:13px;font-family:inherit;color:var(--ink);background:var(--panel);margin-bottom:8px}
+.cmp-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:3px;
+  max-height:200px;overflow:auto;border:1px solid var(--line);border-radius:var(--r-sm);
+  padding:6px 8px;margin-bottom:10px;background:var(--panel)}
+.cmp-list label{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink2);
+  padding:3px 4px;border-radius:4px;cursor:pointer;min-width:0}
+.cmp-list label:hover{background:var(--panel2)}
+.cmp-list label span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cmp-list label small{font-family:var(--mono);color:var(--faint);margin-left:auto}
+.cmp-hint{font-size:12px;color:var(--muted);margin-bottom:6px}
+.cmp-chart{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.cmp-row{display:flex;align-items:center;gap:10px;border-radius:4px;transition:opacity .16s}
+.cmp-row .cl{width:170px;flex-shrink:0;font-size:12px;color:var(--ink2);text-align:right;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cmp-row .cb{flex:1;display:flex;gap:2px;height:24px;border-radius:4px;overflow:hidden;min-width:0}
+.cmp-row .cs{min-width:2px;transition:filter .15s}
+.cmp-row .cv{font-family:var(--mono);font-size:11.5px;color:var(--muted);white-space:nowrap;min-width:44px;text-align:right}
+.cmp.hov .cmp-row{opacity:.4}
+.cmp.hov .cmp-row.on{opacity:1}
+.cmp .lg{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:10px}
+.cmp .lg span{display:inline-flex;align-items:center;gap:5px}
+.cmp .lg i{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+@media (max-width:640px){
+  .cmp-drawer{width:100vw}
+  .cmp-row .cl{width:108px}
+  .brow .bp{display:none}
+}
+
+/* ── 移除公司（危险区）────────────────────────────────────────────────────
+   全站唯一一个会成片删除产出数据的入口。用左侧红色竖条把它与其余区块区分开 ——
+   饱和色在本项目里必须有含义，这里的含义就是「这块的操作不可撤销」。 */
+.danger-zone{border-left:3px solid var(--err)}
+.danger-zone > h2{display:flex;align-items:center;gap:10px}
+
+/* 预览表：每一处将被删除的目录 + 它有多少产品。路径用等宽，方便肉眼核对。 */
+.pg-list{margin-top:12px}
+.pg-row{display:flex;align-items:baseline;gap:10px;padding:7px 0;border-bottom:1px solid var(--line2)}
+.pg-row:last-child{border-bottom:0}
+.pg-row .lb{width:210px;flex-shrink:0;font-size:12.5px;color:var(--ink2)}
+.pg-row .pa{flex:1;font-family:var(--mono);font-size:11.5px;color:var(--muted);
+  word-break:break-all;min-width:0}
+.pg-row .nn{font-family:var(--mono);font-size:12px;color:var(--ink);
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+.pg-sum{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin:12px 0 4px;
+  font-size:13px}
+.pg-sum b{font-family:var(--mono);font-size:17px;color:var(--err);
+  font-variant-numeric:tabular-nums}
+/* 输入目录那条是「不会删」，必须与上面成片的"要删"在视觉上分开，别读成同一类 */
+.pg-keep{border-left:2px solid var(--ok);padding-left:12px;margin-top:12px;
+  font-size:12.5px;color:var(--muted)}
+.pg-keep b{color:var(--ok)}
+.pg-confirm{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+.pg-confirm input{font-family:var(--mono)}
+
+@media (max-width:640px){
+  .pg-row{flex-wrap:wrap}
+  .pg-row .lb{width:100%}
+}
+
+/* 「同时删除输入目录」这一项与其他选项不是一个量级：它删的是不可再生的原始数据。
+   给它独立的红底块，让"勾上了"这件事在余光里也看得见，不会被顺手带过。 */
+.pg-raw{display:flex;align-items:flex-start;gap:10px;margin:12px 0 4px;padding:10px 12px;
+  border:1px solid var(--err);border-radius:var(--r-sm);background:var(--err-bg);
+  font-size:13px;line-height:1.5;cursor:pointer}
+.pg-raw input{margin-top:2px;flex-shrink:0;accent-color:var(--err)}
+.pg-raw b{color:var(--err)}
+.pg-raw small{color:var(--ink2);font-size:12px}
+/* 预览里"原始数据"那一行同样标红，与平台产出区分开 */
+.pg-row.raw .lb{color:var(--err);font-weight:600}
+.pg-row.raw .pa{color:var(--err)}
+.pg-row.locked{background:var(--warn-bg)}
+.pg-row .lk{font-size:11.5px;color:var(--warn);white-space:nowrap}
+
+/* 移除公司的选择器：96 家公司用 <select> 一个个滚太折磨人，改成搜索 + 列表。
+   与对比抽屉的 .cmp-list 同一套观感，但这里是单选，选中要有明确的高亮。 */
+.pg-pick{border:1px solid var(--line);border-radius:var(--r-sm);background:var(--panel);
+  overflow:hidden}
+.pg-pick .srch{position:relative;padding:8px 10px;border-bottom:1px solid var(--line2)}
+.pg-pick .srch input{width:100%;padding-left:30px}
+.pg-pick .srch svg{position:absolute;left:20px;top:50%;transform:translateY(-50%);
+  color:var(--faint);pointer-events:none}
+.pg-opts{max-height:230px;overflow:auto;scrollbar-width:thin}
+.pg-opts button{display:flex;width:100%;align-items:center;gap:10px;background:transparent;
+  border:0;border-radius:0;border-bottom:1px solid var(--line2);padding:8px 12px;
+  font-size:13px;color:var(--ink2);text-align:left;font-family:inherit;
+  justify-content:flex-start;transition:background .12s}
+.pg-opts button:hover{background:var(--sunken);color:var(--ink)}
+.pg-opts button.on{background:var(--err-bg);color:var(--err);font-weight:600;
+  box-shadow:inset 2px 0 0 var(--err)}
+.pg-opts button .nm{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pg-opts button .n{font-family:var(--mono);font-variant-numeric:tabular-nums;
+  font-size:11.5px;color:var(--faint);flex-shrink:0}
+.pg-opts button.on .n{color:var(--err)}
+.pg-opts .empty{padding:16px 12px;text-align:center;color:var(--faint);font-size:12.5px}
+.pg-bar{display:flex;align-items:center;gap:12px;padding:9px 12px;
+  border-top:1px solid var(--line2);background:var(--panel2)}
+.pg-bar .fcount{flex:1}

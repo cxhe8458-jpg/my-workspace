@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>总览 · 自动化数据处理平台</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="phead">
+    <div>
+      <h1>总览</h1>
+      <p>每家公司走到了流水线的哪一步，还剩什么要做——以及<b>下一步点哪里</b>。
+         状态全部来自处理记忆与输出目录，不是另记的账。</p>
+    </div>
+    <div class="headact">
+      <span id="ov-when">读取中…</span>
+      <button class="ghost small" id="ov-rescan">重新扫描</button>
+    </div>
+  </div>
+
+  <!-- 任务队列：写盘的步骤串行排队，这里显示在跑的、排队的、刚跑完的 -->
+  <div id="ov-queue"></div>
+
+  <!-- 任务日志：所有任务的档案馆（含平台重启前的）。队列区只放"刚发生的"，
+       更早的都到这里翻 —— 否则十几张已结束卡片会把首屏整个顶掉。 -->
+  <details class="drawer" id="ov-logs">
+    <summary><span class="chev"></span><b>任务日志</b>
+      <span style="color:var(--muted)">每一次运行的完整记录，平台重启也还在</span>
+      <span class="cv" id="lg-sum">读取中…</span></summary>
+    <div class="body">
+      <div class="filters">
+        <div class="seg" id="lg-seg"></div>
+        <button class="ghost small" id="lg-reload">刷新</button>
+        <button class="ghost small" id="lg-purge">清空已结束的</button>
+        <span class="fcount" id="lg-count"></span>
+      </div>
+      <div id="lg-list" class="logvault"></div>
+    </div>
+  </details>
+
+  <div id="ov-scanbox" style="display:none" class="card"></div>
+
+  <!-- 首屏：流水线状态机本身 -->
+  <section class="card">
+    <h2>流水线状态</h2>
+    <p class="desc">目录即状态机。每一段只复制不移动，所以每一段的产品数都应当对得上——对不上的地方就是要处理的地方。</p>
+    <div class="rail" id="ov-rail"></div>
+  </section>
+
+  <div class="todos" id="ov-todos"></div>
+
+  <!-- 已搁置：人工确认「归不了类」的产品。不算待办，但必须看得见、能捞回来。 -->
+  <section class="card" id="shelf" hidden>
+    <h2>已搁置 <span id="sh-n"></span></h2>
+    <p class="desc">这些产品你确认过<b>归不了类</b>，所以不计入待办——一家公司只要还剩一个未匹配产品，
+      就永远走不到「已走完全程」，搁置是那个必要的出口。
+      <b>数据原地留在 <code>_未匹配</code> 里，没删也没移动</b>，随时可以取消搁置重新当作待办。</p>
+    <div class="filters">
+      <button class="ghost small" id="sh-reload">刷新</button>
+      <span class="fcount" id="sh-stale"></span>
+    </div>
+    <div id="sh-list"></div>
+  </section>
+
+  <!-- 同名变体：同一家公司被录成两份目录。有才显示。 -->
+  <section class="card" id="variants" hidden>
+    <h2>同名变体 <span id="vr-n"></span></h2>
+    <p class="desc">同一家公司被录成了 <code>公司名</code> 和 <code>公司名_1</code> 两份目录。到 ⑤ id 映射时
+      两者会解析成<b>同一个公司 id</b>，后写的覆盖先写的 —— 已经这样让最终交付少过产品。
+      下面按「产品目录数 + PDF 数」比对两份数据，你来定保留哪个。</p>
+    <div id="vr-input"></div>
+    <div id="vr-list"></div>
+  </section>
+
+  <section class="card">
+    <h2>公司 × 阶段</h2>
+    <p class="desc">每一行都算好了<b>下一步该干什么</b>，点右边的按钮就执行。
+      档位上的「一键」＝ 把这一档所有公司的下一步批量做掉。任务串行排队，可以连着点。</p>
+    <div class="filters">
+      <div class="seg" id="ov-seg"></div>
+      <div class="srch"><input type="search" id="ov-q" placeholder="搜索公司名…" aria-label="搜索公司名"></div>
+      <span class="fcount" id="ov-count"></span>
+    </div>
+    <div class="btnrow" id="ov-bulk" style="margin-top:0;margin-bottom:12px"></div>
+    <div class="tablebox matrix"><table id="ov-tbl">
+      <thead><tr>
+        <th class="srt" data-s="name">公司</th>
+        <th class="srt tdn" data-s="products">产品</th>
+        <th class="srt tdc" data-s="stage" style="width:132px">进度</th>
+        <th class="srt tdc" data-s="todo" style="width:150px">待人工</th>
+        <th style="width:210px">下一步</th>
+      </tr></thead>
+      <tbody id="ov-body"></tbody>
+    </table></div>
+    <p class="hint" id="ov-more"></p>
+  </section>
+
+  <!-- ⑤ id 解析：从流水线页搬来。设一次就不再看，默认收起 -->
+  <details class="drawer" id="ov-idbox">
+    <summary>
+      <span class="chev"></span><b>id 解析情况</b>
+      <span style="color:var(--muted)">公司名 → 公司id · 一级/二级 → 分类id</span>
+      <span class="cv" id="im-sum">未读取</span>
+    </summary>
+    <div class="body">
+      <p class="hint" style="margin-top:4px">查不到 id 的一律不猜，按原名输出并单列——可以就地填 id 存进平台别名表，
+        不动你维护的 <code>公司id.json</code>。</p>
+      <div class="filters">
+        <button class="ghost small" id="im-reload">读取 / 刷新</button>
+        <button class="ghost small" id="im-resolve">重新解析并映射未完成的</button>
+        <span class="fcount mono" id="im-stamp" style="color:var(--faint)"></span>
+      </div>
+      <div id="im-clash"></div>
+      <div class="tablebox"><table id="im-tbl">
+        <thead><tr><th>公司（清洗后目录名）</th><th class="tdn">产品</th>
+          <th>公司 id</th><th>解析方式</th><th class="tdc">已映射</th><th>指定 id</th></tr></thead>
+        <tbody><tr><td colspan="6" class="empty">点「读取 / 刷新」看当前的 id 解析情况。</td></tr></tbody>
+      </table></div>
+      <div id="im-box" style="display:none;margin-top:12px"></div>
+      <div id="im-cats"></div>
+    </div>
+  </details>
+
+  <!-- 高级：记忆判断错了时的逃生口 -->
+  <details class="drawer" id="ov-adv">
+    <summary><span class="chev"></span><b>高级</b>
+      <span class="cv">忽略处理记忆强制重做</span></summary>
+    <div class="body">
+      <p class="hint" style="margin-top:4px">平时不需要。映射与清洗都靠处理记忆判断"要不要重做"，
+        只有当你认为<b>记忆判断错了</b>（比如手工动过输出目录）才用这里。</p>
+      <div class="btnrow">
+        <label class="ck"><input type="checkbox" id="adv-remap"> 重做映射（忽略映射记忆）</label>
+        <label class="ck"><input type="checkbox" id="adv-reclean"> 重做清洗（忽略清洗记忆）</label>
+        <span class="hint" style="margin:0">勾选后，本页所有「执行」按钮都会带上这个强制标志。</span>
+      </div>
+    </div>
+  </details>
+</div>
+
+<script src="js/icons.js"></script>
+<script src="js/common.js"></script>
+<script src="js/overview.js"></script>
+<script src="js/ovid.js"></script>
+</body>
+</html>
