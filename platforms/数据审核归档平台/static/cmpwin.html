@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>原网页对比</title>
+<!-- 同源跳板窗口：官网发 COOP 时，直接 window.open 官网会被浏览器切断——平台从此
+     关不掉、换不了那个窗口，每审一个产品就攒一个孤儿窗口。
+     所以这个窗口的**顶层文档永远是平台自己的页面**（COOP 只作用于顶层，内嵌 iframe 不受它管），
+     官网放在里面的 iframe 里：窗口因此一直可控，切产品直接换页、审完一键关掉。
+     官网若拒绝被内嵌（X-Frame-Options / CSP frame-ancestors），自动改用 /api/proxy 代理渲染。 -->
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{display:flex;flex-direction:column;font:13px/1.5 "Microsoft YaHei",system-ui,sans-serif;background:#0f172a}
+#bar{display:flex;align-items:center;gap:8px;padding:6px 10px;color:#fff;flex-shrink:0}
+#pname{font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:38%}
+#url{color:#94a3b8;font-size:12px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#tag{font-size:11px;padding:2px 7px;border-radius:99px;background:#1e293b;color:#cbd5e1;flex-shrink:0}
+button,a.btn{background:#fff;color:#0f172a;border:1px solid #cbd5e1;border-radius:6px;padding:4px 9px;
+  font-size:12px;cursor:pointer;text-decoration:none;white-space:nowrap;font-family:inherit}
+button:hover,a.btn:hover{background:#e2e8f0}
+#wrap{flex:1;position:relative;background:#fff}
+iframe{width:100%;height:100%;border:0;background:#fff}
+#tip{position:absolute;left:0;right:0;bottom:0;background:#fef3c7;color:#78350f;padding:7px 12px;
+  font-size:12px;display:none}
+#tip.show{display:block}
+</style>
+</head>
+<body>
+
+<div id="bar">
+  <span id="pname">对比窗口</span>
+  <span id="tag"></span>
+  <span id="url"></span>
+  <button id="btn-mode" title="官网拒绝内嵌时改由平台代抓渲染">代理渲染</button>
+  <button id="btn-reload" title="重新加载">⟳</button>
+  <a class="btn" id="btn-raw" target="_blank" rel="noopener"
+     title="用浏览器新窗口打开真实页面（那个窗口平台管不了，要自己关）">↗ 原窗口</a>
+</div>
+<div id="wrap">
+  <iframe id="f" src="about:blank"></iframe>
+  <div id="tip"></div>
+</div>
+
+<script>
+"use strict";
+var cur = { url: "", name: "", mode: "" };
+var f = document.getElementById("f"), tip = document.getElementById("tip");
+
+function setTip(msg) { tip.innerHTML = msg || ""; tip.classList.toggle("show", !!msg); }
+
+/* 内嵌得成不成，以后端读到的响应头为准：onerror 在跨源被拦时根本不触发，猜不出来 */
+function decideMode(url) {
+  return fetch("/api/pagecheck?url=" + encodeURIComponent(url))
+    .then(function (r) { return r.json(); })
+    .then(function (j) { return j.embeddable === false ? "proxy" : "direct"; })
+    .catch(function () { return "direct"; });
+}
+
+function render() {
+  document.getElementById("pname").textContent = cur.name || "对比窗口";
+  document.getElementById("url").textContent = cur.url;
+  document.getElementById("url").title = cur.url;
+  document.getElementById("btn-raw").href = cur.url || "#";
+  document.getElementById("tag").textContent = cur.mode === "proxy" ? "代理渲染" : "直连内嵌";
+  document.getElementById("btn-mode").textContent = cur.mode === "proxy" ? "改直连" : "代理渲染";
+  document.title = (cur.name ? cur.name + " · " : "") + "原网页对比";
+  f.src = cur.mode === "proxy" ? "/api/proxy?url=" + encodeURIComponent(cur.url) : cur.url;
+  setTip(cur.mode === "proxy"
+    ? "该站点禁止被内嵌，当前是平台代抓渲染：文字与参数表忠实，交互脚本可能失效；要看真页面点右上「↗ 原窗口」。"
+    : "");
+}
+
+/* 平台（opener）同源直接调它换产品，不重开窗口 */
+window.__cmpShow = function (url, name, mode) {
+  cur.name = name || "";
+  if (url === cur.url && (!mode || mode === cur.mode)) { render(); return; }
+  cur.url = url; cur.mode = mode || "";
+  if (cur.mode) return render();
+  render();                                   // 先把标题/地址显示出来，别空着
+  decideMode(url).then(function (m) { cur.mode = m; render(); });
+};
+
+document.getElementById("btn-mode").onclick = function () {
+  cur.mode = cur.mode === "proxy" ? "direct" : "proxy";
+  render();
+};
+document.getElementById("btn-reload").onclick = render;
+
+var q = new URLSearchParams(location.search);
+if (q.get("url")) window.__cmpShow(q.get("url"), q.get("name") || "", q.get("mode") || "");
+</script>
+</body>
+</html>
