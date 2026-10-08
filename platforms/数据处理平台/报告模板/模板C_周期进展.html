@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>周期进展报告</title><style>
+:root{
+  --paper:#fff; --paper-hi:#f7f9fc;
+  --ink:#051c2c; --ink-md:#42566a; --ink-lo:#8595a6;
+  --line:#dbe2ea; --line-lo:#eef1f6;
+  --blue:#2251ff; --blue-lo:#7d9bff;
+  --ok:#0e7c55; --warn:#a05a00; --err:#c0332b; --ai:#6a4fbf;
+  --d1:#2A78D6; --d2:#EB6834; --d3:#1BAF7A; --d4:#EDA100;
+  --d5:#E87BA4; --d6:#008300; --d7:#4A3AA7; --d8:#E34948;
+  /* 衬线只给标题和大数字；密集小字走无衬线（Windows 上只有 SimSun，小字会发虚） */
+  --serif:"Source Han Serif SC","Noto Serif SC","Songti SC","SimSun",Georgia,serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif;
+  --mono:"Cascadia Mono","JetBrains Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);
+  font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.page{max-width:1120px;margin:0 auto;padding:0 28px}
+.page > *{max-width:720px}
+.page > .full,.page > .figure,.page > .tblbox{max-width:none}
+.band{padding:42px 0 48px;border-top:1px solid var(--line-lo)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.26em;color:var(--blue);
+  text-transform:uppercase;margin-bottom:13px}
+h1{font-family:var(--serif);font-size:clamp(34px,4.6vw,50px);font-weight:700;
+  line-height:1.1;letter-spacing:-.01em;margin:0 0 16px}
+h2{font-family:var(--serif);font-size:29px;font-weight:700;line-height:1.28;margin:0 0 14px}
+h3{font-family:var(--serif);font-size:18px;font-weight:700;margin:26px 0 10px}
+p{margin:0 0 13px;color:var(--ink-md)}
+.lede{font-family:var(--serif);font-size:19px;line-height:1.62;color:var(--ink-md);margin-bottom:20px}
+.note{font-size:13.5px;color:var(--ink-lo);line-height:1.62}
+b,strong{font-weight:700;color:var(--ink)}
+.hd{padding:52px 0 30px}
+.meta{display:flex;flex-wrap:wrap;gap:0 26px;padding-top:13px;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:11.5px;color:var(--ink-lo)}
+.meta b{color:var(--ink);font-weight:400}
+
+.metrics{display:grid;gap:0 24px;margin-top:26px}
+.metric{border-top:1px solid var(--line);padding-top:9px;min-width:0}
+.metric .lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--ink-lo);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.metric .val{font-family:var(--serif);font-size:33px;font-weight:700;line-height:1.15;margin-top:4px;
+  font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.metric .val small{font-size:13px;font-weight:400;color:var(--ink-lo);margin-left:3px}
+.metric .sub{font-family:var(--mono);font-size:10.5px;color:var(--ink-lo);margin-top:2px}
+.metric.acc .val{color:var(--blue)} .metric.warn .val{color:var(--warn)}
+.metric.ok .val{color:var(--ok)} .metric.ai .val{color:var(--ai)}
+
+.figure{border-top:1px solid var(--line);padding:14px 0 6px;margin:32px 0 0}
+.figure .cap{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:6px}
+.figure .cap .t{font-family:var(--serif);font-size:16px;font-weight:700}
+.figure .cap .n{font-family:var(--mono);font-size:11px;color:var(--ink-lo)}
+.figure .sub{font-size:13px;color:var(--ink-lo);margin-bottom:16px;line-height:1.55}
+
+.bars{display:grid;grid-template-columns:max-content 1fr max-content max-content;
+  gap:8px 13px;align-items:center}
+.bars .nm{font-size:14px;white-space:nowrap}
+.bars .tr{height:10px;background:var(--line-lo);position:relative}
+.bars .tr i{position:absolute;left:0;top:0;bottom:0;background:var(--ink)}
+.bars .vn{font-family:var(--mono);font-size:12px;text-align:right}
+.bars .pc{font-family:var(--mono);font-size:11px;text-align:right;color:var(--ink-lo);min-width:44px}
+.bars.np{grid-template-columns:max-content 1fr max-content}
+
+.stack{display:flex;height:28px;width:100%}
+.stack i{display:block;height:100%;box-shadow:inset -1px 0 0 #fff}
+.stack i:last-child{box-shadow:none}
+.legend{display:flex;flex-wrap:wrap;gap:5px 18px;margin-top:12px}
+.legend .li{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ink-md)}
+.legend .sw{width:9px;height:9px;flex:0 0 auto}
+.legend .n{font-family:var(--mono);font-size:11px;color:var(--ink-lo)}
+
+table{width:100%;border-collapse:collapse;margin-top:4px}
+th{font-family:var(--mono);font-size:10.5px;font-weight:400;letter-spacing:.08em;text-align:left;
+  color:var(--ink-lo);padding:7px 12px 7px 0;border-bottom:1px solid var(--line);
+  text-transform:uppercase;white-space:nowrap}
+td{padding:7px 12px 7px 0;border-bottom:1px solid var(--line-lo);color:var(--ink-md);
+  font-size:14px;vertical-align:baseline}
+td.n,th.n{text-align:right;font-family:var(--mono);font-size:12px;font-variant-numeric:tabular-nums}
+td.k{color:var(--ink)}
+tr:hover td{background:var(--paper-hi)}
+.tblbox{overflow-x:auto}
+
+.aside{margin:28px 0;padding:14px 0 15px;border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);font-size:14.5px;line-height:1.65;color:var(--ink-md)}
+.aside .h{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--blue);
+  text-transform:uppercase;margin-bottom:6px}
+.aside.warn .h{color:var(--warn)}
+
+.tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;
+  color:var(--ink-lo);white-space:nowrap}
+.tag::before{content:"";width:6px;height:6px;background:var(--ink-lo)}
+.tag.ok{color:var(--ok)} .tag.ok::before{background:var(--ok)}
+.tag.warn{color:var(--warn)} .tag.warn::before{background:var(--warn)}
+.tag.err{color:var(--err)} .tag.err::before{background:var(--err)}
+
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:18px 0 56px;
+  font-family:var(--mono);font-size:11px;color:var(--ink-lo)}
+@media print{.band{break-inside:avoid}}
+
+.svg{width:100%;height:auto;margin-top:8px}
+.svg .ax{font-family:var(--mono);font-size:9.5px;fill:var(--ink-lo)}
+.svg .vl{font-family:var(--mono);font-size:10px;fill:var(--ink-md)}
+/* 未匹配率的点会落到柱子上（当前周的柱是实心蓝），橙字压蓝底基本看不清。
+   给文字描一圈白边再填色 —— paint-order 让描边先画、文字盖在上面。 */
+.svg .ul{font-family:var(--mono);font-size:9.5px;fill:var(--warn);
+  paint-order:stroke fill;stroke:#fff;stroke-width:3px;stroke-linejoin:round}
+</style></head><body><header class="hd"><div class="page">
+  <div class="kicker">数据处理平台 / 周期报告</div>
+  <h1>本周期进展</h1>
+  <p class="lede">2026-08-08 起至本周五，共 <b>84</b> 家公司完成映射，
+    产出 <b>6,341</b> 个产品，规则与 AI 合计命中 <b>97.2%</b>，
+    未匹配率 <b>2.8%</b>。</p>
+  <div class="meta"><span>周期 <b>2026-08-08 六 → 2026-08-14 五</b></span>
+    <span>生成于 <b>2026-08-14 14:12</b></span>
+    <span>口径 <b>映射记忆快照</b></span></div>
+</div></header>
+
+<section class="band" style="border-top:0"><div class="page">
+<div class="metrics full" style="grid-template-columns:repeat(6,1fr)"><div class="metric acc"><div class="lab">本周公司</div><div class="val">84<small>家</small></div><div class="sub"><span style="color:var(--ok)">+26 家 对比上周</span></div></div><div class="metric "><div class="lab">本周产品</div><div class="val">6,341<small>个</small></div><div class="sub"><span style="color:var(--ok)">+2,312 对比上周</span></div></div><div class="metric ok"><div class="lab">映射成功率</div><div class="val">97.2<small>%</small></div><div class="sub"><span style="color:var(--warn)">-1.1pt 对比上周</span></div></div><div class="metric ai"><div class="lab">AI 研判</div><div class="val">978<small>个</small></div><div class="sub">占 15.4%</div></div><div class="metric warn"><div class="lab">未匹配</div><div class="val">177<small>个</small></div><div class="sub"><span style="color:var(--warn)">+1.2pt 对比上周</span></div></div><div class="metric "><div class="lab">累计公司</div><div class="val">217<small>家</small></div><div class="sub">映射记忆总量</div></div></div>
+
+<div class="figure"><div class="cap"><span class="t">按周推进与质量趋势</span><span class="n">最近 5 周</span></div><div class="sub">蓝柱＝该周映射的产品数（当前周高亮）；橙线＝该周的未匹配率。两条线要一起看：产量涨而未匹配率没跟着涨，才说明产能是健康的。</div><svg viewBox="0 0 760 250" class="svg full" role="img" aria-label="按周产品量与未匹配率趋势">
+      <rect x="67.3" y="204.1" width="90.1" height="11.9" fill="#c8d3e4"><title>2026-07-11 起 · 413 个产品 · 13 家</title></rect><text x="112.4" y="229.0" text-anchor="middle" class="ax">07-11</text><text x="112.4" y="199.1" text-anchor="middle" class="vl">413</text><rect x="208.1" y="142.5" width="90.1" height="73.5" fill="#c8d3e4"><title>2026-07-18 起 · 2,545 个产品 · 28 家</title></rect><text x="253.2" y="229.0" text-anchor="middle" class="ax">07-18</text><text x="253.2" y="137.5" text-anchor="middle" class="vl">2,545</text><rect x="348.9" y="14.0" width="90.1" height="202.0" fill="#c8d3e4"><title>2026-07-25 起 · 6,999 个产品 · 34 家</title></rect><text x="394.0" y="229.0" text-anchor="middle" class="ax">07-25</text><text x="394.0" y="9.0" text-anchor="middle" class="vl">6,999</text><rect x="489.7" y="99.7" width="90.1" height="116.3" fill="#c8d3e4"><title>2026-08-01 起 · 4,029 个产品 · 58 家</title></rect><text x="534.8" y="229.0" text-anchor="middle" class="ax">08-01</text><text x="534.8" y="94.7" text-anchor="middle" class="vl">4,029</text><rect x="630.5" y="33.0" width="90.1" height="183.0" fill="var(--blue)"><title>2026-08-08 起 · 6,341 个产品 · 84 家</title></rect><text x="675.6" y="229.0" text-anchor="middle" class="ax">08-08</text><text x="675.6" y="28.0" text-anchor="middle" class="vl">6,341</text>
+      <path d="M112.4,127.5 L253.2,54.4 L394.0,124.2 L534.8,191.0 L675.6,173.5" fill="none" stroke="var(--warn)" stroke-width="1.5"/><circle cx="112.4" cy="127.5" r="3.2" fill="#fff" stroke="var(--warn)" stroke-width="1.6"><title>2026-07-11 起 · 未匹配率 5.8%</title></circle><text x="112.4" y="119.5" text-anchor="middle" class="ul">5.8%</text><circle cx="253.2" cy="54.4" r="3.2" fill="#fff" stroke="var(--warn)" stroke-width="1.6"><title>2026-07-18 起 · 未匹配率 10.6%</title></circle><text x="253.2" y="46.4" text-anchor="middle" class="ul">10.6%</text><circle cx="394.0" cy="124.2" r="3.2" fill="#fff" stroke="var(--warn)" stroke-width="1.6"><title>2026-07-25 起 · 未匹配率 6.0%</title></circle><text x="394.0" y="116.2" text-anchor="middle" class="ul">6.0%</text><circle cx="534.8" cy="191.0" r="3.2" fill="#fff" stroke="var(--warn)" stroke-width="1.6"><title>2026-08-01 起 · 未匹配率 1.6%</title></circle><text x="534.8" y="183.0" text-anchor="middle" class="ul">1.6%</text><circle cx="675.6" cy="173.5" r="3.2" fill="#fff" stroke="var(--warn)" stroke-width="1.6"><title>2026-08-08 起 · 未匹配率 2.8%</title></circle><text x="675.6" y="165.5" text-anchor="middle" class="ul">2.8%</text>
+      <line x1="36" y1="216" x2="752" y2="216" stroke="var(--line)"/></svg></div>
+</div></section>
+
+<section class="band"><div class="page">
+  <div class="kicker">01 / 构成</div>
+  <h2>本周期处理的是什么</h2>
+  <div class="figure"><div class="cap"><span class="t">本周映射产品的一级分类构成</span><span class="n">6,164 个已分类</span></div><div class="stack"><i style="width:46.89%;background:var(--d1)" title="光学元件 2,890"></i><i style="width:12.41%;background:var(--d2)" title="运动控制 765"></i><i style="width:9.36%;background:var(--d3)" title="光纤元件 577"></i><i style="width:5.76%;background:var(--d4)" title="成像 355"></i><i style="width:5.68%;background:var(--d5)" title="工业制造设备 350"></i><i style="width:5.29%;background:var(--d6)" title="测试和测量 326"></i><i style="width:14.62%;background:var(--d7)" title="其他（6 类） 901"></i></div><div class="legend"><span class="li"><span class="sw" style="background:var(--d1)"></span>光学元件 <span class="n">2,890 · 46.9%</span></span><span class="li"><span class="sw" style="background:var(--d2)"></span>运动控制 <span class="n">765 · 12.4%</span></span><span class="li"><span class="sw" style="background:var(--d3)"></span>光纤元件 <span class="n">577 · 9.4%</span></span><span class="li"><span class="sw" style="background:var(--d4)"></span>成像 <span class="n">355 · 5.8%</span></span><span class="li"><span class="sw" style="background:var(--d5)"></span>工业制造设备 <span class="n">350 · 5.7%</span></span><span class="li"><span class="sw" style="background:var(--d6)"></span>测试和测量 <span class="n">326 · 5.3%</span></span><span class="li"><span class="sw" style="background:var(--d7)"></span>其他（6 类） <span class="n">901 · 14.6%</span></span></div></div>
+</div></section>
+
+<section class="band"><div class="page">
+  <div class="kicker">02 / 逐周</div>
+  <h2>逐周对照</h2>
+  <div class="tblbox"><table>
+    <thead><tr><th>周期（六起）</th><th class="n">公司</th><th class="n">产品</th>
+      <th class="n">规则映射</th><th class="n">AI 研判</th><th class="n">未匹配</th>
+      <th class="n">成功率</th><th>未匹配率</th></tr></thead>
+    <tbody><tr style="background:var(--paper-hi)"><td class="k mono">2026-08-08 起</td><td class="n">84</td><td class="n">6,341</td><td class="n">5,186</td><td class="n">978</td><td class="n">177</td><td class="n">97.2%</td><td><span class="tag ok">2.8%</span></td></tr><tr><td class="k mono">2026-08-01 起</td><td class="n">58</td><td class="n">4,029</td><td class="n">2,912</td><td class="n">1,050</td><td class="n">66</td><td class="n">98.3%</td><td><span class="tag ok">1.6%</span></td></tr><tr><td class="k mono">2026-07-25 起</td><td class="n">34</td><td class="n">6,999</td><td class="n">5,547</td><td class="n">1,030</td><td class="n">422</td><td class="n">94.0%</td><td><span class="tag warn">6.0%</span></td></tr><tr><td class="k mono">2026-07-18 起</td><td class="n">28</td><td class="n">2,545</td><td class="n">1,717</td><td class="n">558</td><td class="n">270</td><td class="n">89.4%</td><td><span class="tag err">10.6%</span></td></tr><tr><td class="k mono">2026-07-11 起</td><td class="n">13</td><td class="n">413</td><td class="n">208</td><td class="n">181</td><td class="n">24</td><td class="n">94.2%</td><td><span class="tag warn">5.8%</span></td></tr></tbody></table></div>
+</div></section>
+
+<section class="band"><div class="page">
+  <div class="kicker">03 / 本周明细</div>
+  <h2>本周期的 84 家公司</h2>
+  <p class="note">按产品数排序，只列前 20 家。</p>
+  <div class="tblbox"><table>
+    <thead><tr><th>公司</th><th class="n">产品数</th><th class="n">规则映射</th>
+      <th class="n">AI 研判</th><th class="n">未匹配</th><th>完成时间</th></tr></thead>
+    <tbody><tr><td class="k">高明鐵企業股份有限公司</td><td class="n">980</td><td class="n">970</td><td class="n">10</td><td class="n">—</td><td class="n" style="color:var(--ink-lo)">08-12 14:24</td></tr><tr><td class="k">四川炬科光学科技有限公司</td><td class="n">707</td><td class="n">707</td><td class="n">0</td><td class="n">—</td><td class="n" style="color:var(--ink-lo)">08-13 17:34</td></tr><tr><td class="k">上海瀚宇光纤通信技术有限公司</td><td class="n">605</td><td class="n">591</td><td class="n">14</td><td class="n">—</td><td class="n" style="color:var(--ink-lo)">08-11 17:12</td></tr><tr><td class="k">鞍山市激埃特光电有限公司</td><td class="n">357</td><td class="n">334</td><td class="n">23</td><td class="n">—</td><td class="n" style="color:var(--ink-lo)">08-11 15:06</td></tr><tr><td class="k">北京万腾达斯科技有限公司</td><td class="n">243</td><td class="n">149</td><td class="n">65</td><td class="n">29</td><td class="n" style="color:var(--ink-lo)">08-13 17:22</td></tr><tr><td class="k">翰普电子科技有限公司</td><td class="n">215</td><td class="n">98</td><td class="n">96</td><td class="n">21</td><td class="n" style="color:var(--ink-lo)">08-10 16:03</td></tr><tr><td class="k">山东宇影光学仪器有限公司</td><td class="n">203</td><td class="n">190</td><td class="n">9</td><td class="n">4</td><td class="n" style="color:var(--ink-lo)">08-12 11:15</td></tr><tr><td class="k">重庆蓝宝精玺防务科技有限公司</td><td class="n">150</td><td class="n">138</td><td class="n">12</td><td class="n">—</td><td class="n" style="color:var(--ink-lo)">08-12 17:32</td></tr><tr><td class="k">深圳市倍特盛电子科技有限公司</td><td class="n">141</td><td class="n">86</td><td class="n">45</td><td class="n">10</td><td class="n" style="color:var(--ink-lo)">08-10 16:06</td></tr><tr><td class="k">杭州微影传感科技有限公司</td><td class="n">133</td><td class="n">56</td><td class="n">73</td><td class="n">4</td><td class="n" style="color:var(--ink-lo)">08-12 11:09</td></tr><tr><td class="k">中山市鸿鑫通讯技术有限公司</td><td class="n">102</td><td class="n">59</td><td class="n">43</td><td class="n">—</td><td class="n" style="color:var(--ink-lo)">08-12 16:01</td></tr><tr><td class="k">上海华赋信息科技有限公司</td><td class="n">101</td><td class="n">89</td><td class="n">11</td><td class="n">1</td><td class="n" style="color:var(--ink-lo)">08-13 17:28</td></tr><tr><td class="k">福建富兰光学股份有限公司</td><td class="n">99</td><td class="n">92</td><td class="n">6</td><td class="n">1</td><td class="n" style="color:var(--ink-lo)">08-13 17:24</td></tr><tr><td class="k">盛金灵光学（深圳）有限公司</td><td class="n">83</td><td class="n">54</td><td class="n">21</td><td class="n">8</td><td class="n" style="color:var(--ink-lo)">08-10 17:28</td></tr><tr><td class="k">深圳市唯锐科技有限公司</td><td class="n">71</td><td class="n">51</td><td class="n">18</td><td class="n">2</td><td class="n" style="color:var(--ink-lo)">08-11 15:50</td></tr><tr><td class="k">中锗科技有限公司</td><td class="n">68</td><td class="n">42</td><td class="n">23</td><td class="n">3</td><td class="n" style="color:var(--ink-lo)">08-12 11:18</td></tr><tr><td class="k">惠州市鼎新光电有限公司</td><td class="n">65</td><td class="n">56</td><td class="n">8</td><td class="n">1</td><td class="n" style="color:var(--ink-lo)">08-12 15:59</td></tr><tr><td class="k">晶智（上海）光学仪器设备有限公司</td><td class="n">63</td><td class="n">55</td><td class="n">7</td><td class="n">1</td><td class="n" style="color:var(--ink-lo)">08-11 15:47</td></tr><tr><td class="k">福建中策光电股份公司</td><td class="n">62</td><td class="n">58</td><td class="n">4</td><td class="n">—</td><td class="n" style="color:var(--ink-lo)">08-11 15:46</td></tr><tr><td class="k">福州阿尔发光学有限公司</td><td class="n">59</td><td class="n">57</td><td class="n">1</td><td class="n">1</td><td class="n" style="color:var(--ink-lo)">08-10 17:04</td></tr></tbody></table></div>
+</div></section>
+
+<footer class="foot"><div class="page">周期进展报告 · 周界为周六 00:00 → 周五 23:59 ·
+  一家公司整批计入它最后一次映射的时间</div></footer></body></html>
