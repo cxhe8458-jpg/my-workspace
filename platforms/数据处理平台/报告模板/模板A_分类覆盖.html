@@ -1,0 +1,150 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分类覆盖报告</title><style>
+:root{
+  --paper:#fff; --paper-hi:#f7f9fc;
+  --ink:#051c2c; --ink-md:#42566a; --ink-lo:#8595a6;
+  --line:#dbe2ea; --line-lo:#eef1f6;
+  --blue:#2251ff; --blue-lo:#7d9bff;
+  --ok:#0e7c55; --warn:#a05a00; --err:#c0332b; --ai:#6a4fbf;
+  --d1:#2A78D6; --d2:#EB6834; --d3:#1BAF7A; --d4:#EDA100;
+  --d5:#E87BA4; --d6:#008300; --d7:#4A3AA7; --d8:#E34948;
+  /* 衬线只给标题和大数字；密集小字走无衬线（Windows 上只有 SimSun，小字会发虚） */
+  --serif:"Source Han Serif SC","Noto Serif SC","Songti SC","SimSun",Georgia,serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif;
+  --mono:"Cascadia Mono","JetBrains Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);
+  font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.page{max-width:1120px;margin:0 auto;padding:0 28px}
+.page > *{max-width:720px}
+.page > .full,.page > .figure,.page > .tblbox{max-width:none}
+.band{padding:42px 0 48px;border-top:1px solid var(--line-lo)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.26em;color:var(--blue);
+  text-transform:uppercase;margin-bottom:13px}
+h1{font-family:var(--serif);font-size:clamp(34px,4.6vw,50px);font-weight:700;
+  line-height:1.1;letter-spacing:-.01em;margin:0 0 16px}
+h2{font-family:var(--serif);font-size:29px;font-weight:700;line-height:1.28;margin:0 0 14px}
+h3{font-family:var(--serif);font-size:18px;font-weight:700;margin:26px 0 10px}
+p{margin:0 0 13px;color:var(--ink-md)}
+.lede{font-family:var(--serif);font-size:19px;line-height:1.62;color:var(--ink-md);margin-bottom:20px}
+.note{font-size:13.5px;color:var(--ink-lo);line-height:1.62}
+b,strong{font-weight:700;color:var(--ink)}
+.hd{padding:52px 0 30px}
+.meta{display:flex;flex-wrap:wrap;gap:0 26px;padding-top:13px;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:11.5px;color:var(--ink-lo)}
+.meta b{color:var(--ink);font-weight:400}
+
+.metrics{display:grid;gap:0 24px;margin-top:26px}
+.metric{border-top:1px solid var(--line);padding-top:9px;min-width:0}
+.metric .lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--ink-lo);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.metric .val{font-family:var(--serif);font-size:33px;font-weight:700;line-height:1.15;margin-top:4px;
+  font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.metric .val small{font-size:13px;font-weight:400;color:var(--ink-lo);margin-left:3px}
+.metric .sub{font-family:var(--mono);font-size:10.5px;color:var(--ink-lo);margin-top:2px}
+.metric.acc .val{color:var(--blue)} .metric.warn .val{color:var(--warn)}
+.metric.ok .val{color:var(--ok)} .metric.ai .val{color:var(--ai)}
+
+.figure{border-top:1px solid var(--line);padding:14px 0 6px;margin:32px 0 0}
+.figure .cap{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:6px}
+.figure .cap .t{font-family:var(--serif);font-size:16px;font-weight:700}
+.figure .cap .n{font-family:var(--mono);font-size:11px;color:var(--ink-lo)}
+.figure .sub{font-size:13px;color:var(--ink-lo);margin-bottom:16px;line-height:1.55}
+
+.bars{display:grid;grid-template-columns:max-content 1fr max-content max-content;
+  gap:8px 13px;align-items:center}
+.bars .nm{font-size:14px;white-space:nowrap}
+.bars .tr{height:10px;background:var(--line-lo);position:relative}
+.bars .tr i{position:absolute;left:0;top:0;bottom:0;background:var(--ink)}
+.bars .vn{font-family:var(--mono);font-size:12px;text-align:right}
+.bars .pc{font-family:var(--mono);font-size:11px;text-align:right;color:var(--ink-lo);min-width:44px}
+.bars.np{grid-template-columns:max-content 1fr max-content}
+
+.stack{display:flex;height:28px;width:100%}
+.stack i{display:block;height:100%;box-shadow:inset -1px 0 0 #fff}
+.stack i:last-child{box-shadow:none}
+.legend{display:flex;flex-wrap:wrap;gap:5px 18px;margin-top:12px}
+.legend .li{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ink-md)}
+.legend .sw{width:9px;height:9px;flex:0 0 auto}
+.legend .n{font-family:var(--mono);font-size:11px;color:var(--ink-lo)}
+
+table{width:100%;border-collapse:collapse;margin-top:4px}
+th{font-family:var(--mono);font-size:10.5px;font-weight:400;letter-spacing:.08em;text-align:left;
+  color:var(--ink-lo);padding:7px 12px 7px 0;border-bottom:1px solid var(--line);
+  text-transform:uppercase;white-space:nowrap}
+td{padding:7px 12px 7px 0;border-bottom:1px solid var(--line-lo);color:var(--ink-md);
+  font-size:14px;vertical-align:baseline}
+td.n,th.n{text-align:right;font-family:var(--mono);font-size:12px;font-variant-numeric:tabular-nums}
+td.k{color:var(--ink)}
+tr:hover td{background:var(--paper-hi)}
+.tblbox{overflow-x:auto}
+
+.aside{margin:28px 0;padding:14px 0 15px;border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);font-size:14.5px;line-height:1.65;color:var(--ink-md)}
+.aside .h{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--blue);
+  text-transform:uppercase;margin-bottom:6px}
+.aside.warn .h{color:var(--warn)}
+
+.tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;
+  color:var(--ink-lo);white-space:nowrap}
+.tag::before{content:"";width:6px;height:6px;background:var(--ink-lo)}
+.tag.ok{color:var(--ok)} .tag.ok::before{background:var(--ok)}
+.tag.warn{color:var(--warn)} .tag.warn::before{background:var(--warn)}
+.tag.err{color:var(--err)} .tag.err::before{background:var(--err)}
+
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:18px 0 56px;
+  font-family:var(--mono);font-size:11px;color:var(--ink-lo)}
+@media print{.band{break-inside:avoid}}
+
+.matrix{margin-top:4px}
+.mrow{display:grid;grid-template-columns:150px 1fr 52px 54px 66px;gap:0 12px;align-items:center;
+  padding:5px 0;border-bottom:1px solid var(--line-lo)}
+.mn{font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mc{display:flex;flex-wrap:wrap;gap:3px}
+.cx{width:13px;height:13px;display:block}
+.cx.l0{background:#dde5ff}.cx.l1{background:#b3c5ff}.cx.l2{background:#7d9bff}
+.cx.l3{background:#4a70f5}.cx.l4{background:#2251ff}
+.cx.e{background:0;border:1px dashed #c0392b80}
+.mv{font-size:11.5px;color:var(--ink-lo);text-align:right}
+.gp{font-family:var(--mono);font-size:10.5px;color:var(--warn)}
+.mp{font-size:11.5px;text-align:right;color:var(--ink)}
+</style></head><body><header class="hd"><div class="page">
+  <div class="kicker">数据处理平台 / 覆盖报告</div>
+  <h1>标准分类体系的覆盖情况</h1>
+  <p class="lede">标准体系共 <b>12</b> 个一级分类、<b>160</b> 个二级分类。
+    当前数据覆盖到其中 <b>148</b> 个二级分类，覆盖率 <b>92.5%</b>，
+    还有 <b>12</b> 个二级分类一个产品都没有。</p>
+  <div class="meta"><span>生成于 <b>2026-08-14 14:12</b></span>
+    <span>扫描于 <b>2026-08-14 09:25:07</b></span>
+    <span>口径 <b>实时扫描目录树</b></span></div>
+</div></header>
+
+<section class="band" style="border-top:0"><div class="page">
+<div class="metrics full" style="grid-template-columns:repeat(6,1fr)"><div class="metric acc"><div class="lab">二级分类覆盖</div><div class="val">148<small>/160</small></div><div class="sub">92.5%</div></div><div class="metric ok"><div class="lab">一级分类覆盖</div><div class="val">12<small>/12</small></div><div class="sub"></div></div><div class="metric warn"><div class="lab">空白二级分类</div><div class="val">12<small>个</small></div><div class="sub">一个产品都没有</div></div><div class="metric "><div class="lab">产品总数</div><div class="val">20,345<small>个</small></div><div class="sub"></div></div><div class="metric "><div class="lab">公司数</div><div class="val">232<small>家</small></div><div class="sub"></div></div><div class="metric warn"><div class="lab">非标分类</div><div class="val">1<small>个</small></div><div class="sub">不在体系内</div></div></div>
+
+<div class="figure"><div class="cap"><span class="t">覆盖矩阵</span><span class="n">160 个二级分类</span></div><div class="sub">一行一个一级分类，一格一个二级分类。格子深浅＝产品数量（对数分档），虚线空格＝该二级分类尚无产品。鼠标悬停看具体数字。</div><div class="matrix full"><div class="mrow"><span class="mn">光学元件</span><span class="mc"><i class="cx l0" title="光学元件/声光可调谐滤波器 2 个"></i><i class="cx l1" title="光学元件/声光调制器 17 个"></i><i class="cx l1" title="光学元件/扩束器 14 个"></i><i class="cx l0" title="光学元件/光束整形器 3 个"></i><i class="cx l2" title="光学元件/分束器 80 个"></i><i class="cx l3" title="光学元件/陶瓷和玻璃组件 177 个"></i><i class="cx l2" title="光学元件/准直器 23 个"></i><i class="cx l0" title="光学元件/漫射器 3 个"></i><i class="cx l2" title="光学元件/电光调制器(EOM) 66 个"></i><i class="cx l1" title="光学元件/电光学 4 个"></i><i class="cx l4" title="光学元件/高性能镜头 1,004 个"></i><i class="cx l2" title="光学元件/激光晶体 68 个"></i><i class="cx l4" title="光学元件/滤光片 858 个"></i><i class="cx l4" title="光学元件/光学透镜 1,655 个"></i><i class="cx l3" title="光学元件/光学反射镜 153 个"></i><i class="cx l3" title="光学元件/光学窗口片 195 个"></i><i class="cx l2" title="光学元件/偏振光学元件 96 个"></i><i class="cx l3" title="光学元件/棱镜 262 个"></i><i class="cx l2" title="光学元件/波片 55 个"></i><i class="cx l2" title="光学元件/衍射光学元件 59 个"></i><i class="cx l1" title="光学元件/光学平晶 5 个"></i><i class="cx l3" title="光学元件/光学材料 389 个"></i><i class="cx l1" title="光学元件/标准具 9 个"></i><i class="cx l3" title="光学元件/涂层 112 个"></i><i class="cx l3" title="光学元件/晶体 141 个"></i></span><span class="mv mono">25/25</span><span class="mp mono">5,450</span></div><div class="mrow"><span class="mn">光纤元件</span><span class="mc"><i class="cx l1" title="光纤元件/控制器和扰频器 13 个"></i><i class="cx l0" title="光纤元件/电光转换器 2 个"></i><i class="cx l2" title="光纤元件/管套 57 个"></i><i class="cx l3" title="光纤元件/光纤电缆和束 146 个"></i><i class="cx l1" title="光纤元件/光纤布拉格光栅 6 个"></i><i class="cx l2" title="光纤元件/光传输设备 22 个"></i><i class="cx l2" title="光纤元件/光纤放大器 93 个"></i><i class="cx l2" title="光纤元件/光纤衰减器 74 个"></i><i class="cx l2" title="光纤元件/光纤环形器 58 个"></i><i class="cx l2" title="光纤元件/光纤耦合器 60 个"></i><i class="cx l3" title="光纤元件/光纤隔离器 134 个"></i><i class="cx l2" title="光纤元件/光纤光开关 35 个"></i><i class="cx l0" title="光纤元件/光纤光机 3 个"></i><i class="cx l1" title="光纤元件/光纤探头 6 个"></i><i class="cx l1" title="光纤元件/光纤可调滤波器 4 个"></i><i class="cx l3" title="光纤元件/光接收设备 158 个"></i><i class="cx l2" title="光纤元件/激光源模块 27 个"></i><i class="cx l0" title="光纤元件/微光学波分复用 1 个"></i><i class="cx l1" title="光纤元件/光调制器驱动器 18 个"></i><i class="cx l2" title="光纤元件/光网络 74 个"></i><i class="cx l4" title="光纤元件/光网络配件 2,324 个"></i><i class="cx l1" title="光纤元件/光电转换器 4 个"></i><i class="cx l2" title="光纤元件/偏振保持产品 54 个"></i><i class="cx l1" title="光纤元件/泵合器 21 个"></i><i class="cx l2" title="光纤元件/跨阻放大器 39 个"></i><i class="cx l3" title="光纤元件/发射器和接收器 370 个"></i><i class="cx l3" title="光纤元件/波分复用 (WDM) 146 个"></i><i class="cx l4" title="光纤元件/光纤 661 个"></i><i class="cx l1" title="光纤元件/光分插复用器（OADM） 4 个"></i><i class="cx l2" title="光纤元件/光纤合束器 35 个"></i></span><span class="mv mono">30/30</span><span class="mp mono">4,649</span></div><div class="mrow"><span class="mn">测试和测量</span><span class="mc"><i class="cx e" title="测试和测量/三维扫描仪 —— 尚无产品"></i><i class="cx e" title="测试和测量/光束分析 —— 尚无产品"></i><i class="cx e" title="测试和测量/光束分析仪配件 —— 尚无产品"></i><i class="cx l1" title="测试和测量/光束分析仪 10 个"></i><i class="cx l1" title="测试和测量/普通显微镜 20 个"></i><i class="cx l2" title="测试和测量/位移测量计 45 个"></i><i class="cx l3" title="测试和测量/传感器 207 个"></i><i class="cx l2" title="测试和测量/光纤检测工具 102 个"></i><i class="cx l3" title="测试和测量/光纤测试与测量 196 个"></i><i class="cx l2" title="测试和测量/气体分析 83 个"></i><i class="cx l2" title="测试和测量/干涉仪 76 个"></i><i class="cx e" title="测试和测量/激光能量计 —— 尚无产品"></i><i class="cx l1" title="测试和测量/激光功率计 15 个"></i><i class="cx l2" title="测试和测量/激光扫描和测距 48 个"></i><i class="cx l2" title="测试和测量/激光雷达 84 个"></i><i class="cx l2" title="测试和测量/材料分析和取证 32 个"></i><i class="cx l3" title="测试和测量/测量设备 341 个"></i><i class="cx l2" title="测试和测量/计量配件 64 个"></i><i class="cx l2" title="测试和测量/显微镜配件 37 个"></i><i class="cx l2" title="测试和测量/显微镜 58 个"></i><i class="cx l1" title="测试和测量/能量功率计 5 个"></i><i class="cx l1" title="测试和测量/单色仪 7 个"></i><i class="cx l1" title="测试和测量/光学池 13 个"></i><i class="cx l1" title="测试和测量/光学延迟线 5 个"></i><i class="cx l3" title="测试和测量/光学检测 198 个"></i><i class="cx l2" title="测试和测量/光学计量 82 个"></i><i class="cx l2" title="测试和测量/光功率计 96 个"></i><i class="cx l2" title="测试和测量/光谱分析仪 43 个"></i><i class="cx l1" title="测试和测量/光学表面轮廓仪 10 个"></i><i class="cx l1" title="测试和测量/光波长计 6 个"></i><i class="cx l1" title="测试和测量/脉冲发生器 13 个"></i><i class="cx l0" title="测试和测量/脉冲诊断器件 1 个"></i><i class="cx l1" title="测试和测量/扫描仪和测距仪 12 个"></i><i class="cx l2" title="测试和测量/尺寸测量 30 个"></i><i class="cx l1" title="测试和测量/太阳能系统 7 个"></i><i class="cx l2" title="测试和测量/光谱仪 74 个"></i><i class="cx l2" title="测试和测量/太赫兹 26 个"></i><i class="cx l1" title="测试和测量/太赫兹成像 5 个"></i><i class="cx l0" title="测试和测量/太赫兹时域 3 个"></i><i class="cx l1" title="测试和测量/散热解决方案 11 个"></i><i class="cx l1" title="测试和测量/波形发生器和分析仪 8 个"></i><i class="cx l3" title="测试和测量/其他分类测量仪器 407 个"></i><i class="cx l1" title="测试和测量/探针台 19 个"></i><i class="cx l3" title="测试和测量/探针台配件 127 个"></i></span><span class="mv mono">40/44</span><span class="gp">缺 4</span><span class="mp mono">2,626</span></div><div class="mrow"><span class="mn">光机械与配件</span><span class="mc"><i class="cx l3" title="光机械与配件/工具 353 个"></i><i class="cx e" title="光机械与配件/激光防护眼镜 —— 尚无产品"></i><i class="cx l4" title="光机械与配件/配件 1,265 个"></i><i class="cx l2" title="光机械与配件/光学平台 88 个"></i><i class="cx l3" title="光机械与配件/封装 129 个"></i><i class="cx l4" title="光机械与配件/PH杆架 515 个"></i><i class="cx l2" title="光机械与配件/光圈 26 个"></i><i class="cx l2" title="光机械与配件/底座 29 个"></i></span><span class="mv mono">7/8</span><span class="gp">缺 1</span><span class="mp mono">2,405</span></div><div class="mrow"><span class="mn">激光器和发光二极管</span><span class="mc"><i class="cx e" title="激光器和发光二极管/LED驱动器芯片 —— 尚无产品"></i><i class="cx l0" title="激光器和发光二极管/LED驱动模块 1 个"></i><i class="cx l2" title="激光器和发光二极管/发光二极管 27 个"></i><i class="cx l2" title="激光器和发光二极管/半导体激光器驱动器 25 个"></i><i class="cx l4" title="激光器和发光二极管/半导体激光器 646 个"></i><i class="cx l4" title="激光器和发光二极管/激光器模块和系统 756 个"></i><i class="cx l2" title="激光器和发光二极管/泵浦源 41 个"></i><i class="cx l2" title="激光器和发光二极管/半导体激光器配件 31 个"></i><i class="cx l2" title="激光器和发光二极管/超辐射发光二极管 66 个"></i></span><span class="mv mono">8/9</span><span class="gp">缺 1</span><span class="mp mono">1,593</span></div><div class="mrow"><span class="mn">运动控制</span><span class="mc"><i class="cx l2" title="运动控制/控制器和计量 26 个"></i><i class="cx l0" title="运动控制/编码器 3 个"></i><i class="cx l2" title="运动控制/电机和驱动器 64 个"></i><i class="cx l4" title="运动控制/手动台 509 个"></i><i class="cx l3" title="运动控制/电动台 386 个"></i><i class="cx l3" title="运动控制/定位器 148 个"></i></span><span class="mv mono">6/6</span><span class="mp mono">1,136</span></div><div class="mrow"><span class="mn">工业制造设备</span><span class="mc"><i class="cx l3" title="工业制造设备/自动化与控制 134 个"></i><i class="cx l2" title="工业制造设备/材料类生产设备 22 个"></i><i class="cx l2" title="工业制造设备/光学类生产设备 102 个"></i><i class="cx l3" title="工业制造设备/工具与机械 206 个"></i><i class="cx l2" title="工业制造设备/半导体制造设备 74 个"></i><i class="cx l3" title="工业制造设备/半导体封装设备 157 个"></i><i class="cx l3" title="工业制造设备/激光加工设备 198 个"></i></span><span class="mv mono">7/7</span><span class="mp mono">893</span></div><div class="mrow"><span class="mn">成像</span><span class="mc"><i class="cx e" title="成像/虚拟现实/增强现实 —— 尚无产品"></i><i class="cx l2" title="成像/内窥镜 39 个"></i><i class="cx l0" title="成像/CCD图像传感器 1 个"></i><i class="cx l0" title="成像/CMOS图像传感器 2 个"></i><i class="cx l3" title="成像/显示技术 220 个"></i><i class="cx l0" title="成像/高速传感器 2 个"></i><i class="cx l3" title="成像/红外成像 209 个"></i><i class="cx l3" title="成像/科学和工业相机 258 个"></i></span><span class="mv mono">7/8</span><span class="gp">缺 1</span><span class="mp mono">731</span></div><div class="mrow"><span class="mn">非激光光源与照明系统</span><span class="mc"><i class="cx l1" title="非激光光源与照明系统/校准标准 20 个"></i><i class="cx l3" title="非激光光源与照明系统/灯具 372 个"></i><i class="cx l2" title="非激光光源与照明系统/照明解决方案 60 个"></i><i class="cx l1" title="非激光光源与照明系统/光子源 16 个"></i><i class="cx l1" title="非激光光源与照明系统/紫外线系统 10 个"></i></span><span class="mv mono">5/5</span><span class="mp mono">478</span></div><div class="mrow"><span class="mn">光电器件</span><span class="mc"><i class="cx l2" title="光电器件/图像传感器 34 个"></i><i class="cx l3" title="光电器件/光电探测器 110 个"></i><i class="cx l2" title="光电器件/视觉传感器 35 个"></i><i class="cx l2" title="光电器件/光电二极管 25 个"></i><i class="cx e" title="光电器件/光电晶体管 —— 尚无产品"></i></span><span class="mv mono">4/5</span><span class="gp">缺 1</span><span class="mp mono">204</span></div><div class="mrow"><span class="mn">增值服务</span><span class="mc"><i class="cx l1" title="增值服务/定制与其他服务 21 个"></i><i class="cx l1" title="增值服务/技术服务 21 个"></i><i class="cx l2" title="增值服务/软件与数据服务 73 个"></i></span><span class="mv mono">3/3</span><span class="mp mono">115</span></div><div class="mrow"><span class="mn">行业应用与系统</span><span class="mc"><i class="cx l0" title="行业应用与系统/医疗与生命科学 1 个"></i><i class="cx l0" title="行业应用与系统/半导体与电子 1 个"></i><i class="cx l2" title="行业应用与系统/国防航空航天 27 个"></i><i class="cx e" title="行业应用与系统/工业制造 —— 尚无产品"></i><i class="cx e" title="行业应用与系统/科研教育 —— 尚无产品"></i><i class="cx e" title="行业应用与系统/通信与能源 —— 尚无产品"></i><i class="cx l0" title="行业应用与系统/通用应用 1 个"></i><i class="cx l0" title="行业应用与系统/汽车与智能交通 1 个"></i><i class="cx e" title="行业应用与系统/环境与公共事业 —— 尚无产品"></i><i class="cx l0" title="行业应用与系统/农业 2 个"></i></span><span class="mv mono">6/10</span><span class="gp">缺 4</span><span class="mp mono">33</span></div></div></div>
+</div></section>
+
+<section class="band"><div class="page">
+  <div class="kicker">01 / 缺口</div>
+  <h2>缺口集中在哪</h2>
+  <p class="note">覆盖率高不等于均匀。下面按覆盖百分比<b>升序</b>排 ——
+     排在最上面的才是真正需要补数据的方向。</p>
+  <div class="figure"><div class="cap"><span class="t">各一级分类的二级覆盖率</span><span class="n">百分比</span></div><div class="bars np"><span class="nm">行业应用与系统</span><span class="tr"><i style="width:60.00%;background:var(--blue)"></i></span><span class="vn">60%</span><span class="nm">光电器件</span><span class="tr"><i style="width:80.00%;background:var(--blue)"></i></span><span class="vn">80%</span><span class="nm">成像</span><span class="tr"><i style="width:88.00%;background:var(--blue)"></i></span><span class="vn">88%</span><span class="nm">光机械与配件</span><span class="tr"><i style="width:88.00%;background:var(--blue)"></i></span><span class="vn">88%</span><span class="nm">激光器和发光二极管</span><span class="tr"><i style="width:89.00%;background:var(--blue)"></i></span><span class="vn">89%</span><span class="nm">测试和测量</span><span class="tr"><i style="width:91.00%;background:var(--blue)"></i></span><span class="vn">91%</span><span class="nm">增值服务</span><span class="tr"><i style="width:100.00%;background:var(--blue)"></i></span><span class="vn">100%</span><span class="nm">非激光光源与照明系统</span><span class="tr"><i style="width:100.00%;background:var(--blue)"></i></span><span class="vn">100%</span><span class="nm">工业制造设备</span><span class="tr"><i style="width:100.00%;background:var(--blue)"></i></span><span class="vn">100%</span><span class="nm">运动控制</span><span class="tr"><i style="width:100.00%;background:var(--blue)"></i></span><span class="vn">100%</span><span class="nm">光纤元件</span><span class="tr"><i style="width:100.00%;background:var(--blue)"></i></span><span class="vn">100%</span><span class="nm">光学元件</span><span class="tr"><i style="width:100.00%;background:var(--blue)"></i></span><span class="vn">100%</span></div></div>
+
+  <div class="aside warn"><div class="h">命名不一致</div>有 1 个分类出现在数据里、但不在标准体系中：<b>成像/虚拟现实</b>。多半是同义词被当成了新类（例如「成像/虚拟现实」与标准的「成像/虚拟现实增强现实」）。这类要么并回标准类，要么正式纳入体系，留着会让覆盖率既算不准也对不齐。</div>
+
+  <h3>完全空白的 12 个二级分类</h3>
+  <p class="note">按所属一级分类的产品量升序 —— 排在前面的是"整类都薄"，
+     排在后面的是"这一类明明有量，偏偏缺这一项"，后者更值得优先补。</p>
+  <div class="tblbox"><table>
+    <thead><tr><th>一级分类</th><th>空白的二级分类</th><th class="n">该一级分类产品数</th><th>判断</th></tr></thead>
+    <tbody><tr><td class="k">行业应用与系统</td><td>工业制造</td><td class="n">33</td><td><span class="tag warn">整类都薄</span></td></tr><tr><td class="k">行业应用与系统</td><td>科研教育</td><td class="n">33</td><td><span class="tag warn">整类都薄</span></td></tr><tr><td class="k">行业应用与系统</td><td>通信与能源</td><td class="n">33</td><td><span class="tag warn">整类都薄</span></td></tr><tr><td class="k">行业应用与系统</td><td>环境与公共事业</td><td class="n">33</td><td><span class="tag warn">整类都薄</span></td></tr><tr><td class="k">光电器件</td><td>光电晶体管</td><td class="n">204</td><td><span class="tag ">该类有量，独缺此项</span></td></tr><tr><td class="k">成像</td><td>虚拟现实/增强现实</td><td class="n">731</td><td><span class="tag ">该类有量，独缺此项</span></td></tr><tr><td class="k">激光器和发光二极管</td><td>LED驱动器芯片</td><td class="n">1,593</td><td><span class="tag ">该类有量，独缺此项</span></td></tr><tr><td class="k">光机械与配件</td><td>激光防护眼镜</td><td class="n">2,405</td><td><span class="tag ">该类有量，独缺此项</span></td></tr><tr><td class="k">测试和测量</td><td>三维扫描仪</td><td class="n">2,626</td><td><span class="tag ">该类有量，独缺此项</span></td></tr><tr><td class="k">测试和测量</td><td>光束分析</td><td class="n">2,626</td><td><span class="tag ">该类有量，独缺此项</span></td></tr><tr><td class="k">测试和测量</td><td>光束分析仪配件</td><td class="n">2,626</td><td><span class="tag ">该类有量，独缺此项</span></td></tr><tr><td class="k">测试和测量</td><td>激光能量计</td><td class="n">2,626</td><td><span class="tag ">该类有量，独缺此项</span></td></tr></tbody></table></div>
+</div></section>
+
+<footer class="foot"><div class="page">分类覆盖报告 · 自包含单文件，无外部依赖 ·
+  分母为 config/company_categories.json 定义的标准分类体系</div></footer></body></html>
