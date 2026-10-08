@@ -1,0 +1,2235 @@
+{
+  "Calibration Standard": {
+    "zh": "校准标准",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Calibration Source": {
+    "zh": "校准光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Spectral Calibration Lamp": {
+    "zh": "光谱校准灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Radiometric Standard": {
+    "zh": "辐射度标准",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Irradiance Standard": {
+    "zh": "辐照度标准",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Reflectance Standard": {
+    "zh": "反射率标准",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Diffuse Reflectance Standard": {
+    "zh": "漫反射率标准",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Reflectance Target": {
+    "zh": "反射率标板",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Color Calibration Target": {
+    "zh": "色彩校准标板",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Color Reference Target": {
+    "zh": "色彩参考标板",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Gray Reference Target": {
+    "zh": "灰度参考标板",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "White Reference Standard": {
+    "zh": "白参考标准",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Integrating Sphere Standard": {
+    "zh": "积分球标准",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Sphere Calibration Standard": {
+    "zh": "积分球校准标准",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Flux Standard": {
+    "zh": "光通量标准",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Luminance Standard": {
+    "zh": "亮度标准",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Illuminance Standard": {
+    "zh": "照度标准",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "NIST Traceable Standard": {
+    "zh": "NIST可溯源标准",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "NIST Traceable Lamp": {
+    "zh": "NIST可溯源标准灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Calibration Artifact": {
+    "zh": "校准标准件",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Optical Calibration Standard": {
+    "zh": "光学校准标准",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Reference Source": {
+    "zh": "参考光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Reference Lamp": {
+    "zh": "参考标准灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Calibration Kit": {
+    "zh": "校准套件",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Optical Reference Standard": {
+    "zh": "光学参考标准",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Lamp": {
+    "zh": "灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Light Source": {
+    "zh": "光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Light Source": {
+    "zh": "LED光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Illuminator": {
+    "zh": "LED照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "White LED Light Source": {
+    "zh": "白光LED光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Light Source": {
+    "zh": "光纤光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Halogen Lamp": {
+    "zh": "卤素灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Tungsten Lamp": {
+    "zh": "钨丝灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Tungsten Halogen Lamp": {
+    "zh": "钨卤灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Xenon Lamp": {
+    "zh": "氙灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Short Arc Xenon Lamp": {
+    "zh": "短弧氙灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Mercury Lamp": {
+    "zh": "汞灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Deuterium Tungsten Lamp": {
+    "zh": "氘钨灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "D2 Lamp": {
+    "zh": "氘灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Pulse Lamp": {
+    "zh": "脉冲灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Infrared Lamp": {
+    "zh": "红外灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "UV Lamp": {
+    "zh": "紫外灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laboratory Light Source": {
+    "zh": "实验室光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Illumination System": {
+    "zh": "照明系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Lighting System": {
+    "zh": "照明系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Machine Vision Lighting": {
+    "zh": "机器视觉光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Industrial Lighting": {
+    "zh": "工业照明",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Ring Light": {
+    "zh": "环形光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Ring Light": {
+    "zh": "LED环形光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Bar Light": {
+    "zh": "条形光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Linear Light": {
+    "zh": "线形光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Backlight": {
+    "zh": "背光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Backlight": {
+    "zh": "LED背光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Coaxial Light": {
+    "zh": "同轴光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Coaxial Illuminator": {
+    "zh": "同轴照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Dome Light": {
+    "zh": "穹顶光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Diffuse Dome Light": {
+    "zh": "漫射穹顶光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Spot Light": {
+    "zh": "点光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Spot Light": {
+    "zh": "LED点光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Line Light": {
+    "zh": "线光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Line Light": {
+    "zh": "LED线光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Structured Light": {
+    "zh": "结构光",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pattern Projector": {
+    "zh": "图案投射器",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Dark Field Illuminator": {
+    "zh": "暗场照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Bright Field Illuminator": {
+    "zh": "明场照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Telecentric Illuminator": {
+    "zh": "远心照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Diffuse Illuminator": {
+    "zh": "漫射照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Microscope Illuminator": {
+    "zh": "显微镜照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Optic Illuminator": {
+    "zh": "光纤照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Inspection Lighting": {
+    "zh": "检测光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Vision Lighting": {
+    "zh": "视觉光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "LED Illumination Module": {
+    "zh": "LED照明模块",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Lighting Module": {
+    "zh": "照明模块",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Photon Source": {
+    "zh": "光子源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Broadband Light Source": {
+    "zh": "宽带光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Broadband Source": {
+    "zh": "宽带光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Continuum Light Source": {
+    "zh": "连续谱光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Supercontinuum Source": {
+    "zh": "超连续谱光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Supercontinuum Light Source": {
+    "zh": "超连续谱光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Blackbody Radiator": {
+    "zh": "黑体辐射源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Infrared Blackbody": {
+    "zh": "红外黑体源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Spectroscopy Source": {
+    "zh": "光谱学光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Xenon Broadband Source": {
+    "zh": "氙灯宽带光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Plasma Broadband Source": {
+    "zh": "等离子体宽带光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "UV VIS NIR Light Source": {
+    "zh": "紫外可见近红外光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "UV VIS IR Source": {
+    "zh": "紫外可见红外光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Photon Generator": {
+    "zh": "光子发生器",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Photonics Source": {
+    "zh": "光子学光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Free Electron Laser Source": {
+    "zh": "自由电子激光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "FEL Source": {
+    "zh": "自由电子激光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Synchrotron Radiation Source": {
+    "zh": "同步辐射光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "VUV Source": {
+    "zh": "真空紫外光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "EUV Source": {
+    "zh": "极紫外光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "THz Source": {
+    "zh": "太赫兹源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "Terahertz Source": {
+    "zh": "太赫兹源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "UV System": {
+    "zh": "紫外线系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ultraviolet System": {
+    "zh": "紫外线系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "UV Light Source": {
+    "zh": "紫外光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "UV Illumination System": {
+    "zh": "紫外照明系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "UV LED Curing System": {
+    "zh": "UV LED固化系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mask Aligner UV System": {
+    "zh": "光刻机紫外系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "UV Inspection System": {
+    "zh": "紫外检测系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "UV Fluorescence System": {
+    "zh": "紫外荧光系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "UV Fluorescence Illuminator": {
+    "zh": "紫外荧光照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "UV Germicidal Lamp": {
+    "zh": "紫外杀菌灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "UVC Sterilizer": {
+    "zh": "UVC消毒器",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "UV Flood System": {
+    "zh": "UV面光固化系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "UV Spot System": {
+    "zh": "UV点光固化系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "UV Line System": {
+    "zh": "UV线光固化系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Deep UV System": {
+    "zh": "深紫外系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "DUV Light Source": {
+    "zh": "深紫外光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "UVA System": {
+    "zh": "UVA系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "UVB System": {
+    "zh": "UVB系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "UVC System": {
+    "zh": "UVC系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "Excimer UV System": {
+    "zh": "准分子紫外系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "High Power LED": {
+    "zh": "大功率LED",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "High Power LED Light Source": {
+    "zh": "大功率LED光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Multi Channel LED Light Source": {
+    "zh": "多通道LED光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Multi Wavelength LED Source": {
+    "zh": "多波长LED光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "RGB LED Light Source": {
+    "zh": "RGB LED光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Monochromatic LED Source": {
+    "zh": "单色LED光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cold Light Source": {
+    "zh": "冷光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cold Fiber Light Source": {
+    "zh": "光纤冷光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Cold Light Source": {
+    "zh": "光纤冷光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Gooseneck Illuminator": {
+    "zh": "鹅颈式照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Dual Gooseneck Illuminator": {
+    "zh": "双鹅颈照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Optic Gooseneck": {
+    "zh": "光纤鹅颈照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Microscope Light Source": {
+    "zh": "显微镜光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Microscope LED Illuminator": {
+    "zh": "显微镜LED照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fluorescence Light Source": {
+    "zh": "荧光光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fluorescence Illuminator": {
+    "zh": "荧光照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Excitation Light Source": {
+    "zh": "激发光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Excitation Illuminator": {
+    "zh": "激发照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Medical Light Source": {
+    "zh": "医用光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Endoscope Light Source": {
+    "zh": "内窥镜光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Surgical Light Source": {
+    "zh": "手术光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "High Intensity Illuminator": {
+    "zh": "高强度照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Precision Light Source": {
+    "zh": "精密光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Compact LED Light Source": {
+    "zh": "紧凑型LED光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "OEM LED Light Source": {
+    "zh": "OEM LED光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Modular LED Light Source": {
+    "zh": "模块化LED光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Scientific Light Source": {
+    "zh": "科学光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Research Light Source": {
+    "zh": "科研光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Machine Vision Illuminator": {
+    "zh": "机器视觉照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Vision Illuminator": {
+    "zh": "视觉照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Vision Light": {
+    "zh": "视觉光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Area Light": {
+    "zh": "LED面光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Area Light": {
+    "zh": "面光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Diffuse Area Light": {
+    "zh": "漫射面光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Flat Dome Light": {
+    "zh": "平面穹顶光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Flat Diffuse Light": {
+    "zh": "平面漫射光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Low Angle Ring Light": {
+    "zh": "低角度环形光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Angle Ring Light": {
+    "zh": "高角度环形光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Segmented Ring Light": {
+    "zh": "分段环形光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Quadrant Ring Light": {
+    "zh": "四分区环形光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "RGB Ring Light": {
+    "zh": "RGB环形光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "RGB Area Light": {
+    "zh": "RGB面光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "High Intensity Ring Light": {
+    "zh": "高强度环形光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Telecentric Backlight": {
+    "zh": "远心背光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Collimated Backlight": {
+    "zh": "准直背光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Edge Backlight": {
+    "zh": "侧入式背光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Large Area Backlight": {
+    "zh": "大面积背光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Diffuse Backlight": {
+    "zh": "漫射背光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Axial Illuminator": {
+    "zh": "轴向照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "On Axis Illuminator": {
+    "zh": "同轴照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Low Angle Illuminator": {
+    "zh": "低角度照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Dark Field Ring Light": {
+    "zh": "暗场环形光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Bright Field Ring Light": {
+    "zh": "明场环形光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Oblique Illuminator": {
+    "zh": "斜射照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Diffuse Coaxial Light": {
+    "zh": "漫射同轴光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Machine Vision Lighting Controller": {
+    "zh": "机器视觉光源控制器",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "LED Lighting Controller": {
+    "zh": "LED光源控制器",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Scientific Light Engine": {
+    "zh": "科学光引擎",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Spectroscopy Light Source": {
+    "zh": "光谱学光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Spectral Light Source": {
+    "zh": "光谱光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Reference Light Source": {
+    "zh": "参考光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Radiometric Light Source": {
+    "zh": "辐射度光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Photometric Light Source": {
+    "zh": "光度光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Integrating Sphere Light Source": {
+    "zh": "积分球光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Integrating Sphere Illuminator": {
+    "zh": "积分球照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Solar Simulator": {
+    "zh": "太阳光模拟器",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Class AAA Solar Simulator": {
+    "zh": "AAA级太阳光模拟器",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "White Light Source": {
+    "zh": "白光光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Tunable White Light Source": {
+    "zh": "可调白光光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Broadband Xenon Source": {
+    "zh": "宽带氙灯光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Xenon Arc Lamp": {
+    "zh": "氙弧灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mercury Xenon Lamp": {
+    "zh": "汞氙灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Deuterium Light Source": {
+    "zh": "氘灯光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Deuterium Halogen Source": {
+    "zh": "氘卤光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Halogen Light Source": {
+    "zh": "卤素光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Quartz Tungsten Halogen Lamp": {
+    "zh": "石英钨卤灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "QTH Light Source": {
+    "zh": "石英钨卤光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Plasma Light Source": {
+    "zh": "等离子体光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Driven Light Source": {
+    "zh": "激光驱动光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LDLS": {
+    "zh": "激光驱动光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "NIR Light Source": {
+    "zh": "近红外光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "SWIR Light Source": {
+    "zh": "短波红外光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "VIS NIR Light Source": {
+    "zh": "可见近红外光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Spectral Calibration Source": {
+    "zh": "光谱校准光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Wavelength Calibration Source": {
+    "zh": "波长校准光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Radiance Standard": {
+    "zh": "辐亮度标准",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "UV LED Light Source": {
+    "zh": "UV LED光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "UV LED Module": {
+    "zh": "UV LED模块",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "UV LED System": {
+    "zh": "UV LED系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Deep UV LED": {
+    "zh": "深紫外LED",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "DUV LED": {
+    "zh": "深紫外LED",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "UVC LED": {
+    "zh": "UVC LED",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "UV Curing System": {
+    "zh": "UV固化系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "UV Curing Lamp": {
+    "zh": "UV固化灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "UV Spot Cure System": {
+    "zh": "UV点固化系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "UV Flood Curing System": {
+    "zh": "UV面固化系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "UV Conveyor System": {
+    "zh": "UV传送带固化系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "UV Exposure System": {
+    "zh": "UV曝光系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "UV Exposure Unit": {
+    "zh": "UV曝光机",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "UV Irradiation System": {
+    "zh": "UV辐照系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "UV Inspection Light": {
+    "zh": "紫外检测灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "UV Fluorescence Light": {
+    "zh": "紫外荧光灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Black Light": {
+    "zh": "黑光灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Blacklight LED": {
+    "zh": "黑光LED",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Mercury UV Lamp": {
+    "zh": "汞紫外灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Metal Halide UV Lamp": {
+    "zh": "金卤紫外灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Excimer Lamp": {
+    "zh": "准分子灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Excimer UV Source": {
+    "zh": "准分子紫外源",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Far UV Source": {
+    "zh": "远紫外源",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Far UVC Lamp": {
+    "zh": "远UVC灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "185nm UV Source": {
+    "zh": "185nm紫外源",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "222nm Excimer Lamp": {
+    "zh": "222nm准分子灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "254nm Germicidal Lamp": {
+    "zh": "254nm杀菌灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "UV Disinfection System": {
+    "zh": "紫外消毒系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "UV Sterilization System": {
+    "zh": "紫外灭菌系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "UV Ozone System": {
+    "zh": "紫外臭氧系统",
+    "category1": "非激光光源与照明系统",
+    "category2": "紫外线系统",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Infrared Light Source": {
+    "zh": "红外光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "IR Light Source": {
+    "zh": "红外光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Near Infrared Light Source": {
+    "zh": "近红外光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "NIR Illuminator": {
+    "zh": "近红外照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "SWIR Illuminator": {
+    "zh": "短波红外照明器",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "MWIR Source": {
+    "zh": "中波红外光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "LWIR Source": {
+    "zh": "长波红外光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Mid Infrared Source": {
+    "zh": "中红外光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Thermal Radiation Source": {
+    "zh": "热辐射源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Thermal Emitter": {
+    "zh": "热辐射发射体",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Infrared Emitter": {
+    "zh": "红外发射体",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Broadband Infrared Source": {
+    "zh": "宽带红外光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Infrared Calibration Source": {
+    "zh": "红外校准源",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Blackbody Source": {
+    "zh": "黑体源",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Blackbody Calibrator": {
+    "zh": "黑体校准器",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Blackbody Calibration Source": {
+    "zh": "黑体校准源",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Variable Temperature Blackbody": {
+    "zh": "变温黑体",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Extended Area Blackbody": {
+    "zh": "大面源黑体",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cavity Blackbody": {
+    "zh": "腔式黑体",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Portable Blackbody": {
+    "zh": "便携式黑体",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Reference Blackbody": {
+    "zh": "参考黑体",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Infrared Reference Source": {
+    "zh": "红外参考源",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Emissivity Reference": {
+    "zh": "发射率参考件",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Radiance Source": {
+    "zh": "辐亮度源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Uniform Radiance Source": {
+    "zh": "均匀辐亮度源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Extended Area Radiance Source": {
+    "zh": "大面积辐亮度源",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Thermal Imaging Test Source": {
+    "zh": "热成像测试源",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Infrared Test Target": {
+    "zh": "红外测试标板",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Arc Lamp": {
+    "zh": "弧光灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Short Arc Lamp": {
+    "zh": "短弧灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Long Arc Lamp": {
+    "zh": "长弧灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Xenon Flash Lamp": {
+    "zh": "氙闪光灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Flash Lamp": {
+    "zh": "闪光灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pulse Flash Lamp": {
+    "zh": "脉冲闪光灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Mercury Arc Lamp": {
+    "zh": "汞弧灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Metal Halide Lamp": {
+    "zh": "金属卤化物灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Quartz Halogen Lamp": {
+    "zh": "石英卤素灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Quartz Tungsten Halogen": {
+    "zh": "石英钨卤灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "QTH Lamp": {
+    "zh": "石英钨卤灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Deuterium Lamp": {
+    "zh": "氘灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Hydrogen Lamp": {
+    "zh": "氢灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Hollow Cathode Lamp": {
+    "zh": "空心阴极灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Multi Element Hollow Cathode Lamp": {
+    "zh": "多元素空心阴极灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Electrodeless Discharge Lamp": {
+    "zh": "无极放电灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "EDL Lamp": {
+    "zh": "无极放电灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Spectral Lamp": {
+    "zh": "光谱灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Emission Lamp": {
+    "zh": "发射光谱灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Line Source Lamp": {
+    "zh": "线光源灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Atomic Spectroscopy Lamp": {
+    "zh": "原子光谱灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "光子源",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Calibration Lamp": {
+    "zh": "校准灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Wavelength Calibration Lamp": {
+    "zh": "波长校准灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Intensity Calibration Lamp": {
+    "zh": "强度校准灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Radiometric Calibration Lamp": {
+    "zh": "辐射度校准灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Irradiance Standard Lamp": {
+    "zh": "辐照度标准灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Spectral Irradiance Standard": {
+    "zh": "光谱辐照度标准",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Radiance Standard Lamp": {
+    "zh": "辐亮度标准灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Standard Lamp": {
+    "zh": "标准灯",
+    "category1": "非激光光源与照明系统",
+    "category2": "校准标准",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Light Guide": {
+    "zh": "导光",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Liquid Light Guide": {
+    "zh": "液体光导",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Light Guide": {
+    "zh": "光纤导光",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Flexible Light Guide": {
+    "zh": "柔性导光",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Dual Branch Light Guide": {
+    "zh": "双分支导光",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Ring Light Guide": {
+    "zh": "环形导光",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Line Light Guide": {
+    "zh": "线状导光",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Bundle": {
+    "zh": "光纤束",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Bundle": {
+    "zh": "光纤束",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Light Pipe": {
+    "zh": "导光管",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Light Pipe Assembly": {
+    "zh": "导光管组件",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Diffuser": {
+    "zh": "漫射器",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Diffuser": {
+    "zh": "光学漫射器",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Diffuser Plate": {
+    "zh": "漫射板",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Light Homogenizer": {
+    "zh": "光匀化器",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Homogenizer": {
+    "zh": "光束匀化器",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Collimator": {
+    "zh": "准直器",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Collimating Lens": {
+    "zh": "准直透镜",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Light Condenser": {
+    "zh": "聚光器",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Condenser Lens": {
+    "zh": "聚光镜",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Light Source Controller": {
+    "zh": "光源控制器",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Controller": {
+    "zh": "LED控制器",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Driver": {
+    "zh": "LED驱动器",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Lighting Controller": {
+    "zh": "照明控制器",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Lighting Power Supply": {
+    "zh": "照明电源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Light Source Power Supply": {
+    "zh": "光源电源",
+    "category1": "非激光光源与照明系统",
+    "category2": "照明解决方案",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Lamp Housing": {
+    "zh": "灯罩壳体",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Lamp Adapter": {
+    "zh": "灯适配器",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Lamp Holder": {
+    "zh": "灯座",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Filter Holder": {
+    "zh": "滤光片夹持器",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "LLBGR": {
+    "zh": "LLBGR机器视觉光源",
+    "category1": "非激光光源与照明系统",
+    "category2": "灯具",
+    "enable": true,
+    "confidence": 1.0
+  }
+}
