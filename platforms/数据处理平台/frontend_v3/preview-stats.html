@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>统计页改版样图 · 数据处理平台</title>
+<style>
+/* ══════════════════════════════════════════════════════════════════════════
+   frontend_v3 样图 —— 参考 kimi.page《推理芯片的四十二年》的排版语言
+
+   借过来的四件事：
+     ① 零卡片：不用圆角/阴影/填充块，分区一律靠 border-top 一条 1px 细线
+     ② 衬线体做正文与数字（原版 et-book，本地无字体文件 → 落到宋体系）
+     ③ 等宽小字 + 大字距（letter-spacing:.26em）当标签/章节号/表头
+     ④ 单一强调色（电光蓝 #2251ff），只用在 kicker、章节号、当前项
+
+   刻意保留的两件事（原平台 style.css 的既有约定，不改）：
+     · 状态色 ok/warn/err/ai 语义不变
+     · 图表色板 --d1..--d8 是过了 dataviz 校验的，一个色值都没动
+   ══════════════════════════════════════════════════════════════════════════ */
+:root{
+  --paper:#ffffff; --paper-hi:#f7f9fc;
+  --ink:#051c2c; --ink-md:#42566a; --ink-lo:#8595a6;
+  --line:#dbe2ea; --line-lo:#eef1f6;
+  --blue:#2251ff; --blue-hi:#1233b8;
+
+  /* 状态色：沿用原平台语义 */
+  --ok:#0e7c55; --warn:#a05a00; --err:#c0332b; --ai:#6a4fbf;
+
+  /* 图表色板：原平台已验证，未改动 */
+  --d1:#2A78D6; --d2:#EB6834; --d3:#1BAF7A; --d4:#EDA100;
+  --d5:#E87BA4; --d6:#008300; --d7:#4A3AA7; --d8:#E34948;
+
+  /* 字体分工（与原版不同，原因写在这里）：
+     原版 --sans 直接指向衬线，整页都是 et-book。但那套字 Windows 上没有，中文会落到
+     宋体 SimSun —— 大字尚可，14px 以下的表格文字会发虚、粗体靠合成涂抹。
+     所以这里拆成两支：衬线只用于标题和大数字（气质来源），密集小字走无衬线。 */
+  --serif:"Source Han Serif SC","Noto Serif SC","Songti SC","SimSun","宋体",Georgia,serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif;
+  --mono:"Cascadia Mono","JetBrains Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);
+  font-size:17px;line-height:1.68;-webkit-font-smoothing:antialiased}
+
+/* 栏宽三档：正文窄栏、图表中栏、数据表宽栏。
+   原版只有 692/800 两档，但这个平台的表列多，硬塞进 800 会挤，所以加了 1120 的宽栏。 */
+/* 一个外框定死左缘，正文靠内部 max-width 收窄 —— 不要让不同栏宽各自居中，
+   那样每段的左边缘都不在一条线上，页面会散。 */
+.prose,.wide,.data{max-width:1120px;margin:0 auto;padding:0 24px}
+.prose > *,.masthead .mast-meta{max-width:692px}
+.wide .figure{max-width:880px}
+
+.band{padding:44px 0 52px;border-top:1px solid var(--line-lo)}
+.band:first-of-type{border-top:0}
+
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
+
+/* ── 标签体系：等宽 + 大字距，是这套设计的骨架 ─────────────────────────── */
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.26em;color:var(--blue);
+  text-transform:uppercase;margin-bottom:14px}
+.eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--ink-lo);
+  text-transform:uppercase}
+
+h1{font-family:var(--serif);font-size:clamp(38px,5.2vw,56px);font-weight:700;
+  line-height:1.08;letter-spacing:-.01em;margin:0 0 18px}
+h2{font-family:var(--serif);font-size:32px;font-weight:700;line-height:1.25;
+  letter-spacing:-.005em;margin:0 0 16px}
+h3{font-family:var(--serif);font-size:19px;font-weight:700;line-height:1.4;margin:30px 0 12px}
+p{margin:0 0 14px;color:var(--ink-md)}
+.lede{font-family:var(--serif);font-size:19px;line-height:1.62;color:var(--ink-md);margin-bottom:22px}
+.note{font-size:14px;line-height:1.62;color:var(--ink-lo)}
+b,strong{font-weight:700;color:var(--ink)}
+
+/* ── 报头 ─────────────────────────────────────────────────────────────── */
+.masthead{padding:56px 0 34px}
+.mast-meta{display:flex;flex-wrap:wrap;gap:0 28px;padding-top:14px;
+  border-top:1px solid var(--line);font-family:var(--mono);font-size:11.5px;color:var(--ink-lo)}
+.mast-meta b{color:var(--ink);font-weight:400}
+
+/* ── 周期选择：不用按钮组，用带下划线的标签页 ───────────────────────────── */
+.periods{display:flex;align-items:flex-end;gap:26px;
+  border-bottom:1px solid var(--line);margin:6px 0 0}
+.periods button{background:0;border:0;padding:0 0 9px;cursor:pointer;
+  font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--ink-lo);
+  border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .12s}
+.periods button:hover{color:var(--ink-md)}
+.periods button.on{color:var(--blue);border-bottom-color:var(--blue)}
+.periods .spacer{flex:1}
+.periods .cust{padding-bottom:7px;font-family:var(--mono);font-size:11.5px;color:var(--ink-lo)}
+.periods .cust input{width:52px;padding:2px 5px;font-family:var(--mono);font-size:11.5px;
+  border:0;border-bottom:1px solid var(--line);background:0;color:var(--ink);text-align:center}
+.periods .cust input:focus{outline:0;border-bottom-color:var(--blue)}
+
+.rangebar{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 14px;
+  padding:12px 0 0;font-family:var(--mono);font-size:11.5px;color:var(--ink-lo)}
+.rangebar .cur{color:var(--blue);letter-spacing:.06em}
+
+/* ── 指标：一条上边线 + 等宽小标签 + 大衬线数字 ──────────────────────────── */
+.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:0 26px;margin-top:30px}
+.metric{border-top:1px solid var(--line);padding-top:9px;min-width:0}
+.metric .lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--ink-lo);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.metric .val{font-family:var(--serif);font-size:34px;font-weight:700;line-height:1.15;
+  margin-top:5px;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.metric .val small{font-size:14px;font-weight:400;color:var(--ink-lo);margin-left:3px}
+.metric .sub{font-family:var(--mono);font-size:10.5px;color:var(--ink-lo);margin-top:2px}
+.metric.acc .val{color:var(--blue)}
+.metric.warn .val{color:var(--warn)}
+.metric.ai .val{color:var(--ai)}
+
+/* ── 图表：无边框无背景，只有一条上边线 ─────────────────────────────────── */
+.figure{border-top:1px solid var(--line);padding:14px 0 6px;margin:34px 0 0}
+.figure .cap{display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  margin-bottom:16px}
+.figure .cap .t{font-family:var(--serif);font-size:16px;font-weight:700}
+.figure .cap .n{font-family:var(--mono);font-size:11px;color:var(--ink-lo);letter-spacing:.06em}
+.figure .sub{font-size:13.5px;color:var(--ink-lo);margin:-10px 0 16px;line-height:1.55}
+
+/* 部分-整体堆叠条：不加圆角，段间靠 1px 白缝分隔 */
+.stack{display:flex;height:30px;width:100%;overflow:hidden}
+.stack i{display:block;height:100%;box-shadow:inset -1px 0 0 #fff}
+.stack i:last-child{box-shadow:none}
+.legend{display:flex;flex-wrap:wrap;gap:5px 20px;margin-top:13px}
+.legend .li{display:flex;align-items:center;gap:7px;font-size:13.5px;color:var(--ink-md)}
+.legend .sw{width:9px;height:9px;flex:0 0 auto}
+.legend .li .n{font-family:var(--mono);font-size:11.5px;color:var(--ink-lo)}
+
+/* 横向条：名称在左、条在中、数字在右，全部基线对齐 */
+.bars{display:grid;grid-template-columns:max-content 1fr max-content max-content;
+  gap:9px 14px;align-items:center}
+.bars .nm{font-size:14.5px;white-space:nowrap}
+.bars .tr{height:11px;background:var(--line-lo);position:relative}
+.bars .tr i{position:absolute;left:0;top:0;bottom:0;background:var(--ink)}
+.bars .vn{font-family:var(--mono);font-size:12.5px;text-align:right;color:var(--ink)}
+.bars .pc{font-family:var(--mono);font-size:11px;text-align:right;color:var(--ink-lo);min-width:44px}
+
+/* ── 表格：只有横线，表头等宽小字 ───────────────────────────────────────── */
+.tbl{width:100%;border-collapse:collapse;margin-top:6px}
+.tbl th{font-family:var(--mono);font-size:10.5px;font-weight:400;letter-spacing:.08em;
+  text-align:left;color:var(--ink-lo);padding:7px 12px 7px 0;border-bottom:1px solid var(--line);
+  text-transform:uppercase;white-space:nowrap}
+.tbl td{padding:8px 12px 8px 0;border-bottom:1px solid var(--line-lo);
+  color:var(--ink-md);vertical-align:baseline;font-size:14.5px}
+.tbl td.n,.tbl th.n{text-align:right;font-family:var(--mono);font-size:12.5px;
+  font-variant-numeric:tabular-nums}
+.tbl td.co{color:var(--ink);font-size:14.5px}
+.tbl tr.out td{color:var(--ink-lo)}
+.tbl tr:hover td{background:var(--paper-hi)}
+.tbl .microbar{display:inline-block;width:64px;height:7px;background:var(--line-lo);
+  vertical-align:middle;margin-left:9px;position:relative}
+.tbl .microbar i{position:absolute;left:0;top:0;bottom:0;background:var(--ink-lo)}
+
+/* 状态标：不用胶囊底色，用一个小方点 + 文字 */
+.st{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);
+  font-size:11px;letter-spacing:.04em;color:var(--ink-lo);white-space:nowrap}
+.st::before{content:"";width:6px;height:6px;flex:0 0 auto;background:var(--ink-lo)}
+.st.ok{color:var(--ok)} .st.ok::before{background:var(--ok)}
+.st.warn{color:var(--warn)} .st.warn::before{background:var(--warn)}
+.st.err{color:var(--err)} .st.err::before{background:var(--err)}
+.st.ai{color:var(--ai)} .st.ai::before{background:var(--ai)}
+
+/* ── 旁注：上下两条线，无底色 ───────────────────────────────────────────── */
+.aside{margin:30px 0;padding:15px 0 16px;border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);font-size:15px;line-height:1.62;color:var(--ink-md)}
+.aside .h{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--blue);
+  text-transform:uppercase;margin-bottom:7px}
+
+/* ── 导出面板 ───────────────────────────────────────────────────────────── */
+.exgrid{display:grid;grid-template-columns:1fr max-content;gap:26px;align-items:end;
+  border-top:1px solid var(--line);padding-top:14px;margin-top:6px}
+.field .fl{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;
+  color:var(--ink-lo);text-transform:uppercase;margin-bottom:7px}
+.segline{display:flex;gap:22px}
+.segline button{background:0;border:0;padding:0 0 6px;cursor:pointer;font-family:var(--mono);
+  font-size:12px;color:var(--ink-lo);border-bottom:2px solid transparent}
+.segline button.on{color:var(--blue);border-bottom-color:var(--blue)}
+.btn{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  padding:10px 22px;background:var(--ink);color:#fff;border:0;cursor:pointer;white-space:nowrap}
+.btn:hover{background:var(--blue)}
+.btn.ghost{background:0;color:var(--ink-md);border:1px solid var(--line)}
+.btn.ghost:hover{background:0;color:var(--blue);border-color:var(--blue)}
+.chks{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:12px;font-family:var(--mono);
+  font-size:11.5px;color:var(--ink-lo)}
+.chks label{cursor:pointer}
+
+.scrollbox{max-height:460px;overflow:auto;margin-top:14px}
+
+/* 对照区：左右两半，中间一条竖线 */
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:0 34px}
+.cmp > div:last-child{border-left:1px solid var(--line-lo);padding-left:34px}
+
+.foot{border-top:1px solid var(--line);margin-top:44px;padding:20px 0 60px;
+  font-family:var(--mono);font-size:11px;color:var(--ink-lo);letter-spacing:.04em}
+
+@media (max-width:900px){
+  .metrics{grid-template-columns:repeat(3,1fr);gap:22px 20px}
+  .cmp{grid-template-columns:1fr}
+  .cmp > div:last-child{border-left:0;padding-left:0;border-top:1px solid var(--line-lo);
+    padding-top:24px;margin-top:24px}
+  .exgrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ── 报头 ──────────────────────────────────────────────────────────────── -->
+<header class="masthead">
+  <div class="prose">
+    <div class="kicker">数据处理平台 / 映射构成与趋势</div>
+    <h1>本周期的产品分类映射构成</h1>
+    <p class="lede" id="lede">—</p>
+    <div class="mast-meta">
+      <span>生成于 <b id="m-gen">—</b></span>
+      <span>周期 <b id="m-range">—</b></span>
+      <span>口径 <b>映射记忆快照</b></span>
+    </div>
+  </div>
+</header>
+
+<!-- ── 周期选择 + 指标 ───────────────────────────────────────────────────── -->
+<section class="band" style="border-top:0;padding-top:0">
+  <div class="data">
+    <div class="periods" id="periods">
+      <button data-m="week" class="on">本周 · 六→五</button>
+      <button data-m="days" data-d="30">近 30 天</button>
+      <button data-m="all">全部</button>
+      <button data-m="custom">自定义</button>
+      <span class="spacer"></span>
+      <span class="cust" id="custbox" style="display:none">近 <input id="custdays" type="number" value="7" min="1" max="3650"> 天</span>
+    </div>
+    <div class="rangebar">
+      <span class="cur" id="r-label">—</span>
+      <span id="r-span">—</span>
+    </div>
+
+    <div class="metrics" id="metrics"></div>
+  </div>
+</section>
+
+<!-- ── 两套口径对照 ──────────────────────────────────────────────────────── -->
+<section class="band">
+  <div class="data">
+    <div class="kicker">01 / 构成</div>
+    <h2>两套口径，不是一回事</h2>
+    <p class="note" style="max-width:692px">
+      左边是<b>实时扫描</b>整个目录树的当前状态，含人工改动；右边是<b>映射记忆快照</b>，
+      按公司最后一次映射的时间落在周期里。两个数不该相等，也不该互相校验。</p>
+
+    <div class="cmp" style="margin-top:26px">
+      <div>
+        <div class="figure" style="margin-top:0">
+          <div class="cap"><span class="t">全部产品的构成</span>
+            <span class="n" id="h1-total">—</span></div>
+          <div class="sub">实时扫描 · 全部 232 家公司</div>
+          <div class="stack" id="stack-all"></div>
+          <div class="legend" id="lg-all"></div>
+        </div>
+      </div>
+      <div>
+        <div class="figure" style="margin-top:0">
+          <div class="cap"><span class="t">本周期映射的构成</span>
+            <span class="n" id="h2-total">—</span></div>
+          <div class="sub" id="h2-sub">—</div>
+          <div class="stack" id="stack-p"></div>
+          <div class="legend" id="lg-p"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="aside" style="max-width:692px">
+      <div class="h">口径提示</div>
+      分母用的是<b>已分类数</b>而不是产品总数。拿总数当分母，各段之和只有 97%，
+      条会填不满一格 —— 而"填满"正是部分-整体图唯一的语义。
+    </div>
+  </div>
+</section>
+
+<!-- ── 一级分类分布 ──────────────────────────────────────────────────────── -->
+<section class="band">
+  <div class="wide">
+    <div class="kicker">02 / 分布</div>
+    <h2>一级分类分布</h2>
+    <div class="figure">
+      <div class="cap"><span class="t">本周期映射产品按一级分类</span>
+        <span class="n" id="bar-note">—</span></div>
+      <div class="bars" id="bars"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 公司明细 ──────────────────────────────────────────────────────────── -->
+<section class="band">
+  <div class="data">
+    <div class="kicker">03 / 公司</div>
+    <h2>公司维度</h2>
+    <p class="note" style="max-width:692px">按本周期内映射的产品数排序。灰色行表示该公司不在当前周期内。</p>
+    <div class="scrollbox">
+      <table class="tbl">
+        <thead><tr>
+          <th>公司</th><th class="n">产品数</th><th class="n">规则映射</th>
+          <th class="n">AI 研判</th><th class="n">未匹配</th><th>状态</th><th>最后映射</th>
+        </tr></thead>
+        <tbody id="co-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── 导出 ──────────────────────────────────────────────────────────────── -->
+<section class="band">
+  <div class="data">
+    <div class="kicker">04 / 导出</div>
+    <h2>导出报告</h2>
+    <p class="note" style="max-width:692px">
+      周期跟随上方选择器。周期内的公司自动勾选，周期外置灰。产品数是实时扫描的当前值，
+      周期只决定<b>导出哪些公司</b>。</p>
+
+    <div class="exgrid">
+      <div class="field">
+        <label class="fl">导出格式</label>
+        <div class="segline" id="fmt">
+          <button data-f="html" class="on">自包含 HTML 报告</button>
+          <button data-f="xlsx">Excel 表格</button>
+        </div>
+      </div>
+      <button class="btn">导出报告</button>
+    </div>
+
+    <div class="chks">
+      <span id="ex-range" style="color:var(--blue);letter-spacing:.06em">—</span>
+      <label><input type="checkbox"> 不限周期（导出全部）</label>
+      <span class="spacer"></span>
+      <label style="cursor:pointer;color:var(--ink-md)">全选</label>
+      <label style="cursor:pointer;color:var(--ink-md)">全不选</label>
+      <label style="cursor:pointer;color:var(--ink-md)">只选本周期的公司</label>
+      <span id="ex-sum" style="margin-left:auto">—</span>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="data">
+    frontend_v3 设计样图 · 数据为 <span id="f-time">—</span> 的真实快照 ·
+    原 frontend/ 未改动
+  </div>
+</footer>
+
+<script>
+const DATA = {"stats":{"range_label":"本周 08-08(六) → 08-14(五)","range_start":"2026-08-08 00:00:00","range_end":"2026-08-14 23:59:59","generated":"2026-08-14 11:49:05","companies":84,"total":6341,"mapped":5186,"ai":978,"unmatched":177,"match_rate":97.2,"cat1_dist":[{"name":"光学元件","n":2890},{"name":"运动控制","n":765},{"name":"光纤元件","n":577},{"name":"成像","n":355},{"name":"工业制造设备","n":350},{"name":"测试和测量","n":326},{"name":"光机械与配件","n":319},{"name":"激光器和发光二极管","n":274},{"name":"非激光光源与照明系统","n":187},{"name":"光电器件","n":66},{"name":"行业应用与系统","n":30},{"name":"增值服务","n":25}],"companies_in_range":["高明鐵企業股份有限公司","四川炬科光学科技有限公司","上海瀚宇光纤通信技术有限公司","鞍山市激埃特光电有限公司","北京万腾达斯科技有限公司","翰普电子科技有限公司","山东宇影光学仪器有限公司","重庆蓝宝精玺防务科技有限公司","深圳市倍特盛电子科技有限公司","杭州微影传感科技有限公司","中山市鸿鑫通讯技术有限公司","上海华赋信息科技有限公司","福建富兰光学股份有限公司","盛金灵光学（深圳）有限公司","深圳市唯锐科技有限公司","中锗科技有限公司","惠州市鼎新光电有限公司","晶智（上海）光学仪器设备有限公司","福建中策光电股份公司","福州阿尔发光学有限公司","厦门三优光电股份有限公司","深圳光泰通信设备有限公司","中山依瓦塔光学有限公司","福建威泰思光电有限公司","飞秒光电科技（西安）有限公司","广州贝拓科学技术有限公司","青岛韬谱光学科技有限公司","常熟信雅达光电有限公司","阿米精控科技（山东）有限公司","南京英特飞光电技术有限公司","汇睿光电技术（北京）有限公司","上海煊峰光电科技有限公司","Alite Co.,Ltd","北京首量科技股份有限公司","深圳市超越激光智能装备股份有限公司","深圳市都乐精密制造有限公司","深圳活力激光技术有限公司","深圳市晶格子光学科技有限公司","北京广目光电技术公司","深圳市霍尔比特科技有限公司","浙江蓝特光学股份有限公司","福建光旭科技有限公司","青岛徕奥光电技术有限公司","浙江焜腾红外技术股份有限公司","成都派斯光学有限公司","天活松林光学（广州）有限公司","成都光明光电股份有限公司","南通振华光电有限公司","南通国光光学玻璃有限公司","上海星庆光学仪器有限公司","南京恒业光学仪器厂南京恒一光电有限公司","郑州市贝斯达超硬材料有限公司","苏州文迪光电科技有限公司","成都菲奥姆光学有限公司","宁波欧泰光学科技有限公司","丰睿成科技（深圳）股份有限公司","深圳镭锳激光科技有限公司","成都欧光光学科技有限公司","沈阳万泉光电科技有限公司","珠海光焱科技有限公司","佛山光宏光学科技有限公司","苏州久晶光电科技有限公司","中建材光芯科技有限公司","南京奂美光学科技有限公司","南京盛略科技有限公司","武汉颐光科技有限公司","武汉中技光学仪器有限公司","福州瑞烁光电科技有限公司","杭州银湖激光科技有限公司","广东兆驰瑞谷通信有限公司","常州思捷光电科技有限公司","板石智能科技(深圳)有限公司","河南联合精密材料股份有限公司","长春盈捷光电科技有限公司","西安精英光电技术有限公司","南京迈得特光学有限公司","嘉兴中润光学科技股份有限公司","徐州仟目科技集团有限公司","吉林省杨天光电有限公司","上海嘉光光学集团","苏州慧利仪器有限责任公司","深圳瑞识科技股份有限公司","微源光子(深圳)科技有限公司","中山市思创光电科技有限公司"]},"overall_cat1":[{"name":"光学元件","n":5450},{"name":"光纤元件","n":4649},{"name":"测试和测量","n":2626},{"name":"光机械与配件","n":2405},{"name":"激光器和发光二极管","n":1593},{"name":"运动控制","n":1136},{"name":"工业制造设备","n":893},{"name":"成像","n":763},{"name":"非激光光源与照明系统","n":478},{"name":"光电器件","n":204},{"name":"增值服务","n":115},{"name":"行业应用与系统","n":33}],"dist_total":20345,"dist_companies":232,"taxonomy":{"cat1":12,"cat2":160},"companies":[{"company":"US Conec Ltd","total":2512,"mapped":2487,"ai":9,"unmatched":16,"time":"2026-07-28 15:34:17"},{"company":"高明鐵企業股份有限公司","total":980,"mapped":970,"ai":10,"unmatched":0,"time":"2026-08-12 14:24:04"},{"company":"四川炬科光学科技有限公司","total":707,"mapped":707,"ai":0,"unmatched":0,"time":"2026-08-13 17:34:38"},{"company":"横河测量技术（上海）有限公司","total":684,"mapped":577,"ai":98,"unmatched":9,"time":"2026-07-28 15:09:25"},{"company":"上海瀚宇光纤通信技术有限公司","total":605,"mapped":591,"ai":14,"unmatched":0,"time":"2026-08-11 17:12:41"},{"company":"北京正印科技有限公司","total":482,"mapped":173,"ai":287,"unmatched":22,"time":"2026-07-28 15:31:34"},{"company":"光越科技（深圳）有限公司","total":416,"mapped":386,"ai":30,"unmatched":0,"time":"2026-08-06 14:21:40"},{"company":"鞍山市激埃特光电有限公司","total":357,"mapped":334,"ai":23,"unmatched":0,"time":"2026-08-11 15:06:58"},{"company":"英福康（上海）真空计有限公司","total":327,"mapped":15,"ai":232,"unmatched":80,"time":"2026-07-23 18:17:07"},{"company":"湖南长步道光电科技股份有限公司","total":323,"mapped":320,"ai":3,"unmatched":0,"time":"2026-07-23 17:20:15"},{"company":"深圳市东正光学技术股份有限公司","total":313,"mapped":313,"ai":0,"unmatched":0,"time":"2026-07-28 14:55:15"},{"company":"东莞市蓝宇激光有限公司","total":309,"mapped":187,"ai":122,"unmatched":0,"time":"2026-08-07 14:03:37"},{"company":"深圳市嘉万光通信有限公司","total":276,"mapped":241,"ai":30,"unmatched":5,"time":"2026-07-28 15:07:16"},{"company":"江西欧特光学有限公司","total":273,"mapped":261,"ai":12,"unmatched":0,"time":"2026-07-28 14:47:08"},{"company":"宝帝流体控制系统（上海）有限公司","total":265,"mapped":23,"ai":110,"unmatched":132,"time":"2026-07-28 15:08:21"},{"company":"广州安特激光技术有限公司","total":263,"mapped":209,"ai":51,"unmatched":3,"time":"2026-08-07 14:07:29"},{"company":"北京万腾达斯科技有限公司","total":243,"mapped":149,"ai":65,"unmatched":29,"time":"2026-08-13 17:22:59"},{"company":"大族激光科技产业集团股份有限公司","total":241,"mapped":175,"ai":65,"unmatched":1,"time":"2026-08-06 14:16:33"},{"company":"武汉红星杨科技有限公司","total":235,"mapped":186,"ai":46,"unmatched":3,"time":"2026-07-28 15:23:24"},{"company":"上海光维通信技术股份有限公司","total":228,"mapped":225,"ai":3,"unmatched":0,"time":"2026-07-28 11:01:40"},{"company":"翰普电子科技有限公司","total":215,"mapped":98,"ai":96,"unmatched":21,"time":"2026-08-10 16:03:42"},{"company":"山东宇影光学仪器有限公司","total":203,"mapped":190,"ai":9,"unmatched":4,"time":"2026-08-12 11:15:17"}]};
+
+const PAL = ["--d1","--d2","--d3","--d4","--d5","--d6","--d7","--d8"];
+const cv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const fmt = n => (n == null ? "—" : n.toLocaleString("en-US"));
+
+/* 超过 6 个分类就把尾部折叠成「其他」—— 图例超过 7 项就没人看得完了 */
+function top6(list) {
+  const s = [...list].sort((a, b) => b.n - a.n);
+  if (s.length <= 7) return s;
+  const head = s.slice(0, 6);
+  head.push({ name: "其他（" + (s.length - 6) + " 类）", n: s.slice(6).reduce((a, x) => a + x.n, 0) });
+  return head;
+}
+
+function drawStack(barEl, lgEl, list) {
+  const items = top6(list), tot = items.reduce((a, x) => a + x.n, 0) || 1;
+  barEl.innerHTML = items.map((x, i) =>
+    `<i style="width:${(x.n / tot * 100).toFixed(2)}%;background:${cv(PAL[i % 8])}"></i>`).join("");
+  lgEl.innerHTML = items.map((x, i) =>
+    `<span class="li"><span class="sw" style="background:${cv(PAL[i % 8])}"></span>${x.name}
+     <span class="n">${fmt(x.n)} · ${(x.n / tot * 100).toFixed(1)}%</span></span>`).join("");
+}
+
+function drawBars(el, list) {
+  const s = [...list].sort((a, b) => b.n - a.n), max = s[0] ? s[0].n : 1;
+  const tot = s.reduce((a, x) => a + x.n, 0) || 1;
+  el.innerHTML = s.map(x => `
+    <span class="nm">${x.name}</span>
+    <span class="tr"><i style="width:${(x.n / max * 100).toFixed(2)}%"></i></span>
+    <span class="vn">${fmt(x.n)}</span>
+    <span class="pc">${(x.n / tot * 100).toFixed(1)}%</span>`).join("");
+}
+
+function render() {
+  const s = DATA.stats;
+  document.getElementById("lede").innerHTML =
+    `<b>${s.range_label}</b> 内共 <b>${fmt(s.companies)}</b> 家公司完成映射，
+     产出 <b>${fmt(s.total)}</b> 个产品，规则与 AI 合计命中 <b>${s.match_rate}%</b>。`;
+  document.getElementById("m-gen").textContent = s.generated;
+  document.getElementById("m-range").textContent = s.range_label;
+  document.getElementById("r-label").textContent = s.range_label;
+  document.getElementById("r-span").textContent =
+    s.range_start ? s.range_start + (s.range_end ? "  ~  " + s.range_end : "  起") : "不限时间";
+  document.getElementById("f-time").textContent = s.generated;
+
+  const M = [
+    ["周期内产品", fmt(s.total), "个", "", ""],
+    ["映射成功率", s.match_rate, "%", "规则 + AI", "acc"],
+    ["规则映射", fmt(s.mapped), "个", "", ""],
+    ["AI 研判归类", fmt(s.ai), "个", "", "ai"],
+    ["未匹配", fmt(s.unmatched), "个", "", s.unmatched ? "warn" : ""],
+    ["映射公司数", fmt(s.companies), "家", "共 " + DATA.dist_companies + " 家", ""],
+  ];
+  document.getElementById("metrics").innerHTML = M.map(([l, v, u, sub, cls]) => `
+    <div class="metric ${cls}"><div class="lab">${l}</div>
+      <div class="val">${v}<small>${u}</small></div>
+      <div class="sub">${sub}</div></div>`).join("");
+
+  document.getElementById("h1-total").textContent = fmt(DATA.dist_total) + " 个产品";
+  document.getElementById("h2-total").textContent =
+    fmt(s.cat1_dist.reduce((a, x) => a + x.n, 0)) + " 个已分类";
+  document.getElementById("h2-sub").textContent = "映射记忆 · " + s.range_label + " · " + s.companies + " 家公司";
+  drawStack(document.getElementById("stack-all"), document.getElementById("lg-all"), DATA.overall_cat1);
+  drawStack(document.getElementById("stack-p"), document.getElementById("lg-p"), s.cat1_dist);
+
+  document.getElementById("bar-note").textContent =
+    s.cat1_dist.length + " 个一级分类 / 标准体系共 " + DATA.taxonomy.cat1 + " 个";
+  drawBars(document.getElementById("bars"), s.cat1_dist);
+
+  const inr = new Set(s.companies_in_range);
+  document.getElementById("co-tbody").innerHTML = DATA.companies.map(c => {
+    const hit = inr.has(c.company);
+    const st = c.unmatched === 0 ? ["ok", "全部命中"]
+      : (c.unmatched / c.total > .1 ? ["warn", "未匹配偏高"] : ["", "有未匹配"]);
+    return `<tr class="${hit ? "" : "out"}>
+      <td class="co">${c.company}</td>
+      <td class="n">${fmt(c.total)}<span class="microbar"><i style="width:${(c.total / DATA.companies[0].total * 100).toFixed(1)}%"></i></span></td>
+      <td class="n">${fmt(c.mapped)}</td><td class="n">${fmt(c.ai)}</td>
+      <td class="n">${c.unmatched ? fmt(c.unmatched) : "—"}</td>
+      <td><span class="st ${st[0]}">${st[1]}</span></td>
+      <td class="n" style="color:var(--ink-lo)">${(c.time || "").slice(0, 10)}</td></tr>`;
+  }).join("");
+
+  document.getElementById("ex-range").textContent = "导出周期 " + s.range_label;
+  document.getElementById("ex-sum").textContent =
+    "已选 " + s.companies + " / " + DATA.dist_companies + " 家";
+}
+
+/* 样图里的交互只做视觉反馈，不打后端 */
+document.getElementById("periods").onclick = e => {
+  const b = e.target.closest("button"); if (!b) return;
+  [...e.currentTarget.querySelectorAll("button")].forEach(x => x.classList.remove("on"));
+  b.classList.add("on");
+  document.getElementById("custbox").style.display = b.dataset.m === "custom" ? "" : "none";
+};
+document.getElementById("fmt").onclick = e => {
+  const b = e.target.closest("button"); if (!b) return;
+  [...e.currentTarget.querySelectorAll("button")].forEach(x => x.classList.remove("on"));
+  b.classList.add("on");
+};
+render();
+</script>
+</body>
+</html>
