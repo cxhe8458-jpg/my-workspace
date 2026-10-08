@@ -1,0 +1,293 @@
+{
+  "metadata": {
+    "description": "HTML中用于处理数学符号、电器/光电产品规格单位符号、数字上下标等最详细的标签、实体和特殊字符集合。",
+    "note": "本列表包含HTML标签、字符实体（Entity Name）、数字实体（Decimal/Hex）以及可直接使用的Unicode字符。所有实体名称均区分大小写。[reference:0]"
+  },
+  "categories": {
+    "formatting_tags": {
+      "description": "用于文本格式化的HTML标签，直接改变文本的显示方式。",
+      "tags": [
+        {
+          "tag": "<sup>",
+          "description": "上标标签。将文本显示为比当前基线更高的上标，通常字号也更小。[reference:1][reference:2]",
+          "example": "E = mc<sup>2</sup> 显示为 E = mc²"
+        },
+        {
+          "tag": "<sub>",
+          "description": "下标标签。将文本显示为比当前基线更低的下标，通常字号也更小。[reference:3][reference:4]",
+          "example": "H<sub>2</sub>O 显示为 H₂O"
+        },
+        {
+          "tag": "<small>",
+          "description": "小号字标签。将文本显示为较小的字号。[reference:5]",
+          "example": "这是<small>小号</small>文字"
+        },
+        {
+          "tag": "<big>",
+          "description": "大号字标签（已废弃，不推荐使用）。将文本显示为较大的字号。",
+          "example": "这是<big>大号</big>文字"
+        }
+      ]
+    },
+    "mathml_tags": {
+      "description": "MathML（数学标记语言）标签，用于在Web页面中结构化地展示数学公式和符号。[reference:7]",
+      "note": "MathML是一种基于XML的语言，分为内容模型和表现模型。以下为表现模型（Presentation MathML）的常用标签。[reference:8][reference:9]",
+      "tags": [
+        {
+          "tag": "<math>",
+          "description": "MathML的根元素，用于定义数学区域。[reference:10]",
+          "example": "<math>...</math>"
+        },
+        {
+          "tag": "<mi>",
+          "description": "标识符，用于表示变量名、函数名等。[reference:11]",
+          "example": "<mi>x</mi> 表示变量 x"
+        },
+        {
+          "tag": "<mn>",
+          "description": "数字，用于表示整数、浮点数等。[reference:12]",
+          "example": "<mn>2</mn> 表示数字 2"
+        },
+        {
+          "tag": "<mo>",
+          "description": "运算符，用于表示加法、减法、乘法等运算符号。[reference:13]",
+          "example": "<mo>+</mo> 表示加号"
+        },
+        {
+          "tag": "<msup>",
+          "description": "上标，用于表示指数或上标形式。[reference:14]",
+          "example": "<msup><mi>x</mi><mn>2</mn></msup> 表示 x²"
+        },
+        {
+          "tag": "<msub>",
+          "description": "下标，用于表示下标形式。[reference:15]",
+          "example": "<msub><mi>x</mi><mn>1</mn></msub> 表示 x₁"
+        },
+        {
+          "tag": "<msubsup>",
+          "description": "上下标，同时表示上标和下标。",
+          "example": "<msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup>"
+        },
+        {
+          "tag": "<mfrac>",
+          "description": "分数，用于表示分数形式。[reference:16]",
+          "example": "<mfrac><mn>1</mn><mn>2</mn></mfrac> 表示 ½"
+        },
+        {
+          "tag": "<mroot>",
+          "description": "根号，用于表示开方运算。[reference:17]",
+          "example": "<mroot><mi>x</mi><mn>3</mn></mroot> 表示 ∛x"
+        },
+        {
+          "tag": "<msqrt>",
+          "description": "平方根，用于表示平方根。",
+          "example": "<msqrt><mi>x</mi></msqrt> 表示 √x"
+        },
+        {
+          "tag": "<mrow>",
+          "description": "行容器，用于组合多个数学元素。[reference:18]",
+          "example": "<mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>"
+        }
+      ]
+    },
+    "superscripts_and_subscripts_unicode": {
+      "description": "可直接使用的Unicode上标和下标字符，无需使用HTML标签。[reference:19]",
+      "superscripts": {
+        "digits": "⁰ ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹",
+        "operators": "⁺ ⁻ ⁼ ⁽ ⁾",
+        "letters_latin": "ᵃ ᵇ ᶜ ᵈ ᵉ ᵍ ʰ ⁱ ʲ ᵏ ˡ ᵐ ⁿ ᵒ ᵖ ʳ ˢ ᵗ ᵘ ᵛ ʷ ˣ ʸ",
+        "letters_latin_uppercase": "ᴬ ᴮ ᒼ ᴰ ᴱ ᴳ ᴴ ᴵ ᴶ ᴷ ᴸ ᴹ ᴺ ᴼ ᴾ ᴿ ˢ ᵀ ᵁ ᵂ ˣ",
+        "others": "º ˙"
+      },
+      "subscripts": {
+        "digits": "₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉",
+        "operators": "₊ ₋ ₌ ₍ ₎",
+        "letters_latin": "ₐ ₑ ₕ ᵢ ⱼ ₖ ₗ ₘ ₙ ₒ ₚ ᵣ ₛ ₜ ᵤ ᵥ ₓ"
+      },
+      "notes": [
+        "常用上标：⁰ ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁺ ⁻ ⁼ ⁽ ⁾ ⁿ º ˙[reference:20]",
+        "常用下标：₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉ ₊ ₋ ₌ ₍ ₎ ₐ ₑ ₒ ₓ ₔ ₕ ₖ ₗ ₘ ₙ ₚ ₛ ₜ[reference:21]"
+      ]
+    },
+    "mathematical_symbols": {
+      "description": "HTML支持的数学符号，可通过实体名称或数字实体引用。[reference:22][reference:23]",
+      "symbols": [
+        {"char": "∀", "entity": "&forall;", "number": "&#8704;", "description": "对于所有（FOR ALL）[reference:24][reference:25]"},
+        {"char": "∂", "entity": "&part;", "number": "&#8706;", "description": "偏微分（PARTIAL DIFFERENTIAL）[reference:26][reference:27]"},
+        {"char": "∃", "entity": "&exist;", "number": "&#8707;", "description": "存在（THERE EXISTS）[reference:28][reference:29]"},
+        {"char": "∅", "entity": "&empty;", "number": "&#8709;", "description": "空集（EMPTY SETS）[reference:30][reference:31]"},
+        {"char": "∇", "entity": "&nabla;", "number": "&#8711;", "description": "梯度/纳布拉（NABLA）[reference:32][reference:33]"},
+        {"char": "∈", "entity": "&isin;", "number": "&#8712;", "description": "属于（ELEMENT OF）[reference:34][reference:35]"},
+        {"char": "∉", "entity": "&notin;", "number": "&#8713;", "description": "不属于（NOT AN ELEMENT OF）[reference:36][reference:37]"},
+        {"char": "∋", "entity": "&ni;", "number": "&#8715;", "description": "包含作为成员（CONTAINS AS MEMBER）[reference:38][reference:39]"},
+        {"char": "∏", "entity": "&prod;", "number": "&#8719;", "description": "连乘（N-ARY PRODUCT）[reference:40][reference:41]"},
+        {"char": "∑", "entity": "&sum;", "number": "&#8721;", "description": "连加（N-ARY SUMMATION）[reference:42][reference:43]"},
+        {"char": "−", "entity": "&minus;", "number": "&#8722;", "description": "减号（MINUS）[reference:44]"},
+        {"char": "∗", "entity": "&lowast;", "number": "&#8727;", "description": "星号运算符（LOWAST）[reference:45]"},
+        {"char": "√", "entity": "&radic;", "number": "&#8730;", "description": "平方根（SQUARE ROOT）[reference:46]"},
+        {"char": "∝", "entity": "&prop;", "number": "&#8733;", "description": "正比于（PROPORTIONAL TO）[reference:47]"},
+        {"char": "∞", "entity": "&infin;", "number": "&#8734;", "description": "无穷大（INFINITY）[reference:48]"},
+        {"char": "∠", "entity": "&ang;", "number": "&#8736;", "description": "角（ANGLE）[reference:49]"},
+        {"char": "∧", "entity": "&and;", "number": "&#8743;", "description": "逻辑与（AND）[reference:50]"},
+        {"char": "∨", "entity": "&or;", "number": "&#8744;", "description": "逻辑或（OR）[reference:51]"},
+        {"char": "∩", "entity": "&cap;", "number": "&#8745;", "description": "交集（CAP）[reference:52]"},
+        {"char": "∪", "entity": "&cup;", "number": "&#8746;", "description": "并集（CUP）[reference:53]"},
+        {"char": "∫", "entity": "&int;", "number": "&#8747;", "description": "积分（INTEGRAL）[reference:54]"},
+        {"char": "∴", "entity": "&there4;", "number": "&#8756;", "description": "因此（THEREFORE）[reference:55]"},
+        {"char": "∼", "entity": "&sim;", "number": "&#8764;", "description": "相似于（SIMILAR TO）[reference:56]"},
+        {"char": "≅", "entity": "&cong;", "number": "&#8773;", "description": "全等于（CONGRUENT TO）[reference:57]"},
+        {"char": "≈", "entity": "&asymp;", "number": "&#8776;", "description": "约等于（ALMOST EQUAL）[reference:58]"},
+        {"char": "≠", "entity": "&ne;", "number": "&#8800;", "description": "不等于（NOT EQUAL）[reference:59]"},
+        {"char": "≡", "entity": "&equiv;", "number": "&#8801;", "description": "恒等于（EQUIVALENT）[reference:60]"},
+        {"char": "≤", "entity": "&le;", "number": "&#8804;", "description": "小于或等于（LESS OR EQUAL）[reference:61]"},
+        {"char": "≥", "entity": "&ge;", "number": "&#8805;", "description": "大于或等于（GREATER OR EQUAL）[reference:62]"},
+        {"char": "⊂", "entity": "&sub;", "number": "&#8834;", "description": "子集（SUBSET OF）[reference:63]"},
+        {"char": "⊃", "entity": "&sup;", "number": "&#8835;", "description": "超集（SUPERSET OF）[reference:64]"},
+        {"char": "⊄", "entity": "&nsub;", "number": "&#8836;", "description": "非子集（NOT SUBSET OF）[reference:65]"},
+        {"char": "⊆", "entity": "&sube;", "number": "&#8838;", "description": "子集或等于（SUBSET OR EQUAL）[reference:66]"},
+        {"char": "⊇", "entity": "&supe;", "number": "&#8839;", "description": "超集或等于（SUPERSET OR EQUAL）[reference:67]"},
+        {"char": "⊕", "entity": "&oplus;", "number": "&#8853;", "description": "带圈加号（CIRCLED PLUS）[reference:68]"},
+        {"char": "⊗", "entity": "&otimes;", "number": "&#8855;", "description": "带圈乘号（CIRCLED TIMES）[reference:69]"},
+        {"char": "⊥", "entity": "&perp;", "number": "&#8869;", "description": "垂直（PERPENDICULAR）[reference:70]"},
+        {"char": "⋅", "entity": "&sdot;", "number": "&#8901;", "description": "点运算符（DOT OPERATOR）[reference:71]"},
+        {"char": "×", "entity": "&times;", "number": "&#215;", "description": "乘号（TIMES）[reference:72]"},
+        {"char": "±", "entity": "&plusmn;", "number": "&#177;", "description": "正负号（PLUS-MINUS）"},
+        {"char": "÷", "entity": "&divide;", "number": "&#247;", "description": "除号（DIVIDE）"},
+        {"char": "ƒ", "entity": "&fnof;", "number": "&#402;", "description": "函数（FUNCTION）"}
+      ]
+    },
+    "greek_letters": {
+      "description": "HTML支持的希腊字母，可通过实体名称或数字实体引用。[reference:76][reference:77]",
+      "uppercase": [
+        {"char": "Α", "entity": "&Alpha;", "number": "&#913;", "description": "Alpha[reference:78]"},
+        {"char": "Β", "entity": "&Beta;", "number": "&#914;", "description": "Beta[reference:79]"},
+        {"char": "Γ", "entity": "&Gamma;", "number": "&#915;", "description": "Gamma[reference:80]"},
+        {"char": "Δ", "entity": "&Delta;", "number": "&#916;", "description": "Delta[reference:81]"},
+        {"char": "Ε", "entity": "&Epsilon;", "number": "&#917;", "description": "Epsilon[reference:82]"},
+        {"char": "Ζ", "entity": "&Zeta;", "number": "&#918;", "description": "Zeta[reference:83]"},
+        {"char": "Η", "entity": "&Eta;", "number": "&#919;", "description": "Eta[reference:84]"},
+        {"char": "Θ", "entity": "&Theta;", "number": "&#920;", "description": "Theta[reference:85]"},
+        {"char": "Ι", "entity": "&Iota;", "number": "&#921;", "description": "Iota[reference:86]"},
+        {"char": "Κ", "entity": "&Kappa;", "number": "&#922;", "description": "Kappa[reference:87]"},
+        {"char": "Λ", "entity": "&Lambda;", "number": "&#923;", "description": "Lambda[reference:88]"},
+        {"char": "Μ", "entity": "&Mu;", "number": "&#924;", "description": "Mu[reference:89]"},
+        {"char": "Ν", "entity": "&Nu;", "number": "&#925;", "description": "Nu[reference:90]"},
+        {"char": "Ξ", "entity": "&Xi;", "number": "&#926;", "description": "Xi[reference:91]"},
+        {"char": "Ο", "entity": "&Omicron;", "number": "&#927;", "description": "Omicron[reference:92]"},
+        {"char": "Π", "entity": "&Pi;", "number": "&#928;", "description": "Pi[reference:93]"},
+        {"char": "Ρ", "entity": "&Rho;", "number": "&#929;", "description": "Rho[reference:94]"},
+        {"char": "Σ", "entity": "&Sigma;", "number": "&#931;", "description": "Sigma[reference:95]"},
+        {"char": "Τ", "entity": "&Tau;", "number": "&#932;", "description": "Tau[reference:96]"},
+        {"char": "Υ", "entity": "&Upsilon;", "number": "&#933;", "description": "Upsilon[reference:97]"},
+        {"char": "Φ", "entity": "&Phi;", "number": "&#934;", "description": "Phi[reference:98]"},
+        {"char": "Χ", "entity": "&Chi;", "number": "&#935;", "description": "Chi[reference:99]"},
+        {"char": "Ψ", "entity": "&Psi;", "number": "&#936;", "description": "Psi[reference:100]"},
+        {"char": "Ω", "entity": "&Omega;", "number": "&#937;", "description": "Omega[reference:101]"}
+      ],
+      "lowercase": [
+        {"char": "α", "entity": "&alpha;", "number": "&#945;", "description": "alpha[reference:102]"},
+        {"char": "β", "entity": "&beta;", "number": "&#946;", "description": "beta[reference:103]"},
+        {"char": "γ", "entity": "&gamma;", "number": "&#947;", "description": "gamma[reference:104]"},
+        {"char": "δ", "entity": "&delta;", "number": "&#948;", "description": "delta[reference:105]"},
+        {"char": "ε", "entity": "&epsilon;", "number": "&#949;", "description": "epsilon[reference:106]"},
+        {"char": "ζ", "entity": "&zeta;", "number": "&#950;", "description": "zeta[reference:107]"},
+        {"char": "η", "entity": "&eta;", "number": "&#951;", "description": "eta[reference:108]"},
+        {"char": "θ", "entity": "&theta;", "number": "&#952;", "description": "theta[reference:109]"},
+        {"char": "ι", "entity": "&iota;", "number": "&#953;", "description": "iota[reference:110]"},
+        {"char": "κ", "entity": "&kappa;", "number": "&#954;", "description": "kappa[reference:111]"},
+        {"char": "λ", "entity": "&lambda;", "number": "&#955;", "description": "lambda[reference:112]"},
+        {"char": "μ", "entity": "&mu;", "number": "&#956;", "description": "mu[reference:113]"},
+        {"char": "ν", "entity": "&nu;", "number": "&#957;", "description": "nu[reference:114]"},
+        {"char": "ξ", "entity": "&xi;", "number": "&#958;", "description": "xi[reference:115]"},
+        {"char": "ο", "entity": "&omicron;", "number": "&#959;", "description": "omicron[reference:116]"},
+        {"char": "π", "entity": "&pi;", "number": "&#960;", "description": "pi[reference:117]"},
+        {"char": "ρ", "entity": "&rho;", "number": "&#961;", "description": "rho[reference:118]"},
+        {"char": "ς", "entity": "&sigmaf;", "number": "&#962;", "description": "sigmaf（词尾）[reference:119]"},
+        {"char": "σ", "entity": "&sigma;", "number": "&#963;", "description": "sigma[reference:120]"},
+        {"char": "τ", "entity": "&tau;", "number": "&#964;", "description": "tau[reference:121]"},
+        {"char": "υ", "entity": "&upsilon;", "number": "&#965;", "description": "upsilon[reference:122]"},
+        {"char": "φ", "entity": "&phi;", "number": "&#966;", "description": "phi[reference:123]"},
+        {"char": "χ", "entity": "&chi;", "number": "&#967;", "description": "chi[reference:124]"},
+        {"char": "ψ", "entity": "&psi;", "number": "&#968;", "description": "psi[reference:125]"},
+        {"char": "ω", "entity": "&omega;", "number": "&#969;", "description": "omega[reference:126]"}
+      ]
+    },
+    "technical_and_unit_symbols": {
+      "description": "HTML支持的科技、货币和单位符号，广泛应用于电器、光电产品规格中。[reference:127][reference:128]",
+      "symbols": [
+        {"char": "°", "entity": "&deg;", "number": "&#176;", "description": "度（DEGREE SIGN），常用于角度、温度"},
+        {"char": "℃", "entity": "", "number": "&#8451;", "description": "摄氏度（DEGREE CELSIUS）"},
+        {"char": "℉", "entity": "", "number": "&#8457;", "description": "华氏度（DEGREE FAHRENHEIT）"},
+        {"char": "Ω", "entity": "&Omega;", "number": "&#937;", "description": "欧姆（OHM），电阻单位"},
+        {"char": "μ", "entity": "&mu;", "number": "&#956;", "description": "微（MICRO），国际单位制词头，如μm、μs"},
+        {"char": "nm", "entity": "", "number": "", "description": "纳米（NANOMETER），常与<sup>标签配合使用：n<sup>2</sup>"},
+        {"char": "m", "entity": "", "number": "", "description": "米（METER），常与<sup>标签配合使用：m<sup>2</sup>[reference:129]"},
+        {"char": "kW", "entity": "", "number": "", "description": "千瓦（KILOWATT），功率单位"},
+        {"char": "V", "entity": "", "number": "", "description": "伏特（VOLT），电压单位"},
+        {"char": "A", "entity": "", "number": "", "description": "安培（AMPERE），电流单位"},
+        {"char": "Hz", "entity": "", "number": "", "description": "赫兹（HERTZ），频率单位"},
+        {"char": "W", "entity": "", "number": "", "description": "瓦特（WATT），功率单位"},
+        {"char": "dB", "entity": "", "number": "", "description": "分贝（DECIBEL），相对单位"},
+        {"char": "％", "entity": "", "number": "&#37;", "description": "百分号（PERCENT SIGN）"},
+        {"char": "‰", "entity": "&permil;", "number": "&#8240;", "description": "千分号（PER MILLE）"},
+        {"char": "¢", "entity": "&cent;", "number": "&#162;", "description": "分（CENT SIGN）[reference:130][reference:131]"},
+        {"char": "£", "entity": "&pound;", "number": "&#163;", "description": "英镑（POUND SIGN）[reference:132]"},
+        {"char": "€", "entity": "&euro;", "number": "&#8364;", "description": "欧元（EURO SIGN）[reference:133]"},
+        {"char": "¥", "entity": "&yen;", "number": "&#165;", "description": "日元/人民币（YEN SIGN）[reference:134]"},
+        {"char": "©", "entity": "&copy;", "number": "&#169;", "description": "版权（COPYRIGHT SIGN）[reference:135]"},
+        {"char": "®", "entity": "&reg;", "number": "&#174;", "description": "注册商标（REGISTERED SIGN）[reference:136]"},
+        {"char": "™", "entity": "&trade;", "number": "&#8482;", "description": "商标（TRADEMARK）[reference:137]"},
+        {"char": "←", "entity": "&larr;", "number": "&#8592;", "description": "左箭头（LEFTWARDS ARROW）[reference:138]"},
+        {"char": "↑", "entity": "&uarr;", "number": "&#8593;", "description": "上箭头（UPWARDS ARROW）[reference:139]"},
+        {"char": "→", "entity": "&rarr;", "number": "&#8594;", "description": "右箭头（RIGHTWARDS ARROW）[reference:140]"},
+        {"char": "↓", "entity": "&darr;", "number": "&#8595;", "description": "下箭头（DOWNWARDS ARROW）[reference:141]"},
+        {"char": "♠", "entity": "&spades;", "number": "&#9824;", "description": "黑桃（BLACK SPADE SUIT）[reference:142]"},
+        {"char": "♣", "entity": "&clubs;", "number": "&#9827;", "description": "梅花（BLACK CLUB SUIT）[reference:143]"},
+        {"char": "♥", "entity": "&hearts;", "number": "&#9829;", "description": "红心（BLACK HEART SUIT）[reference:144]"},
+        {"char": "♦", "entity": "&diams;", "number": "&#9830;", "description": "方块（BLACK DIAMOND SUIT）[reference:145]"},
+        {"char": "†", "entity": "&dagger;", "number": "&#8224;", "description": "剑号（DAGGER）"},
+        {"char": "‡", "entity": "&Dagger;", "number": "&#8225;", "description": "双剑号（DOUBLE DAGGER）"},
+        {"char": "′", "entity": "&prime;", "number": "&#8242;", "description": "分/角分（PRIME）"},
+        {"char": "″", "entity": "&Prime;", "number": "&#8243;", "description": "秒/角秒（DOUBLE PRIME）"},
+        {"char": "‾", "entity": "&oline;", "number": "&#8254;", "description": "上划线（OVERLINE）"},
+        {"char": "¦", "entity": "&brvbar;", "number": "&#166;", "description": "断竖线（BROKEN BAR）"},
+        {"char": "∠", "entity": "&ang;", "number": "&#8736;", "description": "角度（ANGLE）[reference:152]"},
+        {"char": "⊥", "entity": "&perp;", "number": "&#8869;", "description": "垂直（PERPENDICULAR）"},
+        {"char": "⌈", "entity": "&lceil;", "number": "&#8968;", "description": "左天花板（LEFT CEILING）"},
+        {"char": "⌉", "entity": "&rceil;", "number": "&#8969;", "description": "右天花板（RIGHT CEILING）"},
+        {"char": "⌊", "entity": "&lfloor;", "number": "&#8970;", "description": "左地板（LEFT FLOOR）"},
+        {"char": "⌋", "entity": "&rfloor;", "number": "&#8971;", "description": "右地板（RIGHT FLOOR）"},
+        {"char": "⟨", "entity": "&lang;", "number": "&#10216;", "description": "左角括号（LEFT-POINTING ANGLE BRACKET）"},
+        {"char": "⟩", "entity": "&rang;", "number": "&#10217;", "description": "右角括号（RIGHT-POINTING ANGLE BRACKET）"}
+      ]
+    },
+    "fractions": {
+      "description": "HTML中常用的分数符号。",
+      "symbols": [
+        {"char": "¼", "entity": "&frac14;", "number": "&#188;", "description": "四分之一[reference:153]"},
+        {"char": "½", "entity": "&frac12;", "number": "&#189;", "description": "二分之一[reference:154]"},
+        {"char": "¾", "entity": "&frac34;", "number": "&#190;", "description": "四分之三[reference:155]"},
+        {"char": "⅓", "entity": "", "number": "&#8531;", "description": "三分之一"},
+        {"char": "⅔", "entity": "", "number": "&#8532;", "description": "三分之二"},
+        {"char": "⅕", "entity": "", "number": "&#8533;", "description": "五分之一"},
+        {"char": "⅖", "entity": "", "number": "&#8534;", "description": "五分之二"},
+        {"char": "⅗", "entity": "", "number": "&#8535;", "description": "五分之三"},
+        {"char": "⅘", "entity": "", "number": "&#8536;", "description": "五分之四"},
+        {"char": "⅙", "entity": "", "number": "&#8537;", "description": "六分之一"},
+        {"char": "⅚", "entity": "", "number": "&#8538;", "description": "六分之五"},
+        {"char": "⅛", "entity": "", "number": "&#8539;", "description": "八分之一"},
+        {"char": "⅜", "entity": "", "number": "&#8540;", "description": "八分之三"},
+        {"char": "⅝", "entity": "", "number": "&#8541;", "description": "八分之五"},
+        {"char": "⅞", "entity": "", "number": "&#8542;", "description": "八分之七"}
+      ]
+    }
+  },
+  "usage_notes": {
+    "entity_references": "HTML实体引用以 & 开头，以 ; 结尾。例如：&forall; 显示为 ∀。[reference:157]",
+    "case_sensitive": "实体名称区分大小写。例如：&Alpha; 和 &alpha; 不同。[reference:158]",
+    "numeric_references": "如果不存在实体名称，可使用数字实体引用（十进制或十六进制）。例如：&#8704; 或 &#x2200; 都显示为 ∀。[reference:159]",
+    "superscript_subscript": "对于简单的上下标，推荐使用 <sup> 和 <sub> 标签。对于复杂的数学公式，推荐使用 MathML。[reference:160]",
+    "unicode_direct": "在许多情况下，可以直接在HTML中粘贴Unicode字符（如 ²、₁），无需使用实体或标签。[reference:161]",
+    "browser_support": "MathML在Firefox中支持良好，在Chrome和Safari中可能需要MathJax等库的支持。[reference:162]"
+  }
+}
