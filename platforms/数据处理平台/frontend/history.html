@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>历史记录 · 自动化数据处理平台</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="phead"><div><h1>历史</h1>
+  <p>每次处理的记录：时间、步骤、处理了哪些公司、结果统计、输入输出路径。删除只删记录本身，磁盘上已经产出的数据不受影响。</p></div></div>
+
+  <div class="card">
+    <h2>处理历史（<span id="h-count" class="mono">0</span> 条）
+      <span style="flex:1"></span>
+      <button class="ghost small" id="h-refresh">刷新</button>
+      <button class="danger small" id="h-delsel">删除选中</button>
+      <button class="danger small" id="h-delall">清空全部</button>
+    </h2>
+    <div class="tablebox" style="max-height:640px"><table id="h-tbl">
+      <thead><tr><th style="width:34px"><input type="checkbox" id="h-ckall"></th>
+        <th>时间</th><th>步骤</th><th>任务</th><th>公司</th><th>统计</th><th>路径</th><th>结果</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+  </div>
+</div>
+<script src="js/icons.js"></script>
+<script src="js/common.js"></script>
+<script src="js/history.js"></script>
+</body>
+</html>

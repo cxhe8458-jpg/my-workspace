@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>待办 · 自动化数据处理平台</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="phead">
+    <div>
+      <h1>待办</h1>
+      <p id="tb-sub">规则和 AI 都没命中的产品要你定分类；AI 研判过的产品要你确认对不对。两件事都会<b>同时做两件事</b>：把结果写进映射输出，并把关键词归档进规则库——所以同一个判断你只需要做一次。</p>
+    </div>
+    <div class="headact"><button class="ghost small" id="tb-refresh">刷新</button></div>
+  </div>
+
+  <div class="filters" style="margin-bottom:16px">
+    <div class="seg" id="tb-tabs"></div>
+    <span class="fcount" id="tb-count"></span>
+  </div>
+
+  <div class="bench">
+    <!-- 左：公司 → 产品 下钻列表 -->
+    <div class="pane">
+      <div class="ph">
+        <div class="crumb" id="tb-crumb" style="margin:0"></div>
+        <span style="flex:1"></span>
+        <span id="tb-listact"></span>
+      </div>
+      <div class="ph" id="tb-srchrow" style="padding-top:9px;padding-bottom:9px">
+        <div class="srch" style="flex:1"><input type="search" id="tb-q" placeholder="搜索…" aria-label="搜索"></div>
+      </div>
+      <div class="selbar" id="tb-selbar" hidden></div>
+      <div class="pb" id="tb-list"></div>
+    </div>
+
+    <!-- 右：选中项的处理表单 -->
+    <div class="pane">
+      <div class="ph"><h2 id="tb-dtitle">处理</h2><span style="flex:1"></span><span id="tb-dbadge"></span></div>
+      <div class="pb pad" id="tb-detail"></div>
+    </div>
+  </div>
+</div>
+
+<script src="js/icons.js"></script>
+<script src="js/common.js"></script>
+<script src="js/todo.js"></script>
+</body>
+</html>

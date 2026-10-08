@@ -1,0 +1,9 @@
+# 后端服务依赖（在受管 venv 中安装）
+fastapi>=0.110
+uvicorn>=0.29
+pymysql>=1.1
+cryptography>=42.0        # pymysql 连接 MySQL 8 caching_sha2_password 需要
+requests>=2.31            # script.py 抓取请求
+beautifulsoup4>=4.12      # script.py 解析 HTML（BeautifulSoup）
+openpyxl>=3.1             # 导出 Excel
+python-multipart>=0.0.9   # FastAPI 表单/文件上传（名单导入 + logo 替换）

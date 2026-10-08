@@ -1,0 +1,19 @@
+[
+  {
+    "id": "5c28ced5",
+    "name": "产品映射",
+    "provider": "deepseek",
+    "api": "openai",
+    "base_url": "https://api.deepseek.com",
+    "api_key": "sk-YOUR_API_KEY_HERE",
+    "model": "deepseek-v4-pro",
+    "role": "",
+    "prompt": "",
+    "skills": [
+      "product-data-pipeline.md",
+      "product-folder-standardizer.md",
+      "product_category.md"
+    ],
+    "temperature": 0.1
+  }
+]

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>登录 — 数据审核归档平台</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f172a'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' stroke='%2334d399' stroke-width='3.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<!-- 样式内联：登录页不引用 /static，未登录的人就拿不到前端源码 -->
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:14px/1.55 "Microsoft YaHei",-apple-system,"Segoe UI",sans-serif;
+  background:#eef1f6;color:#111827;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.card{background:#fff;border:1px solid #dfe4ec;border-radius:12px;width:100%;max-width:380px;
+  padding:28px 26px 24px;box-shadow:0 8px 28px rgba(15,23,42,.08)}
+.logo{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.logo span{font-size:26px}
+h1{font-size:17px;font-weight:700}
+.sub{color:#6b7280;font-size:12.5px;margin-bottom:20px}
+label{display:block;font-size:12.5px;color:#374151;margin:0 0 5px}
+input{width:100%;border:1px solid #dfe4ec;border-radius:8px;padding:9px 11px;font:inherit;margin-bottom:14px}
+input:focus{outline:none;border-color:#2563eb;box-shadow:0 0 0 3px #eff4ff}
+button{width:100%;border:none;background:#2563eb;color:#fff;font:inherit;font-weight:700;
+  border-radius:8px;padding:10px;cursor:pointer}
+button:hover{filter:brightness(1.08)}
+button:disabled{opacity:.6;cursor:default}
+#err{display:none;background:#fef2f2;color:#dc2626;border:1px solid #fecaca;
+  border-radius:8px;padding:8px 11px;font-size:12.5px;margin-bottom:14px}
+#err.show{display:block}
+.foot{margin-top:16px;color:#6b7280;font-size:12px;line-height:1.7;border-top:1px solid #dfe4ec;padding-top:12px}
+</style>
+</head>
+<body>
+<form class="card" id="f">
+  <div class="logo"><span>📋</span><h1>数据审核归档平台</h1></div>
+  <div class="sub">公司内网 · 请登录后使用</div>
+  <div id="err"></div>
+  <label for="u">用户名</label>
+  <input id="u" name="u" autocomplete="username" autofocus>
+  <label for="p">口令</label>
+  <input id="p" name="p" type="password" autocomplete="current-password">
+  <button id="go" type="submit">登 录</button>
+  <div class="foot">本平台会直接修改与移动服务器上的真实产品数据，请勿把账号告诉无关人员。</div>
+</form>
+<script>
+const err = document.getElementById("err");
+document.getElementById("f").onsubmit = async e => {
+  e.preventDefault();
+  const btn = document.getElementById("go");
+  btn.disabled = true; btn.textContent = "登录中…";
+  err.className = "";
+  try {
+    const r = await fetch("/api/login", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ user: document.getElementById("u").value,
+                             password: document.getElementById("p").value })
+    });
+    if (r.ok) { location.href = "/"; return; }
+    const j = await r.json().catch(() => ({}));
+    err.textContent = "✘ " + (j.detail || `登录失败（HTTP ${r.status}）`);
+  } catch (e2) {
+    err.textContent = "✘ 连不上服务（" + e2.message + "）——确认服务在运行、网络可达";
+  }
+  err.className = "show";
+  btn.disabled = false; btn.textContent = "登 录";
+};
+</script>
+</body>
+</html>
