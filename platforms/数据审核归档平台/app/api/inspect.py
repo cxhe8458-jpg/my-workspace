@@ -65,7 +65,7 @@ def refresh(company: str = ""):
     if company:
         _, new, changed = scanner.refresh_company(company)
         scanner.save_snapshot()          # 全量刷新在 refresh_all 里已存，单公司这里补上
-        return {"ok": True, "total_new": total_new, "total_changed": changed}
+        return {"ok": True, "total_new": new, "total_changed": changed}
     diffs = scanner.refresh_all()
     return {"ok": True, "detail": diffs,
             "total_new": sum(d["new"] for d in diffs.values()),

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>设置 · 自动化数据处理平台</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="phead"><div><h1>设置</h1>
+  <p>设一次就不再看的东西都在这里：流水线各段的目录、id 表、以及 AI 研判用哪个模型。
+     处理动作在<a href="index.html">总览</a>——那里按公司给出「下一步」。</p></div></div>
+
+  <!-- ── 流水线路径：从已删除的流水线页搬来 ───────────────────────────── -->
+  <div class="card">
+    <h2>流水线目录</h2>
+    <p class="desc">每一段只复制不移动，所以每段各有自己的输出目录。改动即时保存，全平台共用这一份配置。</p>
+    <div class="row">
+      <div class="grow2"><label class="fl">输入：原始爬取数据</label><input type="text" id="p-input"></div>
+      <div class="grow2"><label class="fl">② 映射输出</label><input type="text" id="p-mapping_out"></div>
+    </div>
+    <div class="row">
+      <div class="grow2"><label class="fl">未匹配产品目录</label><input type="text" id="p-unmatched"></div>
+      <div class="grow2"><label class="fl">过程记录目录（报告 / 研判 / 人工记录）</label><input type="text" id="p-process"></div>
+    </div>
+    <div class="row">
+      <div class="grow2"><label class="fl">③ 清洗输出（固定目录，增量写入）</label><input type="text" id="p-clean_out"></div>
+      <div class="grow2"><label class="fl">⑤ 最终数据（id 映射后的交付物）</label><input type="text" id="p-final_out"></div>
+    </div>
+    <div class="row">
+      <div class="grow2"><label class="fl">公司id.json</label><input type="text" id="p-company_id"></div>
+      <div class="grow2"><label class="fl">产品id.json（分类 id 表）</label><input type="text" id="p-product_id"></div>
+    </div>
+    <div id="p-idstate" class="hint"></div>
+  </div>
+
+  <!-- ── AI 研判 ─────────────────────────────────────────────────────── -->
+  <div class="card">
+    <h2>AI 研判 <span class="chip idle" id="p-aisum"></span></h2>
+    <p class="desc">映射时关键词规则没命中的产品交给模型研判；结果进「待办 · AI 研判复核」等你确认。
+      这组设置对总览上所有会跑映射的动作生效。</p>
+    <div class="row">
+      <div><label class="fl">任务模型</label><select id="p-model"></select></div>
+      <div style="max-width:150px"><label class="fl">公司级线程</label>
+        <select id="p-threads"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div>
+      <div style="max-width:150px"><label class="fl">AI 产品级并发</label>
+        <select id="p-ai_workers">
+          <option>1</option><option>2</option><option>4</option><option>6</option><option>8</option>
+          <option>12</option><option>16</option><option>24</option><option>32</option></select></div>
+      <div style="align-self:flex-end;max-width:180px">
+        <label class="ck" style="margin-bottom:8px"><input type="checkbox" id="p-useai" checked> 启用 AI 研判</label></div>
+    </div>
+    <p class="hint">两个并发度管的不是一回事，别混：<b>公司级线程</b>管本地文件遍历与复制；
+      <b>AI 产品级并发</b>管 LLM 调用，是耗时的大头。单次研判实测 11~20 秒，
+      一家 2611 个产品、84% 走 AI 的公司，串行要 7 小时、并发 8 约 50 分钟。
+      在飞的调用总数恒定不超过这个值，不会因为公司并行而翻倍去撞供应商限流。</p>
+  </div>
+
+  <div class="card">
+    <h2>任务模型（<span id="cnt">0</span>/5）</h2>
+    <p class="desc">任务模型 = 供应商 + 模型 + 角色设定 + 挂载的 Skill。API Key 只存在本机
+      <code>data/task_models.json</code>，不上传任何地方。</p>
+    <div class="slotgrid" id="slots"></div>
+  </div>
+
+  <div class="card">
+    <h2>编辑任务模型 <span id="editing" class="chip idle" style="margin-left:6px">新建</span></h2>
+    <div class="row">
+      <div><label class="fl">任务模型名称 *</label><input type="text" id="f-name" placeholder="例：产品研判-DeepSeek"></div>
+      <div><label class="fl">LLM 供应商（预置 base URL，可手改）</label><select id="f-provider"></select></div>
+    </div>
+    <div class="row">
+      <div class="grow2"><label class="fl">Base URL *</label><input type="text" id="f-base" placeholder="https://api.deepseek.com/v1"></div>
+      <div><label class="fl">模型名 *</label><input type="text" id="f-model" placeholder="deepseek-chat"></div>
+      <div><label class="fl">温度</label><input type="number" id="f-temp" step="0.1" min="0" max="2" value="0.2"></div>
+    </div>
+    <div class="row">
+      <div class="grow2"><label class="fl">API Key（编辑时留空 = 保留原来的 Key）</label><input type="password" id="f-key" placeholder="sk-..."></div>
+    </div>
+    <label class="fl">模型角色（system 角色设定）</label>
+    <textarea id="f-role" placeholder="例：你是资深光电产品分类专家，熟悉激光器、光学元件、光纤器件、探测器等产品体系……"></textarea>
+    <label class="fl">Prompt（任务指令）</label>
+    <textarea id="f-prompt" placeholder="例：对给定产品做研判归类，只返回 JSON，禁止新建分类……（映射页已内置研判指令，此处可留空或写补充要求）"></textarea>
+    <label class="fl">挂载 Skill（勾选后其全文作为 system 提示词的一部分）</label>
+    <div class="skillck" id="f-skills"></div>
+    <div style="margin-top:10px">
+      <label class="fl">上传自定义 Skill（.md）</label>
+      <input type="file" id="f-upload" accept=".md">
+    </div>
+    <div class="btnrow">
+      <button id="btn-save">保存任务模型</button>
+      <button class="ghost" id="btn-new">新建空白</button>
+      <button class="ghost" id="btn-test" disabled>测试连通（先保存）</button>
+      <button class="danger" id="btn-del" disabled>删除此模型</button>
+      <span id="test-out" class="hint"></span>
+    </div>
+  </div>
+</div>
+<script src="js/icons.js"></script>
+<script src="js/common.js"></script>
+<script src="js/config.js"></script>
+<script src="js/cfgpaths.js"></script>
+</body>
+</html>

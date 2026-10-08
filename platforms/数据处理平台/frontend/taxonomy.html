@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>分类体系 · 自动化数据处理平台</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* 分类树：一级可折叠，二级一行一条 */
+.catcard{border:1px solid var(--line);border-radius:var(--r-sm);margin-bottom:10px;background:var(--panel)}
+.catcard>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:9px;
+  padding:12px 16px;font-weight:600;font-size:13.5px}
+.catcard>summary::-webkit-details-marker{display:none}
+.catcard>summary:hover{background:var(--sunken)}
+.catcard>summary .chev{color:var(--faint);transition:transform .18s}
+.catcard[open]>summary .chev{transform:rotate(90deg)}
+.catcard>summary .cnt{margin-left:auto;color:var(--faint);font-weight:400;font-size:12px;font-family:var(--mono)}
+.catbody{padding:0 16px 12px}
+.catdef{color:var(--muted);font-size:12.5px;margin:0 0 10px;padding-left:24px}
+.c2row{display:flex;gap:14px;padding:7px 0 7px 24px;border-top:1px solid var(--line2);font-size:13px}
+.c2row .c2n{min-width:170px;font-weight:500;flex-shrink:0}
+.c2row .c2d{color:var(--muted);font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="phead">
+    <div>
+      <h1>分类体系</h1>
+      <p>标准分类树是<b>判定的靶子</b>，关键词库是<b>命中的手段</b>——同一件事的两面，所以放在一起。
+      新增的分类只进自定义表，绝不写回标准分类树。</p>
+    </div>
+    <div class="headact" id="tx-stat"></div>
+  </div>
+
+  <div class="filters" style="margin-bottom:16px">
+    <div class="seg" id="tx-tabs">
+      <button data-t="tree" class="on">分类树与定义</button>
+      <button data-t="kw">关键词规则</button>
+    </div>
+  </div>
+
+  <!-- ── 分类树 ─────────────────────────────────────────────── -->
+  <div data-panel="tree">
+    <div class="card">
+      <div class="filters">
+        <div class="srch"><input type="search" id="cat-search" placeholder="搜索分类名或定义…"></div>
+        <label class="ck"><input type="checkbox" id="only-new"> 只看新增的分类</label>
+        <span class="fcount" id="cat-count"></span>
+      </div>
+      <div id="cat-list"></div>
+    </div>
+
+    <details class="drawer">
+      <summary><span class="chev"></span><b>新增分类</b>
+        <span class="cv">必须附定义 · 只进自定义表，不写回标准分类树</span></summary>
+      <div class="body">
+        <div class="row">
+          <div><label class="fl">新增方式</label>
+            <select id="n-mode">
+              <option value="cat2">在已有一级分类下新增二级</option>
+              <option value="cat1">全新的一级 + 二级</option>
+            </select></div>
+          <div><label class="fl">一级分类</label>
+            <select id="n-c1-sel"></select>
+            <input type="text" id="n-c1-input" placeholder="新一级分类名称" style="display:none"></div>
+          <div><label class="fl">新二级分类名称</label><input type="text" id="n-c2"></div>
+        </div>
+        <div id="n-def1-wrap" style="display:none">
+          <label class="fl">新一级分类的定义（必填）</label>
+          <textarea id="n-def1" placeholder="这个一级分类涵盖哪些产品、判定依据是什么……"></textarea>
+        </div>
+        <label class="fl">新二级分类的定义（必填）</label>
+        <textarea id="n-def2" placeholder="这个二级分类是什么、典型产品有哪些、怎么判定……"></textarea>
+        <div class="btnrow"><button id="n-submit">新增分类</button></div>
+      </div>
+    </details>
+  </div>
+
+  <!-- ── 关键词规则 ─────────────────────────────────────────── -->
+  <div data-panel="kw" hidden>
+    <div class="card">
+      <div class="filters">
+        <select id="k-cat1" style="max-width:190px"><option value="">全部一级分类</option></select>
+        <select id="k-cat2" style="max-width:190px"><option value="">全部二级分类</option></select>
+        <select id="k-tag" style="max-width:180px">
+          <option value="">全部来源</option><option>原始</option>
+          <option>人工添加</option><option>人工已确认_ai研判</option><option>人工匹配归档</option>
+        </select>
+        <div class="srch"><input type="search" id="k-search" placeholder="搜索关键词…"></div>
+        <span class="fcount" id="k-summary"></span>
+      </div>
+      <div class="tablebox" style="max-height:min(620px,calc(100vh - 340px))"><table id="k-tbl">
+        <thead><tr><th>关键词</th><th>中文词</th><th>归入分类</th><th class="n">置信度</th>
+          <th>来源</th><th>加入时间</th><th>状态</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+      <div class="btnrow" id="k-more" style="display:none"></div>
+    </div>
+
+    <details class="drawer">
+      <summary><span class="chev"></span><b>添加关键词</b>
+        <span class="cv">存进自定义库，下次映射立即生效</span></summary>
+      <div class="body">
+        <div class="row">
+          <div class="grow2"><label class="fl">关键词（中文按子串匹配，英文按词边界 + 单复数容错）</label>
+            <input type="text" id="a-kw" placeholder="例：窄线宽激光器 或 Narrow Linewidth Laser"></div>
+          <div><label class="fl">中文同义词（可选）</label><input type="text" id="a-zh"></div>
+        </div>
+        <div class="row">
+          <div><label class="fl">一级分类</label><select id="a-cat1"></select></div>
+          <div><label class="fl">二级分类</label><select id="a-cat2"></select></div>
+          <div style="max-width:150px"><label class="fl">置信度（≥ 0.90 才生效）</label>
+            <input type="number" id="a-conf" step="0.01" min="0.9" max="1" value="0.95"></div>
+          <div style="align-self:flex-end;max-width:130px"><button id="a-submit">添加</button></div>
+        </div>
+        <div id="a-defbox" class="note" style="display:none"></div>
+      </div>
+    </details>
+  </div>
+</div>
+
+<script src="js/icons.js"></script>
+<script src="js/common.js"></script>
+<script src="js/taxonomy.js"></script>
+</body>
+</html>

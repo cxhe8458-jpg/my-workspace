@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数据审核归档平台</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f172a'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' stroke='%2334d399' stroke-width='3.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/static/css/app.css">
+</head>
+<body>
+
+<header id="topbar">
+  <h1>📋 数据审核归档平台</h1>
+  <nav>
+    <button data-view="inspect" class="active">产品审核</button>
+    <button data-view="archive">归档</button>
+  </nav>
+  <div class="spacer"></div>
+  <button class="btn small" id="btn-keys" title="键盘快捷键（也可按 ?）">⌨ 快捷键</button>
+  <button class="btn small" id="btn-refresh">⟳ 刷新数据</button>
+  <button class="btn small" id="btn-logout" title="退出登录（多人共用一台机器时用完请退出）">⏻ 退出</button>
+</header>
+
+<!-- ============ 产品审核 ============ -->
+<section id="view-inspect" class="view active">
+  <div id="scan-banner" class="empty" style="display:none">⏳ 正在后台扫描产品数据，已就绪的公司可直接进入…</div>
+
+  <div id="company-page">
+    <div class="stage-tabs" id="stage-tabs"></div>
+    <div id="company-list" class="company-grid"></div>
+  </div>
+
+  <div id="workspace">
+    <aside id="sidebar">
+      <div class="side-head">
+        <div class="title-row">
+          <button class="btn small" id="btn-back">← 公司</button>
+          <h3 id="side-company"></h3>
+        </div>
+        <div class="title-actions">
+          <button class="btn small" id="btn-company-refresh" title="重扫该公司，识别新增产品与内容变化">⟳ 刷新</button>
+          <button class="btn small" id="btn-add-product" title="补录漏提取的产品">＋新增</button>
+          <button class="btn small primary" id="btn-pass-all" title="把该公司所有未检产品一次性标为通过">✔ 一键通过</button>
+        </div>
+        <div class="filters" id="status-filters">
+          <button data-f="" class="active">全部</button>
+          <button data-f="未检">未检</button>
+          <button data-f="通过">通过</button>
+          <button data-f="有问题">有问题</button>
+          <button data-f="no-html">缺HTML</button>
+        </div>
+      </div>
+      <div id="tree"></div>
+    </aside>
+
+    <main id="detail">
+      <div class="empty panel" id="detail-empty">← 在左侧选择产品开始审核（灰点=未检，绿=通过，红=有问题）。标记后自动跳到下一个未检产品。</div>
+      <div id="detail-body" style="display:none">
+        <div class="panel" id="prod-head"></div>
+        <div class="panel" id="p-info"><h4>产品信息 <span class="panel-actions" id="pa-info"></span></h4><div id="prod-info"></div></div>
+        <div class="panel" id="p-params"><h4>参数信息 <span class="panel-actions" id="pa-params"></span></h4><div id="param-nav"></div><div id="prod-params"></div></div>
+        <div class="panel" id="p-main"><h4>主图 <span class="panel-actions" id="pa-main"></span></h4><div id="prod-mainimgs" class="img-grid"></div></div>
+        <div class="panel" id="p-pimg"><h4>参数图 <span class="panel-actions" id="pa-pimg"></span></h4><div id="prod-paramimgs" class="img-grid"></div></div>
+        <div class="panel" id="p-pdf"><h4>PDF 说明书 <span class="panel-actions" id="pa-pdf"></span></h4><div id="prod-pdf"></div></div>
+        <div class="panel" id="p-html"><h4>网页源文件（HTML）</h4><div id="prod-html"></div></div>
+        <div class="panel"><h4>审核历史</h4><ul id="prod-history" class="history"></ul></div>
+        <div id="mark-dock"></div>
+      </div>
+    </main>
+
+    <div id="compare-pane">
+      <div class="cmp-bar">
+        <b style="font-size:13px;flex-shrink:0">🌐 原网页</b>
+        <span id="cmp-url" class="muted ellipsis" style="flex:1"></span>
+        <button class="btn small" id="btn-cmp-mode" title="切换 并排窗口 / 页内内嵌"></button>
+        <button class="btn small" id="btn-cmp-proxy" style="display:none" title="内嵌空白（网站拒绝内嵌）时启用代理">代理</button>
+        <button class="btn small" id="btn-cmp-close" title="关闭对比">✕</button>
+      </div>
+      <div id="cmp-start">
+        <button class="btn primary" id="btn-cmp-go">▶ 打开原网页对比</button>
+        <div class="muted" id="cmp-start-tip" style="text-align:center;max-width:420px;line-height:1.7"></div>
+      </div>
+      <iframe id="cmp-frame" referrerpolicy="no-referrer" style="display:none"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 归档 ============ -->
+<section id="view-archive" class="view">
+  <div class="toolbar">
+    <b>归档</b>
+    <span class="muted">公司下所有产品都是「通过」才可归档；归档＝把整个公司文件夹移到归档路径</span>
+    <span class="spacer"></span>
+    <label>归档路径：</label>
+    <input type="text" id="archive-path" style="width:280px" placeholder="/mnt/d/已审核数据">
+    <button class="btn small primary" id="btn-archive">📦 归档选中公司</button>
+  </div>
+  <div class="stage-tabs" id="arch-tabs"></div>
+  <div id="arch-list" class="company-grid"></div>
+  <div class="panel" style="margin-top:14px">
+    <h4>归档台账 <span class="muted" id="ledger-count"></span></h4>
+    <div class="table-wrap scroll-y"><table class="list" id="ledger-table"></table></div>
+  </div>
+</section>
+
+<div id="toast"></div>
+<div id="undo-bar"></div>
+<div id="modal-mask"><div id="modal"></div></div>
+<div id="lightbox"><img src="" alt=""></div>
+<div id="cmp-float">
+  <span id="cmp-float-state">🌐 并排对比中，点 ▶ 打开产品页</span>
+  <button class="btn small primary" id="btn-float-go">▶ 打开产品页</button>
+  <button class="btn small" id="btn-float-follow" title="切换产品时对比窗口自动换页">🔁 跟随</button>
+  <button class="btn small" id="btn-float-raise" title="把官网窗口调到最前面">🔝</button>
+  <button class="btn small" id="btn-float-squeeze" title="平台压缩到左半屏 / 恢复全宽">⛶</button>
+  <button class="btn small" id="btn-float-close" title="关闭对比">✕</button>
+</div>
+
+<script src="/static/js/api.js"></script>
+<script src="/static/js/ui.js"></script>
+<script src="/static/js/compare.js"></script>
+<script src="/static/js/inspect.js"></script>
+<script src="/static/js/fixes.js"></script>
+<script src="/static/js/archive.js"></script>
+<script src="/static/js/main.js"></script>
+</body>
+</html>
