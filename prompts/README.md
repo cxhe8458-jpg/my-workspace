@@ -1,9 +1,7 @@
 # prompts
 
-Prompt 模板目录：常用提示词模板，按用途命名。
-
-## Prompt 清单
-
-| 模板名称 | 用途 | 入口 |
-| --- | --- | --- |
-| （待补充） | … | `prompts/<用途>.md` |
+当前无独立 Prompt 文件。AI 相关规则/提示词已并入以下 Skill 文档：
+- `skills/product-folder-standardizer.md`（分类引擎规则）
+- `skills/product_category.md`（分类落地规范）
+- `skills/product-data-pipeline.md`（端到端处理流程）
+（位于 `platforms/数据处理平台/skills/`）

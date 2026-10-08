@@ -1,7 +1,4 @@
 # docs
 
-通用文档目录：维护规范、模板与经验笔记。
-
-| 文件 | 用途 |
-| --- | --- |
-| `README-TEMPLATE.md` | 每份资产的标准 README 模板 |
+本目录存放通用文档模板与整理规范。
+- `README-TEMPLATE.md`：资产 README 编写模板
