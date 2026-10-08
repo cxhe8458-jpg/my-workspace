@@ -1,0 +1,16 @@
+# 密钥与凭据
+*.key
+*.pem
+.env
+.env.*
+!*.example
+
+# 缓存与日志
+__pycache__/
+*.pyc
+node_modules/
+*.log
+
+# 系统文件
+.DS_Store
+Thumbs.db
