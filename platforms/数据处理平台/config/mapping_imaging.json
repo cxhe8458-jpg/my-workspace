@@ -1,0 +1,2830 @@
+{
+  "Endoscope": {
+    "zh": "内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Medical Endoscope": {
+    "zh": "医用内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Video Borescope": {
+    "zh": "视频工业内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Flexible Videoscope": {
+    "zh": "软管视频内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rigid Videoscope": {
+    "zh": "硬管视频内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Inspection Scope": {
+    "zh": "检测内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Industrial Videoscope": {
+    "zh": "工业视频内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Pipe Inspection Camera": {
+    "zh": "管道检测相机",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Articulating Borescope": {
+    "zh": "可弯曲工业内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Optic Endoscope": {
+    "zh": "光纤内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "CMOS Endoscope": {
+    "zh": "CMOS内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "HD Endoscope": {
+    "zh": "高清内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "4K Endoscope": {
+    "zh": "4K内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Surgical Endoscope": {
+    "zh": "手术内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Choledochoscope": {
+    "zh": "胆道镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Virtual Reality": {
+    "zh": "虚拟现实",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "VR": {
+    "zh": "虚拟现实",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Augmented Reality": {
+    "zh": "增强现实",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "AR": {
+    "zh": "增强现实",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Augmented Reality Glasses": {
+    "zh": "增强现实眼镜",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mixed Reality": {
+    "zh": "混合现实",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MR": {
+    "zh": "混合现实",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Extended Reality": {
+    "zh": "扩展现实",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "XR": {
+    "zh": "扩展现实",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "HMD": {
+    "zh": "头戴显示器",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Near-Eye Display": {
+    "zh": "近眼显示器",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Waveguide Display": {
+    "zh": "波导显示器",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Waveguide": {
+    "zh": "光波导",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Diffractive Waveguide": {
+    "zh": "衍射光波导",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Reflective Waveguide": {
+    "zh": "反射光波导",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Birdbath Optics": {
+    "zh": "Birdbath光学模组",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "XR Optical Module": {
+    "zh": "XR光学模组",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "VR Optical Module": {
+    "zh": "VR光学模组",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Eye Tracking Module": {
+    "zh": "眼动追踪模块",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Eye Tracking System": {
+    "zh": "眼动追踪系统",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Display": {
+    "zh": "显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Display Technology": {
+    "zh": "显示技术",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Microdisplay": {
+    "zh": "微显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Micro Display": {
+    "zh": "微显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LCD": {
+    "zh": "液晶显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "OLED": {
+    "zh": "有机发光显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "AMOLED": {
+    "zh": "主动矩阵有机发光显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Micro LED": {
+    "zh": "Micro LED显示",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LED Display": {
+    "zh": "LED显示屏",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Mini LED": {
+    "zh": "Mini LED显示",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "LCoS": {
+    "zh": "硅基液晶",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "LCOS": {
+    "zh": "硅基液晶",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "LCoS Display": {
+    "zh": "硅基液晶显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "DLP": {
+    "zh": "数字光处理",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Projection Module": {
+    "zh": "投影模块",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Engine": {
+    "zh": "光引擎",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "HUD Display": {
+    "zh": "抬头显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Holographic Display": {
+    "zh": "全息显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Light Field Display": {
+    "zh": "光场显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "CCD Image Sensor": {
+    "zh": "CCD图像传感器",
+    "category1": "成像",
+    "category2": "CCD图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "CCD Sensor": {
+    "zh": "CCD传感器",
+    "category1": "成像",
+    "category2": "CCD图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Area CCD": {
+    "zh": "面阵CCD",
+    "category1": "成像",
+    "category2": "CCD图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Line CCD": {
+    "zh": "线阵CCD",
+    "category1": "成像",
+    "category2": "CCD图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Interline CCD": {
+    "zh": "行间转移CCD",
+    "category1": "成像",
+    "category2": "CCD图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Full Frame CCD": {
+    "zh": "全帧CCD",
+    "category1": "成像",
+    "category2": "CCD图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Frame Transfer CCD": {
+    "zh": "帧转移CCD",
+    "category1": "成像",
+    "category2": "CCD图像传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Back Illuminated CCD": {
+    "zh": "背照式CCD",
+    "category1": "成像",
+    "category2": "CCD图像传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "CMOS Image Sensor": {
+    "zh": "CMOS图像传感器",
+    "category1": "成像",
+    "category2": "CMOS图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "CMOS Sensor": {
+    "zh": "CMOS传感器",
+    "category1": "成像",
+    "category2": "CMOS图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "sCMOS": {
+    "zh": "科学级CMOS",
+    "category1": "成像",
+    "category2": "CMOS图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Scientific CMOS": {
+    "zh": "科学级CMOS",
+    "category1": "成像",
+    "category2": "CMOS图像传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "BSI CMOS": {
+    "zh": "背照式CMOS",
+    "category1": "成像",
+    "category2": "CMOS图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Backside Illuminated CMOS": {
+    "zh": "背照式CMOS",
+    "category1": "成像",
+    "category2": "CMOS图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Global Shutter CMOS": {
+    "zh": "全局快门CMOS",
+    "category1": "成像",
+    "category2": "CMOS图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rolling Shutter CMOS": {
+    "zh": "卷帘快门CMOS",
+    "category1": "成像",
+    "category2": "CMOS图像传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Stacked CMOS": {
+    "zh": "堆栈式CMOS",
+    "category1": "成像",
+    "category2": "CMOS图像传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Global Shutter Sensor": {
+    "zh": "全局快门传感器",
+    "category1": "成像",
+    "category2": "CMOS图像传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "High Speed Sensor": {
+    "zh": "高速传感器",
+    "category1": "成像",
+    "category2": "高速传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "High-Speed Image Sensor": {
+    "zh": "高速图像传感器",
+    "category1": "成像",
+    "category2": "高速传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ultra High Speed Sensor": {
+    "zh": "超高速传感器",
+    "category1": "成像",
+    "category2": "高速传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Frame Rate Sensor": {
+    "zh": "高帧率传感器",
+    "category1": "成像",
+    "category2": "高速传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Time of Flight Sensor": {
+    "zh": "飞行时间传感器",
+    "category1": "成像",
+    "category2": "高速传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "ToF Sensor": {
+    "zh": "ToF传感器",
+    "category1": "成像",
+    "category2": "高速传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Event Camera Sensor": {
+    "zh": "事件相机传感器",
+    "category1": "成像",
+    "category2": "高速传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "SPAD Image Sensor": {
+    "zh": "单光子雪崩二极管图像传感器",
+    "category1": "成像",
+    "category2": "高速传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Infrared Camera": {
+    "zh": "红外相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "IR Camera": {
+    "zh": "红外相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Thermal Camera": {
+    "zh": "热像仪",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Thermal Imaging Camera": {
+    "zh": "热成像相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Infrared Imaging Camera": {
+    "zh": "红外成像相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Infrared Imaging System": {
+    "zh": "红外成像系统",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Thermal Imaging System": {
+    "zh": "热成像系统",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Infrared Detector": {
+    "zh": "红外探测器",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "IR Detector": {
+    "zh": "红外探测器",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Thermal Detector": {
+    "zh": "热探测器",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Microbolometer": {
+    "zh": "微测辐射热计",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Uncooled Microbolometer": {
+    "zh": "非制冷微测辐射热计",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cooled Infrared Detector": {
+    "zh": "制冷型红外探测器",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "SWIR Camera": {
+    "zh": "短波红外相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Short Wave Infrared Camera": {
+    "zh": "短波红外相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "MWIR Camera": {
+    "zh": "中波红外相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mid Wave Infrared Camera": {
+    "zh": "中波红外相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "LWIR Camera": {
+    "zh": "长波红外相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Long Wave Infrared Camera": {
+    "zh": "长波红外相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Near Infrared Camera": {
+    "zh": "近红外相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "NIR Camera": {
+    "zh": "近红外相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "InGaAs Camera": {
+    "zh": "铟镓砷相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "InSb Camera": {
+    "zh": "锑化铟相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "MCT Camera": {
+    "zh": "碲镉汞相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "HgCdTe Camera": {
+    "zh": "碲镉汞相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Infrared FPA": {
+    "zh": "红外焦平面阵列",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Focal Plane Array": {
+    "zh": "焦平面阵列",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Thermal Core": {
+    "zh": "热成像机芯",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Thermal Imaging Core": {
+    "zh": "热成像机芯",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Infrared Imaging Module": {
+    "zh": "红外成像模块",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Scientific Camera": {
+    "zh": "科学相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "CCD Camera": {
+    "zh": "CCD相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "ICCD Camera": {
+    "zh": "增强型CCD相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "CMOS Camera": {
+    "zh": "CMOS相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Industrial Vision Camera": {
+    "zh": "工业视觉相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "USB Camera": {
+    "zh": "USB相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "USB3 Vision Camera": {
+    "zh": "USB3 Vision相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "GigE Camera": {
+    "zh": "千兆网相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "GigE Vision Camera": {
+    "zh": "GigE Vision相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Camera Link Camera": {
+    "zh": "Camera Link相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "CoaXPress Camera": {
+    "zh": "CoaXPress相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "10GigE Camera": {
+    "zh": "万兆网相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "High Speed Camera": {
+    "zh": "高速相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Astronomy Camera": {
+    "zh": "天文相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "OEM Camera Module": {
+    "zh": "OEM相机模块",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Digital Scientific Camera": {
+    "zh": "数字科学相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Scientific Imaging Camera": {
+    "zh": "科学成像相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "USB3 Camera": {
+    "zh": "USB3相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "USB3 Vision": {
+    "zh": "USB3 Vision相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Gigabit Ethernet Camera": {
+    "zh": "千兆以太网相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "GigE Vision": {
+    "zh": "GigE Vision相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "5GigE Camera": {
+    "zh": "5G网口相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "25GigE Camera": {
+    "zh": "25G网口相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "CLHS Camera": {
+    "zh": "Camera Link HS相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Camera Link HS Camera": {
+    "zh": "Camera Link HS相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Camera Module": {
+    "zh": "相机模块",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "OEM Camera": {
+    "zh": "OEM相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Board Level Camera": {
+    "zh": "板级相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Board Camera": {
+    "zh": "板级相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Embedded Camera": {
+    "zh": "嵌入式相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Embedded Vision Camera": {
+    "zh": "嵌入式视觉相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Smart Camera": {
+    "zh": "智能相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "AI Camera": {
+    "zh": "AI相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Vision AI Camera": {
+    "zh": "视觉AI相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Stereo Camera": {
+    "zh": "立体相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "3D Camera": {
+    "zh": "3D相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Depth Camera": {
+    "zh": "深度相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Time of Flight Camera": {
+    "zh": "飞行时间相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "ToF Camera": {
+    "zh": "ToF相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Polarization Camera": {
+    "zh": "偏振相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Hyperspectral Camera": {
+    "zh": "高光谱相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Multispectral Camera": {
+    "zh": "多光谱相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "SWIR Camera Module": {
+    "zh": "短波红外相机模块",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Machine Vision System": {
+    "zh": "机器视觉系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Industrial Vision System": {
+    "zh": "工业视觉系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Long Range Thermal Camera": {
+    "zh": "远距离热像仪",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Short Range Thermal Camera": {
+    "zh": "近距离热像仪",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Portable Thermal Camera": {
+    "zh": "便携式热像仪",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Handheld Thermal Camera": {
+    "zh": "手持式热像仪",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fixed Thermal Camera": {
+    "zh": "固定式热像仪",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Industrial Thermal Camera": {
+    "zh": "工业热像仪",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Scientific Thermal Camera": {
+    "zh": "科学热像仪",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Research Infrared Camera": {
+    "zh": "科研红外相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Radiometric Thermal Camera": {
+    "zh": "测温型热像仪",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Thermal Imaging Module": {
+    "zh": "热成像模块",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Infrared Camera Module": {
+    "zh": "红外相机模块",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "OEM Thermal Module": {
+    "zh": "OEM热成像模块",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "OEM Infrared Module": {
+    "zh": "OEM红外模块",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Infrared Camera Core": {
+    "zh": "红外相机机芯",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Infrared Core": {
+    "zh": "红外机芯",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Thermal Imaging Engine": {
+    "zh": "热成像引擎",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Infrared Engine": {
+    "zh": "红外引擎",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Dual Band Infrared Camera": {
+    "zh": "双波段红外相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Dual Color Infrared Camera": {
+    "zh": "双色红外相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Multi Band Infrared Camera": {
+    "zh": "多波段红外相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Hyperspectral Infrared Camera": {
+    "zh": "高光谱红外相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Multispectral Infrared Camera": {
+    "zh": "多光谱红外相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Infrared Line Scan Camera": {
+    "zh": "红外线阵相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "SWIR Line Scan Camera": {
+    "zh": "短波红外线阵相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Infrared Area Scan Camera": {
+    "zh": "红外面阵相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Infrared Microscope Camera": {
+    "zh": "红外显微相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Thermal Microscope Camera": {
+    "zh": "热成像显微相机",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Infrared Focal Plane Array": {
+    "zh": "红外焦平面阵列",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "IR FPA": {
+    "zh": "红外焦平面阵列",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cooled FPA": {
+    "zh": "制冷型焦平面阵列",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Uncooled FPA": {
+    "zh": "非制冷焦平面阵列",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Thermal Vision System": {
+    "zh": "热视觉系统",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Infrared Vision System": {
+    "zh": "红外视觉系统",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Electro Optical Infrared System": {
+    "zh": "光电红外系统",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "EO IR System": {
+    "zh": "光电红外系统",
+    "category1": "成像",
+    "category2": "红外成像",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Area Scan Camera": {
+    "zh": "面阵相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Line Scan Camera": {
+    "zh": "线阵相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Global Shutter Camera": {
+    "zh": "全局快门相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Rolling Shutter Camera": {
+    "zh": "卷帘快门相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Global Shutter CMOS Camera": {
+    "zh": "全局快门CMOS相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Rolling Shutter CMOS Camera": {
+    "zh": "卷帘快门CMOS相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Backside Illuminated Camera": {
+    "zh": "背照式相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "BSI Camera": {
+    "zh": "背照式相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Stacked CMOS Camera": {
+    "zh": "堆栈式CMOS相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "sCMOS Camera": {
+    "zh": "科学级CMOS相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Scientific CMOS Camera": {
+    "zh": "科学级CMOS相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "EMCCD Camera": {
+    "zh": "电子倍增CCD相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Interline CCD Camera": {
+    "zh": "行间转移CCD相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Frame Transfer CCD Camera": {
+    "zh": "帧转移CCD相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Full Frame CCD Camera": {
+    "zh": "全帧CCD相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Ultra High Speed Camera": {
+    "zh": "超高速相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "High Frame Rate Camera": {
+    "zh": "高帧率相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Slow Motion Camera": {
+    "zh": "高速慢动作相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Burst Mode Camera": {
+    "zh": "猝发模式相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Low Light Camera": {
+    "zh": "微光相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Ultra Low Light Camera": {
+    "zh": "超微光相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Dynamic Range Camera": {
+    "zh": "高动态范围相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "HDR Camera": {
+    "zh": "HDR相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Color Camera": {
+    "zh": "彩色相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Monochrome Camera": {
+    "zh": "黑白相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cooled Camera": {
+    "zh": "制冷相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Air Cooled Camera": {
+    "zh": "风冷相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Water Cooled Camera": {
+    "zh": "水冷相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Compact Camera": {
+    "zh": "紧凑型相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "OEM Scientific Camera": {
+    "zh": "OEM科学相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "High Resolution Camera": {
+    "zh": "高分辨率相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Large Format Camera": {
+    "zh": "大靶面相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Machine Vision Camera": {
+    "zh": "机器视觉相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Industrial Camera": {
+    "zh": "工业相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Inspection Camera": {
+    "zh": "检测相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "OLED Microdisplay": {
+    "zh": "OLED微显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Micro OLED": {
+    "zh": "微型OLED",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MicroOLED Display": {
+    "zh": "微型OLED显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Micro LED Display": {
+    "zh": "Micro LED显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MicroLED": {
+    "zh": "Micro LED",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mini LED Display": {
+    "zh": "Mini LED显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "MiniLED": {
+    "zh": "Mini LED",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "OLED Display": {
+    "zh": "OLED显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "AMOLED Display": {
+    "zh": "AMOLED显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PMOLED Display": {
+    "zh": "PMOLED显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "LCD Display": {
+    "zh": "液晶显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "TFT LCD": {
+    "zh": "TFT液晶",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "IPS Display": {
+    "zh": "IPS显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "VA Display": {
+    "zh": "VA显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "LCOS Display": {
+    "zh": "硅基液晶显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LCoS Microdisplay": {
+    "zh": "硅基液晶微显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "DLP Display": {
+    "zh": "DLP显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "DLP Chip": {
+    "zh": "DLP芯片",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Digital Micromirror Device": {
+    "zh": "数字微镜器件",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "DMD": {
+    "zh": "数字微镜器件",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Spatial Light Modulator": {
+    "zh": "空间光调制器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "SLM": {
+    "zh": "空间光调制器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Reflective Display": {
+    "zh": "反射式显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Transmissive Display": {
+    "zh": "透射式显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Transparent Display": {
+    "zh": "透明显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Near Eye Display": {
+    "zh": "近眼显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Head Mounted Display": {
+    "zh": "头戴显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Display Engine": {
+    "zh": "显示引擎",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Projection Display": {
+    "zh": "投影显示器",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Projection Engine": {
+    "zh": "投影引擎",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Light Engine": {
+    "zh": "光引擎",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Display Module": {
+    "zh": "显示模块",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Microdisplay Module": {
+    "zh": "微显示模块",
+    "category1": "成像",
+    "category2": "显示技术",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "AR Glasses": {
+    "zh": "AR眼镜",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Smart Glasses": {
+    "zh": "智能眼镜",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical See Through Glasses": {
+    "zh": "光学透视眼镜",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Video See Through Glasses": {
+    "zh": "视频透视眼镜",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "AR Headset": {
+    "zh": "AR头显",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "VR Headset": {
+    "zh": "VR头显",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MR Headset": {
+    "zh": "MR头显",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "XR Headset": {
+    "zh": "XR头显",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mixed Reality Headset": {
+    "zh": "混合现实头显",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Extended Reality Headset": {
+    "zh": "扩展现实头显",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Virtual Reality Headset": {
+    "zh": "虚拟现实头显",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Augmented Reality Headset": {
+    "zh": "增强现实头显",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Near Eye Optical Module": {
+    "zh": "近眼光学模组",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Near Eye Optical System": {
+    "zh": "近眼光学系统",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Waveguide Display Module": {
+    "zh": "波导显示模组",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Waveguide Module": {
+    "zh": "波导模组",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "AR Optical Module": {
+    "zh": "AR光学模组",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "AR Projection Module": {
+    "zh": "AR投影模组",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Head Mounted System": {
+    "zh": "头戴系统",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Wearable Display System": {
+    "zh": "可穿戴显示系统",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "XR Device": {
+    "zh": "XR设备",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "AR Device": {
+    "zh": "AR设备",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "VR Device": {
+    "zh": "VR设备",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Mixed Reality Device": {
+    "zh": "混合现实设备",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "XR Development Kit": {
+    "zh": "XR开发套件",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "AR Development Kit": {
+    "zh": "AR开发套件",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "VR Development Kit": {
+    "zh": "VR开发套件",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Eye Tracking Headset": {
+    "zh": "眼动追踪头显",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Foveated Display System": {
+    "zh": "注视点渲染显示系统",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Head Up Display": {
+    "zh": "抬头显示器",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "HUD System": {
+    "zh": "抬头显示系统",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Automotive HUD": {
+    "zh": "车载抬头显示器",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Helmet Mounted Display": {
+    "zh": "头盔显示器",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Helmet Mounted System": {
+    "zh": "头盔显示系统",
+    "category1": "成像",
+    "category2": "虚拟现实/增强现实",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Rigid Endoscope": {
+    "zh": "硬管内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Flexible Endoscope": {
+    "zh": "软管内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Video Endoscope": {
+    "zh": "视频内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Digital Endoscope": {
+    "zh": "数字内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Industrial Endoscope": {
+    "zh": "工业内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Borescope": {
+    "zh": "工业内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Industrial Borescope": {
+    "zh": "工业内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Videoscope": {
+    "zh": "视频内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiberscope": {
+    "zh": "光纤内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Electronic Endoscope": {
+    "zh": "电子内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Medical Videoscope": {
+    "zh": "医用视频内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Portable Endoscope": {
+    "zh": "便携式内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Handheld Endoscope": {
+    "zh": "手持式内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "USB Endoscope": {
+    "zh": "USB内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Wireless Endoscope": {
+    "zh": "无线内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Inspection Endoscope": {
+    "zh": "检测内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Articulating Endoscope": {
+    "zh": "可弯曲内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Steerable Endoscope": {
+    "zh": "可操控内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Capsule Endoscope": {
+    "zh": "胶囊内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Disposable Endoscope": {
+    "zh": "一次性内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Single Use Endoscope": {
+    "zh": "一次性内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Bronchoscope": {
+    "zh": "支气管镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Gastroscope": {
+    "zh": "胃镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Colonoscope": {
+    "zh": "结肠镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laparoscope": {
+    "zh": "腹腔镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Arthroscope": {
+    "zh": "关节镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Hysteroscope": {
+    "zh": "宫腔镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Ureteroscope": {
+    "zh": "输尿管镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cystoscope": {
+    "zh": "膀胱镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "ENT Endoscope": {
+    "zh": "耳鼻喉内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Veterinary Endoscope": {
+    "zh": "兽用内窥镜",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Endoscope Camera": {
+    "zh": "内窥镜相机",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Endoscope Camera Head": {
+    "zh": "内窥镜摄像头",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Endoscopy Imaging System": {
+    "zh": "内窥镜成像系统",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Endoscopy System": {
+    "zh": "内窥镜系统",
+    "category1": "成像",
+    "category2": "内窥镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fluorescence Imaging System": {
+    "zh": "荧光成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fluorescence Camera": {
+    "zh": "荧光相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Confocal Imaging System": {
+    "zh": "共聚焦成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Confocal Microscope Camera": {
+    "zh": "共聚焦显微相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Multiphoton Imaging System": {
+    "zh": "多光子成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Two Photon Imaging System": {
+    "zh": "双光子成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Light Sheet Imaging System": {
+    "zh": "光片成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Light Sheet Microscope": {
+    "zh": "光片显微镜",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Live Cell Imaging System": {
+    "zh": "活细胞成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cell Imaging System": {
+    "zh": "细胞成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Digital Pathology Scanner": {
+    "zh": "数字病理扫描仪",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Whole Slide Scanner": {
+    "zh": "全切片扫描仪",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Whole Slide Imaging System": {
+    "zh": "全切片成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Bio Imaging System": {
+    "zh": "生物成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Biomedical Imaging System": {
+    "zh": "生物医学成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Life Science Imaging System": {
+    "zh": "生命科学成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Gel Documentation System": {
+    "zh": "凝胶成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Chemiluminescence Imaging System": {
+    "zh": "化学发光成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Luminescence Imaging System": {
+    "zh": "发光成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Bioluminescence Imaging System": {
+    "zh": "生物发光成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "In Vivo Imaging System": {
+    "zh": "活体成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Preclinical Imaging System": {
+    "zh": "临床前成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Content Imaging System": {
+    "zh": "高内涵成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "High Content Screening System": {
+    "zh": "高内涵筛选系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Automated Imaging System": {
+    "zh": "自动成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Microscopy Camera": {
+    "zh": "显微成像相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Microscope Imaging System": {
+    "zh": "显微成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Scientific Imaging Platform": {
+    "zh": "科学成像平台",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Spectral Imaging System": {
+    "zh": "光谱成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Raman Imaging System": {
+    "zh": "拉曼成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Hyperspectral Imaging System": {
+    "zh": "高光谱成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Multispectral Imaging System": {
+    "zh": "多光谱成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Remote Sensing Camera": {
+    "zh": "遥感相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Remote Sensing Imaging System": {
+    "zh": "遥感成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Aerial Imaging System": {
+    "zh": "航空成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Aerial Camera": {
+    "zh": "航空相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Drone Camera": {
+    "zh": "无人机相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "UAV Camera": {
+    "zh": "无人机相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Satellite Camera": {
+    "zh": "卫星相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Satellite Imaging System": {
+    "zh": "卫星成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Earth Observation Camera": {
+    "zh": "对地观测相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Earth Observation Imaging System": {
+    "zh": "对地观测成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Remote Vision System": {
+    "zh": "远程视觉系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Observation Camera": {
+    "zh": "观测相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Inspection Imaging System": {
+    "zh": "检测成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Automated Optical Inspection": {
+    "zh": "自动光学检测",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "AOI System": {
+    "zh": "自动光学检测系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Machine Inspection System": {
+    "zh": "机器检测系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Inline Inspection System": {
+    "zh": "在线检测系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Surface Inspection System": {
+    "zh": "表面检测系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Wafer Inspection System": {
+    "zh": "晶圆检测系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Semiconductor Inspection Camera": {
+    "zh": "半导体检测相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "PCB Inspection Camera": {
+    "zh": "PCB检测相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Quality Inspection Camera": {
+    "zh": "质量检测相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Vision Inspection System": {
+    "zh": "视觉检测系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Machine Vision Inspection System": {
+    "zh": "机器视觉检测系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Hyperspectral Inspection System": {
+    "zh": "高光谱检测系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Multispectral Inspection System": {
+    "zh": "多光谱检测系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Agricultural Imaging System": {
+    "zh": "农业成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Precision Agriculture Camera": {
+    "zh": "精准农业相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Geospatial Imaging System": {
+    "zh": "地理空间成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Survey Imaging System": {
+    "zh": "测绘成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Mapping Camera": {
+    "zh": "测绘相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Photogrammetry Camera": {
+    "zh": "摄影测量相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Spaceborne Imaging System": {
+    "zh": "星载成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Airborne Imaging System": {
+    "zh": "机载成像系统",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "AI Monitoring Camera": {
+    "zh": "AI监控相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "AI Monitoring": {
+    "zh": "AI监控相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Intelligent Monitoring": {
+    "zh": "智能监控相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Omni-directional PTZ": {
+    "zh": "全向云台相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PTZ Camera": {
+    "zh": "云台相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "BUTEO Camera": {
+    "zh": "BUTEO航测相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LAB Scanner": {
+    "zh": "实验室扫描相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LUMENERA": {
+    "zh": "LUMENERA工业相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "BUTEO": {
+    "zh": "BUTEO航测相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "BUTEO Scanner": {
+    "zh": "BUTEO航测扫描相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Smart Appliance Camera": {
+    "zh": "智能家电相机",
+    "category1": "成像",
+    "category2": "科学和工业相机",
+    "enable": true,
+    "confidence": 1.0
+  }
+}
