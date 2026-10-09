@@ -1,0 +1,2585 @@
+{
+  "Medical": {
+    "zh": "医疗",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Medical System": {
+    "zh": "医疗系统",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Medical Laser": {
+    "zh": "医用激光",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Medical Imaging": {
+    "zh": "医学成像",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Biomedical": {
+    "zh": "生物医学",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Biomedical Imaging": {
+    "zh": "生物医学成像",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Life Science": {
+    "zh": "生命科学",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Life Science Instrumentation": {
+    "zh": "生命科学仪器",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Biophotonics": {
+    "zh": "生物光子学",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Clinical Diagnostics": {
+    "zh": "临床诊断",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Diagnostic Imaging": {
+    "zh": "诊断成像",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Ophthalmology": {
+    "zh": "眼科",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Retinal Imaging": {
+    "zh": "视网膜成像",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "OCT": {
+    "zh": "光学相干断层扫描",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Coherence Tomography": {
+    "zh": "光学相干断层扫描",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Endoscopy": {
+    "zh": "内窥镜检查",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fluorescence Imaging": {
+    "zh": "荧光成像",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Digital Pathology": {
+    "zh": "数字病理",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Flow Cytometry": {
+    "zh": "流式细胞术",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cell Imaging": {
+    "zh": "细胞成像",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Live Cell Imaging": {
+    "zh": "活细胞成像",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "DNA Sequencing": {
+    "zh": "DNA测序",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Genomics": {
+    "zh": "基因组学",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Proteomics": {
+    "zh": "蛋白质组学",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Bioinstrumentation": {
+    "zh": "生物仪器",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Dentistry": {
+    "zh": "牙科",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Dermatology": {
+    "zh": "皮肤科",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Surgical Imaging": {
+    "zh": "手术成像",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Medical Diagnostics": {
+    "zh": "医学诊断",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Industrial Manufacturing": {
+    "zh": "工业制造",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Industrial Automation": {
+    "zh": "工业自动化",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Factory Automation": {
+    "zh": "工厂自动化",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Smart Manufacturing": {
+    "zh": "智能制造",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Digital Manufacturing": {
+    "zh": "数字化制造",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Industrial Laser": {
+    "zh": "工业激光",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Processing": {
+    "zh": "激光加工",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Material Processing": {
+    "zh": "激光材料加工",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Cutting": {
+    "zh": "激光切割",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Welding": {
+    "zh": "激光焊接",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Marking": {
+    "zh": "激光打标",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Engraving": {
+    "zh": "激光雕刻",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Cleaning": {
+    "zh": "激光清洗",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Cladding": {
+    "zh": "激光熔覆",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Drilling": {
+    "zh": "激光打孔",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Micromachining": {
+    "zh": "激光微加工",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Precision Manufacturing": {
+    "zh": "精密制造",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Microfabrication": {
+    "zh": "微加工",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Additive Manufacturing": {
+    "zh": "增材制造",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "3D Printing": {
+    "zh": "3D打印",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Industrial Inspection": {
+    "zh": "工业检测",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Machine Vision": {
+    "zh": "机器视觉",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Vision Inspection": {
+    "zh": "视觉检测",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Quality Inspection": {
+    "zh": "质量检测",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Metrology": {
+    "zh": "计量",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Inline Inspection": {
+    "zh": "在线检测",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Robotics": {
+    "zh": "机器人技术",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Robot Vision": {
+    "zh": "机器人视觉",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Automation Equipment": {
+    "zh": "自动化设备",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Factory Vision": {
+    "zh": "工厂视觉",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Surface Inspection": {
+    "zh": "表面检测",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Non Contact Measurement": {
+    "zh": "非接触测量",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Semiconductor Metrology": {
+    "zh": "半导体量测",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Lithography": {
+    "zh": "光刻",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Photolithography": {
+    "zh": "光刻",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "EUV Lithography": {
+    "zh": "极紫外光刻",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "DUV Lithography": {
+    "zh": "深紫外光刻",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "MEMS": {
+    "zh": "微机电系统",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Microelectromechanical Systems": {
+    "zh": "微机电系统",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Flat Panel Display": {
+    "zh": "平板显示",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "IC Testing": {
+    "zh": "集成电路测试",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Failure Analysis": {
+    "zh": "失效分析",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "SMT": {
+    "zh": "表面贴装技术",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Research": {
+    "zh": "科研",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Research Institute": {
+    "zh": "研究机构",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Physics": {
+    "zh": "物理",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Applied Physics": {
+    "zh": "应用物理",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Quantum Physics": {
+    "zh": "量子物理",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Quantum Information": {
+    "zh": "量子信息",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Photonics": {
+    "zh": "光子学",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Integrated Photonics": {
+    "zh": "集成光子学",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optics": {
+    "zh": "光学",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Engineering": {
+    "zh": "光学工程",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Raman Spectroscopy": {
+    "zh": "拉曼光谱",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fluorescence Spectroscopy": {
+    "zh": "荧光光谱",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Electron Microscopy": {
+    "zh": "电子显微术",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Confocal Microscopy": {
+    "zh": "共聚焦显微术",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Chemistry": {
+    "zh": "化学",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "STEM Education": {
+    "zh": "STEM教育",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Fiber Network": {
+    "zh": "光纤网络",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "FTTH": {
+    "zh": "光纤到户",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "FTTx": {
+    "zh": "光纤接入",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Passive Optical Network": {
+    "zh": "无源光网络",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "PON": {
+    "zh": "无源光网络",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cloud Computing": {
+    "zh": "云计算",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "AI Data Center": {
+    "zh": "AI数据中心",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "LiDAR": {
+    "zh": "激光雷达",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Automotive LiDAR": {
+    "zh": "车载激光雷达",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Industrial LiDAR": {
+    "zh": "工业激光雷达",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Photonics Network": {
+    "zh": "光子网络",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Energy": {
+    "zh": "能源",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Lithium Battery": {
+    "zh": "锂电池",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Hydrogen Energy": {
+    "zh": "氢能",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fuel Cell": {
+    "zh": "燃料电池",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Remote Sensing": {
+    "zh": "遥感",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Hyperspectral Imaging": {
+    "zh": "高光谱成像",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Multispectral Imaging": {
+    "zh": "多光谱成像",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Vehicle Vision": {
+    "zh": "车载视觉",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Marine": {
+    "zh": "海洋",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Ocean Observation": {
+    "zh": "海洋观测",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Agricultural Monitoring": {
+    "zh": "农业监测",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Forensics": {
+    "zh": "取证",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Public Safety": {
+    "zh": "公共安全",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Homeland Defense": {
+    "zh": "国土防御",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Geospatial": {
+    "zh": "地理空间",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Life Sciences": {
+    "zh": "生命科学",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Biotechnology": {
+    "zh": "生物技术",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Biotechnology Research": {
+    "zh": "生物技术研究",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Molecular Biology": {
+    "zh": "分子生物学",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cell Biology": {
+    "zh": "细胞生物学",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Histology": {
+    "zh": "组织学",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Pathology": {
+    "zh": "病理学",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cancer Research": {
+    "zh": "癌症研究",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Oncology": {
+    "zh": "肿瘤学",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Immunology": {
+    "zh": "免疫学",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Neuroscience": {
+    "zh": "神经科学",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Stem Cell Research": {
+    "zh": "干细胞研究",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Regenerative Medicine": {
+    "zh": "再生医学",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Drug Discovery": {
+    "zh": "药物发现",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Drug Development": {
+    "zh": "药物开发",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Pharmaceutical": {
+    "zh": "制药",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pharmaceutical Manufacturing": {
+    "zh": "制药生产",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Drug Screening": {
+    "zh": "药物筛选",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Content Screening": {
+    "zh": "高内涵筛选",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Bioanalysis": {
+    "zh": "生物分析",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Bioanalytics": {
+    "zh": "生物分析",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Clinical Research": {
+    "zh": "临床研究",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Clinical Laboratory": {
+    "zh": "临床实验室",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Point of Care": {
+    "zh": "即时检测",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Point of Care Testing": {
+    "zh": "即时检测",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "POCT": {
+    "zh": "即时检测",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Molecular Diagnostics": {
+    "zh": "分子诊断",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "In Vitro Diagnostics": {
+    "zh": "体外诊断",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "IVD": {
+    "zh": "体外诊断",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Veterinary Medicine": {
+    "zh": "兽医",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Medical Device": {
+    "zh": "医疗器械",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Medical Equipment": {
+    "zh": "医疗设备",
+    "category1": "行业应用与系统",
+    "category2": "医疗与生命科学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Advanced Manufacturing": {
+    "zh": "先进制造",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Manufacturing": {
+    "zh": "制造",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Production Line": {
+    "zh": "生产线",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Production Automation": {
+    "zh": "生产自动化",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Factory Digitalization": {
+    "zh": "工厂数字化",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Industry 4.0": {
+    "zh": "工业4.0",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Smart Factory": {
+    "zh": "智慧工厂",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Flexible Manufacturing": {
+    "zh": "柔性制造",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Discrete Manufacturing": {
+    "zh": "离散制造",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Process Manufacturing": {
+    "zh": "流程制造",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Ablation": {
+    "zh": "激光烧蚀",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Surface Treatment": {
+    "zh": "激光表面处理",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Texturing": {
+    "zh": "激光织构",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Annealing": {
+    "zh": "激光退火",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Hardening": {
+    "zh": "激光淬火",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Scribing": {
+    "zh": "激光划线",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Trimming": {
+    "zh": "激光调阻",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Perforation": {
+    "zh": "激光穿孔",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Precision Cutting": {
+    "zh": "精密切割",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Precision Welding": {
+    "zh": "精密焊接",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Micro Welding": {
+    "zh": "微焊接",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Micromachining": {
+    "zh": "微加工",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Macro Processing": {
+    "zh": "宏加工",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Industrial Quality Control": {
+    "zh": "工业质量控制",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Automated Inspection": {
+    "zh": "自动检测",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Inline Quality Inspection": {
+    "zh": "在线质量检测",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Industrial Measurement": {
+    "zh": "工业测量",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Precision Measurement": {
+    "zh": "精密测量",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Industrial Robotics": {
+    "zh": "工业机器人",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Collaborative Robot": {
+    "zh": "协作机器人",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cobot": {
+    "zh": "协作机器人",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Predictive Maintenance": {
+    "zh": "预测性维护",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Condition Monitoring": {
+    "zh": "状态监测",
+    "category1": "行业应用与系统",
+    "category2": "工业制造",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Semiconductor": {
+    "zh": "半导体",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Semiconductor Manufacturing": {
+    "zh": "半导体制造",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Semiconductor Inspection": {
+    "zh": "半导体检测",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Wafer Inspection": {
+    "zh": "晶圆检测",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Wafer Metrology": {
+    "zh": "晶圆量测",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Wafer Processing": {
+    "zh": "晶圆加工",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Wafer Fabrication": {
+    "zh": "晶圆制造",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Wafer Manufacturing": {
+    "zh": "晶圆制造",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Chip Manufacturing": {
+    "zh": "芯片制造",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Chip Inspection": {
+    "zh": "芯片检测",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Integrated Circuit": {
+    "zh": "集成电路",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "IC Manufacturing": {
+    "zh": "集成电路制造",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Microelectronics": {
+    "zh": "微电子",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Nanoelectronics": {
+    "zh": "纳米电子",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Electronics Manufacturing": {
+    "zh": "电子制造",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Electronic Assembly": {
+    "zh": "电子组装",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "PCB Manufacturing": {
+    "zh": "PCB制造",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PCB Inspection": {
+    "zh": "PCB检测",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "SMT Manufacturing": {
+    "zh": "SMT制造",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Surface Mount Technology": {
+    "zh": "表面贴装技术",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Packaging": {
+    "zh": "封装",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Semiconductor Packaging": {
+    "zh": "半导体封装",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Advanced Packaging": {
+    "zh": "先进封装",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Chip Packaging": {
+    "zh": "芯片封装",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Wafer Level Packaging": {
+    "zh": "晶圆级封装",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fan Out Packaging": {
+    "zh": "扇出型封装",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "MEMS Manufacturing": {
+    "zh": "微机电制造",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MEMS Inspection": {
+    "zh": "微机电检测",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Display Manufacturing": {
+    "zh": "显示制造",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Display Inspection": {
+    "zh": "显示检测",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "MicroLED Manufacturing": {
+    "zh": "Micro LED制造",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "OLED Manufacturing": {
+    "zh": "OLED制造",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Photonics Packaging": {
+    "zh": "光子封装",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optoelectronics Manufacturing": {
+    "zh": "光电子制造",
+    "category1": "行业应用与系统",
+    "category2": "半导体与电子",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Scientific Research": {
+    "zh": "科学研究",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Academic Research": {
+    "zh": "学术研究",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "University Research": {
+    "zh": "大学科研",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Research Laboratory": {
+    "zh": "研究实验室",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laboratory": {
+    "zh": "实验室",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laboratory Research": {
+    "zh": "实验室研究",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Education": {
+    "zh": "教育",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Higher Education": {
+    "zh": "高等教育",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Teaching Laboratory": {
+    "zh": "教学实验室",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Physics Research": {
+    "zh": "物理研究",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Quantum Research": {
+    "zh": "量子研究",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Quantum Optics": {
+    "zh": "量子光学",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Quantum Computing": {
+    "zh": "量子计算",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Photonics Research": {
+    "zh": "光子学研究",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optics Research": {
+    "zh": "光学研究",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Research": {
+    "zh": "激光研究",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Spectroscopy": {
+    "zh": "光谱学",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Microscopy": {
+    "zh": "显微术",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Imaging Research": {
+    "zh": "成像研究",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Materials Research": {
+    "zh": "材料研究",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Material Science": {
+    "zh": "材料科学",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Nanotechnology": {
+    "zh": "纳米技术",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Nanoscience": {
+    "zh": "纳米科学",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Chemical Analysis": {
+    "zh": "化学分析",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Analytical Chemistry": {
+    "zh": "分析化学",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Environmental Research": {
+    "zh": "环境研究",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Astronomy": {
+    "zh": "天文学",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Astrophysics": {
+    "zh": "天体物理",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Space Science": {
+    "zh": "空间科学",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Synchrotron Research": {
+    "zh": "同步辐射研究",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Free Electron Laser Research": {
+    "zh": "自由电子激光研究",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Metrology Research": {
+    "zh": "计量研究",
+    "category1": "行业应用与系统",
+    "category2": "科研教育",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Communication": {
+    "zh": "光通信",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Communication": {
+    "zh": "光纤通信",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optics": {
+    "zh": "光纤",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Networking": {
+    "zh": "光网络",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Network": {
+    "zh": "光网络",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Data Center": {
+    "zh": "数据中心",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Data Centre": {
+    "zh": "数据中心",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Telecommunications": {
+    "zh": "电信",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Telecom": {
+    "zh": "电信",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "5G": {
+    "zh": "5G",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "6G": {
+    "zh": "6G",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Mobile Communication": {
+    "zh": "移动通信",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Wireless Communication": {
+    "zh": "无线通信",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Free Space Optical Communication": {
+    "zh": "自由空间光通信",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "FSO Communication": {
+    "zh": "自由空间光通信",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Satellite Communication": {
+    "zh": "卫星通信",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Communication": {
+    "zh": "激光通信",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Interconnect": {
+    "zh": "光互连",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "High Speed Interconnect": {
+    "zh": "高速互连",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cloud Infrastructure": {
+    "zh": "云基础设施",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Network Infrastructure": {
+    "zh": "网络基础设施",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Renewable Energy": {
+    "zh": "可再生能源",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Solar Energy": {
+    "zh": "太阳能",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Photovoltaics": {
+    "zh": "光伏",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PV Manufacturing": {
+    "zh": "光伏制造",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Battery Manufacturing": {
+    "zh": "电池制造",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Energy Storage": {
+    "zh": "储能",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Power Electronics": {
+    "zh": "电力电子",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Smart Grid": {
+    "zh": "智能电网",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Electric Vehicle": {
+    "zh": "电动汽车",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "EV Battery": {
+    "zh": "电动汽车电池",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Charging Infrastructure": {
+    "zh": "充电基础设施",
+    "category1": "行业应用与系统",
+    "category2": "通信与能源",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Defense": {
+    "zh": "国防",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Military": {
+    "zh": "军事",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Homeland Security": {
+    "zh": "国土安全",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "National Security": {
+    "zh": "国家安全",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Border Security": {
+    "zh": "边境安全",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Surveillance": {
+    "zh": "监视",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Persistent Surveillance": {
+    "zh": "持续监视",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Reconnaissance": {
+    "zh": "侦察",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Intelligence Surveillance Reconnaissance": {
+    "zh": "情报监视侦察",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "ISR": {
+    "zh": "情报监视侦察",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Target Acquisition": {
+    "zh": "目标捕获",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Target Tracking": {
+    "zh": "目标跟踪",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Electro Optics": {
+    "zh": "光电",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Electro Optical System": {
+    "zh": "光电系统",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "EO IR": {
+    "zh": "光电红外",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Infrared Search and Track": {
+    "zh": "红外搜索跟踪",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "IRST": {
+    "zh": "红外搜索跟踪",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Missile Warning": {
+    "zh": "导弹预警",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Missile Defense": {
+    "zh": "导弹防御",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Designation": {
+    "zh": "激光指示",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Rangefinding": {
+    "zh": "激光测距",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fire Control": {
+    "zh": "火控",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Space": {
+    "zh": "航天",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Space Exploration": {
+    "zh": "太空探索",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Satellite": {
+    "zh": "卫星",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Satellite Payload": {
+    "zh": "卫星载荷",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Earth Observation": {
+    "zh": "对地观测",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Space Optics": {
+    "zh": "空间光学",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Aerospace": {
+    "zh": "航空航天",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Commercial Aerospace": {
+    "zh": "商业航空航天",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Aircraft Manufacturing": {
+    "zh": "飞机制造",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Avionics": {
+    "zh": "航空电子",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Navigation": {
+    "zh": "导航",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Guidance System": {
+    "zh": "制导系统",
+    "category1": "行业应用与系统",
+    "category2": "国防航空航天",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Automotive": {
+    "zh": "汽车",
+    "category1": "行业应用与系统",
+    "category2": "汽车与智能交通",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Automotive Manufacturing": {
+    "zh": "汽车制造",
+    "category1": "行业应用与系统",
+    "category2": "汽车与智能交通",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Automotive Electronics": {
+    "zh": "汽车电子",
+    "category1": "行业应用与系统",
+    "category2": "汽车与智能交通",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Autonomous Driving": {
+    "zh": "自动驾驶",
+    "category1": "行业应用与系统",
+    "category2": "汽车与智能交通",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Advanced Driver Assistance Systems": {
+    "zh": "高级驾驶辅助系统",
+    "category1": "行业应用与系统",
+    "category2": "汽车与智能交通",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "ADAS": {
+    "zh": "高级驾驶辅助系统",
+    "category1": "行业应用与系统",
+    "category2": "汽车与智能交通",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Intelligent Transportation": {
+    "zh": "智能交通",
+    "category1": "行业应用与系统",
+    "category2": "汽车与智能交通",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Traffic Monitoring": {
+    "zh": "交通监控",
+    "category1": "行业应用与系统",
+    "category2": "汽车与智能交通",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Railway": {
+    "zh": "铁路",
+    "category1": "行业应用与系统",
+    "category2": "汽车与智能交通",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rail Transit": {
+    "zh": "轨道交通",
+    "category1": "行业应用与系统",
+    "category2": "汽车与智能交通",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Environmental Monitoring": {
+    "zh": "环境监测",
+    "category1": "行业应用与系统",
+    "category2": "环境与公共事业",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Environmental Protection": {
+    "zh": "环境保护",
+    "category1": "行业应用与系统",
+    "category2": "环境与公共事业",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Air Quality Monitoring": {
+    "zh": "空气质量监测",
+    "category1": "行业应用与系统",
+    "category2": "环境与公共事业",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Water Quality Monitoring": {
+    "zh": "水质监测",
+    "category1": "行业应用与系统",
+    "category2": "环境与公共事业",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Emission Monitoring": {
+    "zh": "排放监测",
+    "category1": "行业应用与系统",
+    "category2": "环境与公共事业",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Gas Monitoring": {
+    "zh": "气体监测",
+    "category1": "行业应用与系统",
+    "category2": "环境与公共事业",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Water Treatment": {
+    "zh": "水处理",
+    "category1": "行业应用与系统",
+    "category2": "环境与公共事业",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Smart City": {
+    "zh": "智慧城市",
+    "category1": "行业应用与系统",
+    "category2": "环境与公共事业",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Agriculture": {
+    "zh": "农业",
+    "category1": "行业应用与系统",
+    "category2": "农业",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Precision Agriculture": {
+    "zh": "精准农业",
+    "category1": "行业应用与系统",
+    "category2": "农业",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Smart Agriculture": {
+    "zh": "智慧农业",
+    "category1": "行业应用与系统",
+    "category2": "农业",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Agricultural Inspection": {
+    "zh": "农业检测",
+    "category1": "行业应用与系统",
+    "category2": "农业",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Crop Monitoring": {
+    "zh": "作物监测",
+    "category1": "行业应用与系统",
+    "category2": "农业",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Plant Phenotyping": {
+    "zh": "植物表型分析",
+    "category1": "行业应用与系统",
+    "category2": "农业",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Forestry": {
+    "zh": "林业",
+    "category1": "行业应用与系统",
+    "category2": "农业",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Food Inspection": {
+    "zh": "食品检测",
+    "category1": "行业应用与系统",
+    "category2": "农业",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Food Processing": {
+    "zh": "食品加工",
+    "category1": "行业应用与系统",
+    "category2": "农业",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Food Safety": {
+    "zh": "食品安全",
+    "category1": "行业应用与系统",
+    "category2": "农业",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "General Purpose": {
+    "zh": "通用",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "General Application": {
+    "zh": "通用应用",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Commercial": {
+    "zh": "商用",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Commercial Application": {
+    "zh": "商用应用",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Industrial": {
+    "zh": "工业",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "OEM": {
+    "zh": "OEM",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "OEM Integration": {
+    "zh": "OEM集成",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "OEM Solutions": {
+    "zh": "OEM解决方案",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Custom Application": {
+    "zh": "定制应用",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Custom Solution": {
+    "zh": "定制解决方案",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Customized Solution": {
+    "zh": "定制解决方案",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Tailored Solution": {
+    "zh": "定制解决方案",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Turnkey Solution": {
+    "zh": "交钥匙解决方案",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "System Integration": {
+    "zh": "系统集成",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Integrated Solution": {
+    "zh": "集成解决方案",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Application Development": {
+    "zh": "应用开发",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Technology Demonstration": {
+    "zh": "技术演示",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Proof of Concept": {
+    "zh": "概念验证",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Emerging Applications": {
+    "zh": "新兴应用",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Future Applications": {
+    "zh": "未来应用",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Research Use": {
+    "zh": "科研用途",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Research Use Only": {
+    "zh": "仅供科研",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "RUO": {
+    "zh": "仅供科研",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Evaluation Kit": {
+    "zh": "评估套件",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Development Platform": {
+    "zh": "开发平台",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Reference Design": {
+    "zh": "参考设计",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Solution Platform": {
+    "zh": "解决方案平台",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Technology Platform": {
+    "zh": "技术平台",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Cross Industry": {
+    "zh": "跨行业",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Multi Industry": {
+    "zh": "多行业",
+    "category1": "行业应用与系统",
+    "category2": "通用应用",
+    "enable": true,
+    "confidence": 0.97
+  }
+}
