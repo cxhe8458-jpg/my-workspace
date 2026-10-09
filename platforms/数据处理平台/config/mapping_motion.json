@@ -1,0 +1,2501 @@
+{
+  "Motion Controller": {
+    "zh": "运动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motion Control System": {
+    "zh": "运动控制系统",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motion Control Unit": {
+    "zh": "运动控制单元",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motion Control Card": {
+    "zh": "运动控制卡",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motion Control Board": {
+    "zh": "运动控制板",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Multi Axis Controller": {
+    "zh": "多轴控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Multi-Axis Motion Controller": {
+    "zh": "多轴运动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Single Axis Controller": {
+    "zh": "单轴控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Position Controller": {
+    "zh": "位置控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Positioning Controller": {
+    "zh": "定位控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Position Control System": {
+    "zh": "位置控制系统",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Stage Controller": {
+    "zh": "平移台控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Translation Stage Controller": {
+    "zh": "平移台控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Piezo Motion Controller": {
+    "zh": "压电运动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Nanopositioning Controller": {
+    "zh": "纳米定位控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Servo Controller": {
+    "zh": "伺服控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Servo Motion Controller": {
+    "zh": "伺服运动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Drive Controller": {
+    "zh": "驱动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Stepper Controller": {
+    "zh": "步进控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Stepper Motor Controller": {
+    "zh": "步进电机控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Brushless Motor Controller": {
+    "zh": "无刷电机控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Linear Motor Controller": {
+    "zh": "直线电机控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Precision Motion Controller": {
+    "zh": "精密运动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "CNC Motion Controller": {
+    "zh": "数控运动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Measurement Controller": {
+    "zh": "测量控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Data Acquisition Controller": {
+    "zh": "数据采集控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Motion Synchronization Controller": {
+    "zh": "运动同步控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Trajectory Controller": {
+    "zh": "轨迹控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "EtherCAT Motion Controller": {
+    "zh": "EtherCAT运动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "PCI Motion Controller": {
+    "zh": "PCI运动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "USB Motion Controller": {
+    "zh": "USB运动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Encoder": {
+    "zh": "编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Rotary Encoder": {
+    "zh": "旋转编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Linear Encoder": {
+    "zh": "直线编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Encoder": {
+    "zh": "光学编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Magnetic Encoder": {
+    "zh": "磁栅编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Absolute Encoder": {
+    "zh": "绝对值编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Absolute Rotary Encoder": {
+    "zh": "绝对值旋转编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Absolute Linear Encoder": {
+    "zh": "绝对值直线编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Incremental Encoder": {
+    "zh": "增量式编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Incremental Rotary Encoder": {
+    "zh": "增量式旋转编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Incremental Linear Encoder": {
+    "zh": "增量式直线编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Ring Encoder": {
+    "zh": "环形编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Encoder Ring": {
+    "zh": "编码环",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Encoder Scale": {
+    "zh": "编码器光栅尺",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Linear Scale": {
+    "zh": "直线光栅尺",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Glass Scale": {
+    "zh": "玻璃光栅尺",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Steel Scale": {
+    "zh": "钢带光栅尺",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Tape Scale": {
+    "zh": "带式光栅尺",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Linear Scale": {
+    "zh": "光学直线光栅尺",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Magnetic Scale": {
+    "zh": "磁栅尺",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Read Head": {
+    "zh": "读数头",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Read Head": {
+    "zh": "光学读数头",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Magnetic Read Head": {
+    "zh": "磁栅读数头",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Encoder Readhead": {
+    "zh": "编码器读数头",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Encoder Module": {
+    "zh": "编码器模块",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Encoder Sensor": {
+    "zh": "编码器传感器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Position Encoder": {
+    "zh": "位置编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Linear Position Encoder": {
+    "zh": "直线位置编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Rotary Position Encoder": {
+    "zh": "旋转位置编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Encoder System": {
+    "zh": "编码器系统",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Precision Encoder": {
+    "zh": "精密编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "High Resolution Encoder": {
+    "zh": "高分辨率编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Encoder Kit": {
+    "zh": "编码器套件",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Servo Motor": {
+    "zh": "伺服电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Brushless Servo Motor": {
+    "zh": "无刷伺服电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Linear Motor": {
+    "zh": "直线电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Stepper Motor": {
+    "zh": "步进电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Hybrid Stepper Motor": {
+    "zh": "混合式步进电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Closed Loop Stepper": {
+    "zh": "闭环步进电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Piezoelectric Motor": {
+    "zh": "压电电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Nanopositioning Motor": {
+    "zh": "纳米定位电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "DC Motor": {
+    "zh": "直流电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Micro Motor": {
+    "zh": "微型电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Precision Motor": {
+    "zh": "精密电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Motor Driver": {
+    "zh": "电机驱动器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motor Drive": {
+    "zh": "电机驱动器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Servo Drive": {
+    "zh": "伺服驱动器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Piezo Amplifier": {
+    "zh": "压电放大器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Motor Amplifier": {
+    "zh": "电机放大器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Stepper Driver": {
+    "zh": "步进驱动器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Brushless Driver": {
+    "zh": "无刷驱动器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Motor Controller Drive": {
+    "zh": "电机控制驱动器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Manual Stage": {
+    "zh": "手动台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Linear Stage": {
+    "zh": "直线平移台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Linear Translation Stage": {
+    "zh": "直线平移台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "XY Stage": {
+    "zh": "XY平移台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "XYZ Stage": {
+    "zh": "XYZ平移台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "XYZ Translation Stage": {
+    "zh": "XYZ平移台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Crossed Roller Stage": {
+    "zh": "交叉滚柱导轨台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cross Roller Stage": {
+    "zh": "交叉滚柱导轨台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rotary Stage": {
+    "zh": "旋转台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Precision Rotary Stage": {
+    "zh": "精密旋转台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Goniometer": {
+    "zh": "测角仪台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Goniometer Stage": {
+    "zh": "测角仪台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Tilt Stage": {
+    "zh": "倾斜台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Angular Stage": {
+    "zh": "角度台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Vertical Stage": {
+    "zh": "垂直台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Z Stage": {
+    "zh": "Z轴台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Lab Jack": {
+    "zh": "实验室升降台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Scissor Jack": {
+    "zh": "剪式升降台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Breadboard Positioner": {
+    "zh": "面包板定位器",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Manual Positioner": {
+    "zh": "手动定位器",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Micrometer Stage": {
+    "zh": "千分尺平移台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Micrometer Translation Stage": {
+    "zh": "千分尺平移台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Compact Manual Stage": {
+    "zh": "紧凑型手动台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Miniature Manual Stage": {
+    "zh": "微型手动台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Optical Positioning Stage": {
+    "zh": "光学定位台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Motorized Stage": {
+    "zh": "电动台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Linear Motor Stage": {
+    "zh": "直线电机台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Electric Linear Stage": {
+    "zh": "电动直线台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "XY Positioning Stage": {
+    "zh": "XY定位台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "XYZ Positioning Stage": {
+    "zh": "XYZ定位台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rotary Positioning Stage": {
+    "zh": "旋转定位台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Motorized Goniometer": {
+    "zh": "电动测角仪台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Piezo Stage": {
+    "zh": "压电台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Piezo XYZ Stage": {
+    "zh": "压电XYZ台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Linear Actuator": {
+    "zh": "直线致动器",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Electric Actuator": {
+    "zh": "电动致动器",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Precision Positioning Stage": {
+    "zh": "精密定位台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Precision Motion Stage": {
+    "zh": "精密运动台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Precision XY Stage": {
+    "zh": "精密XY台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Precision XYZ Stage": {
+    "zh": "精密XYZ台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Vertical Positioning Stage": {
+    "zh": "垂直定位台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Microscope Stage": {
+    "zh": "显微镜载物台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Automated Stage": {
+    "zh": "自动化平移台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Sample Positioning Stage": {
+    "zh": "样品定位台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Motorized Platform": {
+    "zh": "电动平台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Precision Motion Platform": {
+    "zh": "精密运动平台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Positioner": {
+    "zh": "定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Micropositioner": {
+    "zh": "微定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Positioner": {
+    "zh": "光纤定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Fiber Positioner": {
+    "zh": "光纤定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Lens Positioner": {
+    "zh": "透镜定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optics Positioner": {
+    "zh": "光学定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Positioner": {
+    "zh": "光学定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Positioner": {
+    "zh": "光束定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Alignment Positioner": {
+    "zh": "对准定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Parallel Kinematics Stage": {
+    "zh": "并联运动平台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Stewart Platform": {
+    "zh": "斯图尔特平台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Gimbal": {
+    "zh": "万向支架",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Motorized Gimbal": {
+    "zh": "电动万向支架",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Tip Tilt Platform": {
+    "zh": "俯仰倾斜平台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Tip Tilt Stage": {
+    "zh": "俯仰倾斜台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fast Steering Mirror": {
+    "zh": "快速控制反射镜",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "FSM": {
+    "zh": "快速控制反射镜",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Active Alignment System": {
+    "zh": "主动对准系统",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Wafer Alignment Stage": {
+    "zh": "晶圆对准台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "UHV Positioner": {
+    "zh": "超高真空定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Multi Axis Positioner": {
+    "zh": "多轴定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Motion Controller Chassis": {
+    "zh": "运动控制器机箱",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motion Control Rack": {
+    "zh": "运动控制机架",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Axis Controller": {
+    "zh": "轴控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Dual Axis Controller": {
+    "zh": "双轴控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Four Axis Controller": {
+    "zh": "四轴控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Six Axis Controller": {
+    "zh": "六轴控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Eight Axis Controller": {
+    "zh": "八轴控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Embedded Motion Controller": {
+    "zh": "嵌入式运动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Standalone Motion Controller": {
+    "zh": "独立式运动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Benchtop Motion Controller": {
+    "zh": "台式运动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rack Mount Motion Controller": {
+    "zh": "机架式运动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Ethernet Motion Controller": {
+    "zh": "以太网运动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "CAN Motion Controller": {
+    "zh": "CAN运动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "RS232 Motion Controller": {
+    "zh": "RS232运动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "RS485 Motion Controller": {
+    "zh": "RS485运动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "GPIB Motion Controller": {
+    "zh": "GPIB运动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "USB Controller": {
+    "zh": "USB控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Joystick Controller": {
+    "zh": "操纵杆控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Remote Motion Controller": {
+    "zh": "远程运动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Synchronization Controller": {
+    "zh": "同步控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Trigger Controller": {
+    "zh": "触发控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Pulse Generator Controller": {
+    "zh": "脉冲发生控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Motion Sequencer": {
+    "zh": "运动序列器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Motion Synchronizer": {
+    "zh": "运动同步器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Trajectory Generator": {
+    "zh": "轨迹发生器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Real Time Motion Controller": {
+    "zh": "实时运动控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Absolute Optical Encoder": {
+    "zh": "绝对值光学编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Incremental Optical Encoder": {
+    "zh": "增量式光学编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Absolute Magnetic Encoder": {
+    "zh": "绝对值磁栅编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Incremental Magnetic Encoder": {
+    "zh": "增量式磁栅编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Magnetic Ring Encoder": {
+    "zh": "磁环编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Ring Encoder": {
+    "zh": "光学环形编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Encoder Disk": {
+    "zh": "编码盘",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Code Disk": {
+    "zh": "码盘",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Encoder Wheel": {
+    "zh": "编码轮",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Scale Encoder": {
+    "zh": "光栅尺编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Absolute Scale Encoder": {
+    "zh": "绝对值光栅编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Incremental Scale Encoder": {
+    "zh": "增量式光栅编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Open Encoder": {
+    "zh": "开放式编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Open Type Encoder": {
+    "zh": "开放式编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Kit Encoder": {
+    "zh": "套件式编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Hollow Shaft Encoder": {
+    "zh": "空心轴编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Solid Shaft Encoder": {
+    "zh": "实心轴编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Blind Hollow Shaft Encoder": {
+    "zh": "半空心轴编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Through Hollow Shaft Encoder": {
+    "zh": "通孔空心轴编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Bearingless Encoder": {
+    "zh": "无轴承编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Non Contact Encoder": {
+    "zh": "非接触式编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Contactless Encoder": {
+    "zh": "非接触式编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Accuracy Encoder": {
+    "zh": "高精度编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Ultra Precision Encoder": {
+    "zh": "超精密编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "High Speed Encoder": {
+    "zh": "高速编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Heavy Duty Encoder": {
+    "zh": "重载编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Miniature Encoder": {
+    "zh": "微型编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Compact Encoder": {
+    "zh": "紧凑型编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Encoder Interface": {
+    "zh": "编码器接口",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Encoder Interface Module": {
+    "zh": "编码器接口模块",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Encoder Evaluation Kit": {
+    "zh": "编码器评估套件",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Linear Encoder System": {
+    "zh": "直线编码器系统",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Rotary Encoder System": {
+    "zh": "旋转编码器系统",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Encoder Head": {
+    "zh": "编码器读数头",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Scanning Head": {
+    "zh": "扫描头",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Readhead Assembly": {
+    "zh": "读数头组件",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Absolute Position Encoder": {
+    "zh": "绝对位置编码器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Rotary Position Sensor": {
+    "zh": "旋转位置传感器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Linear Position Sensor": {
+    "zh": "直线位置传感器",
+    "category1": "运动控制",
+    "category2": "编码器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Ironless Linear Motor": {
+    "zh": "无铁芯直线电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Iron Core Linear Motor": {
+    "zh": "铁芯直线电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Direct Drive Linear Motor": {
+    "zh": "直驱直线电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Linear Servo Motor": {
+    "zh": "直线伺服电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Voice Coil Motor": {
+    "zh": "音圈电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "VCM": {
+    "zh": "音圈电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Piezo Motor": {
+    "zh": "压电电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ultrasonic Motor": {
+    "zh": "超声电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Torque Motor": {
+    "zh": "力矩电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Frameless Torque Motor": {
+    "zh": "无框力矩电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Frameless Motor": {
+    "zh": "无框电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Slotless Motor": {
+    "zh": "无槽电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Coreless DC Motor": {
+    "zh": "空心杯直流电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Brush DC Motor": {
+    "zh": "有刷直流电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Brushless DC Motor": {
+    "zh": "无刷直流电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "BLDC Motor": {
+    "zh": "无刷直流电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "AC Servo Motor": {
+    "zh": "交流伺服电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "DC Servo Motor": {
+    "zh": "直流伺服电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Micro Servo Motor": {
+    "zh": "微型伺服电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Planetary Gear Motor": {
+    "zh": "行星齿轮电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Gear Motor": {
+    "zh": "齿轮减速电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Direct Drive Motor": {
+    "zh": "直驱电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Integrated Servo Motor": {
+    "zh": "一体化伺服电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Integrated Stepper Motor": {
+    "zh": "一体化步进电机",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Servo Amplifier": {
+    "zh": "伺服放大器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Servo Amplifier Module": {
+    "zh": "伺服放大模块",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Linear Amplifier": {
+    "zh": "线性放大器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "PWM Servo Drive": {
+    "zh": "PWM伺服驱动器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Digital Servo Drive": {
+    "zh": "数字伺服驱动器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Multi Axis Servo Drive": {
+    "zh": "多轴伺服驱动器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Motion Drive": {
+    "zh": "运动驱动器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Motor Driver Module": {
+    "zh": "电机驱动模块",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Drive Electronics": {
+    "zh": "驱动电子单元",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Piezo Driver": {
+    "zh": "压电驱动器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Piezo Controller": {
+    "zh": "压电控制器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Voice Coil Driver": {
+    "zh": "音圈驱动器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Voice Coil Controller": {
+    "zh": "音圈控制器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Manual Translation Stage": {
+    "zh": "手动平移台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Manual Linear Stage": {
+    "zh": "手动直线台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Manual XY Stage": {
+    "zh": "手动XY台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Manual XYZ Stage": {
+    "zh": "手动XYZ台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Manual Rotation Stage": {
+    "zh": "手动旋转台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Manual Rotary Stage": {
+    "zh": "手动旋转台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Manual Goniometer Stage": {
+    "zh": "手动测角仪台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Manual Tilt Stage": {
+    "zh": "手动倾斜台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Manual Lift Stage": {
+    "zh": "手动升降台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Manual Vertical Stage": {
+    "zh": "手动垂直台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Manual Cross Roller Stage": {
+    "zh": "手动交叉滚柱台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Manual Precision Stage": {
+    "zh": "手动精密台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Motorized Translation Stage": {
+    "zh": "电动平移台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motorized Linear Stage": {
+    "zh": "电动直线台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motorized XY Stage": {
+    "zh": "电动XY台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motorized XYZ Stage": {
+    "zh": "电动XYZ台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motorized Rotation Stage": {
+    "zh": "电动旋转台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motorized Rotary Stage": {
+    "zh": "电动旋转台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motorized Goniometer Stage": {
+    "zh": "电动测角仪台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motorized Tilt Stage": {
+    "zh": "电动倾斜台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Motorized Lift Stage": {
+    "zh": "电动升降台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motorized Vertical Stage": {
+    "zh": "电动垂直台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Motorized Cross Roller Stage": {
+    "zh": "电动交叉滚柱台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Motorized Precision Stage": {
+    "zh": "电动精密台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Long Travel Stage": {
+    "zh": "长行程平移台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "High Load Stage": {
+    "zh": "高载荷平移台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "High Precision Stage": {
+    "zh": "高精度平移台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Vacuum Compatible Stage": {
+    "zh": "真空兼容平移台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Cleanroom Stage": {
+    "zh": "洁净室平移台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Hexapod": {
+    "zh": "六足平台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Hexapod Positioning System": {
+    "zh": "六足定位系统",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Hexapod Positioner": {
+    "zh": "六足定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Nano Positioner": {
+    "zh": "纳米定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Nanopositioner": {
+    "zh": "纳米定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Nanopositioning Stage": {
+    "zh": "纳米定位台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Nanopositioning System": {
+    "zh": "纳米定位系统",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Piezo Positioner": {
+    "zh": "压电定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Piezo Positioning Stage": {
+    "zh": "压电定位台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Piezo Scanner": {
+    "zh": "压电扫描器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Piezo Scanner Stage": {
+    "zh": "压电扫描台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Flexure Stage": {
+    "zh": "柔性铰链台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Flexure Positioner": {
+    "zh": "柔性铰链定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Flexure Guided Stage": {
+    "zh": "柔性导向台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Alignment Stage": {
+    "zh": "对准台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Alignment Stage": {
+    "zh": "光纤对准台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Alignment Stage": {
+    "zh": "光学对准台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Alignment Platform": {
+    "zh": "对准平台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Precision Positioner": {
+    "zh": "精密定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Precision Positioning System": {
+    "zh": "精密定位系统",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Micro Positioner": {
+    "zh": "微定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Micro Positioning Stage": {
+    "zh": "微定位台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "XYZ Positioner": {
+    "zh": "XYZ定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Six Degree of Freedom Positioner": {
+    "zh": "六自由度定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "6DOF Positioner": {
+    "zh": "六自由度定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fast Steering Mirror Stage": {
+    "zh": "快速控制反射镜台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Steering Stage": {
+    "zh": "光束控制台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Mirror Positioner": {
+    "zh": "反射镜定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Objective Positioner": {
+    "zh": "物镜定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Sample Positioner": {
+    "zh": "样品定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Probe Positioner": {
+    "zh": "探针定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Wafer Positioner": {
+    "zh": "晶圆定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Vacuum Positioner": {
+    "zh": "真空定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Cryogenic Positioner": {
+    "zh": "低温定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "High Precision Positioner": {
+    "zh": "高精度定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Ultra Precision Positioner": {
+    "zh": "超精密定位器",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Motorized Translation Stage EC": {
+    "zh": "电控平移台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motorized Stage EMove": {
+    "zh": "电移台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motorized Goniometer Stage EC": {
+    "zh": "电控角位台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motorized Lift Stage EC": {
+    "zh": "电控升降台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motorized Turret EC": {
+    "zh": "电控转塔",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Piezo Drive Platform": {
+    "zh": "压电驱动平台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Piezo Displacement Platform": {
+    "zh": "压电位移平台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Piezo Lift Platform": {
+    "zh": "压电升降平台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Displacement Platform ZH": {
+    "zh": "位移平台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Air Bearing Platform": {
+    "zh": "气浮平台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Air Bearing Lift Platform": {
+    "zh": "气浮升降平台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Auto Translation Stage ZH": {
+    "zh": "自动平移台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Gantry Drive": {
+    "zh": "龙门驱动",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Gantry Type Stage": {
+    "zh": "龙门式",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Manual Goniometer Stage ZH": {
+    "zh": "手动角位台",
+    "category1": "运动控制",
+    "category2": "手动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Nano Positioning Platform ZH": {
+    "zh": "纳米定位平台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fast Steering Mirror ZH": {
+    "zh": "偏摆镜",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Voice Coil Steering Mirror": {
+    "zh": "音圈摆镜",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Six DOF Motion Platform": {
+    "zh": "六自由度运动平台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Three DOF Motion Platform": {
+    "zh": "三自由度运动平台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Coupling Motion Platform": {
+    "zh": "光耦合运动平台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "High Precision Motion Platform": {
+    "zh": "高精度运动平台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Alignment Mount ZH": {
+    "zh": "光纤调整架",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Wafer Adjustment Platform": {
+    "zh": "晶圆调整平台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Gimbal Head ZH": {
+    "zh": "云台",
+    "category1": "运动控制",
+    "category2": "定位器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Piezo Actuator ZH": {
+    "zh": "压电促动器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Piezo Ceramic Actuator ZH": {
+    "zh": "压电陶瓷促动器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Piezo Ceramic Driver ZH": {
+    "zh": "压电陶瓷驱动器",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Piezo Ceramic Motor ZH": {
+    "zh": "压电陶瓷马达",
+    "category1": "运动控制",
+    "category2": "电机和驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Analog Controller ZH": {
+    "zh": "模拟控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Piezo Digital Controller ZH": {
+    "zh": "压电数字控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Digital Controller ZH": {
+    "zh": "数字控制器",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ethernet Module ZH": {
+    "zh": "以太网模块",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Communication Expansion Module ZH": {
+    "zh": "通讯扩展模块",
+    "category1": "运动控制",
+    "category2": "控制器和计量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Piezo Rotation Platform": {
+    "zh": "压电旋转平台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Air Bearing Rotation Platform": {
+    "zh": "气浮旋转平台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motorized Goniometer ZH2": {
+    "zh": "角位台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motorized Lift Stage ZH2": {
+    "zh": "升降台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "3D Translation Stage ZH": {
+    "zh": "三维平移台",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motorized Turret ZH2": {
+    "zh": "电动转塔",
+    "category1": "运动控制",
+    "category2": "电动台",
+    "enable": true,
+    "confidence": 1.0
+  }
+}
