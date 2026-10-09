@@ -1,0 +1,3390 @@
+{
+  "Optical Tool": {
+    "zh": "光学工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Precision Tool": {
+    "zh": "精密工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Assembly Tool": {
+    "zh": "装配工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Installation Tool": {
+    "zh": "安装工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Alignment Tool": {
+    "zh": "对准工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Adjustment Tool": {
+    "zh": "调节工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Alignment Tool": {
+    "zh": "光学对准工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Tweezers": {
+    "zh": "镊子",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Vacuum Tweezer": {
+    "zh": "真空镊子",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Vacuum Pick Up Tool": {
+    "zh": "真空拾取工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Vacuum Pick-Up Pen": {
+    "zh": "真空吸笔",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Component Handling Tool": {
+    "zh": "元件操作工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Tool": {
+    "zh": "光纤工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Preparation Tool": {
+    "zh": "光纤处理工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Cleaver": {
+    "zh": "光纤切割刀",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Stripper": {
+    "zh": "光纤剥线钳",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Cutter": {
+    "zh": "光纤切割刀",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Connector Tool": {
+    "zh": "连接器工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Connector Installation Tool": {
+    "zh": "连接器安装工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Crimp Tool": {
+    "zh": "压接工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Cleaning Tool": {
+    "zh": "清洁工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Cleaning Tool": {
+    "zh": "光纤清洁工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optics Cleaning Kit": {
+    "zh": "光学清洁套件",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Lens Cleaning Kit": {
+    "zh": "透镜清洁套件",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Inspection Tool": {
+    "zh": "检测工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Calibration Tool": {
+    "zh": "校准工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Torque Screwdriver": {
+    "zh": "扭力螺丝刀",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Screwdriver": {
+    "zh": "光学螺丝刀",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Workbench Tool": {
+    "zh": "工作台工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Maintenance Tool": {
+    "zh": "维护工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Laser Safety Glasses": {
+    "zh": "激光防护眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Safety Goggles": {
+    "zh": "激光防护护目镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Protective Eyewear": {
+    "zh": "激光防护眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Eyewear": {
+    "zh": "激光防护眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Glasses": {
+    "zh": "激光眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Goggles": {
+    "zh": "激光护目镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "IPL Safety Glasses": {
+    "zh": "强光防护眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "IPL Protective Glasses": {
+    "zh": "强光防护眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Alignment Glasses": {
+    "zh": "激光对准眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Alignment Goggles": {
+    "zh": "对准护目镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "CO2 Laser Safety Glasses": {
+    "zh": "CO2激光防护眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Laser Safety Glasses": {
+    "zh": "光纤激光防护眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "YAG Laser Safety Glasses": {
+    "zh": "YAG激光防护眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Excimer Laser Safety Glasses": {
+    "zh": "准分子激光防护眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "UV Laser Safety Glasses": {
+    "zh": "紫外激光防护眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "IR Laser Safety Glasses": {
+    "zh": "红外激光防护眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Visible Laser Safety Glasses": {
+    "zh": "可见光激光防护眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Viewing Glasses": {
+    "zh": "激光观察眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Viewing Goggles": {
+    "zh": "激光观察护目镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Over Glass Laser Goggles": {
+    "zh": "套镜式激光护目镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Wrap Around Laser Glasses": {
+    "zh": "包裹式激光眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Protective Eyewear": {
+    "zh": "防护眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Laser Protection Glasses": {
+    "zh": "激光防护眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "OD7 Laser Glasses": {
+    "zh": "OD7激光眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "OD6 Laser Goggles": {
+    "zh": "OD6激光护目镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Laser Safety Spectacles": {
+    "zh": "激光防护眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Laser Face Shield": {
+    "zh": "激光防护面罩",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "Medical Laser Safety Glasses": {
+    "zh": "医用激光防护眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "Industrial Laser Safety Glasses": {
+    "zh": "工业激光防护眼镜",
+    "category1": "光机械与配件",
+    "category2": "激光防护眼镜",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "Accessory": {
+    "zh": "配件",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Accessories": {
+    "zh": "配件",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Accessory": {
+    "zh": "光学配件",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mechanical Accessory": {
+    "zh": "机械配件",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optomechanical Accessory": {
+    "zh": "光机配件",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Adapter Bracket": {
+    "zh": "适配支架",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Mounting Adapter": {
+    "zh": "安装适配器",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mounting Hardware": {
+    "zh": "安装五金件",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Extension Rod": {
+    "zh": "延长杆",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Clamp Arm": {
+    "zh": "夹臂",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Right Angle Clamp": {
+    "zh": "直角夹",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Kinematic Clamp": {
+    "zh": "运动学夹",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Shaft Coupler": {
+    "zh": "轴连接器",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Connecting Plate": {
+    "zh": "连接板",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Universal Adapter": {
+    "zh": "通用适配器",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Replacement Parts": {
+    "zh": "替换零件",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Optical Table": {
+    "zh": "光学平台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Bench": {
+    "zh": "光学平台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Workbench": {
+    "zh": "光学工作台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Workstation": {
+    "zh": "光学工作站",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Portable Breadboard": {
+    "zh": "便携式面包板",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Mini Breadboard": {
+    "zh": "微型面包板",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Platform": {
+    "zh": "光学平台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Precision Optical Table": {
+    "zh": "精密光学平台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Vibration Isolation Table": {
+    "zh": "隔振光学平台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Isolation Table": {
+    "zh": "隔振平台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Passive Isolation Table": {
+    "zh": "被动隔振平台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Active Isolation Table": {
+    "zh": "主动隔振平台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Vibration Isolation Platform": {
+    "zh": "隔振平台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Isolation Platform": {
+    "zh": "光学隔振平台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Floating Optical Table": {
+    "zh": "气浮光学平台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laboratory Table": {
+    "zh": "实验台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Cleanroom Optical Table": {
+    "zh": "洁净室光学平台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Research Optical Table": {
+    "zh": "科研光学平台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Metrology Table": {
+    "zh": "计量平台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Instrument Table": {
+    "zh": "仪器台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Granite Base": {
+    "zh": "花岗岩基座",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Granite Platform": {
+    "zh": "花岗岩平台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Air Isolation Support": {
+    "zh": "气浮隔振支撑",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Self Leveling Isolation System": {
+    "zh": "自调平隔振系统",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "Optical Table Accessory": {
+    "zh": "光学平台配件",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "Package": {
+    "zh": "封装",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Package": {
+    "zh": "光学封装",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Package": {
+    "zh": "激光器封装",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Detector Package": {
+    "zh": "探测器封装",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Photodiode Package": {
+    "zh": "光电二极管封装",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Diode Package": {
+    "zh": "激光二极管封装",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Housing": {
+    "zh": "激光器外壳",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Module Housing": {
+    "zh": "模块外壳",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Housing": {
+    "zh": "外壳",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Enclosure": {
+    "zh": "封装壳体",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Hermetic Package": {
+    "zh": "气密封装",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Hermetic Housing": {
+    "zh": "气密外壳",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Butterfly Package": {
+    "zh": "蝶形封装",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "14 Pin Butterfly": {
+    "zh": "14针蝶形封装",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Butterfly Laser Package": {
+    "zh": "蝶形激光器封装",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "TO Package": {
+    "zh": "TO封装",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "TO Can": {
+    "zh": "TO封装管壳",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "TO Header": {
+    "zh": "TO封装管座",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "TO-18 Package": {
+    "zh": "TO-18封装",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "TO-46 Package": {
+    "zh": "TO-46封装",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "TO-56 Package": {
+    "zh": "TO-56封装",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "TO-Can Laser": {
+    "zh": "TO封装激光器",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "TEC Package": {
+    "zh": "半导体制冷封装",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "TEC Housing": {
+    "zh": "半导体制冷外壳",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cooler Housing": {
+    "zh": "制冷器外壳",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Package Base": {
+    "zh": "封装底座",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Package Header": {
+    "zh": "封装管座",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Package Cap": {
+    "zh": "封装帽",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Package Window": {
+    "zh": "封装窗口",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Window Package": {
+    "zh": "光学窗口封装",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Module Housing": {
+    "zh": "激光模块外壳",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Package": {
+    "zh": "光纤封装",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optoelectronic Package": {
+    "zh": "光电子封装",
+    "category1": "光机械与配件",
+    "category2": "封装",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Mounting Post": {
+    "zh": "安装立柱",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Stainless Steel Post": {
+    "zh": "不锈钢立柱",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Aluminum Post": {
+    "zh": "铝合金立柱",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Post Holder": {
+    "zh": "光学立柱支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Post Base Plate": {
+    "zh": "立柱底板",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Base Adapter": {
+    "zh": "底座适配器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Post Collar": {
+    "zh": "立柱固定环",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Support Column": {
+    "zh": "支撑立柱",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Column Mount": {
+    "zh": "立柱支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Column": {
+    "zh": "光学立柱",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Pillar": {
+    "zh": "支柱",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Pillar Mount": {
+    "zh": "支柱支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Mount": {
+    "zh": "光学支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Mount": {
+    "zh": "支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Mounting Holder": {
+    "zh": "安装夹持器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Vertical Mount": {
+    "zh": "垂直支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Support Mount": {
+    "zh": "支撑支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Post Adapter": {
+    "zh": "立柱适配器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Fixed Post": {
+    "zh": "固定立柱",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "Removable Post": {
+    "zh": "可拆卸立柱",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "Heavy Duty Post": {
+    "zh": "重载立柱",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "Base": {
+    "zh": "底座",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mount Base": {
+    "zh": "支架底座",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Support Base": {
+    "zh": "支撑底座",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Pedestal Base": {
+    "zh": "基座底座",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Post Base": {
+    "zh": "立柱底座",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Column Base": {
+    "zh": "立柱底座",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Mount Plate": {
+    "zh": "支架底板",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Bottom Plate": {
+    "zh": "底板",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Floor Plate": {
+    "zh": "地板底板",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Bench Plate": {
+    "zh": "平台底板",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Bench Base": {
+    "zh": "平台底座",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Platform Base": {
+    "zh": "平台底座",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Stage Base": {
+    "zh": "平移台底座",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fixed Base": {
+    "zh": "固定底座",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Vacuum Base": {
+    "zh": "真空底座",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Leveling Base": {
+    "zh": "调平底座",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Universal Base": {
+    "zh": "通用底座",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Instrument Base": {
+    "zh": "仪器底座",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "Precision Base": {
+    "zh": "精密底座",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "Mount Support": {
+    "zh": "支架支撑",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "Optomechanical Base": {
+    "zh": "光机底座",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "Base Assembly": {
+    "zh": "底座组件",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "Iris": {
+    "zh": "可变光阑",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Iris Diaphragm": {
+    "zh": "光阑",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Adjustable Iris": {
+    "zh": "可调光阑",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Variable Iris": {
+    "zh": "可变光阑",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Precision Iris": {
+    "zh": "精密光阑",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Motorized Iris": {
+    "zh": "电动光阑",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Automatic Iris": {
+    "zh": "自动光阑",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Aperture": {
+    "zh": "光学光阑",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Aperture": {
+    "zh": "光阑",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Variable Aperture": {
+    "zh": "可变光阑",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fixed Aperture": {
+    "zh": "固定光阑",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Circular Aperture": {
+    "zh": "圆孔光阑",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Slit": {
+    "zh": "狭缝",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Adjustable Slit": {
+    "zh": "可调狭缝",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Precision Slit": {
+    "zh": "精密狭缝",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Entrance Slit": {
+    "zh": "入射狭缝",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Exit Slit": {
+    "zh": "出射狭缝",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Pinhole": {
+    "zh": "针孔",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Precision Pinhole": {
+    "zh": "精密针孔",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Spatial Filter Pinhole": {
+    "zh": "空间滤波针孔",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Beam Stop": {
+    "zh": "光束截止器",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Beam Stop": {
+    "zh": "激光光束截止器",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Beam Block": {
+    "zh": "激光光束阻挡器",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Shutter": {
+    "zh": "光学快门",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mechanical Shutter": {
+    "zh": "机械快门",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Electronic Shutter": {
+    "zh": "电子快门",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Shutter": {
+    "zh": "激光快门",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Safety Shutter": {
+    "zh": "安全快门",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Shutter System": {
+    "zh": "快门系统",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Optical Stop": {
+    "zh": "光阑",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Light Stop": {
+    "zh": "遮光光阑",
+    "category1": "光机械与配件",
+    "category2": "光圈",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Mirror Mount": {
+    "zh": "反射镜架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Mirror Mount": {
+    "zh": "光学反射镜架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Kinematic Mirror Mount": {
+    "zh": "运动学反射镜架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Precision Mirror Mount": {
+    "zh": "精密反射镜架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fixed Mirror Mount": {
+    "zh": "固定反射镜架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Adjustable Mirror Mount": {
+    "zh": "可调反射镜架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Motorized Mirror Mount": {
+    "zh": "电动反射镜架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Lens Mount": {
+    "zh": "透镜架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Lens Mount": {
+    "zh": "光学透镜架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Objective Mount": {
+    "zh": "物镜架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Objective Holder": {
+    "zh": "物镜夹持器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Lens Holder": {
+    "zh": "透镜夹持器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Tube Lens Mount": {
+    "zh": "镜筒透镜架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Filter Mount": {
+    "zh": "滤光片架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Filter Holder": {
+    "zh": "滤光片夹持器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Sliding Filter Holder": {
+    "zh": "滑动式滤光片夹持器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rotating Filter Mount": {
+    "zh": "旋转式滤光片架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Prism Mount": {
+    "zh": "棱镜架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Prism Holder": {
+    "zh": "棱镜夹持器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Beam Splitter Mount": {
+    "zh": "分束器架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Beam Splitter Holder": {
+    "zh": "分束器夹持器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Polarizer Mount": {
+    "zh": "偏振片架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Waveplate Mount": {
+    "zh": "波片架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Crystal Mount": {
+    "zh": "晶体架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optic Mount": {
+    "zh": "光学元件架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optic Holder": {
+    "zh": "光学元件夹持器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Component Mount": {
+    "zh": "元件支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Component Holder": {
+    "zh": "元件夹持器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optomechanical Mount": {
+    "zh": "光机支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Universal Mount": {
+    "zh": "通用支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Mounting Assembly": {
+    "zh": "安装组件",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Mounting System": {
+    "zh": "安装系统",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Cage System": {
+    "zh": "笼式系统",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "30mm Cage System": {
+    "zh": "30mm笼式系统",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "60mm Cage System": {
+    "zh": "60mm笼式系统",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "16mm Cage System": {
+    "zh": "16mm笼式系统",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cage Assembly": {
+    "zh": "笼式组件",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cage Cube": {
+    "zh": "笼式立方",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cage Plate": {
+    "zh": "笼板",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cage Mount": {
+    "zh": "笼式支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cage Adapter": {
+    "zh": "笼式适配器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cage Rod": {
+    "zh": "笼式导杆",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cage Rod Assembly": {
+    "zh": "笼式导杆组件",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cage Rod Connector": {
+    "zh": "笼式导杆连接件",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cage Rod Clamp": {
+    "zh": "笼式导杆夹",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cage Connector": {
+    "zh": "笼式连接件",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rail System": {
+    "zh": "导轨系统",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Rail": {
+    "zh": "光学导轨",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Linear Rail": {
+    "zh": "直线导轨",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Dovetail Rail": {
+    "zh": "燕尾导轨",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Rail System": {
+    "zh": "光学导轨系统",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rail Carrier": {
+    "zh": "导轨滑块",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rail Clamp": {
+    "zh": "导轨夹",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rail Block": {
+    "zh": "导轨滑座",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rail Mount": {
+    "zh": "导轨支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rail Adapter": {
+    "zh": "导轨适配器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rod System": {
+    "zh": "导杆系统",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Rod": {
+    "zh": "光学导杆",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Support Rod": {
+    "zh": "支撑杆",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Rod Mount": {
+    "zh": "导杆支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Rod Holder": {
+    "zh": "导杆夹持器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Rod Clamp": {
+    "zh": "导杆夹",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rod Connector": {
+    "zh": "导杆连接件",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rod Base": {
+    "zh": "导杆底座",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rod Extension": {
+    "zh": "导杆延长件",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Kinematic Mount": {
+    "zh": "运动学支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Kinematic Platform": {
+    "zh": "运动学平台",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Kinematic Base": {
+    "zh": "运动学底座",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Tip Tilt Platform": {
+    "zh": "俯仰倾斜平台",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Tip Tilt Mount": {
+    "zh": "俯仰倾斜支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Tilt Platform": {
+    "zh": "倾斜平台",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rotation Mount": {
+    "zh": "旋转架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Rotation Stage Mount": {
+    "zh": "旋转台支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rotation Platform": {
+    "zh": "旋转平台",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rotary Mount": {
+    "zh": "旋转架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Goniometer Mount": {
+    "zh": "测角仪架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Goniometer Platform": {
+    "zh": "测角仪平台",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Translation Mount": {
+    "zh": "平移架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Translation Platform": {
+    "zh": "平移平台",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Linear Translation Mount": {
+    "zh": "直线平移架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Adjustment Mount": {
+    "zh": "调节架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Adjustable Mount": {
+    "zh": "可调支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Precision Mount": {
+    "zh": "精密支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fine Adjustment Mount": {
+    "zh": "精细调节架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fine Positioning Mount": {
+    "zh": "精细定位架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Micrometer Adjuster": {
+    "zh": "千分尺调节器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Differential Adjuster": {
+    "zh": "差动调节器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fine Adjuster": {
+    "zh": "精细调节器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Adjustment Screw": {
+    "zh": "调节螺钉",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Micrometer Head": {
+    "zh": "千分尺测微头",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Actuator": {
+    "zh": "致动器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Manual Actuator": {
+    "zh": "手动致动器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Precision Actuator": {
+    "zh": "精密致动器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Locking Mount": {
+    "zh": "锁紧支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Quick Release Mount": {
+    "zh": "快拆支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Universal Positioning Mount": {
+    "zh": "通用定位架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Post": {
+    "zh": "光学立柱",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Post": {
+    "zh": "立柱",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Support Post": {
+    "zh": "支撑立柱",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pedestal Post": {
+    "zh": "基座立柱",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Extension Post": {
+    "zh": "延长立柱",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Post Holder": {
+    "zh": "立柱支座",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Post Mount": {
+    "zh": "立柱支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Post Clamp": {
+    "zh": "立柱夹",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Right Angle Post Clamp": {
+    "zh": "直角立柱夹",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fork Clamp": {
+    "zh": "叉形夹",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Post Extension": {
+    "zh": "立柱延长件",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Post Connector": {
+    "zh": "立柱连接件",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Support Arm": {
+    "zh": "支撑臂",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Mounting Arm": {
+    "zh": "安装臂",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Support Bracket": {
+    "zh": "支撑架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mounting Bracket": {
+    "zh": "安装支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Angle Bracket": {
+    "zh": "角支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "L Bracket": {
+    "zh": "L形支架",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Support Plate": {
+    "zh": "支撑板",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Mounting Plate": {
+    "zh": "安装板",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Adapter Plate": {
+    "zh": "适配板",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Base Plate": {
+    "zh": "底板",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mounting Base": {
+    "zh": "安装底座",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Base": {
+    "zh": "光学底座",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Heavy Duty Base": {
+    "zh": "重载底座",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Magnetic Base": {
+    "zh": "磁性底座",
+    "category1": "光机械与配件",
+    "category2": "底座",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Clamp": {
+    "zh": "夹具",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Clamp": {
+    "zh": "光学夹具",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Component Clamp": {
+    "zh": "元件夹具",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Universal Clamp": {
+    "zh": "通用夹具",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Tube Clamp": {
+    "zh": "镜筒夹",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Pipe Clamp": {
+    "zh": "管夹",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Adapter": {
+    "zh": "适配器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Adapter": {
+    "zh": "光学适配器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mount Adapter": {
+    "zh": "支架适配器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Adapter Ring": {
+    "zh": "适配环",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Thread Adapter": {
+    "zh": "螺纹适配器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Thread Adapter Plate": {
+    "zh": "螺纹适配板",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Thread Converter": {
+    "zh": "螺纹转接器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Extension Tube": {
+    "zh": "延长镜筒",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Extension Ring": {
+    "zh": "延长环",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Spacer Ring": {
+    "zh": "间隔环",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Spacer": {
+    "zh": "垫片",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Coupler": {
+    "zh": "连接器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Coupler": {
+    "zh": "光学连接器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mechanical Coupler": {
+    "zh": "机械连接器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rod Coupler": {
+    "zh": "导杆连接器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Post Coupler": {
+    "zh": "立柱连接器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Tube Coupler": {
+    "zh": "镜筒连接器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Connector": {
+    "zh": "连接件",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mechanical Connector": {
+    "zh": "机械连接件",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Connector": {
+    "zh": "光学连接件",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Joining Plate": {
+    "zh": "连接板",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Connection Plate": {
+    "zh": "连接板",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Interface Plate": {
+    "zh": "接口板",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Interface Adapter": {
+    "zh": "接口适配器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Adapter Block": {
+    "zh": "适配块",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Connection Block": {
+    "zh": "连接块",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Reducer": {
+    "zh": "变径接头",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Reducer Adapter": {
+    "zh": "变径适配器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Reducer Ring": {
+    "zh": "变径环",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Conversion Adapter": {
+    "zh": "转换适配器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Mount Converter": {
+    "zh": "支架转换器",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Thread Reducer": {
+    "zh": "螺纹变径接头",
+    "category1": "光机械与配件",
+    "category2": "PH杆架",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Breadboard": {
+    "zh": "面包板",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Breadboard": {
+    "zh": "光学面包板",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Aluminum Breadboard": {
+    "zh": "铝制面包板",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Steel Breadboard": {
+    "zh": "钢制面包板",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Honeycomb Optical Table": {
+    "zh": "蜂窝光学平台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Honeycomb Breadboard": {
+    "zh": "蜂窝面包板",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Table Frame": {
+    "zh": "光学平台支架",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Table Support Frame": {
+    "zh": "光学平台支撑架",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Table Leg": {
+    "zh": "平台支腿",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Table Leg": {
+    "zh": "光学平台支腿",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Table Support": {
+    "zh": "平台支撑",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Isolation Support": {
+    "zh": "隔振支撑",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Isolation Leg": {
+    "zh": "隔振支腿",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Passive Isolation Leg": {
+    "zh": "被动隔振支腿",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Active Isolation Leg": {
+    "zh": "主动隔振支腿",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Isolation Mount": {
+    "zh": "隔振支座",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Vibration Isolation Mount": {
+    "zh": "隔振支座",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Isolation Platform": {
+    "zh": "隔振平台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Isolation System": {
+    "zh": "隔振系统",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Leveling Foot": {
+    "zh": "调平脚",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Adjustable Foot": {
+    "zh": "可调支脚",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Anti Vibration Foot": {
+    "zh": "防振支脚",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cable Tray": {
+    "zh": "线缆托架",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Cable Management Kit": {
+    "zh": "线缆管理套件",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Cable Clamp": {
+    "zh": "线缆夹",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Utility Shelf": {
+    "zh": "多功能搁架",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Instrument Shelf": {
+    "zh": "仪器搁架",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Monitor Arm": {
+    "zh": "显示器支臂",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Keyboard Tray": {
+    "zh": "键盘托架",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Table Extension": {
+    "zh": "平台延长件",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Breadboard Bracket": {
+    "zh": "面包板支架",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Breadboard Adapter": {
+    "zh": "面包板适配器",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Breadboard Connector": {
+    "zh": "面包板连接件",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Beam Enclosure": {
+    "zh": "光束围护罩",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Enclosure": {
+    "zh": "光学围护罩",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Enclosure": {
+    "zh": "激光围护罩",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Beam Shield": {
+    "zh": "光束防护罩",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Beam Block": {
+    "zh": "光束阻挡器",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Beam Dump": {
+    "zh": "光束收集器",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Beam Dump": {
+    "zh": "激光光束收集器",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Beam Trap": {
+    "zh": "光束陷阱",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Light Trap": {
+    "zh": "光陷阱",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Curtain": {
+    "zh": "激光防护帘",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Safety Curtain": {
+    "zh": "激光安全防护帘",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Barrier": {
+    "zh": "激光防护屏障",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Safety Barrier": {
+    "zh": "安全屏障",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Shield": {
+    "zh": "激光防护屏",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Protective Screen": {
+    "zh": "防护屏",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Safety Window": {
+    "zh": "安全观察窗",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Viewing Window": {
+    "zh": "观察窗",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Protective Cover": {
+    "zh": "防护罩",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Dust Cover": {
+    "zh": "防尘罩",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Hardware Kit": {
+    "zh": "五金套件",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mechanical Kit": {
+    "zh": "机械套件",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mounting Kit": {
+    "zh": "安装套件",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Installation Kit": {
+    "zh": "安装套件",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fastener Kit": {
+    "zh": "紧固件套件",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Screw Kit": {
+    "zh": "螺钉套件",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Tool Kit": {
+    "zh": "工具套件",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Hex Key Set": {
+    "zh": "内六角扳手套件",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Allen Key Set": {
+    "zh": "内六角扳手套件",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Maintenance Kit": {
+    "zh": "维护套件",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Service Kit": {
+    "zh": "维修套件",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Accessory Kit": {
+    "zh": "配件套件",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Spare Parts Kit": {
+    "zh": "备件套件",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Fiber Cleaver": {
+    "zh": "光纤切割刀",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Cleaver": {
+    "zh": "光纤切割刀",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cleaver Fiber Optic": {
+    "zh": "光纤切割刀",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Thermal Stripper": {
+    "zh": "光纤热剥器",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Thermal Stripper": {
+    "zh": "光纤热剥器",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Holder": {
+    "zh": "光纤夹持器",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ribbon Holder": {
+    "zh": "带状光纤夹持器",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ribbon Handler": {
+    "zh": "带状光纤操作器",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Crimp Die": {
+    "zh": "压接模具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ribbonizer": {
+    "zh": "光纤带化工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ribbonizing Tool": {
+    "zh": "光纤带化工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Removal Tool": {
+    "zh": "拆卸工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Insertion Cap": {
+    "zh": "插芯插入帽",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Polishing Film": {
+    "zh": "研磨膜",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Interdental Brush": {
+    "zh": "清洁刷",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Vacuum Pump Kit": {
+    "zh": "真空泵套件",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Consumables": {
+    "zh": "耗材",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Stripping": {
+    "zh": "光纤剥除工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Stacker": {
+    "zh": "光纤堆叠工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PRIZMMT Termination": {
+    "zh": "PRIZM MT端接操作器",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Base PMT": {
+    "zh": "PMT端接基座工装",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Vibration Isolation Table ZH": {
+    "zh": "隔振台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Vibration Isolation Air Cushion": {
+    "zh": "隔振气垫",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Vibration Isolator ZH": {
+    "zh": "隔振器",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Vibration Isolation Platform ZH": {
+    "zh": "隔振平台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Balance Table ZH": {
+    "zh": "天平台",
+    "category1": "光机械与配件",
+    "category2": "光学平台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Connector Crimper": {
+    "zh": "光纤连接器压接钳",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Crimper": {
+    "zh": "压接钳",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Crimping Tool ZH": {
+    "zh": "压接工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Curing Oven": {
+    "zh": "固化炉",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Connector Polishing Machine": {
+    "zh": "连接器研磨机",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Polishing Rubber Pad": {
+    "zh": "研磨橡胶垫",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Tool Kit": {
+    "zh": "光纤工具套件",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Termination Tool Kit": {
+    "zh": "端接工具套件",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ultrasonic Cleaner": {
+    "zh": "超声波清洗机",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Epoxy Injection": {
+    "zh": "环氧注胶器",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Heating Stripper": {
+    "zh": "加热剥离器",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Draw Hook": {
+    "zh": "牵引钩",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Centrifugal Machine": {
+    "zh": "离心机",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Coating Stripper": {
+    "zh": "涂覆层剥除器",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fusion Splicer": {
+    "zh": "光纤熔接机",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Splicer": {
+    "zh": "熔接机",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cleaver": {
+    "zh": "光纤切割刀",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Epoxy ZH": {
+    "zh": "环氧胶",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Crimping Tool": {
+    "zh": "压接工具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Epoxy": {
+    "zh": "环氧胶",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Epoxy Curing Oven": {
+    "zh": "环氧固化炉",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Polish Puck": {
+    "zh": "研磨夹具",
+    "category1": "光机械与配件",
+    "category2": "工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Lens Barrel ZH": {
+    "zh": "镜筒",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Curved Barrel ZH": {
+    "zh": "曲线筒",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Camera Mount Bayonet": {
+    "zh": "卡口",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Die Casting Part": {
+    "zh": "压铸件",
+    "category1": "光机械与配件",
+    "category2": "配件",
+    "enable": true,
+    "confidence": 1.0
+  }
+}
