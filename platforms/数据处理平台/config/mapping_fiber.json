@@ -1,0 +1,4363 @@
+{
+  "Optical Fiber": {
+    "zh": "光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber": {
+    "zh": "光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic": {
+    "zh": "光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Single Mode Fiber": {
+    "zh": "单模光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "SM Fiber": {
+    "zh": "单模光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Multimode Fiber": {
+    "zh": "多模光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MM Fiber": {
+    "zh": "多模光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Double Clad Fiber": {
+    "zh": "双包层光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "DCF": {
+    "zh": "双包层光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Photonic Crystal Fiber": {
+    "zh": "光子晶体光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "PCF": {
+    "zh": "光子晶体光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Hollow Core Fiber": {
+    "zh": "空芯光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Active Fiber": {
+    "zh": "有源光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Passive Fiber": {
+    "zh": "无源光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Rare Earth Doped Fiber": {
+    "zh": "稀土掺杂光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Erbium Doped Fiber": {
+    "zh": "掺铒光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Ytterbium Doped Fiber": {
+    "zh": "掺镱光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Polarization Maintaining Fiber": {
+    "zh": "保偏光纤",
+    "category1": "光纤元件",
+    "category2": "偏振保持产品",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PM Fiber": {
+    "zh": "保偏光纤",
+    "category1": "光纤元件",
+    "category2": "偏振保持产品",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PM Patch Cord": {
+    "zh": "保偏跳线",
+    "category1": "光纤元件",
+    "category2": "偏振保持产品",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Polarization Maintaining Patch Cable": {
+    "zh": "保偏跳线",
+    "category1": "光纤元件",
+    "category2": "偏振保持产品",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Pigtail": {
+    "zh": "光纤尾纤",
+    "category1": "光纤元件",
+    "category2": "光纤电缆和束",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Ceramic Sleeve": {
+    "zh": "陶瓷套管",
+    "category1": "光纤元件",
+    "category2": "管套",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Alignment Sleeve": {
+    "zh": "对准套管",
+    "category1": "光纤元件",
+    "category2": "管套",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Ferrule Sleeve": {
+    "zh": "插芯套管",
+    "category1": "光纤元件",
+    "category2": "管套",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Coupler": {
+    "zh": "光纤耦合器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Fiber Coupler": {
+    "zh": "光纤耦合器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Coupler": {
+    "zh": "光纤耦合器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fused Fiber Coupler": {
+    "zh": "熔融拉锥耦合器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "PLC Splitter": {
+    "zh": "PLC分路器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Splitter": {
+    "zh": "光纤分路器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Tap Coupler": {
+    "zh": "分光耦合器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Directional Coupler": {
+    "zh": "定向耦合器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Polarization Maintaining Coupler": {
+    "zh": "保偏耦合器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Combiner": {
+    "zh": "光纤合束器",
+    "category1": "光纤元件",
+    "category2": "光纤合束器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Fiber Combiner": {
+    "zh": "光纤合束器",
+    "category1": "光纤元件",
+    "category2": "光纤合束器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Signal Combiner": {
+    "zh": "信号合束器",
+    "category1": "光纤元件",
+    "category2": "光纤合束器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Power Combiner": {
+    "zh": "功率合束器",
+    "category1": "光纤元件",
+    "category2": "光纤合束器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Nx1 Combiner": {
+    "zh": "Nx1合束器",
+    "category1": "光纤元件",
+    "category2": "光纤合束器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Beam Combiner Fiber": {
+    "zh": "光纤合束器",
+    "category1": "光纤元件",
+    "category2": "光纤合束器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Pump Combiner": {
+    "zh": "泵浦合束器",
+    "category1": "光纤元件",
+    "category2": "泵合器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pump Coupler": {
+    "zh": "泵浦耦合器",
+    "category1": "光纤元件",
+    "category2": "泵合器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pump Signal Combiner": {
+    "zh": "泵浦信号合束器",
+    "category1": "光纤元件",
+    "category2": "泵合器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "High Power Pump Combiner": {
+    "zh": "大功率泵浦合束器",
+    "category1": "光纤元件",
+    "category2": "泵合器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Pump Combiner Module": {
+    "zh": "泵浦合束模块",
+    "category1": "光纤元件",
+    "category2": "泵合器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "(2+1)x1 Pump Combiner": {
+    "zh": "(2+1)x1泵浦合束器",
+    "category1": "光纤元件",
+    "category2": "泵合器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "(6+1)x1 Pump Combiner": {
+    "zh": "(6+1)x1泵浦合束器",
+    "category1": "光纤元件",
+    "category2": "泵合器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "(18+1)x1 Pump Combiner": {
+    "zh": "(18+1)x1泵浦合束器",
+    "category1": "光纤元件",
+    "category2": "泵合器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "WDM": {
+    "zh": "波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Wavelength Division Multiplexer": {
+    "zh": "波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "CWDM": {
+    "zh": "粗波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "DWDM": {
+    "zh": "密集波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "FWDM": {
+    "zh": "滤波型波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "MWDM": {
+    "zh": "中等波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "WDM Module": {
+    "zh": "波分复用模块",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "OADM": {
+    "zh": "光分插复用器",
+    "category1": "光纤元件",
+    "category2": "光分插复用器（OADM）",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Add Drop Multiplexer": {
+    "zh": "分插复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Isolator": {
+    "zh": "光纤隔离器",
+    "category1": "光纤元件",
+    "category2": "光纤隔离器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Isolator": {
+    "zh": "光隔离器",
+    "category1": "光纤元件",
+    "category2": "光纤隔离器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Isolator": {
+    "zh": "光纤隔离器",
+    "category1": "光纤元件",
+    "category2": "光纤隔离器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "High Power Isolator": {
+    "zh": "大功率隔离器",
+    "category1": "光纤元件",
+    "category2": "光纤隔离器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Inline Isolator": {
+    "zh": "在线隔离器",
+    "category1": "光纤元件",
+    "category2": "光纤隔离器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Micro Isolator": {
+    "zh": "微型隔离器",
+    "category1": "光纤元件",
+    "category2": "光纤隔离器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Circulator": {
+    "zh": "光纤环形器",
+    "category1": "光纤元件",
+    "category2": "光纤环形器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Circulator": {
+    "zh": "光环形器",
+    "category1": "光纤元件",
+    "category2": "光纤环形器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Circulator": {
+    "zh": "光纤环形器",
+    "category1": "光纤元件",
+    "category2": "光纤环形器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Polarization Independent Circulator": {
+    "zh": "偏振无关环形器",
+    "category1": "光纤元件",
+    "category2": "光纤环形器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Amplifier": {
+    "zh": "光纤放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Fiber Amplifier": {
+    "zh": "光纤放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Amplifier": {
+    "zh": "光纤放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "EDFA": {
+    "zh": "掺铒光纤放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Erbium Doped Fiber Amplifier": {
+    "zh": "掺铒光纤放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Line Amplifier": {
+    "zh": "线路放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "YDFA": {
+    "zh": "掺镱光纤放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ytterbium Doped Fiber Amplifier": {
+    "zh": "掺镱光纤放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "TDFA": {
+    "zh": "掺铥光纤放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Thulium Doped Fiber Amplifier": {
+    "zh": "掺铥光纤放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "SOA": {
+    "zh": "半导体光放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Semiconductor Optical Amplifier": {
+    "zh": "半导体光放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "ASE Source": {
+    "zh": "ASE宽带光源",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "ASE Broadband Source": {
+    "zh": "ASE宽带光源",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Laser Module": {
+    "zh": "激光模块",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Laser Source": {
+    "zh": "光纤激光光源",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Engine": {
+    "zh": "激光引擎",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Seed Laser": {
+    "zh": "种子激光器",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Seed Source": {
+    "zh": "种子源",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "CW Fiber Laser": {
+    "zh": "连续波光纤激光器",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Pulsed Fiber Laser": {
+    "zh": "脉冲光纤激光器",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Nanosecond Fiber Laser": {
+    "zh": "纳秒光纤激光器",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Picosecond Fiber Laser": {
+    "zh": "皮秒光纤激光器",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Femtosecond Fiber Laser": {
+    "zh": "飞秒光纤激光器",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Supercontinuum Source": {
+    "zh": "超连续谱光源",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Broadband Fiber Source": {
+    "zh": "宽带光纤光源",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Pump Laser Module": {
+    "zh": "泵浦激光模块",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Pump Laser Source": {
+    "zh": "泵浦激光光源",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Pump Diode Module": {
+    "zh": "泵浦二极管模块",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Coupled Laser Module": {
+    "zh": "光纤耦合激光模块",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Transmitter": {
+    "zh": "光纤发射器",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Transmitter": {
+    "zh": "光发射机",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Transmitter": {
+    "zh": "光纤发射器",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Transmitter": {
+    "zh": "激光发射器",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Tx Module": {
+    "zh": "光发射模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Transmitter Module": {
+    "zh": "发射模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Receiver": {
+    "zh": "光纤接收器",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Receiver": {
+    "zh": "光接收机",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Receiver": {
+    "zh": "光纤接收器",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Rx Module": {
+    "zh": "光接收模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Receiver Module": {
+    "zh": "接收模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Photoreceiver": {
+    "zh": "光电接收器",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Transceiver": {
+    "zh": "光纤收发器",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Transceiver": {
+    "zh": "光收发器",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Transceiver": {
+    "zh": "光纤收发器",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "SFP": {
+    "zh": "SFP光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "SFP28": {
+    "zh": "SFP28光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "QSFP": {
+    "zh": "QSFP光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "QSFP+": {
+    "zh": "QSFP+光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "QSFP28": {
+    "zh": "QSFP28光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "QSFP-DD": {
+    "zh": "QSFP-DD光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "CFP": {
+    "zh": "CFP光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "CFP2": {
+    "zh": "CFP2光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "CFP4": {
+    "zh": "CFP4光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "XFP": {
+    "zh": "XFP光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "XENPAK": {
+    "zh": "XENPAK光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "X2 Transceiver": {
+    "zh": "X2光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "O/E Converter": {
+    "zh": "光电转换器",
+    "category1": "光纤元件",
+    "category2": "光电转换器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical to Electrical Converter": {
+    "zh": "光电转换器",
+    "category1": "光纤元件",
+    "category2": "光电转换器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Photodetector Module": {
+    "zh": "光电探测模块",
+    "category1": "光纤元件",
+    "category2": "光电转换器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Receiver Converter": {
+    "zh": "光接收转换器",
+    "category1": "光纤元件",
+    "category2": "光电转换器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "E/O Converter": {
+    "zh": "电光转换器",
+    "category1": "光纤元件",
+    "category2": "电光转换器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Electrical to Optical Converter": {
+    "zh": "电光转换器",
+    "category1": "光纤元件",
+    "category2": "电光转换器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optical Switch": {
+    "zh": "光纤光开关",
+    "category1": "光纤元件",
+    "category2": "光纤光开关",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Switch": {
+    "zh": "光开关",
+    "category1": "光纤元件",
+    "category2": "光纤光开关",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Switch": {
+    "zh": "光纤开关",
+    "category1": "光纤元件",
+    "category2": "光纤光开关",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "2x2 Optical Switch": {
+    "zh": "2x2光开关",
+    "category1": "光纤元件",
+    "category2": "光纤光开关",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "NxM Optical Switch": {
+    "zh": "NxM光开关",
+    "category1": "光纤元件",
+    "category2": "光纤光开关",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Switch Module": {
+    "zh": "光开关模块",
+    "category1": "光纤元件",
+    "category2": "光纤光开关",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Latching Optical Switch": {
+    "zh": "自锁式光开关",
+    "category1": "光纤元件",
+    "category2": "光纤光开关",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Non-Latching Optical Switch": {
+    "zh": "非自锁式光开关",
+    "category1": "光纤元件",
+    "category2": "光纤光开关",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Tunable Filter": {
+    "zh": "光纤可调滤波器",
+    "category1": "光纤元件",
+    "category2": "光纤可调滤波器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Tunable Optical Filter": {
+    "zh": "可调光滤波器",
+    "category1": "光纤元件",
+    "category2": "光纤可调滤波器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Tunable Filter": {
+    "zh": "可调光滤波器",
+    "category1": "光纤元件",
+    "category2": "光纤可调滤波器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Fabry Perot Filter": {
+    "zh": "光纤法珀滤波器",
+    "category1": "光纤元件",
+    "category2": "光纤可调滤波器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Bandpass Filter": {
+    "zh": "光纤带通滤波器",
+    "category1": "光纤元件",
+    "category2": "光纤可调滤波器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "MEMS Tunable Filter": {
+    "zh": "MEMS可调滤波器",
+    "category1": "光纤元件",
+    "category2": "光纤可调滤波器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Programmable Optical Filter": {
+    "zh": "可编程光滤波器",
+    "category1": "光纤元件",
+    "category2": "光纤可调滤波器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Controller": {
+    "zh": "光纤控制器",
+    "category1": "光纤元件",
+    "category2": "控制器和扰频器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Polarization Stabilizer": {
+    "zh": "光纤偏振稳定器",
+    "category1": "光纤元件",
+    "category2": "控制器和扰频器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Polarization Tracker": {
+    "zh": "偏振跟踪器",
+    "category1": "光纤元件",
+    "category2": "控制器和扰频器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Optic Bench": {
+    "zh": "光纤光机平台",
+    "category1": "光纤元件",
+    "category2": "光纤光机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Bench": {
+    "zh": "光纤平台",
+    "category1": "光纤元件",
+    "category2": "光纤光机",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Assembly": {
+    "zh": "光纤光机组件",
+    "category1": "光纤元件",
+    "category2": "光纤光机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Optical Platform": {
+    "zh": "光纤光学平台",
+    "category1": "光纤元件",
+    "category2": "光纤光机",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Optic Subassembly": {
+    "zh": "光纤光机子组件",
+    "category1": "光纤元件",
+    "category2": "光纤光机",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Alignment Bench": {
+    "zh": "光纤对准平台",
+    "category1": "光纤元件",
+    "category2": "光纤光机",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Bench Module": {
+    "zh": "光机平台模块",
+    "category1": "光纤元件",
+    "category2": "光纤光机",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Network": {
+    "zh": "光网络",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Networking": {
+    "zh": "光网络",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Transport": {
+    "zh": "光传输",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "DWDM Transport": {
+    "zh": "密集波分传输设备",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "CWDM Transport": {
+    "zh": "粗波分传输设备",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Networking Platform": {
+    "zh": "光网络平台",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "ROADM": {
+    "zh": "可重构光分插复用器",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Line System": {
+    "zh": "光传输线路系统",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Network Accessories": {
+    "zh": "光网络配件",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Network Accessories": {
+    "zh": "光纤网络配件",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Rack Mount Chassis": {
+    "zh": "机架式机箱",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Network Chassis": {
+    "zh": "网络机箱",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Distribution Frame": {
+    "zh": "光纤配线架",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Enclosure": {
+    "zh": "光纤箱体",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "GPON": {
+    "zh": "吉比特无源光网络",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Gigabit Passive Optical Network": {
+    "zh": "吉比特无源光网络",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "10G PON": {
+    "zh": "10G无源光网络",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "ONT": {
+    "zh": "光网络终端",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Network Terminal": {
+    "zh": "光网络终端",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Transimpedance Amplifier": {
+    "zh": "跨阻放大器",
+    "category1": "光纤元件",
+    "category2": "跨阻放大器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "TIA": {
+    "zh": "跨阻放大器",
+    "category1": "光纤元件",
+    "category2": "跨阻放大器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Balanced TIA": {
+    "zh": "平衡跨阻放大器",
+    "category1": "光纤元件",
+    "category2": "跨阻放大器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Low Noise TIA": {
+    "zh": "低噪声跨阻放大器",
+    "category1": "光纤元件",
+    "category2": "跨阻放大器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Speed TIA": {
+    "zh": "高速跨阻放大器",
+    "category1": "光纤元件",
+    "category2": "跨阻放大器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Photoreceiver TIA": {
+    "zh": "光接收跨阻放大器",
+    "category1": "光纤元件",
+    "category2": "跨阻放大器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Driver": {
+    "zh": "激光驱动器",
+    "category1": "光纤元件",
+    "category2": "光调制器驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Driver Amplifier": {
+    "zh": "激光驱动放大器",
+    "category1": "光纤元件",
+    "category2": "光调制器驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "EAM Driver": {
+    "zh": "电吸收调制器驱动器",
+    "category1": "光纤元件",
+    "category2": "光调制器驱动器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "MZM Driver": {
+    "zh": "马赫-曾德尔调制器驱动器",
+    "category1": "光纤元件",
+    "category2": "光调制器驱动器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "High Speed Driver Amplifier": {
+    "zh": "高速驱动放大器",
+    "category1": "光纤元件",
+    "category2": "光调制器驱动器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "CDR Driver": {
+    "zh": "时钟数据恢复驱动器",
+    "category1": "光纤元件",
+    "category2": "光调制器驱动器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Fiber Inspection Tool": {
+    "zh": "光纤检测工具",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Connector Inspection Tool": {
+    "zh": "连接器检测工具",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Visual Fault Locator": {
+    "zh": "光纤红光笔",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "VFL": {
+    "zh": "红光笔",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Test Equipment": {
+    "zh": "光纤测试设备",
+    "category1": "光纤元件",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Test Equipment": {
+    "zh": "光测试设备",
+    "category1": "光纤元件",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Return Loss Meter": {
+    "zh": "回损仪",
+    "category1": "光纤元件",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Micro Optic WDM": {
+    "zh": "微光学波分复用器",
+    "category1": "光纤元件",
+    "category2": "微光学波分复用",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Micro Optical WDM": {
+    "zh": "微光学波分复用器",
+    "category1": "光纤元件",
+    "category2": "微光学波分复用",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Micro Optic Multiplexer": {
+    "zh": "微光学复用器",
+    "category1": "光纤元件",
+    "category2": "微光学波分复用",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Micro Optics DWDM": {
+    "zh": "微光学密集波分复用器",
+    "category1": "光纤元件",
+    "category2": "微光学波分复用",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Micro Optics CWDM": {
+    "zh": "微光学粗波分复用器",
+    "category1": "光纤元件",
+    "category2": "微光学波分复用",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Micro Optic Filter Module": {
+    "zh": "微光学滤波模块",
+    "category1": "光纤元件",
+    "category2": "微光学波分复用",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Transmitter and Receiver": {
+    "zh": "发射器和接收器",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Tx Rx": {
+    "zh": "光收发模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Integrated Transmitter Receiver": {
+    "zh": "集成收发器",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical TxRx": {
+    "zh": "光收发模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Optic Components": {
+    "zh": "光纤无源器件",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Passive Fiber Components": {
+    "zh": "光纤无源器件",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Fiber Accessory": {
+    "zh": "光纤配件",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Fiber Management": {
+    "zh": "光纤管理",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Fiber Bragg Grating": {
+    "zh": "光纤布拉格光栅",
+    "category1": "光纤元件",
+    "category2": "光纤布拉格光栅",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "FBG": {
+    "zh": "光纤布拉格光栅",
+    "category1": "光纤元件",
+    "category2": "光纤布拉格光栅",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Grating": {
+    "zh": "光纤光栅",
+    "category1": "光纤元件",
+    "category2": "光纤布拉格光栅",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "FBG Sensor": {
+    "zh": "光纤光栅传感器",
+    "category1": "光纤元件",
+    "category2": "光纤布拉格光栅",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Bragg Grating Sensor": {
+    "zh": "光纤布拉格光栅传感器",
+    "category1": "光纤元件",
+    "category2": "光纤布拉格光栅",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Grating Sensor": {
+    "zh": "光纤光栅传感器",
+    "category1": "光纤元件",
+    "category2": "光纤布拉格光栅",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Attenuator": {
+    "zh": "光纤衰减器",
+    "category1": "光纤元件",
+    "category2": "光纤衰减器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Attenuator": {
+    "zh": "光衰减器",
+    "category1": "光纤元件",
+    "category2": "光纤衰减器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fixed Attenuator": {
+    "zh": "固定衰减器",
+    "category1": "光纤元件",
+    "category2": "光纤衰减器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Variable Optical Attenuator": {
+    "zh": "可变光衰减器",
+    "category1": "光纤元件",
+    "category2": "光纤衰减器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "VOA": {
+    "zh": "可变光衰减器",
+    "category1": "光纤元件",
+    "category2": "光纤衰减器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Variable Attenuator": {
+    "zh": "光纤可变衰减器",
+    "category1": "光纤元件",
+    "category2": "光纤衰减器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Large Mode Area Fiber": {
+    "zh": "大模场光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LMA Fiber": {
+    "zh": "大模场光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PM LMA Fiber": {
+    "zh": "保偏大模场光纤",
+    "category1": "光纤元件",
+    "category2": "偏振保持产品",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Few Mode Fiber": {
+    "zh": "少模光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "FMF": {
+    "zh": "少模光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Multi Core Fiber": {
+    "zh": "多芯光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "MCF": {
+    "zh": "多芯光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Polarization Maintaining Photonic Crystal Fiber": {
+    "zh": "保偏光子晶体光纤",
+    "category1": "光纤元件",
+    "category2": "偏振保持产品",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "PM Photonic Crystal Fiber": {
+    "zh": "保偏光子晶体光纤",
+    "category1": "光纤元件",
+    "category2": "偏振保持产品",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Photonic Bandgap Fiber": {
+    "zh": "光子带隙光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "PBG Fiber": {
+    "zh": "光子带隙光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Leakage Channel Fiber": {
+    "zh": "泄漏通道光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "LCF Fiber": {
+    "zh": "泄漏通道光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Bend Insensitive Fiber": {
+    "zh": "抗弯光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "BI Fiber": {
+    "zh": "抗弯光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Radiation Resistant Fiber": {
+    "zh": "抗辐照光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Radiation Hardened Fiber": {
+    "zh": "耐辐照光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High NA Fiber": {
+    "zh": "高数值孔径光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Low NA Fiber": {
+    "zh": "低数值孔径光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "End Cap Fiber": {
+    "zh": "端帽光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber End Cap": {
+    "zh": "光纤端帽",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Octagonal Fiber": {
+    "zh": "八边形光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Square Core Fiber": {
+    "zh": "方芯光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Rectangular Core Fiber": {
+    "zh": "矩形芯光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Triple Clad Fiber": {
+    "zh": "三包层光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Triple Cladding Fiber": {
+    "zh": "三包层光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fluoride Fiber": {
+    "zh": "氟化物光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Chalcogenide Fiber": {
+    "zh": "硫系光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Silica Fiber": {
+    "zh": "石英光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Plastic Optical Fiber": {
+    "zh": "塑料光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "POF": {
+    "zh": "塑料光纤",
+    "category1": "光纤元件",
+    "category2": "光纤",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Single Mode Coupler": {
+    "zh": "单模耦合器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Multimode Coupler": {
+    "zh": "多模耦合器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PM Fiber Coupler": {
+    "zh": "保偏光纤耦合器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PM Coupler": {
+    "zh": "保偏耦合器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "1x2 Coupler": {
+    "zh": "1x2耦合器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "2x2 Coupler": {
+    "zh": "2x2耦合器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "1xN Coupler": {
+    "zh": "1xN耦合器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "NxN Coupler": {
+    "zh": "NxN耦合器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Star Coupler": {
+    "zh": "星形耦合器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Tree Coupler": {
+    "zh": "树形耦合器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Broadband Coupler": {
+    "zh": "宽带耦合器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Wavelength Independent Coupler": {
+    "zh": "波长无关耦合器",
+    "category1": "光纤元件",
+    "category2": "光纤耦合器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Signal Combiner Module": {
+    "zh": "信号合束模块",
+    "category1": "光纤元件",
+    "category2": "光纤合束器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Beam Combiner": {
+    "zh": "光纤合束器",
+    "category1": "光纤元件",
+    "category2": "光纤合束器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Polarization Beam Combiner": {
+    "zh": "偏振合束器",
+    "category1": "光纤元件",
+    "category2": "光纤合束器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Polarization Combiner": {
+    "zh": "偏振合束器",
+    "category1": "光纤元件",
+    "category2": "光纤合束器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Coherent Beam Combiner": {
+    "zh": "相干合束器",
+    "category1": "光纤元件",
+    "category2": "光纤合束器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "High Power Combiner": {
+    "zh": "大功率合束器",
+    "category1": "光纤元件",
+    "category2": "光纤合束器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Mode Field Adapter": {
+    "zh": "模场适配器",
+    "category1": "光纤元件",
+    "category2": "光纤合束器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "MFA": {
+    "zh": "模场适配器",
+    "category1": "光纤元件",
+    "category2": "光纤合束器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Pump Signal Combiner Module": {
+    "zh": "泵浦信号合束模块",
+    "category1": "光纤元件",
+    "category2": "泵合器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pump Signal Combiner (PSC)": {
+    "zh": "泵浦信号合束器",
+    "category1": "光纤元件",
+    "category2": "泵合器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PSC": {
+    "zh": "泵浦信号合束器",
+    "category1": "光纤元件",
+    "category2": "泵合器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Pump Combiner Assembly": {
+    "zh": "泵浦合束组件",
+    "category1": "光纤元件",
+    "category2": "泵合器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Pump Delivery Combiner": {
+    "zh": "泵浦传输合束器",
+    "category1": "光纤元件",
+    "category2": "泵合器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Signal Pump Combiner": {
+    "zh": "信号泵浦合束器",
+    "category1": "光纤元件",
+    "category2": "泵合器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Multimode Pump Combiner": {
+    "zh": "多模泵浦合束器",
+    "category1": "光纤元件",
+    "category2": "泵合器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "PM Pump Combiner": {
+    "zh": "保偏泵浦合束器",
+    "category1": "光纤元件",
+    "category2": "泵合器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Pump and Signal Combiner": {
+    "zh": "泵浦信号合束器",
+    "category1": "光纤元件",
+    "category2": "泵合器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "EDFA Module": {
+    "zh": "掺铒光纤放大模块",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "EDFA System": {
+    "zh": "掺铒光纤放大系统",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Booster Amplifier": {
+    "zh": "功率放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Booster EDFA": {
+    "zh": "功率型掺铒光纤放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Pre Amplifier": {
+    "zh": "前置放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Pre-Amplifier": {
+    "zh": "前置放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Inline Amplifier": {
+    "zh": "在线放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Line Amplifier": {
+    "zh": "光线路放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Raman Amplifier": {
+    "zh": "拉曼放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Distributed Raman Amplifier": {
+    "zh": "分布式拉曼放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Hybrid Optical Amplifier": {
+    "zh": "混合光放大器",
+    "category1": "光纤元件",
+    "category2": "光纤放大器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Laser Module": {
+    "zh": "光纤激光模块",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Source Module": {
+    "zh": "激光光源模块",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Seed Laser Module": {
+    "zh": "种子激光模块",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Seed Module": {
+    "zh": "光纤种子模块",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "ASE Source Module": {
+    "zh": "ASE光源模块",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Broadband Source Module": {
+    "zh": "宽带光源模块",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "SLD Module": {
+    "zh": "超辐射发光二极管模块",
+    "category1": "光纤元件",
+    "category2": "激光源模块",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Optical Transmitter": {
+    "zh": "光纤发射器",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Transmitter Module": {
+    "zh": "光发射模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Laser Transmitter": {
+    "zh": "光纤激光发射器",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Optical Receiver": {
+    "zh": "光纤接收器",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Receiver Module": {
+    "zh": "光接收模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Balanced Receiver": {
+    "zh": "平衡接收器",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Balanced Photoreceiver": {
+    "zh": "平衡光电接收器",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Transceiver Module": {
+    "zh": "光纤收发模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Transceiver Module": {
+    "zh": "光收发模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "BiDi Transceiver": {
+    "zh": "单纤双向光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "CWDM Transceiver": {
+    "zh": "粗波分光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "DWDM Transceiver": {
+    "zh": "密集波分光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "QSFP Optical Module": {
+    "zh": "QSFP光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "QSFP28 Module": {
+    "zh": "QSFP28光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "SFP Optical Module": {
+    "zh": "SFP光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "SFP+": {
+    "zh": "SFP+光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "XFP Module": {
+    "zh": "XFP光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "PM Fiber Isolator": {
+    "zh": "保偏光纤隔离器",
+    "category1": "光纤元件",
+    "category2": "光纤隔离器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Polarization Maintaining Isolator": {
+    "zh": "保偏隔离器",
+    "category1": "光纤元件",
+    "category2": "光纤隔离器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Inline Fiber Isolator": {
+    "zh": "在线光纤隔离器",
+    "category1": "光纤元件",
+    "category2": "光纤隔离器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Free Space Isolator": {
+    "zh": "自由空间隔离器",
+    "category1": "光纤元件",
+    "category2": "光纤隔离器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "High Power Fiber Isolator": {
+    "zh": "大功率光纤隔离器",
+    "category1": "光纤元件",
+    "category2": "光纤隔离器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Dual Stage Isolator": {
+    "zh": "双级隔离器",
+    "category1": "光纤元件",
+    "category2": "光纤隔离器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "PM Circulator": {
+    "zh": "保偏环形器",
+    "category1": "光纤元件",
+    "category2": "光纤环形器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Polarization Maintaining Circulator": {
+    "zh": "保偏环形器",
+    "category1": "光纤元件",
+    "category2": "光纤环形器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "3 Port Circulator": {
+    "zh": "三端口环形器",
+    "category1": "光纤元件",
+    "category2": "光纤环形器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "4 Port Circulator": {
+    "zh": "四端口环形器",
+    "category1": "光纤元件",
+    "category2": "光纤环形器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Power Circulator": {
+    "zh": "大功率环形器",
+    "category1": "光纤元件",
+    "category2": "光纤环形器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "MEMS Optical Switch": {
+    "zh": "MEMS光开关",
+    "category1": "光纤元件",
+    "category2": "光纤光开关",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MEMS Fiber Switch": {
+    "zh": "MEMS光纤开关",
+    "category1": "光纤元件",
+    "category2": "光纤光开关",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Mechanical Fiber Switch": {
+    "zh": "机械式光纤开关",
+    "category1": "光纤元件",
+    "category2": "光纤光开关",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Solid State Optical Switch": {
+    "zh": "固态光开关",
+    "category1": "光纤元件",
+    "category2": "光纤光开关",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "1x2 Optical Switch": {
+    "zh": "1x2光开关",
+    "category1": "光纤元件",
+    "category2": "光纤光开关",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "1xN Optical Switch": {
+    "zh": "1xN光开关",
+    "category1": "光纤元件",
+    "category2": "光纤光开关",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "NxN Optical Switch": {
+    "zh": "NxN光开关",
+    "category1": "光纤元件",
+    "category2": "光纤光开关",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Thin Film WDM": {
+    "zh": "薄膜波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "TFF WDM": {
+    "zh": "薄膜滤波波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Hybrid WDM": {
+    "zh": "混合波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "CWDM Module": {
+    "zh": "粗波分模块",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "DWDM Module": {
+    "zh": "密集波分模块",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "AWG Module": {
+    "zh": "阵列波导光栅模块",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Arrayed Waveguide Grating": {
+    "zh": "阵列波导光栅",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "CWDM OADM": {
+    "zh": "粗波分光分插复用器",
+    "category1": "光纤元件",
+    "category2": "光分插复用器（OADM）",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "DWDM OADM": {
+    "zh": "密集波分光分插复用器",
+    "category1": "光纤元件",
+    "category2": "光分插复用器（OADM）",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Add Drop Multiplexer": {
+    "zh": "光分插复用器",
+    "category1": "光纤元件",
+    "category2": "光分插复用器（OADM）",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber OADM": {
+    "zh": "光纤分插复用器",
+    "category1": "光纤元件",
+    "category2": "光分插复用器（OADM）",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Probe": {
+    "zh": "光纤探头",
+    "category1": "光纤元件",
+    "category2": "光纤探头",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Probe": {
+    "zh": "光纤探头",
+    "category1": "光纤元件",
+    "category2": "光纤探头",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Fiber Probe": {
+    "zh": "光纤探头",
+    "category1": "光纤元件",
+    "category2": "光纤探头",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Reflection Probe": {
+    "zh": "反射式探头",
+    "category1": "光纤元件",
+    "category2": "光纤探头",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Transmission Probe": {
+    "zh": "透射式探头",
+    "category1": "光纤元件",
+    "category2": "光纤探头",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Raman Probe": {
+    "zh": "拉曼探头",
+    "category1": "光纤元件",
+    "category2": "光纤探头",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fluorescence Probe": {
+    "zh": "荧光探头",
+    "category1": "光纤元件",
+    "category2": "光纤探头",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Immersion Probe": {
+    "zh": "浸入式探头",
+    "category1": "光纤元件",
+    "category2": "光纤探头",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "ATR Probe": {
+    "zh": "衰减全反射探头",
+    "category1": "光纤元件",
+    "category2": "光纤探头",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Inspection Scope": {
+    "zh": "光纤检测镜",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Inspection Microscope": {
+    "zh": "光纤检测显微镜",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Endface Inspector": {
+    "zh": "光纤端面检测仪",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Connector Inspection Probe": {
+    "zh": "连接器检测探头",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Video Fiber Microscope": {
+    "zh": "视频光纤显微镜",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Cleaning Kit": {
+    "zh": "光纤清洁工具",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Connector Cleaner": {
+    "zh": "连接器清洁器",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Identifier": {
+    "zh": "光纤识别仪",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "OTDR": {
+    "zh": "光时域反射仪",
+    "category1": "光纤元件",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Time Domain Reflectometer": {
+    "zh": "光时域反射仪",
+    "category1": "光纤元件",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Return Loss Meter": {
+    "zh": "光回损仪",
+    "category1": "光纤元件",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Insertion Loss Test Set": {
+    "zh": "插损测试仪",
+    "category1": "光纤元件",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Loss Test Set": {
+    "zh": "光损耗测试仪",
+    "category1": "光纤元件",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Test System": {
+    "zh": "光纤测试系统",
+    "category1": "光纤元件",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Characterization System": {
+    "zh": "光纤表征系统",
+    "category1": "光纤元件",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Measurement System": {
+    "zh": "光纤测量系统",
+    "category1": "光纤元件",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Fiber Analyzer": {
+    "zh": "光纤分析仪",
+    "category1": "光纤元件",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Analyzer": {
+    "zh": "光纤分析仪",
+    "category1": "光纤元件",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Network Unit": {
+    "zh": "光网络单元",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "ONU": {
+    "zh": "光网络单元",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Line Terminal": {
+    "zh": "光线路终端",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "OLT": {
+    "zh": "光线路终端",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Distribution Network": {
+    "zh": "光分配网",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "ODN": {
+    "zh": "光分配网",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Passive Optical Network": {
+    "zh": "无源光网络",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "PON System": {
+    "zh": "无源光网络系统",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "GPON ONU": {
+    "zh": "GPON光网络单元",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "GPON OLT": {
+    "zh": "GPON光线路终端",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "GPON SFP": {
+    "zh": "GPON光模块",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "EPON ONU": {
+    "zh": "EPON光网络单元",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "EPON OLT": {
+    "zh": "EPON光线路终端",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "XG-PON": {
+    "zh": "XG-PON",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "XGS-PON": {
+    "zh": "XGS-PON",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "NG-PON2": {
+    "zh": "NG-PON2",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Media Converter": {
+    "zh": "光纤收发器",
+    "category1": "光纤元件",
+    "category2": "光电转换器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Media Converter": {
+    "zh": "光电转换器",
+    "category1": "光纤元件",
+    "category2": "光电转换器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ethernet Media Converter": {
+    "zh": "以太网光电转换器",
+    "category1": "光纤元件",
+    "category2": "光电转换器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Industrial Media Converter": {
+    "zh": "工业级光电转换器",
+    "category1": "光纤元件",
+    "category2": "光电转换器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Gigabit Media Converter": {
+    "zh": "千兆光电转换器",
+    "category1": "光纤元件",
+    "category2": "光电转换器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "10G Media Converter": {
+    "zh": "万兆光电转换器",
+    "category1": "光纤元件",
+    "category2": "光电转换器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Electro Optical Converter": {
+    "zh": "电光转换器",
+    "category1": "光纤元件",
+    "category2": "电光转换器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Electro-Optic Converter": {
+    "zh": "电光转换器",
+    "category1": "光纤元件",
+    "category2": "电光转换器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Electrical Optical Converter": {
+    "zh": "电光转换器",
+    "category1": "光纤元件",
+    "category2": "电光转换器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "EO Converter": {
+    "zh": "电光转换器",
+    "category1": "光纤元件",
+    "category2": "电光转换器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Electrical Converter": {
+    "zh": "光电转换器",
+    "category1": "光纤元件",
+    "category2": "电光转换器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "OE Converter": {
+    "zh": "光电转换器",
+    "category1": "光纤元件",
+    "category2": "电光转换器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Adapter Panel": {
+    "zh": "光纤适配器面板",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Patch Panel": {
+    "zh": "光纤配线面板",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Distribution Frame": {
+    "zh": "光纤配线架",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "ODF": {
+    "zh": "光纤配线架",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Terminal Box": {
+    "zh": "光纤终端盒",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Distribution Box": {
+    "zh": "光纤分纤箱",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Cable Assembly": {
+    "zh": "光缆组件",
+    "category1": "光纤元件",
+    "category2": "光纤电缆和束",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Cable": {
+    "zh": "光缆",
+    "category1": "光纤元件",
+    "category2": "光纤电缆和束",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Cable": {
+    "zh": "光缆",
+    "category1": "光纤元件",
+    "category2": "光纤电缆和束",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Harness": {
+    "zh": "光纤线束",
+    "category1": "光纤元件",
+    "category2": "光纤电缆和束",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Bundle": {
+    "zh": "光纤束",
+    "category1": "光纤元件",
+    "category2": "光纤电缆和束",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Bundle Assembly": {
+    "zh": "光纤束组件",
+    "category1": "光纤元件",
+    "category2": "光纤电缆和束",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Imaging Fiber Bundle": {
+    "zh": "成像光纤束",
+    "category1": "光纤元件",
+    "category2": "光纤电缆和束",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Illumination Fiber Bundle": {
+    "zh": "照明光纤束",
+    "category1": "光纤元件",
+    "category2": "光纤电缆和束",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Sleeve": {
+    "zh": "光纤套管",
+    "category1": "光纤元件",
+    "category2": "管套",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Protection Sleeve": {
+    "zh": "保护套管",
+    "category1": "光纤元件",
+    "category2": "管套",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Heat Shrink Sleeve": {
+    "zh": "热缩套管",
+    "category1": "光纤元件",
+    "category2": "管套",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fusion Splice Sleeve": {
+    "zh": "熔接保护套管",
+    "category1": "光纤元件",
+    "category2": "管套",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Splice Protection Sleeve": {
+    "zh": "熔接保护套管",
+    "category1": "光纤元件",
+    "category2": "管套",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Polarization Controller": {
+    "zh": "偏振控制器",
+    "category1": "光纤元件",
+    "category2": "控制器和扰频器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Polarization Controller": {
+    "zh": "光纤偏振控制器",
+    "category1": "光纤元件",
+    "category2": "控制器和扰频器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Polarization Scrambler": {
+    "zh": "偏振扰偏器",
+    "category1": "光纤元件",
+    "category2": "控制器和扰频器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Scrambler": {
+    "zh": "光纤扰偏器",
+    "category1": "光纤元件",
+    "category2": "控制器和扰频器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Polarization Stabilizer": {
+    "zh": "偏振稳定器",
+    "category1": "光纤元件",
+    "category2": "控制器和扰频器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Modulator Driver": {
+    "zh": "光调制器驱动器",
+    "category1": "光纤元件",
+    "category2": "光调制器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Modulator Driver": {
+    "zh": "调制器驱动器",
+    "category1": "光纤元件",
+    "category2": "光调制器驱动器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "EOM Driver": {
+    "zh": "电光调制器驱动器",
+    "category1": "光纤元件",
+    "category2": "光调制器驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "AOM Driver": {
+    "zh": "声光调制器驱动器",
+    "category1": "光纤元件",
+    "category2": "光调制器驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Bias Controller": {
+    "zh": "偏置控制器",
+    "category1": "光纤元件",
+    "category2": "光调制器驱动器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Transmitter and Receiver": {
+    "zh": "光发射与接收器",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Transmitter and Receiver": {
+    "zh": "光纤发射与接收器",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Tx Rx Module": {
+    "zh": "收发模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Tx/Rx Module": {
+    "zh": "收发模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Adapter": {
+    "zh": "光纤适配器",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Connector": {
+    "zh": "光纤连接器",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Attenuator Adapter": {
+    "zh": "光纤衰减适配器",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Patch Cord": {
+    "zh": "跳线",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Pigtail": {
+    "zh": "尾纤",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Patch Cord": {
+    "zh": "光纤跳线",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "XG-PON OLT": {
+    "zh": "XG-PON光线路终端",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "XGS-PON OLT": {
+    "zh": "XGS-PON光线路终端",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Combo PON OLT": {
+    "zh": "Combo PON光线路终端",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "10G Combo PON OLT": {
+    "zh": "10G Combo PON光线路终端",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mini OLT": {
+    "zh": "微型光线路终端",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Compact OLT": {
+    "zh": "紧凑型光线路终端",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Outdoor OLT": {
+    "zh": "室外型光线路终端",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "MDU": {
+    "zh": "多住户单元",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "SFU": {
+    "zh": "单住户单元",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "HGU": {
+    "zh": "家庭网关单元",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "WiFi ONU": {
+    "zh": "WiFi光网络单元",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "CATV ONU": {
+    "zh": "CATV光网络单元",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "ONU Stick": {
+    "zh": "棒状光网络单元",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Panel ONU": {
+    "zh": "面板式光网络单元",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "OTN": {
+    "zh": "光传送网",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "OTN Platform": {
+    "zh": "光传送网平台",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "OTN Equipment": {
+    "zh": "光传送网设备",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "OTN Shelf": {
+    "zh": "光传送网子架",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "OTN Chassis": {
+    "zh": "光传送网机箱",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Transport Platform": {
+    "zh": "光传输平台",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Transport System": {
+    "zh": "光传输系统",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Transport Platform": {
+    "zh": "传输平台",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Transport Shelf": {
+    "zh": "传输子架",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "DCI": {
+    "zh": "数据中心互联",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Data Center Interconnect": {
+    "zh": "数据中心互联",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "DWDM Platform": {
+    "zh": "密集波分平台",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Photo Receiver": {
+    "zh": "光电接收器",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Coherent Receiver": {
+    "zh": "相干接收机",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Coherent Transceiver": {
+    "zh": "相干光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "OSFP": {
+    "zh": "OSFP光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "GBIC": {
+    "zh": "GBIC光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Module": {
+    "zh": "光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Module": {
+    "zh": "光纤模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Engine": {
+    "zh": "光引擎",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "CWDM Card": {
+    "zh": "粗波分板卡",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "DWDM Card": {
+    "zh": "密集波分板卡",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "WDM Card": {
+    "zh": "波分复用板卡",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MUX Card": {
+    "zh": "复用板卡",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "DEMUX Card": {
+    "zh": "解复用板卡",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Multiplexer Card": {
+    "zh": "复用板卡",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Demultiplexer Card": {
+    "zh": "解复用板卡",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MUX": {
+    "zh": "复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "DEMUX": {
+    "zh": "解复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Multiplexer": {
+    "zh": "复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Demultiplexer": {
+    "zh": "解复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Passive WDM": {
+    "zh": "无源波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Active WDM": {
+    "zh": "有源波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Mini CWDM": {
+    "zh": "微型粗波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Mini DWDM": {
+    "zh": "微型密集波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "LGX CWDM": {
+    "zh": "LGX粗波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "LGX DWDM": {
+    "zh": "LGX密集波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rackmount WDM": {
+    "zh": "机架式波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "1xN CWDM": {
+    "zh": "1xN粗波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "1xN DWDM": {
+    "zh": "1xN密集波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Dual Fiber CWDM": {
+    "zh": "双纤粗波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Single Fiber CWDM": {
+    "zh": "单纤粗波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Dual Fiber DWDM": {
+    "zh": "双纤密集波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Single Fiber DWDM": {
+    "zh": "单纤密集波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Multiplexer": {
+    "zh": "光复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Demultiplexer": {
+    "zh": "光解复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical MUX DEMUX": {
+    "zh": "光复用解复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Ethernet Switch": {
+    "zh": "以太网交换机",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Network Switch": {
+    "zh": "网络交换机",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Managed Switch": {
+    "zh": "网管型交换机",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Unmanaged Switch": {
+    "zh": "非网管型交换机",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Layer 2 Switch": {
+    "zh": "二层交换机",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Layer 3 Switch": {
+    "zh": "三层交换机",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PoE Switch": {
+    "zh": "PoE交换机",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Industrial Ethernet Switch": {
+    "zh": "工业以太网交换机",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Industrial Switch": {
+    "zh": "工业交换机",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Gigabit Switch": {
+    "zh": "千兆交换机",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "10G Ethernet Switch": {
+    "zh": "万兆以太网交换机",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Aggregation Switch": {
+    "zh": "汇聚交换机",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Core Switch": {
+    "zh": "核心交换机",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Access Switch": {
+    "zh": "接入交换机",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Router": {
+    "zh": "路由器",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Wireless Router": {
+    "zh": "无线路由器",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "WiFi Router": {
+    "zh": "WiFi路由器",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Enterprise Router": {
+    "zh": "企业级路由器",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Industrial Router": {
+    "zh": "工业路由器",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "VPN Router": {
+    "zh": "VPN路由器",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Gateway": {
+    "zh": "网关",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Industrial Gateway": {
+    "zh": "工业网关",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "IoT Gateway": {
+    "zh": "物联网网关",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Wireless Gateway": {
+    "zh": "无线网关",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Access Point": {
+    "zh": "无线接入点",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Wireless Access Point": {
+    "zh": "无线接入点",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "AP": {
+    "zh": "无线接入点",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Mesh AP": {
+    "zh": "Mesh接入点",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Wireless Controller": {
+    "zh": "无线控制器",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "AC Controller": {
+    "zh": "无线接入控制器",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Mesh Router": {
+    "zh": "Mesh路由器",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Network Appliance": {
+    "zh": "网络设备",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Ethernet Device": {
+    "zh": "以太网设备",
+    "category1": "光纤元件",
+    "category2": "光网络",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Transport System": {
+    "zh": "传输系统",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Transmission System": {
+    "zh": "光传输系统",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Transmission Platform": {
+    "zh": "传输平台",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "xPON": {
+    "zh": "xPON",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "XPON": {
+    "zh": "XPON",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Combo PON": {
+    "zh": "Combo PON",
+    "category1": "光纤元件",
+    "category2": "光接收设备",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Muxponder": {
+    "zh": "复用转发器",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Transponder": {
+    "zh": "光转发器",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "TMUX": {
+    "zh": "复用转发器",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "TMUX Card": {
+    "zh": "复用转发卡",
+    "category1": "光纤元件",
+    "category2": "光传输设备",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Coherent Module": {
+    "zh": "相干模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "400G Transceiver": {
+    "zh": "400G光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "800G Transceiver": {
+    "zh": "800G光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "SFP56": {
+    "zh": "SFP56光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "QSFP56": {
+    "zh": "QSFP56光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "QSFP112": {
+    "zh": "QSFP112光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "QSFP-DD800": {
+    "zh": "QSFP-DD800光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "OSFP800": {
+    "zh": "OSFP800光模块",
+    "category1": "光纤元件",
+    "category2": "发射器和接收器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "AAWG": {
+    "zh": "阵列波导光栅",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Thin Film Filter WDM": {
+    "zh": "薄膜滤波波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "PLC WDM": {
+    "zh": "PLC波分复用器",
+    "category1": "光纤元件",
+    "category2": "波分复用 (WDM)",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Kit MTP": {
+    "zh": "MTP连接器套件",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Adapter MTP": {
+    "zh": "MTP适配器",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MTP Adapter": {
+    "zh": "MTP适配器",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MPO Adapter": {
+    "zh": "MPO适配器",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MTP Connector": {
+    "zh": "MTP连接器",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MPO Connector": {
+    "zh": "MPO连接器",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Adapter Single Fiber": {
+    "zh": "单纤适配器",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Kit MXC": {
+    "zh": "MXC连接器套件",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MXC Connector": {
+    "zh": "MXC连接器",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PRIZM LightTurn": {
+    "zh": "PRIZM LightTurn光纤连接器",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Adapter MDC": {
+    "zh": "MDC适配器",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Adapter MT": {
+    "zh": "MT/MTP适配器",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Adapter MXC": {
+    "zh": "MXC适配器",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Bracket MXC": {
+    "zh": "MXC连接器支架",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MXC External": {
+    "zh": "MXC外部插头载体",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Blind Mate": {
+    "zh": "盲插连接器",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fast Track MTP": {
+    "zh": "Fast-Track MTP连接器套件",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pin Clamp MTP": {
+    "zh": "MTP针夹组件",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Kit MDC": {
+    "zh": "MDC连接器套件",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Kit Uniboot": {
+    "zh": "Uniboot连接器套件",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Kit LC 9": {
+    "zh": "LC连接器套件",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Kit LC 2": {
+    "zh": "LC连接器套件",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Kit LC 3": {
+    "zh": "LC连接器套件",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Kit SC 9": {
+    "zh": "SC连接器套件",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Kit SC 2": {
+    "zh": "SC连接器套件",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Kit SC 3": {
+    "zh": "SC连接器套件",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MT Ferrule": {
+    "zh": "MT插芯",
+    "category1": "光纤元件",
+    "category2": "管套",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ferrule": {
+    "zh": "插芯",
+    "category1": "光纤元件",
+    "category2": "管套",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Cleaner": {
+    "zh": "光纤连接器清洁器",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Brand Cleaner": {
+    "zh": "光纤连接器清洁器",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cleaning Cassette": {
+    "zh": "光纤清洁盒",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cleaning Casette": {
+    "zh": "光纤清洁盒",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cleaning Stick": {
+    "zh": "光纤清洁棒",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "CLETOP": {
+    "zh": "CLETOP光纤清洁器",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "NEOCLEAN": {
+    "zh": "NEOCLEAN光纤清洁器",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "OPTIPOP": {
+    "zh": "OPTIPOP光纤清洁器",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MXC Cleaner": {
+    "zh": "MXC清洁器",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Brand Solvent": {
+    "zh": "光纤清洁溶剂",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Inspection Reticle": {
+    "zh": "连接器检测标线板",
+    "category1": "光纤元件",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MXC": {
+    "zh": "MXC光纤连接器",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Kit LC 900um": {
+    "zh": "LC连接器套件",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Kit SC 900um": {
+    "zh": "SC连接器套件",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Cable ZH": {
+    "zh": "光缆",
+    "category1": "光纤元件",
+    "category2": "光纤电缆和束",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Armored Cable": {
+    "zh": "铠装光缆",
+    "category1": "光纤元件",
+    "category2": "光纤电缆和束",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Non-Armored Cable": {
+    "zh": "非铠装光缆",
+    "category1": "光纤元件",
+    "category2": "光纤电缆和束",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Micro Cable": {
+    "zh": "微缆",
+    "category1": "光纤元件",
+    "category2": "光纤电缆和束",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Tail Cable": {
+    "zh": "尾缆",
+    "category1": "光纤元件",
+    "category2": "光纤电缆和束",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Indoor Cable": {
+    "zh": "室内光缆",
+    "category1": "光纤元件",
+    "category2": "光纤电缆和束",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Aerial Cable": {
+    "zh": "架空光缆",
+    "category1": "光纤元件",
+    "category2": "光纤电缆和束",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Tight Tube Patchcord": {
+    "zh": "紧套跳线",
+    "category1": "光纤元件",
+    "category2": "光纤电缆和束",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Bare Fiber Reel": {
+    "zh": "裸光纤盘",
+    "category1": "光纤元件",
+    "category2": "光纤电缆和束",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Attenuator": {
+    "zh": "衰减器",
+    "category1": "光纤元件",
+    "category2": "光纤衰减器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fast Connector": {
+    "zh": "快速连接器",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Termination Box": {
+    "zh": "光纤终端盒",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Splice Closure": {
+    "zh": "光缆接头盒",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Splice Closure FOSC": {
+    "zh": "光缆接续盒",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Distribution Cabinet": {
+    "zh": "光缆配线柜",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Integrated Cabinet": {
+    "zh": "一体化机柜",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Termination Box": {
+    "zh": "光终端盒",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mating Sleeve": {
+    "zh": "法兰适配器",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Socket": {
+    "zh": "光纤面板插座",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cabinet ZH": {
+    "zh": "机柜",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cable Marker": {
+    "zh": "线缆标识",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cable Clip": {
+    "zh": "线缆卡扣",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cable Duct": {
+    "zh": "线槽",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Cable": {
+    "zh": "光缆",
+    "category1": "光纤元件",
+    "category2": "光纤电缆和束",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cabinet": {
+    "zh": "机柜",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Splitter Closure": {
+    "zh": "分光接头盒",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Cable Tray": {
+    "zh": "光缆走线架",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ribbon Indoor Cable": {
+    "zh": "室内带状光缆",
+    "category1": "光纤元件",
+    "category2": "光纤电缆和束",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cable Tray Introduction": {
+    "zh": "光缆走线架",
+    "category1": "光纤元件",
+    "category2": "光网络配件",
+    "enable": true,
+    "confidence": 1.0
+  }
+}
