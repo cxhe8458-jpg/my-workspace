@@ -1,0 +1,3670 @@
+{
+  "Spectrometer": {
+    "zh": "光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Spectrometer": {
+    "zh": "光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Spectrometer": {
+    "zh": "光纤光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Mini Spectrometer": {
+    "zh": "微型光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Compact Spectrometer": {
+    "zh": "紧凑型光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "CCD Spectrometer": {
+    "zh": "CCD光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "CMOS Spectrometer": {
+    "zh": "CMOS光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "NIR Spectrometer": {
+    "zh": "近红外光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "UV VIS Spectrometer": {
+    "zh": "紫外可见光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Raman Spectrometer": {
+    "zh": "拉曼光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fluorescence Spectrometer": {
+    "zh": "荧光光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Imaging Spectrometer": {
+    "zh": "成像光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Spectrum Analyzer": {
+    "zh": "光谱分析仪",
+    "category1": "测试和测量",
+    "category2": "光谱分析仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "OSA": {
+    "zh": "光谱分析仪",
+    "category1": "测试和测量",
+    "category2": "光谱分析仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Spectrum Analyzer": {
+    "zh": "频谱分析仪",
+    "category1": "测试和测量",
+    "category2": "光谱分析仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "High Resolution OSA": {
+    "zh": "高分辨率光谱分析仪",
+    "category1": "测试和测量",
+    "category2": "光谱分析仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Benchtop OSA": {
+    "zh": "台式光谱分析仪",
+    "category1": "测试和测量",
+    "category2": "光谱分析仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Channel Analyzer": {
+    "zh": "光通道分析仪",
+    "category1": "测试和测量",
+    "category2": "光谱分析仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "DWDM Analyzer": {
+    "zh": "密集波分分析仪",
+    "category1": "测试和测量",
+    "category2": "光谱分析仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Monochromator": {
+    "zh": "单色仪",
+    "category1": "测试和测量",
+    "category2": "单色仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Imaging Monochromator": {
+    "zh": "成像单色仪",
+    "category1": "测试和测量",
+    "category2": "单色仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Scanning Monochromator": {
+    "zh": "扫描单色仪",
+    "category1": "测试和测量",
+    "category2": "单色仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Czerny Turner Monochromator": {
+    "zh": "车尼-特纳单色仪",
+    "category1": "测试和测量",
+    "category2": "单色仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Double Monochromator": {
+    "zh": "双单色仪",
+    "category1": "测试和测量",
+    "category2": "单色仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Triple Monochromator": {
+    "zh": "三单色仪",
+    "category1": "测试和测量",
+    "category2": "单色仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Research Monochromator": {
+    "zh": "科研单色仪",
+    "category1": "测试和测量",
+    "category2": "单色仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Power Meter": {
+    "zh": "光功率计",
+    "category1": "测试和测量",
+    "category2": "光功率计",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Power Meter System": {
+    "zh": "光功率计系统",
+    "category1": "测试和测量",
+    "category2": "光功率计",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Power Meter": {
+    "zh": "光纤功率计",
+    "category1": "测试和测量",
+    "category2": "光功率计",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Power Sensor": {
+    "zh": "光功率传感器",
+    "category1": "测试和测量",
+    "category2": "光功率计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Power Console": {
+    "zh": "光功率计主机",
+    "category1": "测试和测量",
+    "category2": "光功率计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Power Measurement System": {
+    "zh": "光功率测量系统",
+    "category1": "测试和测量",
+    "category2": "光功率计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Power Meter": {
+    "zh": "光纤功率计",
+    "category1": "测试和测量",
+    "category2": "光功率计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Power Monitor": {
+    "zh": "光功率监视器",
+    "category1": "测试和测量",
+    "category2": "光功率计",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Power Meter": {
+    "zh": "激光功率计",
+    "category1": "测试和测量",
+    "category2": "激光功率计",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Power Measurement System": {
+    "zh": "激光功率测量系统",
+    "category1": "测试和测量",
+    "category2": "激光功率计",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Power Analyzer": {
+    "zh": "激光功率分析仪",
+    "category1": "测试和测量",
+    "category2": "激光功率计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Power Laser Meter": {
+    "zh": "大功率激光功率计",
+    "category1": "测试和测量",
+    "category2": "激光功率计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Power Console": {
+    "zh": "激光功率计主机",
+    "category1": "测试和测量",
+    "category2": "激光功率计",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Beam Power Meter": {
+    "zh": "激光光束功率计",
+    "category1": "测试和测量",
+    "category2": "激光功率计",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Pulse Energy Meter": {
+    "zh": "激光脉冲能量计",
+    "category1": "测试和测量",
+    "category2": "激光能量计",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Energy Analyzer": {
+    "zh": "激光能量分析仪",
+    "category1": "测试和测量",
+    "category2": "激光能量计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Pulse Energy Measurement System": {
+    "zh": "脉冲能量测量系统",
+    "category1": "测试和测量",
+    "category2": "激光能量计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Single Shot Energy Meter": {
+    "zh": "单次脉冲能量计",
+    "category1": "测试和测量",
+    "category2": "激光能量计",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Power Sensor": {
+    "zh": "激光功率传感器",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Thermopile Sensor": {
+    "zh": "热电堆传感器",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Photodiode Sensor": {
+    "zh": "光电二极管传感器",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Pyroelectric Sensor": {
+    "zh": "热释电传感器",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Integrating Sphere Sensor": {
+    "zh": "积分球传感器",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Thermal Sensor Head": {
+    "zh": "热探头",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Power Detector Head": {
+    "zh": "功率探头",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Energy Detector Head": {
+    "zh": "能量探头",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Beam Analyzer": {
+    "zh": "光束分析仪",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Beam Profiling System": {
+    "zh": "光束轮廓分析系统",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Beam Measurement System": {
+    "zh": "光束测量系统",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "M² Beam Analyzer": {
+    "zh": "M²光束分析仪",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "M2 Beam Analyzer": {
+    "zh": "M²光束分析仪",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Beam Analysis": {
+    "zh": "激光光束分析",
+    "category1": "测试和测量",
+    "category2": "光束分析",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Beam Diagnostics": {
+    "zh": "光束诊断",
+    "category1": "测试和测量",
+    "category2": "光束分析",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Quality Measurement": {
+    "zh": "光束质量测量",
+    "category1": "测试和测量",
+    "category2": "光束分析",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "ISO 11146 Beam Measurement": {
+    "zh": "ISO 11146光束测量",
+    "category1": "测试和测量",
+    "category2": "光束分析",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Beam Quality Analyzer": {
+    "zh": "激光光束质量分析仪",
+    "category1": "测试和测量",
+    "category2": "光束分析",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Beam Profiler Accessory": {
+    "zh": "光束轮廓仪配件",
+    "category1": "测试和测量",
+    "category2": "光束分析仪配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Beam Analyzer Accessory": {
+    "zh": "光束分析仪配件",
+    "category1": "测试和测量",
+    "category2": "光束分析仪配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Beam Splitter for Profiler": {
+    "zh": "光束轮廓仪分束器",
+    "category1": "测试和测量",
+    "category2": "光束分析仪配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Attenuator": {
+    "zh": "光束衰减器",
+    "category1": "测试和测量",
+    "category2": "光束分析仪配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Sampler": {
+    "zh": "光束取样器",
+    "category1": "测试和测量",
+    "category2": "光束分析仪配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Profiler Filter": {
+    "zh": "轮廓仪滤光片",
+    "category1": "测试和测量",
+    "category2": "光束分析仪配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Beam Expander for Profiler": {
+    "zh": "轮廓仪扩束器",
+    "category1": "测试和测量",
+    "category2": "光束分析仪配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Beam Analyzer Mount": {
+    "zh": "光束分析仪支架",
+    "category1": "测试和测量",
+    "category2": "光束分析仪配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Camera Adapter": {
+    "zh": "相机适配器",
+    "category1": "测试和测量",
+    "category2": "光束分析仪配件",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Interferometer": {
+    "zh": "干涉仪",
+    "category1": "测试和测量",
+    "category2": "干涉仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Interferometer": {
+    "zh": "激光干涉仪",
+    "category1": "测试和测量",
+    "category2": "干涉仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Interferometer": {
+    "zh": "光学干涉仪",
+    "category1": "测试和测量",
+    "category2": "干涉仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Phase Shifting Interferometer": {
+    "zh": "移相干涉仪",
+    "category1": "测试和测量",
+    "category2": "干涉仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fizeau Interferometer": {
+    "zh": "斐索干涉仪",
+    "category1": "测试和测量",
+    "category2": "干涉仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Twyman Green Interferometer": {
+    "zh": "泰曼-格林干涉仪",
+    "category1": "测试和测量",
+    "category2": "干涉仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Michelson Interferometer": {
+    "zh": "迈克尔逊干涉仪",
+    "category1": "测试和测量",
+    "category2": "干涉仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "White Light Interferometer": {
+    "zh": "白光干涉仪",
+    "category1": "测试和测量",
+    "category2": "干涉仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Coherence Scanning Interferometer": {
+    "zh": "相干扫描干涉仪",
+    "category1": "测试和测量",
+    "category2": "干涉仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Dynamic Interferometer": {
+    "zh": "动态干涉仪",
+    "category1": "测试和测量",
+    "category2": "干涉仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Metrology": {
+    "zh": "光学计量",
+    "category1": "测试和测量",
+    "category2": "光学计量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Metrology System": {
+    "zh": "光学计量系统",
+    "category1": "测试和测量",
+    "category2": "光学计量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Metrology System": {
+    "zh": "计量系统",
+    "category1": "测试和测量",
+    "category2": "光学计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Precision Optical Metrology": {
+    "zh": "精密光学计量",
+    "category1": "测试和测量",
+    "category2": "光学计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Wavefront Metrology": {
+    "zh": "波前计量",
+    "category1": "测试和测量",
+    "category2": "光学计量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Measurement System": {
+    "zh": "光学测量系统",
+    "category1": "测试和测量",
+    "category2": "光学计量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Lens Metrology": {
+    "zh": "镜头计量",
+    "category1": "测试和测量",
+    "category2": "光学计量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Inspection Metrology": {
+    "zh": "光学检测计量",
+    "category1": "测试和测量",
+    "category2": "光学计量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Profiler": {
+    "zh": "光学轮廓仪",
+    "category1": "测试和测量",
+    "category2": "光学表面轮廓仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Surface Profiler": {
+    "zh": "光学表面轮廓仪",
+    "category1": "测试和测量",
+    "category2": "光学表面轮廓仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Surface Profiler": {
+    "zh": "表面轮廓仪",
+    "category1": "测试和测量",
+    "category2": "光学表面轮廓仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "3D Optical Profiler": {
+    "zh": "三维光学轮廓仪",
+    "category1": "测试和测量",
+    "category2": "光学表面轮廓仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "White Light Profiler": {
+    "zh": "白光轮廓仪",
+    "category1": "测试和测量",
+    "category2": "光学表面轮廓仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Non Contact Profiler": {
+    "zh": "非接触式轮廓仪",
+    "category1": "测试和测量",
+    "category2": "光学表面轮廓仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Confocal Profiler": {
+    "zh": "共聚焦轮廓仪",
+    "category1": "测试和测量",
+    "category2": "光学表面轮廓仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Surface Topography System": {
+    "zh": "表面形貌测量系统",
+    "category1": "测试和测量",
+    "category2": "光学表面轮廓仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Surface Roughness Profiler": {
+    "zh": "表面粗糙度轮廓仪",
+    "category1": "测试和测量",
+    "category2": "光学表面轮廓仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "3D Surface Metrology": {
+    "zh": "三维表面计量仪",
+    "category1": "测试和测量",
+    "category2": "光学表面轮廓仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Wavelength Meter": {
+    "zh": "波长计",
+    "category1": "测试和测量",
+    "category2": "光波长计",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Wavelength Meter": {
+    "zh": "光波长计",
+    "category1": "测试和测量",
+    "category2": "光波长计",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Wavelength Meter": {
+    "zh": "激光波长计",
+    "category1": "测试和测量",
+    "category2": "光波长计",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Wavemeter": {
+    "zh": "波长计",
+    "category1": "测试和测量",
+    "category2": "光波长计",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "High Precision Wavemeter": {
+    "zh": "高精度波长计",
+    "category1": "测试和测量",
+    "category2": "光波长计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Frequency Meter": {
+    "zh": "光频率计",
+    "category1": "测试和测量",
+    "category2": "光波长计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Frequency Comb Wavemeter": {
+    "zh": "光频梳波长计",
+    "category1": "测试和测量",
+    "category2": "光波长计",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Frequency Meter": {
+    "zh": "激光频率计",
+    "category1": "测试和测量",
+    "category2": "光波长计",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Inspection System": {
+    "zh": "光学检测系统",
+    "category1": "测试和测量",
+    "category2": "光学检测",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Vision Inspection System": {
+    "zh": "视觉检测系统",
+    "category1": "测试和测量",
+    "category2": "光学检测",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Automated Optical Inspection": {
+    "zh": "自动光学检测",
+    "category1": "测试和测量",
+    "category2": "光学检测",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "AOI": {
+    "zh": "自动光学检测",
+    "category1": "测试和测量",
+    "category2": "光学检测",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Machine Vision Inspection": {
+    "zh": "机器视觉检测",
+    "category1": "测试和测量",
+    "category2": "光学检测",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Surface Inspection System": {
+    "zh": "表面检测系统",
+    "category1": "测试和测量",
+    "category2": "光学检测",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Wafer Inspection": {
+    "zh": "晶圆检测",
+    "category1": "测试和测量",
+    "category2": "光学检测",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Defect Inspection": {
+    "zh": "光学缺陷检测",
+    "category1": "测试和测量",
+    "category2": "光学检测",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Inline Optical Inspection": {
+    "zh": "在线光学检测",
+    "category1": "测试和测量",
+    "category2": "光学检测",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Delay Line": {
+    "zh": "光学延迟线",
+    "category1": "测试和测量",
+    "category2": "光学延迟线",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Delay Stage": {
+    "zh": "光学延迟台",
+    "category1": "测试和测量",
+    "category2": "光学延迟线",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Delay Line": {
+    "zh": "延迟线",
+    "category1": "测试和测量",
+    "category2": "光学延迟线",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Free Space Delay Line": {
+    "zh": "自由空间延迟线",
+    "category1": "测试和测量",
+    "category2": "光学延迟线",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Delay Line": {
+    "zh": "光纤延迟线",
+    "category1": "测试和测量",
+    "category2": "光学延迟线",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Motorized Delay Line": {
+    "zh": "电动延迟线",
+    "category1": "测试和测量",
+    "category2": "光学延迟线",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Linear Delay Line": {
+    "zh": "直线延迟线",
+    "category1": "测试和测量",
+    "category2": "光学延迟线",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Ultrafast Delay Line": {
+    "zh": "超快延迟线",
+    "category1": "测试和测量",
+    "category2": "光学延迟线",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Femtosecond Delay Line": {
+    "zh": "飞秒延迟线",
+    "category1": "测试和测量",
+    "category2": "光学延迟线",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Delay Line Module": {
+    "zh": "延迟线模块",
+    "category1": "测试和测量",
+    "category2": "光学延迟线",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "LiDAR": {
+    "zh": "激光雷达",
+    "category1": "测试和测量",
+    "category2": "激光雷达",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Lidar": {
+    "zh": "激光雷达",
+    "category1": "测试和测量",
+    "category2": "激光雷达",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Radar": {
+    "zh": "激光雷达",
+    "category1": "测试和测量",
+    "category2": "激光雷达",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "3D LiDAR": {
+    "zh": "三维激光雷达",
+    "category1": "测试和测量",
+    "category2": "激光雷达",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Solid State LiDAR": {
+    "zh": "固态激光雷达",
+    "category1": "测试和测量",
+    "category2": "激光雷达",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "MEMS LiDAR": {
+    "zh": "MEMS激光雷达",
+    "category1": "测试和测量",
+    "category2": "激光雷达",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Flash LiDAR": {
+    "zh": "面阵激光雷达",
+    "category1": "测试和测量",
+    "category2": "激光雷达",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "FMCW LiDAR": {
+    "zh": "调频连续波激光雷达",
+    "category1": "测试和测量",
+    "category2": "激光雷达",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Automotive LiDAR": {
+    "zh": "车载激光雷达",
+    "category1": "测试和测量",
+    "category2": "激光雷达",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Long Range LiDAR": {
+    "zh": "远距离激光雷达",
+    "category1": "测试和测量",
+    "category2": "激光雷达",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Scanning System": {
+    "zh": "激光扫描系统",
+    "category1": "测试和测量",
+    "category2": "激光扫描和测距",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Rangefinder": {
+    "zh": "激光测距仪",
+    "category1": "测试和测量",
+    "category2": "激光扫描和测距",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Distance Sensor": {
+    "zh": "激光距离传感器",
+    "category1": "测试和测量",
+    "category2": "激光扫描和测距",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Distance Measuring Sensor": {
+    "zh": "距离测量传感器",
+    "category1": "测试和测量",
+    "category2": "激光扫描和测距",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Measurement System": {
+    "zh": "激光测量系统",
+    "category1": "测试和测量",
+    "category2": "激光扫描和测距",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Displacement Scanner": {
+    "zh": "激光位移扫描仪",
+    "category1": "测试和测量",
+    "category2": "激光扫描和测距",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Scanner": {
+    "zh": "扫描仪",
+    "category1": "测试和测量",
+    "category2": "扫描仪和测距仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Scanner System": {
+    "zh": "激光扫描系统",
+    "category1": "测试和测量",
+    "category2": "扫描仪和测距仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Terrestrial Laser Scanner": {
+    "zh": "地面激光扫描仪",
+    "category1": "测试和测量",
+    "category2": "扫描仪和测距仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Mobile Mapping Scanner": {
+    "zh": "移动测绘扫描仪",
+    "category1": "测试和测量",
+    "category2": "扫描仪和测距仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Survey Scanner": {
+    "zh": "测量扫描仪",
+    "category1": "测试和测量",
+    "category2": "扫描仪和测距仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Survey Grade Scanner": {
+    "zh": "测量级扫描仪",
+    "category1": "测试和测量",
+    "category2": "扫描仪和测距仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "White Light Scanner": {
+    "zh": "白光扫描仪",
+    "category1": "测试和测量",
+    "category2": "三维扫描仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Metrology 3D Scanner": {
+    "zh": "计量级三维扫描仪",
+    "category1": "测试和测量",
+    "category2": "三维扫描仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Research Microscope": {
+    "zh": "研究级显微镜",
+    "category1": "测试和测量",
+    "category2": "显微镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Raman Microscope": {
+    "zh": "拉曼显微镜",
+    "category1": "测试和测量",
+    "category2": "显微镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Standard Microscope": {
+    "zh": "普通显微镜",
+    "category1": "测试和测量",
+    "category2": "普通显微镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Educational Microscope": {
+    "zh": "教学显微镜",
+    "category1": "测试和测量",
+    "category2": "普通显微镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Biological Microscope": {
+    "zh": "生物显微镜",
+    "category1": "测试和测量",
+    "category2": "普通显微镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laboratory Microscope": {
+    "zh": "实验室显微镜",
+    "category1": "测试和测量",
+    "category2": "普通显微镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Routine Microscope": {
+    "zh": "常规显微镜",
+    "category1": "测试和测量",
+    "category2": "普通显微镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Teaching Microscope": {
+    "zh": "教学显微镜",
+    "category1": "测试和测量",
+    "category2": "普通显微镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Microscope Accessories": {
+    "zh": "显微镜配件",
+    "category1": "测试和测量",
+    "category2": "显微镜配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Microscope Accessory": {
+    "zh": "显微镜配件",
+    "category1": "测试和测量",
+    "category2": "显微镜配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Objective Lens": {
+    "zh": "物镜",
+    "category1": "测试和测量",
+    "category2": "显微镜配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Eyepiece": {
+    "zh": "目镜",
+    "category1": "测试和测量",
+    "category2": "显微镜配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Microscope Camera Adapter": {
+    "zh": "显微镜相机适配器",
+    "category1": "测试和测量",
+    "category2": "显微镜配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Motorized Microscope Stage": {
+    "zh": "电动显微镜载物台",
+    "category1": "测试和测量",
+    "category2": "显微镜配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Microscope Filter Cube": {
+    "zh": "显微镜滤光块",
+    "category1": "测试和测量",
+    "category2": "显微镜配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Microscope Condenser": {
+    "zh": "显微镜聚光镜",
+    "category1": "测试和测量",
+    "category2": "显微镜配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Microscope Nosepiece": {
+    "zh": "显微镜物镜转换器",
+    "category1": "测试和测量",
+    "category2": "显微镜配件",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Microscope Controller": {
+    "zh": "显微镜控制器",
+    "category1": "测试和测量",
+    "category2": "显微镜配件",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Fiber Inspection Tool": {
+    "zh": "光纤检测工具",
+    "category1": "测试和测量",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Inspection Scope": {
+    "zh": "光纤检测镜",
+    "category1": "测试和测量",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Microscope": {
+    "zh": "光纤显微镜",
+    "category1": "测试和测量",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Connector Cleaner": {
+    "zh": "光纤连接器清洁器",
+    "category1": "测试和测量",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Cleaning Kit": {
+    "zh": "光纤清洁工具",
+    "category1": "测试和测量",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Test System": {
+    "zh": "光纤测试系统",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Test Equipment": {
+    "zh": "光纤测试设备",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Certification Tester": {
+    "zh": "光纤认证测试仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Polarization Analyzer": {
+    "zh": "偏振分析仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Displacement Sensor": {
+    "zh": "位移传感器",
+    "category1": "测试和测量",
+    "category2": "位移测量计",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Displacement Sensor": {
+    "zh": "激光位移传感器",
+    "category1": "测试和测量",
+    "category2": "位移测量计",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Displacement Gauge": {
+    "zh": "位移测量计",
+    "category1": "测试和测量",
+    "category2": "位移测量计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Displacement Meter": {
+    "zh": "激光位移计",
+    "category1": "测试和测量",
+    "category2": "位移测量计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Position Sensor": {
+    "zh": "位置传感器",
+    "category1": "测试和测量",
+    "category2": "位移测量计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Confocal Displacement Sensor": {
+    "zh": "共聚焦位移传感器",
+    "category1": "测试和测量",
+    "category2": "位移测量计",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Capacitive Displacement Sensor": {
+    "zh": "电容式位移传感器",
+    "category1": "测试和测量",
+    "category2": "位移测量计",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Dimensional Measurement": {
+    "zh": "尺寸测量",
+    "category1": "测试和测量",
+    "category2": "尺寸测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Dimension Measurement System": {
+    "zh": "尺寸测量系统",
+    "category1": "测试和测量",
+    "category2": "尺寸测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Dimension Measurement": {
+    "zh": "光学尺寸测量",
+    "category1": "测试和测量",
+    "category2": "尺寸测量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Vision Measurement System": {
+    "zh": "视觉测量系统",
+    "category1": "测试和测量",
+    "category2": "尺寸测量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Comparator": {
+    "zh": "光学投影仪",
+    "category1": "测试和测量",
+    "category2": "尺寸测量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Coordinate Measuring System": {
+    "zh": "坐标测量系统",
+    "category1": "测试和测量",
+    "category2": "尺寸测量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Vision Measuring Machine": {
+    "zh": "影像测量仪",
+    "category1": "测试和测量",
+    "category2": "尺寸测量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Measuring Machine": {
+    "zh": "光学测量机",
+    "category1": "测试和测量",
+    "category2": "尺寸测量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Gas Analyzer": {
+    "zh": "气体分析仪",
+    "category1": "测试和测量",
+    "category2": "气体分析",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Gas Analysis System": {
+    "zh": "气体分析系统",
+    "category1": "测试和测量",
+    "category2": "气体分析",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Gas Spectrometer": {
+    "zh": "气体光谱仪",
+    "category1": "测试和测量",
+    "category2": "气体分析",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Gas Detection System": {
+    "zh": "气体检测系统",
+    "category1": "测试和测量",
+    "category2": "气体分析",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Gas Analyzer": {
+    "zh": "激光气体分析仪",
+    "category1": "测试和测量",
+    "category2": "气体分析",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "TDLAS Gas Analyzer": {
+    "zh": "TDLAS气体分析仪",
+    "category1": "测试和测量",
+    "category2": "气体分析",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Gas Monitoring System": {
+    "zh": "气体监测系统",
+    "category1": "测试和测量",
+    "category2": "气体分析",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Material Analysis": {
+    "zh": "材料分析",
+    "category1": "测试和测量",
+    "category2": "材料分析和取证",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Material Analyzer": {
+    "zh": "材料分析仪",
+    "category1": "测试和测量",
+    "category2": "材料分析和取证",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Materials Characterization": {
+    "zh": "材料表征",
+    "category1": "测试和测量",
+    "category2": "材料分析和取证",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Failure Analysis": {
+    "zh": "失效分析",
+    "category1": "测试和测量",
+    "category2": "材料分析和取证",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Forensic Analysis": {
+    "zh": "取证分析",
+    "category1": "测试和测量",
+    "category2": "材料分析和取证",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Surface Analysis": {
+    "zh": "表面分析",
+    "category1": "测试和测量",
+    "category2": "材料分析和取证",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Elemental Analysis": {
+    "zh": "元素分析",
+    "category1": "测试和测量",
+    "category2": "材料分析和取证",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Raman Analysis": {
+    "zh": "拉曼分析",
+    "category1": "测试和测量",
+    "category2": "材料分析和取证",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "FTIR Analysis": {
+    "zh": "傅里叶红外分析",
+    "category1": "测试和测量",
+    "category2": "材料分析和取证",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Terahertz": {
+    "zh": "太赫兹",
+    "category1": "测试和测量",
+    "category2": "太赫兹",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "THz": {
+    "zh": "太赫兹",
+    "category1": "测试和测量",
+    "category2": "太赫兹",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Terahertz Source": {
+    "zh": "太赫兹源",
+    "category1": "测试和测量",
+    "category2": "太赫兹",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Terahertz Detector": {
+    "zh": "太赫兹探测器",
+    "category1": "测试和测量",
+    "category2": "太赫兹",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Terahertz Imaging": {
+    "zh": "太赫兹成像",
+    "category1": "测试和测量",
+    "category2": "太赫兹成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "THz Imaging": {
+    "zh": "太赫兹成像",
+    "category1": "测试和测量",
+    "category2": "太赫兹成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Terahertz Scanner": {
+    "zh": "太赫兹扫描仪",
+    "category1": "测试和测量",
+    "category2": "太赫兹成像",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Terahertz Time Domain": {
+    "zh": "太赫兹时域",
+    "category1": "测试和测量",
+    "category2": "太赫兹时域",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "THz Time Domain": {
+    "zh": "太赫兹时域",
+    "category1": "测试和测量",
+    "category2": "太赫兹时域",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "THz TDS": {
+    "zh": "太赫兹时域光谱",
+    "category1": "测试和测量",
+    "category2": "太赫兹时域",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Terahertz Time Domain Spectroscopy": {
+    "zh": "太赫兹时域光谱",
+    "category1": "测试和测量",
+    "category2": "太赫兹时域",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "THz Spectroscopy": {
+    "zh": "太赫兹光谱",
+    "category1": "测试和测量",
+    "category2": "太赫兹时域",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Time Domain Spectrometer": {
+    "zh": "时域光谱仪",
+    "category1": "测试和测量",
+    "category2": "太赫兹时域",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Waveform Generator": {
+    "zh": "波形发生器",
+    "category1": "测试和测量",
+    "category2": "波形发生器和分析仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Waveform Analyzer": {
+    "zh": "波形分析仪",
+    "category1": "测试和测量",
+    "category2": "波形发生器和分析仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Arbitrary Waveform Generator": {
+    "zh": "任意波形发生器",
+    "category1": "测试和测量",
+    "category2": "波形发生器和分析仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "AWG": {
+    "zh": "任意波形发生器",
+    "category1": "测试和测量",
+    "category2": "波形发生器和分析仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Function Generator": {
+    "zh": "函数发生器",
+    "category1": "测试和测量",
+    "category2": "波形发生器和分析仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Signal Generator": {
+    "zh": "信号发生器",
+    "category1": "测试和测量",
+    "category2": "波形发生器和分析仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Pulse Pattern Generator": {
+    "zh": "脉冲码型发生器",
+    "category1": "测试和测量",
+    "category2": "波形发生器和分析仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Digital Pattern Generator": {
+    "zh": "数字码型发生器",
+    "category1": "测试和测量",
+    "category2": "波形发生器和分析仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Arbitrary Function Generator": {
+    "zh": "任意函数发生器",
+    "category1": "测试和测量",
+    "category2": "波形发生器和分析仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Pulse Generator": {
+    "zh": "脉冲发生器",
+    "category1": "测试和测量",
+    "category2": "脉冲发生器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Digital Pulse Generator": {
+    "zh": "数字脉冲发生器",
+    "category1": "测试和测量",
+    "category2": "脉冲发生器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Delay Generator": {
+    "zh": "延迟发生器",
+    "category1": "测试和测量",
+    "category2": "脉冲发生器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Digital Delay Generator": {
+    "zh": "数字延迟发生器",
+    "category1": "测试和测量",
+    "category2": "脉冲发生器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Timing Generator": {
+    "zh": "时序发生器",
+    "category1": "测试和测量",
+    "category2": "脉冲发生器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Clock Generator": {
+    "zh": "时钟发生器",
+    "category1": "测试和测量",
+    "category2": "脉冲发生器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Trigger Generator": {
+    "zh": "触发发生器",
+    "category1": "测试和测量",
+    "category2": "脉冲发生器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Pulse Delay Generator": {
+    "zh": "脉冲延迟发生器",
+    "category1": "测试和测量",
+    "category2": "脉冲发生器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Pulse Diagnostic": {
+    "zh": "脉冲诊断器件",
+    "category1": "测试和测量",
+    "category2": "脉冲诊断器件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pulse Diagnostic System": {
+    "zh": "脉冲诊断系统",
+    "category1": "测试和测量",
+    "category2": "脉冲诊断器件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Autocorrelator": {
+    "zh": "自相关仪",
+    "category1": "测试和测量",
+    "category2": "脉冲诊断器件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Intensity Autocorrelator": {
+    "zh": "强度自相关仪",
+    "category1": "测试和测量",
+    "category2": "脉冲诊断器件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "FROG": {
+    "zh": "频率分辨光学门",
+    "category1": "测试和测量",
+    "category2": "脉冲诊断器件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Frequency Resolved Optical Gating": {
+    "zh": "频率分辨光学门",
+    "category1": "测试和测量",
+    "category2": "脉冲诊断器件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "SPIDER": {
+    "zh": "光谱相位相干电场重建仪",
+    "category1": "测试和测量",
+    "category2": "脉冲诊断器件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Pulse Characterization": {
+    "zh": "脉冲表征器件",
+    "category1": "测试和测量",
+    "category2": "脉冲诊断器件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Ultrafast Pulse Measurement": {
+    "zh": "超快脉冲测量仪",
+    "category1": "测试和测量",
+    "category2": "脉冲诊断器件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Measurement Instrument": {
+    "zh": "测量仪器",
+    "category1": "测试和测量",
+    "category2": "其他分类测量仪器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Test Instrument": {
+    "zh": "测试仪器",
+    "category1": "测试和测量",
+    "category2": "其他分类测量仪器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Measurement Instrument": {
+    "zh": "光学测量仪器",
+    "category1": "测试和测量",
+    "category2": "其他分类测量仪器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Precision Measurement Instrument": {
+    "zh": "精密测量仪器",
+    "category1": "测试和测量",
+    "category2": "其他分类测量仪器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Cell": {
+    "zh": "光学池",
+    "category1": "测试和测量",
+    "category2": "光学池",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Flow Cell": {
+    "zh": "流通池",
+    "category1": "测试和测量",
+    "category2": "光学池",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Gas Cell": {
+    "zh": "气体池",
+    "category1": "测试和测量",
+    "category2": "光学池",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Liquid Cell": {
+    "zh": "液体池",
+    "category1": "测试和测量",
+    "category2": "光学池",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cuvette": {
+    "zh": "比色皿",
+    "category1": "测试和测量",
+    "category2": "光学池",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Quartz Cuvette": {
+    "zh": "石英比色皿",
+    "category1": "测试和测量",
+    "category2": "光学池",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Measurement Accessories": {
+    "zh": "计量配件",
+    "category1": "测试和测量",
+    "category2": "计量配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Meter Accessories": {
+    "zh": "仪表配件",
+    "category1": "测试和测量",
+    "category2": "计量配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Power Meter Accessories": {
+    "zh": "功率计配件",
+    "category1": "测试和测量",
+    "category2": "计量配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Sensor Head": {
+    "zh": "传感器探头",
+    "category1": "测试和测量",
+    "category2": "计量配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Calibration Adapter": {
+    "zh": "校准适配器",
+    "category1": "测试和测量",
+    "category2": "计量配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Adapter": {
+    "zh": "光学适配器",
+    "category1": "测试和测量",
+    "category2": "计量配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Energy Meter": {
+    "zh": "激光能量计",
+    "category1": "测试和测量",
+    "category2": "能量功率计",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Energy Meter": {
+    "zh": "能量计",
+    "category1": "测试和测量",
+    "category2": "能量功率计",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pulse Energy Meter": {
+    "zh": "脉冲能量计",
+    "category1": "测试和测量",
+    "category2": "能量功率计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Energy Sensor": {
+    "zh": "激光能量传感器",
+    "category1": "测试和测量",
+    "category2": "能量功率计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Hyperspectral Spectrometer": {
+    "zh": "高光谱光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Hyperspectral Imaging Spectrometer": {
+    "zh": "高光谱成像光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Portable Spectrometer": {
+    "zh": "便携式光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Handheld Spectrometer": {
+    "zh": "手持式光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Process Spectrometer": {
+    "zh": "过程光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Industrial Spectrometer": {
+    "zh": "工业光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "OEM Spectrometer": {
+    "zh": "OEM光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Inline Spectrometer": {
+    "zh": "在线光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Process Raman Spectrometer": {
+    "zh": "过程拉曼光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "LIBS Spectrometer": {
+    "zh": "激光诱导击穿光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Emission Spectrometer": {
+    "zh": "发射光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Absorption Spectrometer": {
+    "zh": "吸收光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "FTIR Spectrometer": {
+    "zh": "傅里叶变换红外光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "NMR Spectrometer": {
+    "zh": "核磁共振波谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Benchtop Spectrometer": {
+    "zh": "台式光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "UV Spectrometer": {
+    "zh": "紫外光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "VIS Spectrometer": {
+    "zh": "可见光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "SWIR Spectrometer": {
+    "zh": "短波红外光谱仪",
+    "category1": "测试和测量",
+    "category2": "光谱仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "NIR Analyzer": {
+    "zh": "近红外分析仪",
+    "category1": "测试和测量",
+    "category2": "光谱分析仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Spectrum Monitoring System": {
+    "zh": "光谱监测系统",
+    "category1": "测试和测量",
+    "category2": "光谱分析仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Scanning Monochromator System": {
+    "zh": "扫描单色仪系统",
+    "category1": "测试和测量",
+    "category2": "单色仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "OEM Monochromator": {
+    "zh": "OEM单色仪",
+    "category1": "测试和测量",
+    "category2": "单色仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Power Monitor": {
+    "zh": "激光功率监视器",
+    "category1": "测试和测量",
+    "category2": "激光功率计",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Power Measurement Instrument": {
+    "zh": "激光功率测量仪",
+    "category1": "测试和测量",
+    "category2": "激光功率计",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Continuous Laser Power Meter": {
+    "zh": "连续激光功率计",
+    "category1": "测试和测量",
+    "category2": "激光功率计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "CW Laser Power Meter": {
+    "zh": "连续波激光功率计",
+    "category1": "测试和测量",
+    "category2": "激光功率计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Energy Laser Meter": {
+    "zh": "高能激光计",
+    "category1": "测试和测量",
+    "category2": "激光功率计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Measurement Console": {
+    "zh": "激光测量主机",
+    "category1": "测试和测量",
+    "category2": "激光功率计",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Power Readout": {
+    "zh": "激光功率读数仪",
+    "category1": "测试和测量",
+    "category2": "激光功率计",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Power Display": {
+    "zh": "激光功率显示器",
+    "category1": "测试和测量",
+    "category2": "激光功率计",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Power Monitor System": {
+    "zh": "光功率监测系统",
+    "category1": "测试和测量",
+    "category2": "光功率计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Power Logger": {
+    "zh": "光功率记录仪",
+    "category1": "测试和测量",
+    "category2": "光功率计",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Power Readout": {
+    "zh": "光功率读数仪",
+    "category1": "测试和测量",
+    "category2": "光功率计",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Power Display": {
+    "zh": "光功率显示器",
+    "category1": "测试和测量",
+    "category2": "光功率计",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Photodiode Power Sensor": {
+    "zh": "光电二极管功率传感器",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Thermopile Power Sensor": {
+    "zh": "热电堆功率传感器",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pyroelectric Energy Sensor": {
+    "zh": "热释电能量传感器",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Photodiode Energy Sensor": {
+    "zh": "光电二极管能量传感器",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Sensor Head": {
+    "zh": "激光探头",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Power Measurement Sensor": {
+    "zh": "功率测量传感器",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Energy Measurement Sensor": {
+    "zh": "能量测量传感器",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Detector Head": {
+    "zh": "激光探测头",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Broadband Power Sensor": {
+    "zh": "宽带功率传感器",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "High Power Sensor": {
+    "zh": "大功率传感器",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Water Cooled Sensor": {
+    "zh": "水冷传感器",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Air Cooled Sensor": {
+    "zh": "风冷传感器",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Integrating Sphere Power Sensor": {
+    "zh": "积分球功率传感器",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Integrating Sphere Detector": {
+    "zh": "积分球探测器",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Photodetector Head": {
+    "zh": "光电探测头",
+    "category1": "测试和测量",
+    "category2": "传感器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Energy Monitor": {
+    "zh": "激光能量监视器",
+    "category1": "测试和测量",
+    "category2": "激光能量计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Energy Measurement Instrument": {
+    "zh": "激光能量测量仪",
+    "category1": "测试和测量",
+    "category2": "激光能量计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Single Pulse Energy Meter": {
+    "zh": "单脉冲能量计",
+    "category1": "测试和测量",
+    "category2": "激光能量计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Pulse Energy Monitor": {
+    "zh": "脉冲能量监视器",
+    "category1": "测试和测量",
+    "category2": "激光能量计",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Energy Measurement Console": {
+    "zh": "能量测量主机",
+    "category1": "测试和测量",
+    "category2": "激光能量计",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Beam Profiler": {
+    "zh": "光斑分析仪",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Beam Profilers": {
+    "zh": "光束轮廓仪",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Beam Profiler": {
+    "zh": "激光光束轮廓仪",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Beam Profile Camera": {
+    "zh": "光束轮廓相机",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Profiling Camera": {
+    "zh": "光束轮廓相机",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Analysis Camera": {
+    "zh": "光束分析相机",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Beam Analyzer": {
+    "zh": "激光光束分析仪",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Beam Characterization System": {
+    "zh": "光束表征系统",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Characterization Instrument": {
+    "zh": "光束表征仪",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Diagnostic System": {
+    "zh": "光束诊断系统",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Diagnostic Instrument": {
+    "zh": "光束诊断仪",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Beam Diagnostics": {
+    "zh": "激光光束诊断",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Quality Analyzer": {
+    "zh": "光束质量分析仪",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "M2 Analyzer": {
+    "zh": "M²分析仪",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "M² Analyzer": {
+    "zh": "M²分析仪",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Beam Propagation Analyzer": {
+    "zh": "光束传输分析仪",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Focus Analyzer": {
+    "zh": "激光焦点分析仪",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Focal Spot Analyzer": {
+    "zh": "焦斑分析仪",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Beam Waist Analyzer": {
+    "zh": "束腰分析仪",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Caustic Measurement System": {
+    "zh": "激光焦散测量系统",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Beam Radius Measurement System": {
+    "zh": "光束半径测量系统",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Beam Divergence Analyzer": {
+    "zh": "光束发散角分析仪",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "ISO Beam Analyzer": {
+    "zh": "ISO光束分析仪",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Laser Beam Measurement System": {
+    "zh": "激光光束测量系统",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Beam Analysis Software": {
+    "zh": "光束分析软件",
+    "category1": "测试和测量",
+    "category2": "光束分析仪配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Beam Analysis Package": {
+    "zh": "光束分析软件包",
+    "category1": "测试和测量",
+    "category2": "光束分析仪配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Beam Profiler Software": {
+    "zh": "光束轮廓仪软件",
+    "category1": "测试和测量",
+    "category2": "光束分析仪配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Analysis SDK": {
+    "zh": "光束分析SDK",
+    "category1": "测试和测量",
+    "category2": "光束分析仪配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Beam Profiler Accessories": {
+    "zh": "光束轮廓仪配件",
+    "category1": "测试和测量",
+    "category2": "光束分析仪配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Profiler Adapter": {
+    "zh": "光束轮廓仪适配器",
+    "category1": "测试和测量",
+    "category2": "光束分析仪配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Digital Microscope": {
+    "zh": "数码显微镜",
+    "category1": "测试和测量",
+    "category2": "显微镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Microscope": {
+    "zh": "光学显微镜",
+    "category1": "测试和测量",
+    "category2": "显微镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Stereo Microscope": {
+    "zh": "体视显微镜",
+    "category1": "测试和测量",
+    "category2": "显微镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Zoom Microscope": {
+    "zh": "变倍显微镜",
+    "category1": "测试和测量",
+    "category2": "显微镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Metallurgical Microscope": {
+    "zh": "金相显微镜",
+    "category1": "测试和测量",
+    "category2": "显微镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Polarizing Microscope": {
+    "zh": "偏光显微镜",
+    "category1": "测试和测量",
+    "category2": "显微镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Confocal Microscope": {
+    "zh": "共聚焦显微镜",
+    "category1": "测试和测量",
+    "category2": "显微镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Scanning Microscope": {
+    "zh": "激光扫描显微镜",
+    "category1": "测试和测量",
+    "category2": "显微镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fluorescence Microscope": {
+    "zh": "荧光显微镜",
+    "category1": "测试和测量",
+    "category2": "显微镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Inverted Microscope": {
+    "zh": "倒置显微镜",
+    "category1": "测试和测量",
+    "category2": "显微镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Upright Microscope": {
+    "zh": "正置显微镜",
+    "category1": "测试和测量",
+    "category2": "显微镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Inspection Microscope": {
+    "zh": "检测显微镜",
+    "category1": "测试和测量",
+    "category2": "显微镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Video Microscope": {
+    "zh": "视频显微镜",
+    "category1": "测试和测量",
+    "category2": "显微镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Measuring Microscope": {
+    "zh": "测量显微镜",
+    "category1": "测试和测量",
+    "category2": "显微镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Toolmaker Microscope": {
+    "zh": "工具显微镜",
+    "category1": "测试和测量",
+    "category2": "显微镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Microscope Camera": {
+    "zh": "显微镜相机",
+    "category1": "测试和测量",
+    "category2": "显微镜配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Microscope Objective": {
+    "zh": "显微物镜",
+    "category1": "测试和测量",
+    "category2": "显微镜配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Microscope Illumination": {
+    "zh": "显微镜照明",
+    "category1": "测试和测量",
+    "category2": "显微镜配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Microscope Adapter": {
+    "zh": "显微镜适配器",
+    "category1": "测试和测量",
+    "category2": "显微镜配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Microscope Stage": {
+    "zh": "显微镜载物台",
+    "category1": "测试和测量",
+    "category2": "显微镜配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Scanner": {
+    "zh": "激光扫描仪",
+    "category1": "测试和测量",
+    "category2": "扫描仪和测距仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Scanners": {
+    "zh": "激光扫描仪",
+    "category1": "测试和测量",
+    "category2": "扫描仪和测距仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Distance Meter": {
+    "zh": "激光测距仪",
+    "category1": "测试和测量",
+    "category2": "扫描仪和测距仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Distance Measurement System": {
+    "zh": "激光测距系统",
+    "category1": "测试和测量",
+    "category2": "扫描仪和测距仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Range Finder": {
+    "zh": "激光测距仪",
+    "category1": "测试和测量",
+    "category2": "扫描仪和测距仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Ranging System": {
+    "zh": "激光测距系统",
+    "category1": "测试和测量",
+    "category2": "扫描仪和测距仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Distance Sensor": {
+    "zh": "距离传感器",
+    "category1": "测试和测量",
+    "category2": "扫描仪和测距仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Distance Measuring System": {
+    "zh": "距离测量系统",
+    "category1": "测试和测量",
+    "category2": "扫描仪和测距仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "3D Laser Scanner": {
+    "zh": "三维激光扫描仪",
+    "category1": "测试和测量",
+    "category2": "三维扫描仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "3D Scanner": {
+    "zh": "三维扫描仪",
+    "category1": "测试和测量",
+    "category2": "三维扫描仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Portable 3D Scanner": {
+    "zh": "便携式三维扫描仪",
+    "category1": "测试和测量",
+    "category2": "三维扫描仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Handheld 3D Scanner": {
+    "zh": "手持式三维扫描仪",
+    "category1": "测试和测量",
+    "category2": "三维扫描仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Industrial 3D Scanner": {
+    "zh": "工业三维扫描仪",
+    "category1": "测试和测量",
+    "category2": "三维扫描仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical 3D Scanner": {
+    "zh": "光学三维扫描仪",
+    "category1": "测试和测量",
+    "category2": "三维扫描仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Structured Light Scanner": {
+    "zh": "结构光扫描仪",
+    "category1": "测试和测量",
+    "category2": "三维扫描仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Blue Light Scanner": {
+    "zh": "蓝光扫描仪",
+    "category1": "测试和测量",
+    "category2": "三维扫描仪",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "3D Metrology Scanner": {
+    "zh": "三维计量扫描仪",
+    "category1": "测试和测量",
+    "category2": "三维扫描仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "3D Inspection Scanner": {
+    "zh": "三维检测扫描仪",
+    "category1": "测试和测量",
+    "category2": "三维扫描仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Tracking Scanner": {
+    "zh": "激光跟踪扫描仪",
+    "category1": "测试和测量",
+    "category2": "三维扫描仪",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Terahertz System": {
+    "zh": "太赫兹系统",
+    "category1": "测试和测量",
+    "category2": "太赫兹",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Terahertz Spectrometer": {
+    "zh": "太赫兹光谱仪",
+    "category1": "测试和测量",
+    "category2": "太赫兹",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Terahertz Spectroscopy System": {
+    "zh": "太赫兹光谱系统",
+    "category1": "测试和测量",
+    "category2": "太赫兹",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "THz Spectrometer": {
+    "zh": "太赫兹光谱仪",
+    "category1": "测试和测量",
+    "category2": "太赫兹",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "THz System": {
+    "zh": "太赫兹系统",
+    "category1": "测试和测量",
+    "category2": "太赫兹",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Terahertz Imaging System": {
+    "zh": "太赫兹成像系统",
+    "category1": "测试和测量",
+    "category2": "太赫兹成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "THz Imaging System": {
+    "zh": "太赫兹成像系统",
+    "category1": "测试和测量",
+    "category2": "太赫兹成像",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Terahertz Camera": {
+    "zh": "太赫兹相机",
+    "category1": "测试和测量",
+    "category2": "太赫兹成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "THz Camera": {
+    "zh": "太赫兹相机",
+    "category1": "测试和测量",
+    "category2": "太赫兹成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Terahertz Imaging Camera": {
+    "zh": "太赫兹成像相机",
+    "category1": "测试和测量",
+    "category2": "太赫兹成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "THz Imaging Camera": {
+    "zh": "太赫兹成像相机",
+    "category1": "测试和测量",
+    "category2": "太赫兹成像",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Terahertz Time Domain System": {
+    "zh": "太赫兹时域系统",
+    "category1": "测试和测量",
+    "category2": "太赫兹时域",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Terahertz Time Domain Spectrometer": {
+    "zh": "太赫兹时域光谱仪",
+    "category1": "测试和测量",
+    "category2": "太赫兹时域",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "THz-TDS": {
+    "zh": "太赫兹时域光谱",
+    "category1": "测试和测量",
+    "category2": "太赫兹时域",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "THz Time Domain Spectrometer": {
+    "zh": "太赫兹时域光谱仪",
+    "category1": "测试和测量",
+    "category2": "太赫兹时域",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Time Domain Terahertz System": {
+    "zh": "时域太赫兹系统",
+    "category1": "测试和测量",
+    "category2": "太赫兹时域",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Time Domain Reflectometer": {
+    "zh": "光时域反射仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "OTDR": {
+    "zh": "光时域反射仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Loss Test Set": {
+    "zh": "光损耗测试仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "OLTS": {
+    "zh": "光损耗测试仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Return Loss Meter": {
+    "zh": "光回损仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "ORL Meter": {
+    "zh": "光回损仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Identifier": {
+    "zh": "光纤识别仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Live Fiber Identifier": {
+    "zh": "在线光纤识别仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Inspection Probe": {
+    "zh": "光纤检测探头",
+    "category1": "测试和测量",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Inspection Microscope": {
+    "zh": "光纤检测显微镜",
+    "category1": "测试和测量",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Endface Inspector": {
+    "zh": "光纤端面检测仪",
+    "category1": "测试和测量",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Connector Inspection Probe": {
+    "zh": "连接器检测探头",
+    "category1": "测试和测量",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Inspection Camera": {
+    "zh": "光纤检测相机",
+    "category1": "测试和测量",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Endface Microscope": {
+    "zh": "光纤端面显微镜",
+    "category1": "测试和测量",
+    "category2": "光纤检测工具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Fiber Analyzer": {
+    "zh": "光纤分析仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Characterization System": {
+    "zh": "光纤表征系统",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fiber Geometry Measurement System": {
+    "zh": "光纤几何参数测量系统",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Length Measurement System": {
+    "zh": "光纤长度测量系统",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Curl Measurement System": {
+    "zh": "光纤翘曲测量系统",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Cleave Analyzer": {
+    "zh": "光纤端面切割分析仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Splice Analyzer": {
+    "zh": "光纤熔接分析仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Network Tester": {
+    "zh": "光纤网络测试仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Passive Optical Network Tester": {
+    "zh": "无源光网络测试仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "PON Tester": {
+    "zh": "PON测试仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Fiber Test Platform": {
+    "zh": "光纤测试平台",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Optic Test System": {
+    "zh": "光纤测试系统",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Probe Station": {
+    "zh": "探针台",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Manual Probe Station": {
+    "zh": "手动探针台",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Semi Automatic Probe Station": {
+    "zh": "半自动探针台",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Semi-Automatic Probe Station": {
+    "zh": "半自动探针台",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Automatic Probe Station": {
+    "zh": "全自动探针台",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Auto Probe Station": {
+    "zh": "全自动探针台",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Wafer Probe Station": {
+    "zh": "晶圆探针台",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Semiconductor Probe Station": {
+    "zh": "半导体探针台",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cryogenic Probe Station": {
+    "zh": "低温探针台",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Vacuum Probe Station": {
+    "zh": "真空探针台",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "RF Probe Station": {
+    "zh": "射频探针台",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Microwave Probe Station": {
+    "zh": "微波探针台",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Millimeter Wave Probe Station": {
+    "zh": "毫米波探针台",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "mmWave Probe Station": {
+    "zh": "毫米波探针台",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Frequency Probe Station": {
+    "zh": "高频探针台",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "On Wafer Measurement System": {
+    "zh": "在片测量系统",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Wafer Test System": {
+    "zh": "晶圆测试系统",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Probe System": {
+    "zh": "探针系统",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Probe Bench": {
+    "zh": "探针台",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Probe Platform": {
+    "zh": "探针平台",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Probe Test Platform": {
+    "zh": "探针测试平台",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Wafer Measurement Platform": {
+    "zh": "晶圆测量平台",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Wafer Characterization System": {
+    "zh": "晶圆表征系统",
+    "category1": "测试和测量",
+    "category2": "探针台",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Probe": {
+    "zh": "探针",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "RF Probe": {
+    "zh": "射频探针",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "DC Probe": {
+    "zh": "直流探针",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Waveguide Probe": {
+    "zh": "波导探针",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Probe": {
+    "zh": "光学探针",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Probe": {
+    "zh": "光纤探针",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Microwave Probe": {
+    "zh": "微波探针",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Millimeter Wave Probe": {
+    "zh": "毫米波探针",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "mmWave Probe": {
+    "zh": "毫米波探针",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Frequency Probe": {
+    "zh": "高频探针",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Probe Card": {
+    "zh": "探针卡",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "RF Probe Card": {
+    "zh": "射频探针卡",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "MEMS Probe Card": {
+    "zh": "MEMS探针卡",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Vertical Probe Card": {
+    "zh": "垂直探针卡",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cantilever Probe Card": {
+    "zh": "悬臂探针卡",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Probe Holder": {
+    "zh": "探针夹持器",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Probe Mount": {
+    "zh": "探针支架",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Probe Arm": {
+    "zh": "探针臂",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Probe Head": {
+    "zh": "探针头",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Probe Tip": {
+    "zh": "探针针尖",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Needle Tip": {
+    "zh": "针尖",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Probe Needle": {
+    "zh": "探针针",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Probe Positioner": {
+    "zh": "探针定位器",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Positioner": {
+    "zh": "定位器",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Micro Positioner": {
+    "zh": "微定位器",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "XYZ Positioner": {
+    "zh": "XYZ定位器",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Manipulator": {
+    "zh": "操纵器",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Micro Manipulator": {
+    "zh": "微操纵器",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Probe Manipulator": {
+    "zh": "探针操纵器",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Chuck": {
+    "zh": "载片台",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Vacuum Chuck": {
+    "zh": "真空载片台",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Thermal Chuck": {
+    "zh": "温控载片台",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cryogenic Chuck": {
+    "zh": "低温载片台",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Probe Calibration Kit": {
+    "zh": "探针校准套件",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Calibration Substrate": {
+    "zh": "校准基片",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Calibration Standard": {
+    "zh": "校准标准件",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Impedance Standard Substrate": {
+    "zh": "阻抗标准基片",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "GSG Probe": {
+    "zh": "GSG探针",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "GSGSG Probe": {
+    "zh": "GSGSG探针",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "GS Probe": {
+    "zh": "GS探针",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "SG Probe": {
+    "zh": "SG探针",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Differential Probe": {
+    "zh": "差分探针",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Wafer Chuck": {
+    "zh": "晶圆载片台",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Calibration Kit": {
+    "zh": "校准套件",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "SOLT Calibration Kit": {
+    "zh": "SOLT校准套件",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "TRL Calibration Kit": {
+    "zh": "TRL校准套件",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "LRRM Calibration Kit": {
+    "zh": "LRRM校准套件",
+    "category1": "测试和测量",
+    "category2": "探针台配件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Atomic Force Microscope ZH": {
+    "zh": "原子力显微镜",
+    "category1": "测试和测量",
+    "category2": "显微镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Power Meter": {
+    "zh": "光功率计",
+    "category1": "测试和测量",
+    "category2": "光功率计",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Multimeter": {
+    "zh": "光万用表",
+    "category1": "测试和测量",
+    "category2": "光功率计",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Explorer": {
+    "zh": "光纤链路探测仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fronthaul Analyzer": {
+    "zh": "前传分析仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Transmission Analyzer": {
+    "zh": "传输分析仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Talk Set": {
+    "zh": "光话机",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Link Map": {
+    "zh": "光纤链路图仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "FTTH PDA": {
+    "zh": "FTTH测速仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PON Installation Tester": {
+    "zh": "PON安装测试仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Integrated Tester": {
+    "zh": "集成测试仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Integrated Monitoring": {
+    "zh": "集成监测设备",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "TV Signal Level Meter": {
+    "zh": "电视信号电平表",
+    "category1": "测试和测量",
+    "category2": "其他分类测量仪器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "FOH-100": {
+    "zh": "xPON测试仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "FOH-200": {
+    "zh": "xPON测试仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "EPON Tester": {
+    "zh": "EPON测试仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "200XGS": {
+    "zh": "XGS-PON测试仪",
+    "category1": "测试和测量",
+    "category2": "光纤测试与测量",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Spot Analyzer ZH": {
+    "zh": "光斑分析仪",
+    "category1": "测试和测量",
+    "category2": "光束分析仪",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Surface Defect Inspection": {
+    "zh": "表面缺陷检测",
+    "category1": "测试和测量",
+    "category2": "光学检测",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Defect Inspection Machine": {
+    "zh": "缺陷检测机",
+    "category1": "测试和测量",
+    "category2": "光学检测",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Scanning Electron Microscope ZH": {
+    "zh": "扫描电镜",
+    "category1": "测试和测量",
+    "category2": "显微镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Energy Spectrometer EDS": {
+    "zh": "能谱仪",
+    "category1": "测试和测量",
+    "category2": "材料分析和取证",
+    "enable": true,
+    "confidence": 1.0
+  }
+}
