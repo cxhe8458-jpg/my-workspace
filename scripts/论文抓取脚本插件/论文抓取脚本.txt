@@ -1,0 +1,3564 @@
+// ==UserScript==
+// @name         CNKI 公开文献信息采集器
+// @namespace    cnki-public-metadata-collector
+// @version      0.1.8
+// @description  基于用户提供的v0.1.4，保留原有单篇、批量、翻页与导出流程，仅增加作者通讯邮箱和作者机构对应信息。
+// @author       OpenAI
+// @match        https://kns.cnki.net/*
+// @run-at       document-idle
+// @grant        GM_getValue
+// @grant        GM_setValue
+// ==/UserScript==
+
+(function () {
+    'use strict';
+
+    /*
+     * 本版基线：用户上传的 v0.1.4。
+     *
+     * 保留原有：
+     * 1. 页面识别与 iframe 判断
+     * 2. 搜索页批量入口
+     * 3. 详情页单篇入口
+     * 4. 参考文献、相似文献请求流程
+     * 5. 自动翻页流程
+     * 6. 数据库、设置键、运行状态键
+     *
+     * 本次新增：
+     * author_details
+     * unmatched_correspondence（仅存在无法确定的邮箱归属时输出）
+     * author_parse_warnings（仅存在解析问题时输出）
+     *
+     * authors 和 institutions 继续保持字符串数组。
+     */
+
+    if (window.top !== window.self) return;
+
+    const VERSION = '0.1.8';
+
+    // 继续使用原来的主数据版本，作者补充信息单独标记。
+    const SCHEMA_VERSION = 4;
+    const AUTHOR_INFO_VERSION = 1;
+    const DISPLAY_LIMIT = 10;
+
+    const pathname = location.pathname.toLowerCase();
+
+    // 原 v0.1.4 页面识别逻辑，不引入新识别方式。
+    const IS_SEARCH =
+        pathname.includes('/kns8s/') &&
+        (
+            pathname.includes('defaultresult') ||
+            pathname.includes('advsearch') ||
+            pathname.includes('result')
+        );
+
+    const IS_DETAIL =
+        pathname.includes('/kcms2/article/');
+
+    if (!IS_SEARCH && !IS_DETAIL) return;
+
+    // ============================================================
+    // 配置：继续沿用 v0.1.4 的设置
+    // ============================================================
+
+    const SETTINGS_KEY = 'cnki_public_collector_settings_v4';
+    const RUN_KEY = 'cnki_public_collector_run_v4';
+
+    const REFERENCE_TYPES = [
+        'CJFDREF',
+        'CDFDREF',
+        'CMFDREF',
+        'CPFDREF',
+        'CYFDREF',
+        'CCNDREF',
+        'WWJDREF',
+        'SCPDREF',
+        'SCSDREF',
+        'NLNKREF'
+    ];
+
+    const DEFAULT_SETTINGS = {
+        pages: 1,
+        articleDelayMs: 6000,
+        pageDelayMs: 20000,
+        collectReferences: true,
+        collectSimilar: true,
+        keywordMode: 'cn',
+        skipExisting: true
+    };
+
+    function gmGet(key, fallback) {
+        try {
+            const value = GM_getValue(key);
+            return value === undefined ? fallback : value;
+        } catch (error) {
+            return fallback;
+        }
+    }
+
+    function gmSet(key, value) {
+        try {
+            GM_setValue(key, value);
+        } catch (error) {
+            console.warn('[CNKI Collector] GM_setValue failed:', error);
+        }
+    }
+
+    function loadSettings() {
+        return {
+            ...DEFAULT_SETTINGS,
+            ...(gmGet(SETTINGS_KEY, {}) || {})
+        };
+    }
+
+    function saveSettings(settings) {
+        gmSet(SETTINGS_KEY, settings);
+    }
+
+    // ============================================================
+    // 原有通用工具
+    // ============================================================
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    function cleanText(value) {
+        return String(value ?? '')
+            .replace(/\u00a0/g, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+    }
+
+    function cleanListItem(value) {
+        return cleanText(value)
+            .replace(/^[；;，,、\s]+|[；;，,、\s]+$/g, '')
+            .trim();
+    }
+
+    function unique(values) {
+        const result = [];
+        const seen = new Set();
+
+        for (const raw of values || []) {
+            const value = cleanListItem(raw);
+            if (!value) continue;
+
+            const key = /[A-Za-z]/.test(value)
+                ? value.toLowerCase()
+                : value;
+
+            if (seen.has(key)) continue;
+
+            seen.add(key);
+            result.push(value);
+        }
+
+        return result;
+    }
+
+    function hasChinese(value) {
+        return /[\u3400-\u4dbf\u4e00-\u9fff]/.test(String(value || ''));
+    }
+
+    function cleanKeywords(keywords, mode) {
+        const all = unique(keywords || []);
+        if (mode === 'all') return all;
+
+        const chinese = all.filter(hasChinese);
+        return chinese.length ? chinese : all;
+    }
+
+    function absoluteUrl(href, base = location.href) {
+        if (!href) return '';
+
+        try {
+            return new URL(href, base).href;
+        } catch (error) {
+            return String(href);
+        }
+    }
+
+    function cleanDetailUrl(url) {
+        if (!url) return '';
+
+        try {
+            const parsed = new URL(url, 'https://kns.cnki.net/');
+
+            for (const key of [...parsed.searchParams.keys()]) {
+                if (key.toLowerCase() === 'captchaid') {
+                    parsed.searchParams.delete(key);
+                }
+            }
+
+            return parsed.href;
+        } catch (error) {
+            return String(url)
+                .replace(/([?&])captchaId=[^&#]*&?/ig, '$1')
+                .replace(/[?&]$/, '');
+        }
+    }
+
+    function pickYear(...values) {
+        for (const raw of values) {
+            const value = cleanText(raw);
+            if (!value) continue;
+
+            const match = value.match(
+                /(?:^|\D)((?:19|20)\d{2})(?:\D|$)/
+            );
+
+            if (match) return match[1];
+        }
+
+        return '';
+    }
+
+    function timestamp() {
+        const now = new Date();
+        const pad = value => String(value).padStart(2, '0');
+
+        return (
+            now.getFullYear() +
+            pad(now.getMonth() + 1) +
+            pad(now.getDate()) +
+            '_' +
+            pad(now.getHours()) +
+            pad(now.getMinutes()) +
+            pad(now.getSeconds())
+        );
+    }
+
+    function downloadText(filename, content, mime) {
+        const blob = new Blob(
+            [content],
+            { type: mime || 'text/plain;charset=utf-8' }
+        );
+
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+
+        a.href = url;
+        a.download = filename;
+
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+
+        setTimeout(() => URL.revokeObjectURL(url), 3000);
+    }
+
+    // ============================================================
+    // 原有验证 / 限流识别
+    // ============================================================
+
+    function isChallengeUrl(url) {
+        const value = String(url || '');
+
+        return (
+            /\/bar\/verify(?:\/|$)/i.test(value) ||
+            /\/verify\/index(?:\.html)?(?:\?|$)/i.test(value)
+        );
+    }
+
+    function isChallengeText(text) {
+        const value = cleanText(text);
+
+        return (
+            /拼图校验/i.test(value) ||
+            /访问过于频繁/i.test(value) ||
+            /请求过于频繁/i.test(value) ||
+            /too many requests/i.test(value)
+        );
+    }
+
+    function detectChallengeDocument(doc, url) {
+        if (!doc) return false;
+        if (isChallengeUrl(url)) return true;
+
+        const title = cleanText(doc.title);
+
+        if (
+            /拼图校验/i.test(title) ||
+            /too many requests/i.test(title)
+        ) {
+            return true;
+        }
+
+        const normalDetail = !!(
+            doc.querySelector('#param-filename') ||
+            doc.querySelector('#ChDivSummary') ||
+            doc.querySelector('.wx-tit h1')
+        );
+
+        if (normalDetail) return false;
+
+        let bodyText = '';
+
+        try {
+            bodyText = doc.body?.innerText || '';
+        } catch (error) {
+            // 保留原有容错行为
+        }
+
+        return isChallengeText(bodyText);
+    }
+
+    function isFatalError(error) {
+        const value = String(error?.message || error || '');
+
+        return (
+            /VERIFICATION_REQUIRED/i.test(value) ||
+            /RATE_LIMIT_403/i.test(value) ||
+            /RATE_LIMIT_429/i.test(value)
+        );
+    }
+
+    // ============================================================
+    // 原有数据库
+    // ============================================================
+
+    const DB_NAME = 'cnki_public_metadata_collector';
+    const STORE_NAME = 'articles';
+    const DB_VERSION = 1;
+
+    let dbPromise = null;
+
+    function openDB() {
+        if (dbPromise) return dbPromise;
+
+        dbPromise = new Promise((resolve, reject) => {
+            const request = indexedDB.open(DB_NAME, DB_VERSION);
+
+            request.onupgradeneeded = function () {
+                const db = request.result;
+
+                if (!db.objectStoreNames.contains(STORE_NAME)) {
+                    const store = db.createObjectStore(
+                        STORE_NAME,
+                        { keyPath: 'key' }
+                    );
+
+                    store.createIndex(
+                        'detail_url',
+                        'detail_url',
+                        { unique: false }
+                    );
+
+                    store.createIndex(
+                        'article_id',
+                        'article_id',
+                        { unique: false }
+                    );
+                }
+            };
+
+            request.onsuccess = () => resolve(request.result);
+            request.onerror = () => reject(request.error);
+        });
+
+        return dbPromise;
+    }
+
+    async function dbPut(article) {
+        const db = await openDB();
+
+        return new Promise((resolve, reject) => {
+            const tx = db.transaction(STORE_NAME, 'readwrite');
+            tx.objectStore(STORE_NAME).put(article);
+
+            tx.oncomplete = () => resolve();
+            tx.onerror = () => reject(tx.error);
+            tx.onabort = () => reject(
+                tx.error || new Error('DATABASE_TRANSACTION_ABORTED')
+            );
+        });
+    }
+
+    async function dbGetByUrl(url) {
+        const db = await openDB();
+        const cleaned = cleanDetailUrl(url);
+
+        return new Promise((resolve, reject) => {
+            const tx = db.transaction(STORE_NAME, 'readonly');
+
+            const request = tx
+                .objectStore(STORE_NAME)
+                .index('detail_url')
+                .get(cleaned);
+
+            request.onsuccess = () => resolve(request.result || null);
+            request.onerror = () => reject(request.error);
+        });
+    }
+
+    async function dbGetAll() {
+        const db = await openDB();
+
+        return new Promise((resolve, reject) => {
+            const tx = db.transaction(STORE_NAME, 'readonly');
+            const request = tx.objectStore(STORE_NAME).getAll();
+
+            request.onsuccess = () => resolve(request.result || []);
+            request.onerror = () => reject(request.error);
+        });
+    }
+
+    async function dbCount() {
+        const db = await openDB();
+
+        return new Promise((resolve, reject) => {
+            const tx = db.transaction(STORE_NAME, 'readonly');
+            const request = tx.objectStore(STORE_NAME).count();
+
+            request.onsuccess = () => resolve(request.result || 0);
+            request.onerror = () => reject(request.error);
+        });
+    }
+
+    async function dbClear() {
+        const db = await openDB();
+
+        return new Promise((resolve, reject) => {
+            const tx = db.transaction(STORE_NAME, 'readwrite');
+            tx.objectStore(STORE_NAME).clear();
+
+            tx.oncomplete = () => resolve();
+            tx.onerror = () => reject(tx.error);
+            tx.onabort = () => reject(
+                tx.error || new Error('DATABASE_TRANSACTION_ABORTED')
+            );
+        });
+    }
+
+    // ============================================================
+    // 新增：作者信息解析
+    //
+    // 这些函数只读取当前论文HTML。
+    // 不新增网络请求，不修改页面，不执行网页中的脚本。
+    // ============================================================
+
+    function authorCleanContactNoise(value) {
+        return cleanText(value)
+            .replace(
+                /(?:E[\s-]*mail|电子邮箱|电子邮件|邮箱)\s*[:：]?\s*[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/ig,
+                ''
+            )
+            .replace(
+                /[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/g,
+                ''
+            )
+            .replace(
+                /(?:Tel(?:ephone)?|Phone|联系电话|电话|手机)\s*[:：]?\s*[+\d（）()\-\s]{6,}/ig,
+                ''
+            )
+            .replace(
+                /(?:E[\s-]*mail|电子邮箱|电子邮件|邮箱)\s*[:：]?\s*$/ig,
+                ''
+            )
+            .replace(/\s*[*＊†‡#]+\s*$/, '')
+            .trim();
+    }
+
+    function authorMarkerTokens(value) {
+        /*
+         * 只解析“整体就是编号”的文本。
+         *
+         * 不从电话、年份、任意正文中提取数字。
+         * 12保持为编号12，不擅自拆成1和2。
+         */
+        const superscripts = '⁰¹²³⁴⁵⁶⁷⁸⁹';
+
+        let text = String(value || '')
+            .replace(/[０-９]/g, c =>
+                String(c.charCodeAt(0) - 0xFF10)
+            )
+            .replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]/g, c =>
+                String(superscripts.indexOf(c))
+            )
+            .replace(/[①-⑳]/g, c =>
+                ',' + String(c.charCodeAt(0) - 0x2460 + 1) + ','
+            )
+            .replace(/[*＊†‡#]/g, '')
+            .replace(/[()[\]（）【】]/g, '')
+            .replace(/^[\s,，、;；/]+|[\s,，、;；/]+$/g, '');
+
+        if (!text) return [];
+
+        if (!/^(?:\d{1,3}|[A-Za-z])(?:[\s,，、;；/]+(?:\d{1,3}|[A-Za-z]))*$/.test(text)) {
+            return [];
+        }
+
+        return unique(
+            text.split(/[\s,，、;；/]+/)
+                .map(token => {
+                    if (/^\d+$/.test(token)) {
+                        const number = Number(token);
+                        return number > 0 ? String(number) : '';
+                    }
+                    return token.toLowerCase();
+                })
+        );
+    }
+
+    function authorNodeNameText(node) {
+        if (!node) return '';
+
+        const clone = node.cloneNode(true);
+
+        clone.querySelectorAll(
+            'sup,script,style,i,svg,.icon,' +
+            'a[href^="mailto:"],a[href^="tel:"]'
+        ).forEach(el => el.remove());
+
+        return authorCleanContactNoise(clone.textContent);
+    }
+
+    function authorSafeHolder(link, root, candidateLinks) {
+        /*
+         * 只允许使用包含“一个作者/机构链接”的局部容器。
+         * 避免把整个作者区的全部编号分配给某一个人。
+         */
+        let holder = link;
+
+        for (
+            let parent = link.parentElement;
+            parent && parent !== root;
+            parent = parent.parentElement
+        ) {
+            const count = candidateLinks.filter(
+                candidate => parent.contains(candidate)
+            ).length;
+
+            if (count !== 1) break;
+            holder = parent;
+        }
+
+        if (candidateLinks.length === 1 && root.contains(link)) {
+            holder = root;
+        }
+
+        return holder;
+    }
+
+    function authorReadMarkers(holder, link, includePrevious) {
+        const result = [];
+
+        for (const sup of holder.querySelectorAll('sup')) {
+            result.push(...authorMarkerTokens(sup.textContent));
+        }
+
+        const clone = holder.cloneNode(true);
+
+        clone.querySelectorAll(
+            'a,script,style,i,svg,.icon'
+        ).forEach(el => el.remove());
+
+        result.push(...authorMarkerTokens(clone.textContent));
+
+        /*
+         * 平铺写法：
+         * <a>张三</a><sup>1</sup><a>李四</a><sup>2</sup>
+         */
+        if (holder === link) {
+            const next = link.nextSibling;
+
+            if (next) {
+                result.push(
+                    ...authorMarkerTokens(next.textContent || '')
+                );
+            }
+
+            // 机构编号也可能写在机构链接前。
+            if (includePrevious) {
+                const previous = link.previousSibling;
+
+                if (previous) {
+                    result.push(
+                        ...authorMarkerTokens(previous.textContent || '')
+                    );
+                }
+            }
+        }
+
+        return unique(result);
+    }
+
+    function authorParseInstitution(value) {
+        let name = cleanText(value);
+        let labels = [];
+
+        /*
+         * 支持明确的前缀：
+         * 1.某大学
+         * 1、某大学
+         * 1 某大学
+         * a.某研究所
+         */
+        let match = name.match(
+            /^(\d{1,3}|[A-Za-z])(?:[.．、:：)]\s*|\s+)(.+)$/
+        );
+
+        // 中文机构紧邻数字：1某大学
+        if (!match) {
+            match = name.match(
+                /^(\d{1,3})([\u3400-\u4dbf\u4e00-\u9fff].+)$/
+            );
+        }
+
+        if (match) {
+            labels = authorMarkerTokens(match[1]);
+            name = match[2];
+        }
+
+        // 圆圈编号：①某大学
+        const circled = name.match(/^([①-⑳]+)\s*(.+)$/);
+
+        if (circled) {
+            labels.push(...authorMarkerTokens(circled[1]));
+            name = circled[2];
+        }
+
+        return {
+            name: cleanText(name).replace(/[；;]+$/, '').trim(),
+            labels: unique(labels)
+        };
+    }
+
+    function authorParseName(value, knownLabels) {
+        let name = authorCleanContactNoise(value);
+        let labels = [];
+
+        /*
+         * Unicode上标：只把整个上标串作为标记解析。
+         * ¹²不武断拆成“1和2”。
+         */
+        const superscript = name.match(
+            /([⁰¹²³⁴⁵⁶⁷⁸⁹①-⑳,，、\s]+)$/
+        );
+
+        if (
+            superscript &&
+            /[⁰¹²³⁴⁵⁶⁷⁸⁹①-⑳]/.test(superscript[1])
+        ) {
+            labels.push(...authorMarkerTokens(superscript[1]));
+            name = name.slice(0, superscript.index).trim();
+        }
+
+        /*
+         * 普通数字后缀：
+         * 中文姓名后的编号，或能与明确机构标签匹配的后缀。
+         * 不把四位年份截断成两位机构编号。
+         */
+        const suffix = name.match(
+            /^([^0-9]+?)([0-9]{1,3}(?:\s*[,，、;；/]\s*[0-9]{1,3})*)$/
+        );
+
+        if (suffix) {
+            const found = authorMarkerTokens(suffix[2]);
+
+            const plausibleChineseName =
+                /^[\u3400-\u4dbf\u4e00-\u9fff·•\s]+$/.test(
+                    cleanText(suffix[1])
+                );
+
+            const explicitlyMatched =
+                found.length > 0 &&
+                found.every(label => knownLabels.has(label));
+
+            if (plausibleChineseName || explicitlyMatched) {
+                labels.push(...found);
+                name = suffix[1];
+            }
+        }
+
+        return {
+            name: cleanListItem(name),
+            labels: unique(labels)
+        };
+    }
+
+    function authorExtractEmails(value) {
+        return unique(
+            String(value || '').match(
+                /[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g
+            ) || []
+        );
+    }
+
+    function authorMailtoEmails(holder) {
+        const result = [];
+
+        for (
+            const link
+            of holder.querySelectorAll('a[href^="mailto:"]')
+        ) {
+            let value = String(link.getAttribute('href') || '')
+                .replace(/^mailto:/i, '')
+                .split('?')[0];
+
+            try {
+                value = decodeURIComponent(value);
+            } catch (error) {
+                // 保留原值
+            }
+
+            result.push(...authorExtractEmails(value));
+        }
+
+        return unique(result);
+    }
+
+    function authorDecodeStringLiteral(literal) {
+        /*
+         * 只解码字符串字面量。
+         * 不使用 eval / Function 执行网页代码。
+         */
+        return literal.slice(1, -1).replace(
+            /\\(?:u([0-9a-fA-F]{4})|x([0-9a-fA-F]{2})|(\r\n|\r|\n)|([\s\S]))/g,
+            (all, unicode, hex, continuation, escaped) => {
+                if (unicode) {
+                    return String.fromCharCode(parseInt(unicode, 16));
+                }
+
+                if (hex) {
+                    return String.fromCharCode(parseInt(hex, 16));
+                }
+
+                if (continuation) return '';
+
+                const escapes = {
+                    n: '\n',
+                    r: '\r',
+                    t: '\t',
+                    b: '\b',
+                    f: '\f',
+                    v: '\v',
+                    '0': '\0'
+                };
+
+                return Object.prototype.hasOwnProperty.call(
+                    escapes,
+                    escaped
+                )
+                    ? escapes[escaped]
+                    : escaped;
+            }
+        );
+    }
+
+    function authorReadCorrespondenceSource(doc) {
+        const values = [];
+
+        /*
+         * 跳过注释及独立字符串。
+         * 只读取 var/let/const cau = "..." 的常量赋值。
+         *
+         * 注释里的：
+         *   var cauem = "..."
+         * 不作为邮箱来源。
+         */
+        const tokenPattern =
+            /\/\/[^\r\n]*|\/\*[\s\S]*?\*\/|("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|`(?:\\.|[^`\\])*`)|\b(?:var|let|const)\s+cau\s*=\s*("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')\s*;/g;
+
+        for (const script of doc.scripts) {
+            const text = script.textContent || '';
+            tokenPattern.lastIndex = 0;
+
+            let match;
+
+            while ((match = tokenPattern.exec(text)) !== null) {
+                if (match[2]) {
+                    values.push(
+                        authorDecodeStringLiteral(match[2])
+                    );
+                }
+            }
+        }
+
+        const distinct = [...new Set(
+            values.map(cleanText).filter(Boolean)
+        )];
+
+        const warnings = [];
+
+        if (distinct.length > 1) {
+            warnings.push('conflicting_corresponding_author_sources');
+        }
+
+        const names = distinct.length === 1
+            ? unique(
+                distinct[0]
+                    .split(/[;；]/)
+                    .map(authorCleanContactNoise)
+            )
+            : [];
+
+        const rawEmailText =
+            doc.querySelector('#cauem')
+                ?.getAttribute('data-cauem') || '';
+
+        /*
+         * 不先对邮箱槽位去重，避免改变原始位置。
+         * 空槽位也保留，只有末尾分号产生的空项被去掉。
+         */
+        const emailSlots = String(rawEmailText).split(/[;；]/);
+
+        while (
+            emailSlots.length &&
+            !cleanText(emailSlots[emailSlots.length - 1])
+        ) {
+            emailSlots.pop();
+        }
+
+        const emailGroups = emailSlots.map(authorExtractEmails);
+
+        return {
+            names,
+            emailGroups,
+            emails: unique(emailGroups.flat()),
+            warnings
+        };
+    }
+
+    function extractAuthorExtension(doc) {
+        const warnings = [];
+        const root = doc.querySelector('#authorpart');
+
+        if (!root) {
+            return {
+                success: false,
+                authors: [],
+                institutions: [],
+                author_details: [],
+                unmatched_correspondence: [],
+                warnings: ['author_container_not_found']
+            };
+        }
+
+        // --------------------------------------------------------
+        // 先读取机构与网页明确给出的机构标签
+        // --------------------------------------------------------
+
+        const scope = root.closest('.wx-tit') || doc;
+
+        let blocks = [...scope.querySelectorAll('h3.author')]
+            .filter(block => block !== root && !root.contains(block));
+
+        if (!blocks.length && scope !== doc) {
+            blocks = [...doc.querySelectorAll('h3.author')]
+                .filter(block => block !== root && !root.contains(block));
+        }
+
+        const institutionRows = [];
+
+        function addInstitution(name, labels) {
+            name = cleanText(name);
+            if (!name) return;
+
+            const found = institutionRows.find(
+                item => item.name === name
+            );
+
+            if (found) {
+                found.labels = unique([...found.labels, ...labels]);
+            } else {
+                institutionRows.push({
+                    name,
+                    labels: unique(labels)
+                });
+            }
+        }
+
+        for (const block of blocks) {
+            const links = [...block.querySelectorAll('a')]
+                .filter(link => {
+                    const href = String(
+                        link.getAttribute('href') || ''
+                    );
+
+                    return (
+                        !/^(?:mailto:|tel:)/i.test(href) &&
+                        !!authorNodeNameText(link)
+                    );
+                });
+
+            if (links.length) {
+                for (const link of links) {
+                    const holder = authorSafeHolder(link, block, links);
+
+                    const parsed = authorParseInstitution(
+                        authorNodeNameText(link)
+                    );
+
+                    const labels = unique([
+                        ...parsed.labels,
+                        ...authorReadMarkers(holder, link, true)
+                    ]);
+
+                    addInstitution(parsed.name, labels);
+                }
+
+                continue;
+            }
+
+            /*
+             * 无链接机构：按明确的换行或分号拆分。
+             * 不把一串连续正文按数字随意切开。
+             */
+            const clone = block.cloneNode(true);
+
+            clone.querySelectorAll('br').forEach(br =>
+                br.replaceWith(doc.createTextNode('\n'))
+            );
+
+            clone.querySelectorAll(
+                'script,style,i,svg,.icon'
+            ).forEach(el => el.remove());
+
+            const parts = clone.textContent
+                .split(/[\r\n;；]+/)
+                .map(cleanText)
+                .filter(Boolean);
+
+            for (const part of parts) {
+                const parsed = authorParseInstitution(part);
+                addInstitution(parsed.name, parsed.labels);
+            }
+        }
+
+        /*
+         * 网页标签 -> institutions 数组序号。
+         *
+         * 多个机构没有网页标签时，不根据DOM顺序
+         * 猜测作者的1、2分别对应哪个机构。
+         */
+        const labelToIndexes = new Map();
+
+        institutionRows.forEach((institution, index) => {
+            for (const label of institution.labels) {
+                if (!labelToIndexes.has(label)) {
+                    labelToIndexes.set(label, []);
+                }
+
+                labelToIndexes.get(label).push(index + 1);
+            }
+        });
+
+        const knownLabels = new Set(labelToIndexes.keys());
+
+        // --------------------------------------------------------
+        // 作者：从作者链接读取姓名，标号单独解析
+        // --------------------------------------------------------
+
+        const allLinks = [...root.querySelectorAll('a')]
+            .filter(link => {
+                const href = String(
+                    link.getAttribute('href') || ''
+                );
+
+                const text = authorNodeNameText(link);
+
+                return (
+                    !/^(?:mailto:|tel:)/i.test(href) &&
+                    !!text &&
+                    !/^(?:通讯作者|通信作者|作者简介|查看作者)$/.test(text)
+                );
+            });
+
+        const identifiedAuthorLinks = allLinks.filter(link =>
+            /\/author\//i.test(
+                String(link.getAttribute('href') || '')
+            )
+        );
+
+        const links = identifiedAuthorLinks.length
+            ? identifiedAuthorLinks
+            : allLinks;
+
+        const details = [];
+        const seenAuthors = new Set();
+
+        for (const link of links) {
+            const holder = authorSafeHolder(link, root, links);
+
+            const parsed = authorParseName(
+                authorNodeNameText(link),
+                knownLabels
+            );
+
+            if (!parsed.name) continue;
+
+            const labels = unique([
+                ...parsed.labels,
+                ...authorReadMarkers(holder, link, false)
+            ]);
+
+            const identity = [
+                link.getAttribute('href') || '',
+                parsed.name,
+                labels.join(',')
+            ].join('|');
+
+            if (seenAuthors.has(identity)) continue;
+            seenAuthors.add(identity);
+
+            const indexes = [];
+            let unresolved = false;
+
+            for (const label of labels) {
+                const matches = labelToIndexes.get(label) || [];
+
+                if (matches.length === 1) {
+                    indexes.push(matches[0]);
+                } else {
+                    unresolved = true;
+                }
+            }
+
+            /*
+             * 没有机构标号且全文只列一个机构：
+             * 可以作单机构归属。
+             *
+             * 有明确但无法对应的标号时不覆盖、不猜。
+             */
+            if (
+                !labels.length &&
+                institutionRows.length === 1
+            ) {
+                indexes.push(1);
+            }
+
+            const row = {
+                name: parsed.name,
+                institution_indexes: [...new Set(indexes)],
+                corresponding: false,
+                emails: authorMailtoEmails(holder)
+            };
+
+            if (labels.length) {
+                row.affiliation_labels = labels;
+            }
+
+            if (
+                unresolved ||
+                (
+                    institutionRows.length > 1 &&
+                    !labels.length
+                )
+            ) {
+                warnings.push(
+                    'author_affiliation_unresolved:' + parsed.name
+                );
+            }
+
+            details.push(row);
+        }
+
+        // --------------------------------------------------------
+        // 通讯作者：独立 cau + #cauem
+        // --------------------------------------------------------
+
+        const correspondence = authorReadCorrespondenceSource(doc);
+
+        warnings.push(...correspondence.warnings);
+
+        const unmatched = [];
+
+        for (const name of correspondence.names) {
+            const matches = details.filter(
+                author => author.name === name
+            );
+
+            if (matches.length === 1) {
+                matches[0].corresponding = true;
+            } else {
+                warnings.push(
+                    'corresponding_author_not_uniquely_matched:' + name
+                );
+            }
+        }
+
+        /*
+         * 一个明确通讯作者：
+         * 独立通讯邮箱板块中的邮箱归属于该作者。
+         *
+         * 多个通讯作者：
+         * 不仅凭“人数等于邮箱数”就按顺序猜配对。
+         * 局部 mailto 已有明确归属的保留；
+         * 其余邮箱保存在 unmatched_correspondence 中。
+         */
+        if (correspondence.names.length === 1) {
+            const name = correspondence.names[0];
+
+            const matches = details.filter(
+                author => author.name === name
+            );
+
+            if (matches.length === 1) {
+                matches[0].emails = unique([
+                    ...matches[0].emails,
+                    ...correspondence.emails
+                ]);
+            } else if (correspondence.emails.length) {
+                unmatched.push({
+                    names: [name],
+                    email_groups: correspondence.emailGroups,
+                    reason: 'author_not_uniquely_matched'
+                });
+            }
+        } else if (correspondence.emails.length) {
+            const alreadyAssigned = new Set(
+                details
+                    .flatMap(author => author.emails)
+                    .map(email => email.toLowerCase())
+            );
+
+            const hasUnassignedEmail =
+                correspondence.emails.some(email =>
+                    !alreadyAssigned.has(email.toLowerCase())
+                );
+
+            if (hasUnassignedEmail) {
+                unmatched.push({
+                    names: correspondence.names,
+                    email_groups: correspondence.emailGroups,
+                    reason: correspondence.names.length
+                        ? 'multiple_authors_mapping_unverified'
+                        : 'corresponding_author_name_missing'
+                });
+
+                warnings.push('corresponding_email_mapping_unresolved');
+            }
+        }
+
+        return {
+            success: details.length > 0,
+            authors: unique(details.map(author => author.name)),
+            institutions: institutionRows.map(item => item.name),
+            author_details: details,
+            unmatched_correspondence: unmatched,
+            warnings: unique(warnings)
+        };
+    }
+
+    // ============================================================
+    // 原有主论文 HTML 字段
+    // ============================================================
+
+    function getLabelContainer(doc, labelName) {
+        const wanted = cleanText(labelName).replace(/[：:]/g, '');
+
+        for (const label of doc.querySelectorAll('.rowtit')) {
+            const name = cleanText(label.textContent)
+                .replace(/[：:]/g, '');
+
+            if (name !== wanted) continue;
+
+            return (
+                label.closest('li') ||
+                label.closest('.row') ||
+                label.parentElement
+            );
+        }
+
+        return null;
+    }
+
+    function getLabelValue(doc, labelName) {
+        const box = getLabelContainer(doc, labelName);
+        if (!box) return '';
+
+        const clone = box.cloneNode(true);
+
+        clone.querySelectorAll(
+            '.rowtit,script,style'
+        ).forEach(node => node.remove());
+
+        return cleanText(clone.textContent);
+    }
+
+    function getLabelLinks(doc, labelName) {
+        const box = getLabelContainer(doc, labelName);
+        if (!box) return [];
+
+        return unique(
+            [...box.querySelectorAll('a')]
+                .map(a => a.textContent)
+        );
+    }
+
+    function splitSemicolon(value) {
+        return unique(cleanText(value).split(/[；;]/));
+    }
+
+    function extractTitle(doc) {
+        const element =
+            doc.querySelector('.wx-tit h1') ||
+            doc.querySelector('.brief h1') ||
+            doc.querySelector('h1');
+
+        if (!element) return '';
+
+        const clone = element.cloneNode(true);
+
+        clone.querySelectorAll(
+            'i,script,style,#corr-video,.type'
+        ).forEach(node => node.remove());
+
+        return cleanText(clone.textContent);
+    }
+
+    function extractCatalog(doc) {
+        return [...doc.querySelectorAll('.catalog-list li')]
+            .map(item => {
+                let level = 1;
+
+                if (item.classList.contains('title-3')) {
+                    level = 3;
+                } else if (item.classList.contains('title-2')) {
+                    level = 2;
+                }
+
+                return {
+                    level,
+                    title: cleanText(
+                        item.getAttribute('title') ||
+                        item.textContent
+                    )
+                };
+            })
+            .filter(item => item.title);
+    }
+
+    function extractMainKeywords(doc, keywordMode) {
+        let keywords = getLabelLinks(doc, '关键词');
+
+        if (!keywords.length) {
+            keywords = splitSemicolon(
+                getLabelValue(doc, '关键词')
+            );
+        }
+
+        return cleanKeywords(keywords, keywordMode);
+    }
+
+    function extractStaticMetadata(doc, detailUrl, keywordMode) {
+        const cleanedDetailUrl = cleanDetailUrl(detailUrl);
+
+        /*
+         * 原有字段作为兜底。
+         * 作者增强模块即使发生异常，也不影响基本元数据采集。
+         */
+        let authors = unique(
+            [...doc.querySelectorAll('#authorpart a')]
+                .map(a => a.textContent)
+        );
+
+        let institutions = [];
+
+        for (const block of doc.querySelectorAll('h3.author')) {
+            if (block.id === 'authorpart') continue;
+
+            institutions.push(
+                ...[...block.querySelectorAll('a')]
+                    .map(a => a.textContent)
+            );
+        }
+
+        institutions = unique(institutions);
+
+        let authorExtension = null;
+
+        try {
+            authorExtension = extractAuthorExtension(doc);
+
+            if (authorExtension.authors.length) {
+                authors = authorExtension.authors;
+            }
+
+            if (authorExtension.institutions.length) {
+                institutions = authorExtension.institutions;
+            }
+        } catch (error) {
+            console.warn(
+                '[CNKI Collector] 作者补充解析失败，保留原基础字段。',
+                error
+            );
+
+            authorExtension = {
+                success: false,
+                author_details: [],
+                unmatched_correspondence: [],
+                warnings: ['author_extension_parse_failed']
+            };
+        }
+
+        const journal = cleanText(
+            doc.querySelector('.top-tip a')?.textContent
+        )
+            .replace(/[。.]+$/g, '')
+            .trim();
+
+        const abstract =
+            cleanText(doc.querySelector('#abstract_text')?.value) ||
+            cleanText(doc.querySelector('#ChDivSummary')?.textContent);
+
+        let onlinePublicTime = getLabelValue(doc, '在线公开时间');
+
+        if (onlinePublicTime) {
+            onlinePublicTime = onlinePublicTime
+                .replace(/（.*$/g, '')
+                .trim();
+        }
+
+        const articleId = cleanText(
+            doc.querySelector('#param-filename')?.value
+        );
+
+        return {
+            key: articleId || cleanedDetailUrl,
+            schema_version: SCHEMA_VERSION,
+            keyword_mode: keywordMode,
+
+            // 独立标记，不改原有数据库和主数据版本。
+            author_info_version: authorExtension.success
+                ? AUTHOR_INFO_VERSION
+                : 0,
+
+            article_id: articleId,
+            title: extractTitle(doc),
+
+            // 继续保持字符串数组。
+            authors,
+            institutions,
+
+            // 新增作者明细。
+            author_details: authorExtension.author_details,
+            unmatched_correspondence:
+                authorExtension.unmatched_correspondence,
+            author_parse_warnings: authorExtension.warnings,
+
+            journal,
+            abstract,
+            keywords: extractMainKeywords(doc, keywordMode),
+            funds: splitSemicolon(getLabelValue(doc, '基金资助')),
+            album: getLabelValue(doc, '专辑'),
+            subject: getLabelValue(doc, '专题'),
+            clc: getLabelValue(doc, '分类号'),
+            online_public_time: onlinePublicTime,
+            catalog: extractCatalog(doc),
+
+            references: { count: 0, items: [] },
+            similar_articles: { count: 0, items: [] },
+
+            detail_url: cleanedDetailUrl,
+            collected_at: new Date().toISOString()
+        };
+    }
+
+    // ============================================================
+    // 原有 HTTP 请求
+    // ============================================================
+
+    async function fetchDetailDocument(url) {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 30000);
+
+        try {
+            const response = await fetch(cleanDetailUrl(url), {
+                method: 'GET',
+                credentials: 'include',
+                cache: 'no-store',
+                redirect: 'follow',
+                signal: controller.signal
+            });
+
+            if (response.status === 403) {
+                throw new Error('RATE_LIMIT_403');
+            }
+
+            if (response.status === 429) {
+                throw new Error('RATE_LIMIT_429');
+            }
+
+            if (!response.ok) {
+                throw new Error('DETAIL_HTTP_' + response.status);
+            }
+
+            const html = await response.text();
+
+            const doc = new DOMParser()
+                .parseFromString(html, 'text/html');
+
+            if (detectChallengeDocument(doc, response.url)) {
+                throw new Error('VERIFICATION_REQUIRED');
+            }
+
+            return {
+                doc,
+                finalUrl: cleanDetailUrl(response.url || url)
+            };
+        } finally {
+            clearTimeout(timeout);
+        }
+    }
+
+    async function fetchJson(url) {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 25000);
+
+        try {
+            const response = await fetch(url, {
+                method: 'GET',
+                credentials: 'include',
+                cache: 'no-store',
+                redirect: 'follow',
+                headers: {
+                    Accept:
+                        'application/json, text/javascript, */*; q=0.01'
+                },
+                signal: controller.signal
+            });
+
+            if (response.status === 403) {
+                throw new Error('RATE_LIMIT_403');
+            }
+
+            if (response.status === 429) {
+                throw new Error('RATE_LIMIT_429');
+            }
+
+            if (isChallengeUrl(response.url)) {
+                throw new Error('VERIFICATION_REQUIRED');
+            }
+
+            const text = await response.text();
+
+            if (!response.ok) {
+                throw new Error('API_HTTP_' + response.status);
+            }
+
+            let json;
+
+            try {
+                json = JSON.parse(text);
+            } catch (error) {
+                if (
+                    isChallengeText(text) ||
+                    (
+                        /<html/i.test(text) &&
+                        /验证|校验/i.test(text)
+                    )
+                ) {
+                    throw new Error('VERIFICATION_REQUIRED');
+                }
+
+                throw new Error('API_NON_JSON');
+            }
+
+            if (
+                json &&
+                json.code !== undefined &&
+                Number(json.code) !== 0
+            ) {
+                const message = cleanText(
+                    json.message || json.msg || ''
+                );
+
+                if (isChallengeText(message)) {
+                    throw new Error('VERIFICATION_REQUIRED');
+                }
+
+                throw new Error(
+                    `API_CODE_${json.code}:${message}`
+                );
+            }
+
+            return json;
+        } finally {
+            clearTimeout(timeout);
+        }
+    }
+
+    // ============================================================
+    // 原有动态接口字段转换
+    // ============================================================
+
+    function arrayToMap(array) {
+        const result = {};
+        if (!Array.isArray(array)) return result;
+
+        for (const item of array) {
+            if (!item || !item.name) continue;
+            result[String(item.name)] = item.value ?? '';
+        }
+
+        return result;
+    }
+
+    function metadataToMap(metadata) {
+        if (Array.isArray(metadata)) {
+            return arrayToMap(metadata);
+        }
+
+        if (metadata && typeof metadata === 'object') {
+            return metadata;
+        }
+
+        return {};
+    }
+
+    function flattenKeywords(value) {
+        if (!Array.isArray(value)) return [];
+
+        if (value.every(item => typeof item === 'string')) {
+            return unique(value);
+        }
+
+        const result = [];
+
+        for (const group of value) {
+            if (!group) continue;
+
+            if (typeof group === 'string') {
+                result.push(group);
+                continue;
+            }
+
+            const items = Array.isArray(group.items)
+                ? group.items
+                : [group];
+
+            for (const item of items) {
+                if (!item) continue;
+
+                if (typeof item === 'string') {
+                    result.push(item);
+                    continue;
+                }
+
+                const keyword =
+                    item.item ||
+                    item.title ||
+                    item.name ||
+                    item.value ||
+                    '';
+
+                if (keyword) result.push(keyword);
+            }
+        }
+
+        return unique(result);
+    }
+
+    function getDynamicTitle(item, metadata) {
+        const direct =
+            item?.title ||
+            item?.name ||
+            metadata.TI ||
+            metadata.CTI ||
+            metadata.TITLE ||
+            metadata.Title ||
+            '';
+
+        if (direct) return cleanText(direct);
+
+        if (Array.isArray(item?.titles)) {
+            const found = item.titles.find(
+                value => value?.title || value?.item || value?.value
+            );
+
+            if (found) {
+                return cleanText(
+                    found.title || found.item || found.value
+                );
+            }
+        }
+
+        return '';
+    }
+
+    function normalizeAuthors(authors) {
+        if (!Array.isArray(authors)) return [];
+
+        return unique(
+            authors.map(author => {
+                if (typeof author === 'string') return author;
+
+                return (
+                    author?.title ||
+                    author?.name ||
+                    author?.value ||
+                    ''
+                );
+            })
+        );
+    }
+
+    function normalizeLiteratureItem(item, keywordMode) {
+        const metadata = metadataToMap(item?.metadata);
+        const source = item?.source || {};
+
+        return {
+            id: cleanText(
+                item?.id || metadata.FN || metadata.PFN || ''
+            ),
+
+            title: getDynamicTitle(item, metadata),
+
+            authors: normalizeAuthors(item?.authors),
+
+            journal: cleanText(
+                item?.journal || source.title || metadata.LY || ''
+            ),
+
+            year: pickYear(
+                item?.year,
+                source.year,
+                metadata.YE,
+                metadata.PT,
+                item?.publication_time
+            ),
+
+            issue: cleanText(
+                item?.issue || source.issue || metadata.QI || ''
+            ),
+
+            keywords: cleanKeywords(
+                flattenKeywords(item?.keywords),
+                keywordMode
+            )
+        };
+    }
+
+    function literatureKey(item) {
+        const id = cleanText(item?.id);
+
+        if (id) return 'id:' + id.toUpperCase();
+
+        return [
+            cleanText(item?.title).toLowerCase(),
+            (item?.authors || []).join('|').toLowerCase(),
+            cleanText(item?.journal).toLowerCase(),
+            cleanText(item?.year)
+        ].join('::');
+    }
+
+    function dedupeLiterature(items, limit = DISPLAY_LIMIT) {
+        const result = [];
+        const seen = new Set();
+
+        for (const item of items || []) {
+            if (!item || !item.title) continue;
+
+            const key = literatureKey(item);
+            if (seen.has(key)) continue;
+
+            seen.add(key);
+            result.push(item);
+
+            if (result.length >= limit) break;
+        }
+
+        return result;
+    }
+
+    // ============================================================
+    // 原有参考文献采集
+    // ============================================================
+
+    function getCitationContext(doc, detailUrl) {
+        let raw = doc.querySelector('#paramkcmslink')?.value || '';
+
+        raw = raw
+            .replace(/&amp;/g, '&')
+            .replace(/^\?/, '');
+
+        const hiddenParams = new URLSearchParams(raw);
+
+        let pageParams;
+
+        try {
+            pageParams = new URL(detailUrl).searchParams;
+        } catch (error) {
+            pageParams = new URLSearchParams();
+        }
+
+        return {
+            v:
+                hiddenParams.get('v') ||
+                pageParams.get('v') ||
+                '',
+
+            uniplatform:
+                hiddenParams.get('uniplatform') ||
+                pageParams.get('uniplatform') ||
+                'NZKPT',
+
+            apiHost:
+                cleanText(doc.querySelector('#apiHost')?.value) ||
+                'https://kns.cnki.net/restapi'
+        };
+    }
+
+    async function collectReferences(doc, detailUrl, keywordMode) {
+        const context = getCitationContext(doc, detailUrl);
+
+        if (!context.v) {
+            return { count: 0, items: [] };
+        }
+
+        const collected = [];
+        const base = context.apiHost.replace(/\/+$/, '');
+
+        for (const type of REFERENCE_TYPES) {
+            if (
+                dedupeLiterature(collected, DISPLAY_LIMIT).length >=
+                DISPLAY_LIMIT
+            ) {
+                break;
+            }
+
+            const url = new URL(
+                base + '/citation-api/v1/literature/references'
+            );
+
+            url.searchParams.set('v', context.v);
+            url.searchParams.set('uniplatform', context.uniplatform);
+            url.searchParams.set('type', type);
+            url.searchParams.set('start', '1');
+            url.searchParams.set('size', String(DISPLAY_LIMIT));
+
+            try {
+                const json = await fetchJson(url.href);
+
+                const rows = Array.isArray(json?.data?.data)
+                    ? json.data.data
+                    : [];
+
+                for (const row of rows) {
+                    collected.push(
+                        normalizeLiteratureItem(row, keywordMode)
+                    );
+                }
+            } catch (error) {
+                if (isFatalError(error)) throw error;
+
+                console.debug(
+                    '[CNKI Collector] Reference type skipped:',
+                    type,
+                    error
+                );
+            }
+
+            if (
+                dedupeLiterature(collected, DISPLAY_LIMIT).length <
+                DISPLAY_LIMIT
+            ) {
+                await sleep(500);
+            }
+        }
+
+        const items = dedupeLiterature(collected, DISPLAY_LIMIT);
+
+        return { count: items.length, items };
+    }
+
+    // ============================================================
+    // 原有相似文献采集
+    // ============================================================
+
+    function getSimilarArticleId(doc) {
+        const links = [
+            ...doc.querySelectorAll(
+                'a[href*="ai.cnki.net/trans"]'
+            )
+        ];
+
+        for (const link of links) {
+            try {
+                const url = new URL(
+                    link.href,
+                    'https://kns.cnki.net/'
+                );
+
+                const cid = url.searchParams.get('cid');
+                if (cid) return cid;
+            } catch (error) {
+                // 继续查找
+            }
+        }
+
+        const scriptText = [...doc.scripts]
+            .map(script => script.textContent || '')
+            .join('\n');
+
+        const match = scriptText.match(
+            /initCNKIAiToolSiler\(\s*["'][^"']*["']\s*,\s*["'][^"']*["']\s*,\s*["'][^"']*["']\s*,\s*["'][^"']*["']\s*,\s*["']([^"']+)["']/
+        );
+
+        return match ? match[1] : '';
+    }
+
+    function getSimilarProductId(doc) {
+        const resource = cleanText(
+            doc.querySelector('#paramresource')?.value
+        ).toUpperCase();
+
+        const dbcode = cleanText(
+            doc.querySelector('#paramdbcode')?.value
+        ).toUpperCase();
+
+        if (
+            resource === 'JOURNAL' ||
+            /^(CAPJ|CJFQ|CJFD)/.test(dbcode)
+        ) {
+            return 'CJFD';
+        }
+
+        if (
+            /THESIS|DISSERTATION|MASTER|DOCTOR/.test(resource) ||
+            /CDFD|CMFD/.test(dbcode)
+        ) {
+            return 'CDMD';
+        }
+
+        if (
+            /CONFERENCE/.test(resource) ||
+            /CPFD/.test(dbcode)
+        ) {
+            return 'CPFD';
+        }
+
+        if (
+            /NEWSPAPER/.test(resource) ||
+            /CCND/.test(dbcode)
+        ) {
+            return 'CCND';
+        }
+
+        if (
+            /YEARBOOK/.test(resource) ||
+            /CYFD/.test(dbcode)
+        ) {
+            return 'CYFD';
+        }
+
+        return '';
+    }
+
+    async function collectSimilar(doc, keywordMode) {
+        const articleId = getSimilarArticleId(doc);
+        const productId = getSimilarProductId(doc);
+
+        if (!articleId || !productId) {
+            return { count: 0, items: [] };
+        }
+
+        const url = new URL(
+            'https://kns.cnki.net/openapi/usercenter-api/v1/recommend/similar/articles'
+        );
+
+        url.searchParams.set('productid', productId);
+        url.searchParams.set('trace', 'JZTJ_KCMSSIMILAR');
+        url.searchParams.set('articleid', articleId);
+        url.searchParams.set('size', String(DISPLAY_LIMIT));
+
+        try {
+            const json = await fetchJson(url.href);
+            let rows = [];
+
+            if (Array.isArray(json?.data)) {
+                rows = json.data;
+            } else if (Array.isArray(json?.data?.data)) {
+                rows = json.data.data;
+            }
+
+            const items = dedupeLiterature(
+                rows.map(row =>
+                    normalizeLiteratureItem(row, keywordMode)
+                ),
+                DISPLAY_LIMIT
+            );
+
+            return { count: items.length, items };
+        } catch (error) {
+            if (isFatalError(error)) throw error;
+
+            console.debug(
+                '[CNKI Collector] Similar API failed:',
+                error
+            );
+
+            return { count: 0, items: [] };
+        }
+    }
+
+    // ============================================================
+    // 原有单篇处理流程
+    // ============================================================
+
+    async function enrichArticle(article, doc, settings) {
+        if (settings.collectReferences) {
+            article.references = await collectReferences(
+                doc,
+                article.detail_url,
+                settings.keywordMode
+            );
+        }
+
+        if (settings.collectSimilar) {
+            article.similar_articles = await collectSimilar(
+                doc,
+                settings.keywordMode
+            );
+        }
+
+        article.collected_references = !!settings.collectReferences;
+        article.collected_similar = !!settings.collectSimilar;
+        article.keyword_mode = settings.keywordMode;
+        article.schema_version = SCHEMA_VERSION;
+        article.collected_at = new Date().toISOString();
+
+        return article;
+    }
+
+    async function collectByUrl(url, settings) {
+        const result = await fetchDetailDocument(url);
+
+        const article = extractStaticMetadata(
+            result.doc,
+            result.finalUrl,
+            settings.keywordMode
+        );
+
+        if (!article.title && !article.article_id) {
+            throw new Error('DETAIL_PARSE_EMPTY');
+        }
+
+        return enrichArticle(article, result.doc, settings);
+    }
+
+    async function collectCurrentPage(settings) {
+        if (detectChallengeDocument(document, location.href)) {
+            throw new Error('VERIFICATION_REQUIRED');
+        }
+
+        const article = extractStaticMetadata(
+            document,
+            location.href,
+            settings.keywordMode
+        );
+
+        if (!article.title && !article.article_id) {
+            throw new Error('DETAIL_PARSE_EMPTY');
+        }
+
+        return enrichArticle(article, document, settings);
+    }
+
+    function existingRecordIsEnough(existing, settings) {
+        if (!existing) return false;
+
+        if (
+            Number(existing.schema_version) < SCHEMA_VERSION
+        ) {
+            return false;
+        }
+
+        /*
+         * 唯一新增的跳过条件：
+         * 没采过作者补充信息的旧记录，需要重新采一次。
+         * 不清空旧数据库。
+         */
+        if (
+            Number(existing.author_info_version) !==
+            AUTHOR_INFO_VERSION
+        ) {
+            return false;
+        }
+
+        if (existing.keyword_mode !== settings.keywordMode) {
+            return false;
+        }
+
+        if (
+            settings.collectReferences &&
+            !existing.collected_references
+        ) {
+            return false;
+        }
+
+        if (
+            settings.collectSimilar &&
+            !existing.collected_similar
+        ) {
+            return false;
+        }
+
+        return true;
+    }
+
+    // ============================================================
+    // 原有搜索结果识别
+    // ============================================================
+
+    function getResultLinks() {
+    /*
+     * 搜索结果识别修复：
+     *
+     * 1. 只处理 #ModuleSearchResult。
+     * 2. 根据表头定位“题名”列。
+     * 3. 每个结果行最多提取一个题名链接。
+     * 4. 不扫描被引、下载、作者、来源、操作等列。
+     * 5. 不把论文数量写死为20。
+     * 6. 保持原返回结构：[{ url, title }, ...]。
+     */
+
+    const root = document.querySelector('#ModuleSearchResult');
+
+    // 结果区域还没加载时，返回空数组等待。
+    // 不再退回整个 document 搜索，避免收集到其他模块。
+    if (!root) return [];
+
+    const titleHeaderNames = new Set([
+        '题名',
+        '篇名',
+        '标题',
+        '文献题名',
+        '文献标题'
+    ]);
+
+    function normalizedHeader(text) {
+        return String(text || '')
+            .replace(/\s+/g, '')
+            .replace(/[↑↓↕⇅▲▼△▽▴▾:：]/g, '')
+            .trim();
+    }
+
+    function isDisplayed(element) {
+        /*
+         * 检查元素及祖先是否隐藏。
+         * 不要求元素必须处在当前屏幕视口内：
+         * 页面下方尚未滚动到的论文也应被识别。
+         */
+        if (!element) return false;
+
+        const view = element.ownerDocument.defaultView;
+
+        for (
+            let node = element;
+            node && node.nodeType === 1;
+            node = node.parentElement
+        ) {
+            if (
+                node.hidden ||
+                node.getAttribute('aria-hidden') === 'true'
+            ) {
+                return false;
+            }
+
+            if (view) {
+                const style = view.getComputedStyle(node);
+
+                if (
+                    style.display === 'none' ||
+                    style.visibility === 'hidden' ||
+                    style.visibility === 'collapse'
+                ) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
+    function findTitleColumn(table) {
+        /*
+         * 优先读取 thead。
+         * 没有 thead 时，只检查表格前部的表头候选行。
+         *
+         * 使用 colspan / rowspan 计算逻辑列位置，
+         * 避免前面有序号列、选择框列时发生偏移。
+         */
+        const ownRows = Array.from(table.rows).filter(
+            row => row.closest('table') === table
+        );
+
+        const headerRows = table.tHead
+            ? Array.from(table.tHead.rows)
+            : ownRows.slice(0, 6).filter(
+                row => !row.querySelector(
+                    'a[href*="/kcms2/article/abstract"]'
+                )
+            );
+
+        const grid = [];
+
+        for (let rowIndex = 0; rowIndex < headerRows.length; rowIndex++) {
+            const row = headerRows[rowIndex];
+
+            if (!grid[rowIndex]) grid[rowIndex] = [];
+
+            let columnIndex = 0;
+
+            for (const cell of Array.from(row.cells)) {
+                // 跳过被上一行 rowspan 占用的列。
+                while (grid[rowIndex][columnIndex]) {
+                    columnIndex++;
+                }
+
+                const columnSpan = Math.max(1, cell.colSpan || 1);
+
+                const rowSpan = cell.rowSpan === 0
+                    ? headerRows.length - rowIndex
+                    : Math.max(1, cell.rowSpan || 1);
+
+                const start = columnIndex;
+                const end = start + columnSpan;
+
+                for (
+                    let r = rowIndex;
+                    r < rowIndex + rowSpan;
+                    r++
+                ) {
+                    if (!grid[r]) grid[r] = [];
+
+                    for (let c = start; c < end; c++) {
+                        grid[r][c] = true;
+                    }
+                }
+
+                const label = normalizedHeader(cell.textContent);
+
+                if (titleHeaderNames.has(label)) {
+                    return {
+                        start,
+                        end,
+                        headerRow: row
+                    };
+                }
+
+                columnIndex = end;
+            }
+        }
+
+        return null;
+    }
+
+    function getTitleCells(row, titleColumn) {
+        /*
+         * 找出数据行中落在题名列范围内的单元格。
+         *
+         * 广告、提示等横跨整张表格的 colspan 单元格，
+         * 不作为题名单元格。
+         */
+        const result = [];
+        let columnIndex = 0;
+
+        for (const cell of Array.from(row.cells)) {
+            const start = columnIndex;
+            const end = start + Math.max(1, cell.colSpan || 1);
+
+            if (
+                cell.tagName === 'TD' &&
+                start >= titleColumn.start &&
+                end <= titleColumn.end
+            ) {
+                result.push(cell);
+            }
+
+            columnIndex = end;
+        }
+
+        return result;
+    }
+
+    function readTitleLink(cell, row, table) {
+        for (const anchor of cell.querySelectorAll('a[href]')) {
+            // 排除嵌套表格、嵌套结果区域中的链接。
+            if (
+                anchor.closest('tr') !== row ||
+                anchor.closest('table') !== table ||
+                !isDisplayed(anchor)
+            ) {
+                continue;
+            }
+
+            const rawHref = anchor.getAttribute('href');
+
+            if (
+                !rawHref ||
+                /^(?:javascript:|mailto:|tel:|#)/i.test(rawHref)
+            ) {
+                continue;
+            }
+
+            let parsed;
+
+            try {
+                parsed = new URL(
+                    rawHref,
+                    document.baseURI || location.href
+                );
+            } catch (error) {
+                continue;
+            }
+
+            if (
+                !/^https?:$/.test(parsed.protocol) ||
+                !/^\/kcms2\/article\/abstract\/?$/i.test(
+                    parsed.pathname
+                )
+            ) {
+                continue;
+            }
+
+            const title = cleanText(anchor.textContent);
+
+            if (!title) continue;
+
+            // 额外保护：纯数字不能作为题名链接。
+            // 正常的“3D……”等含文字题名不会被排除。
+            if (/^[\d０-９\s.,，]+$/.test(title)) {
+                continue;
+            }
+
+            // 排除纯操作文字，不影响真正的论文题名。
+            if (
+                /^(?:被引|被引频次|引用|下载|PDF下载|CAJ下载|HTML阅读|原版阅读|查看|详情|更多)$/
+                    .test(title)
+            ) {
+                continue;
+            }
+
+            return {
+                url: cleanDetailUrl(parsed.href),
+                title
+            };
+        }
+
+        return null;
+    }
+
+    const tableResults = [];
+
+    for (const table of root.querySelectorAll('table')) {
+        if (!isDisplayed(table)) continue;
+
+        const titleColumn = findTitleColumn(table);
+
+        // 无法确定题名列时，不退回“扫描所有链接”。
+        if (!titleColumn) continue;
+
+        const result = [];
+        const seen = new Set();
+
+        for (const row of Array.from(table.rows)) {
+            if (
+                row.closest('table') !== table ||
+                row === titleColumn.headerRow ||
+                row.closest('thead') ||
+                !isDisplayed(row)
+            ) {
+                continue;
+            }
+
+            const titleCells = getTitleCells(row, titleColumn);
+
+            let item = null;
+
+            for (const cell of titleCells) {
+                item = readTitleLink(cell, row, table);
+
+                if (item) break;
+            }
+
+            // 每个结果行只接受一个题名链接。
+            if (!item) continue;
+
+            // 去重时忽略页内锚点，但不改实际采集URL。
+            let key = item.url;
+
+            try {
+                const parsed = new URL(item.url);
+                parsed.hash = '';
+                key = parsed.href;
+            } catch (error) {
+                // 使用原URL作为去重键。
+            }
+
+            if (seen.has(key)) continue;
+
+            seen.add(key);
+            result.push(item);
+        }
+
+        if (result.length) {
+            tableResults.push(result);
+        }
+    }
+
+    /*
+     * 正常列表视图只有一张结果表。
+     * 若同时存在多张候选表，只使用结果行最多的一张，
+     * 不把不同表格的链接混合相加。
+     */
+    tableResults.sort((a, b) => b.length - a.length);
+
+    return tableResults[0] || [];
+}
+    async function waitForResults(timeoutMs = 30000) {
+        const start = Date.now();
+
+        while (Date.now() - start < timeoutMs) {
+            const result = getResultLinks();
+            if (result.length) return result;
+            await sleep(300);
+        }
+
+        return [];
+    }
+
+    function resultSignature() {
+        return getResultLinks()
+            .slice(0, 3)
+            .map(item => item.url)
+            .join('|');
+    }
+
+    // ============================================================
+    // 原有下一页识别
+    // ============================================================
+
+    function findNextButton() {
+        const selectors = [
+            '#PageNext',
+            'a#PageNext',
+            'a.next',
+            '.pages a.next',
+            '.pager a.next',
+            '.pagination a.next',
+            '.page-next',
+            '.layui-laypage-next',
+            'a[title="下一页"]',
+            'a[title*="下一页"]',
+            'button[title*="下一页"]'
+        ];
+
+        for (const selector of selectors) {
+            const element = document.querySelector(selector);
+
+            if (
+                element &&
+                !element.disabled &&
+                !element.classList.contains('disabled') &&
+                !element.classList.contains('disable')
+            ) {
+                return element;
+            }
+        }
+
+        for (
+            const element
+            of document.querySelectorAll('a,button')
+        ) {
+            const text = cleanText(element.textContent);
+
+            if (text === '下一页' || text === '下页') {
+                if (
+                    !element.disabled &&
+                    !element.classList.contains('disabled')
+                ) {
+                    return element;
+                }
+            }
+        }
+
+        return null;
+    }
+
+    async function waitResultChange(
+        oldSignature,
+        timeoutMs = 30000
+    ) {
+        const start = Date.now();
+
+        while (Date.now() - start < timeoutMs) {
+            const newSignature = resultSignature();
+
+            if (
+                newSignature &&
+                newSignature !== oldSignature
+            ) {
+                return true;
+            }
+
+            await sleep(400);
+        }
+
+        return false;
+    }
+
+    // ============================================================
+    // 原有运行状态
+    // ============================================================
+
+    function defaultRunState() {
+        return {
+            active: false,
+            paused: false,
+            targetPages: 0,
+            pagesDone: 0,
+            fingerprint: ''
+        };
+    }
+
+    function getRunState() {
+        return {
+            ...defaultRunState(),
+            ...(gmGet(RUN_KEY, {}) || {})
+        };
+    }
+
+    function setRunState(patch) {
+        const state = {
+            ...getRunState(),
+            ...patch
+        };
+
+        gmSet(RUN_KEY, state);
+        refreshButtons();
+
+        return state;
+    }
+
+    function searchFingerprint() {
+        try {
+            const url = new URL(location.href);
+
+            return [
+                location.pathname,
+                url.searchParams.get('kw') || '',
+                url.searchParams.get('crossids') || '',
+                url.searchParams.get('korder') || ''
+            ].join('|');
+        } catch (error) {
+            return location.pathname;
+        }
+    }
+
+    async function waitWhilePaused() {
+        while (true) {
+            const state = getRunState();
+
+            if (!state.active) {
+                throw new Error('USER_STOPPED');
+            }
+
+            if (!state.paused) return;
+
+            setStatus('已暂停，点击“继续”恢复。');
+            await sleep(500);
+        }
+    }
+
+    // ============================================================
+    // 原有批量运行流程
+    // ============================================================
+
+    async function processSearchItem(
+        item,
+        index,
+        total,
+        settings
+    ) {
+        await waitWhilePaused();
+
+        setStatus(
+            `正在采集 ${index + 1}/${total}：` +
+            (item.title || '读取详情页')
+        );
+
+        if (settings.skipExisting) {
+            const existing = await dbGetByUrl(item.url);
+
+            if (existingRecordIsEnough(existing, settings)) {
+                console.log(
+                    '[CNKI Collector] SKIP:',
+                    item.title
+                );
+
+                return { skipped: true };
+            }
+        }
+
+        const article = await collectByUrl(item.url, settings);
+        article.key = article.article_id || article.detail_url;
+
+        await dbPut(article);
+        await refreshCounter();
+
+        return { skipped: false, article };
+    }
+
+    function describeArticle(article) {
+        return (
+            `参考文献 ${article?.references?.count ?? 0}，` +
+            `相似文献 ${article?.similar_articles?.count ?? 0}`
+        );
+    }
+
+    let runningPromise = null;
+
+    async function runBatch() {
+        if (runningPromise) return runningPromise;
+
+        runningPromise = (async function () {
+            let consecutiveFailures = 0;
+
+            try {
+                while (true) {
+                    let state = getRunState();
+                    if (!state.active) return;
+
+                    await waitWhilePaused();
+
+                    if (state.pagesDone >= state.targetPages) {
+                        setRunState({
+                            active: false,
+                            paused: false
+                        });
+
+                        setStatus('采集完成。');
+                        return;
+                    }
+
+                    const items = await waitForResults();
+
+                    if (!items.length) {
+                        throw new Error('NO_SEARCH_RESULTS');
+                    }
+
+                    state = getRunState();
+
+                    setStatus(
+                        `第 ${state.pagesDone + 1}/${state.targetPages} 页，` +
+                        `识别 ${items.length} 篇。`
+                    );
+
+                    for (let i = 0; i < items.length; i++) {
+                        await waitWhilePaused();
+
+                        try {
+                            const settings = loadSettings();
+
+                            const result = await processSearchItem(
+                                items[i],
+                                i,
+                                items.length,
+                                settings
+                            );
+
+                            consecutiveFailures = 0;
+
+                            if (result.article) {
+                                setStatus(
+                                    `已保存：${result.article.title}；` +
+                                    describeArticle(result.article)
+                                );
+                            }
+                        } catch (error) {
+                            console.error('[CNKI Collector]', error);
+
+                            if (isFatalError(error)) {
+                                setRunState({ paused: true });
+
+                                setStatus(
+                                    '检测到验证码、403 或 429，任务已自动暂停。'
+                                );
+
+                                return;
+                            }
+
+                            consecutiveFailures++;
+
+                            if (consecutiveFailures >= 3) {
+                                setRunState({ paused: true });
+
+                                setStatus(
+                                    '连续失败 3 篇，已保护性暂停。'
+                                );
+
+                                return;
+                            }
+                        }
+
+                        if (i < items.length - 1) {
+                            const delay =
+                                loadSettings().articleDelayMs;
+
+                            setStatus(
+                                `等待 ${(delay / 1000).toFixed(1)} 秒后继续下一篇……`
+                            );
+
+                            await sleep(delay);
+                        }
+                    }
+
+                    state = getRunState();
+
+                    const completedPages = state.pagesDone + 1;
+
+                    setRunState({
+                        pagesDone: completedPages
+                    });
+
+                    if (completedPages >= state.targetPages) {
+                        setRunState({
+                            active: false,
+                            paused: false
+                        });
+
+                        setStatus('采集完成。');
+                        return;
+                    }
+
+                    const pageDelay =
+                        loadSettings().pageDelayMs;
+
+                    setStatus(
+                        `本页完成，等待 ${(pageDelay / 1000).toFixed(1)} 秒后进入下一页……`
+                    );
+
+                    await sleep(pageDelay);
+                    await waitWhilePaused();
+
+                    const oldSignature = resultSignature();
+                    const nextButton = findNextButton();
+
+                    if (!nextButton) {
+                        setRunState({ active: false });
+
+                        setStatus(
+                            '未找到“下一页”按钮，任务已停止。'
+                        );
+
+                        return;
+                    }
+
+                    setStatus('正在进入下一页……');
+                    nextButton.click();
+
+                    const changed =
+                        await waitResultChange(oldSignature);
+
+                    if (!changed) {
+                        await sleep(1200);
+
+                        if (resultSignature() === oldSignature) {
+                            setRunState({ paused: true });
+
+                            setStatus(
+                                '点击下一页后未检测到搜索结果变化，已暂停。'
+                            );
+
+                            return;
+                        }
+                    }
+                }
+            } catch (error) {
+                const code = String(error?.message || error);
+
+                if (code !== 'USER_STOPPED') {
+                    console.error('[CNKI Collector]', error);
+
+                    setRunState({ paused: true });
+                    setStatus('运行异常：' + code);
+                }
+            } finally {
+                runningPromise = null;
+                await refreshCounter();
+                refreshButtons();
+            }
+        })();
+
+        return runningPromise;
+    }
+
+    // ============================================================
+    // 导出前清洗
+    // ============================================================
+
+    function sanitizeRelation(block, keywordMode) {
+        const rawItems =
+            block?.items ||
+            block?.displayed_items ||
+            [];
+
+        const items = dedupeLiterature(
+            rawItems.map(item =>
+                normalizeLiteratureItem(item || {}, keywordMode)
+            ),
+            DISPLAY_LIMIT
+        );
+
+        return { count: items.length, items };
+    }
+
+    function authorLegacyNames(values) {
+        /*
+         * 兼容数据库里可能残留的旧版对象数组。
+         * 只用于防止导出出现 [object Object]。
+         */
+        if (!Array.isArray(values)) return [];
+
+        return unique(
+            values.map(value =>
+                typeof value === 'string'
+                    ? value
+                    : (
+                        value?.name ||
+                        value?.title ||
+                        value?.value ||
+                        ''
+                    )
+            )
+        );
+    }
+
+    function sanitizeAuthorDetails(article, institutionCount) {
+        /*
+         * 没有本版作者补充结果的旧记录：
+         * 不凭旧字符串反推通讯邮箱或机构关系。
+         */
+        if (
+            Number(article.author_info_version) !==
+            AUTHOR_INFO_VERSION
+        ) {
+            return [];
+        }
+
+        if (!Array.isArray(article.author_details)) {
+            return [];
+        }
+
+        return article.author_details
+            .map(author => {
+                const row = {
+                    name: cleanText(author.name),
+
+                    institution_indexes: [
+                        ...new Set(
+                            (author.institution_indexes || [])
+                                .map(Number)
+                                .filter(index =>
+                                    Number.isInteger(index) &&
+                                    index >= 1 &&
+                                    index <= institutionCount
+                                )
+                        )
+                    ],
+
+                    corresponding: author.corresponding === true,
+
+                    emails: unique(
+                        (author.emails || [])
+                            .flatMap(authorExtractEmails)
+                    )
+                };
+
+                if (
+                    Array.isArray(author.affiliation_labels) &&
+                    author.affiliation_labels.length
+                ) {
+                    row.affiliation_labels =
+                        unique(author.affiliation_labels);
+                }
+
+                return row;
+            })
+            .filter(author => author.name);
+    }
+
+    function sanitizeArticle(article, keywordMode) {
+        const authors = authorLegacyNames(article.authors);
+        const institutions = authorLegacyNames(article.institutions);
+
+        const output = {
+            article_id: cleanText(article.article_id),
+            title: cleanText(article.title),
+
+            // 保留原有字段类型。
+            authors,
+            institutions,
+
+            // 作者补充数据单独存放。
+            author_details: sanitizeAuthorDetails(
+                article,
+                institutions.length
+            ),
+
+            journal: cleanText(article.journal),
+            abstract: cleanText(article.abstract),
+
+            keywords: cleanKeywords(
+                article.keywords || [],
+                keywordMode
+            ),
+
+            funds: unique(article.funds || []),
+            album: cleanText(article.album),
+            subject: cleanText(article.subject),
+            clc: cleanText(article.clc),
+            online_public_time:
+                cleanText(article.online_public_time),
+
+            catalog: Array.isArray(article.catalog)
+                ? article.catalog
+                    .map(item => ({
+                        level: Number(item.level) || 1,
+                        title: cleanText(item.title)
+                    }))
+                    .filter(item => item.title)
+                : [],
+
+            references: sanitizeRelation(
+                article.references,
+                keywordMode
+            ),
+
+            similar_articles: sanitizeRelation(
+                article.similar_articles,
+                keywordMode
+            ),
+
+            detail_url: cleanDetailUrl(article.detail_url)
+        };
+
+        /*
+         * 没有异常时不输出额外诊断字段，保持数据精简。
+         */
+        if (
+            Array.isArray(article.unmatched_correspondence) &&
+            article.unmatched_correspondence.length
+        ) {
+            output.unmatched_correspondence =
+                article.unmatched_correspondence.map(item => ({
+                    names: unique(item.names || []),
+
+                    email_groups:
+                        (item.email_groups || []).map(group =>
+                            unique(
+                                (Array.isArray(group) ? group : [group])
+                                    .flatMap(authorExtractEmails)
+                            )
+                        ),
+
+                    reason: cleanText(item.reason)
+                }));
+        }
+
+        const warnings = unique(
+            article.author_parse_warnings || []
+        );
+
+        if (
+            Number(article.author_info_version) !==
+            AUTHOR_INFO_VERSION &&
+            !warnings.length
+        ) {
+            warnings.push('author_details_not_collected');
+        }
+
+        if (warnings.length) {
+            output.author_parse_warnings = warnings;
+        }
+
+        return output;
+    }
+
+    // ============================================================
+    // 原有 JSON 下载入口
+    // ============================================================
+
+    async function exportJSON() {
+        const settings = loadSettings();
+        const rawArticles = await dbGetAll();
+
+        const articles = rawArticles.map(article =>
+            sanitizeArticle(article, settings.keywordMode)
+        );
+
+        const output = {
+            generator: 'CNKI Public Metadata Collector',
+            version: VERSION,
+            keyword_mode: settings.keywordMode,
+            exported_at: new Date().toISOString(),
+            count: articles.length,
+            articles
+        };
+
+        downloadText(
+            `cnki_metadata_clean_${timestamp()}.json`,
+            JSON.stringify(output, null, 2),
+            'application/json;charset=utf-8'
+        );
+    }
+
+    // ============================================================
+    // 原有 CSV 下载入口
+    // 新列追加到末尾，原有列的顺序不改
+    // ============================================================
+
+    function csvCell(value) {
+        let text;
+
+        if (value === null || value === undefined) {
+            text = '';
+        } else if (typeof value === 'object') {
+            text = JSON.stringify(value);
+        } else {
+            text = String(value);
+        }
+
+        return (
+            '"' +
+            text
+                .replace(/"/g, '""')
+                .replace(/\r?\n/g, ' ') +
+            '"'
+        );
+    }
+
+    async function exportCSV() {
+        const settings = loadSettings();
+        const rawArticles = await dbGetAll();
+
+        const data = rawArticles.map(article =>
+            sanitizeArticle(article, settings.keywordMode)
+        );
+
+        const headers = [
+            'article_id',
+            'title',
+            'authors',
+            'institutions',
+            'journal',
+            'abstract',
+            'keywords',
+            'funds',
+            'album',
+            'subject',
+            'clc',
+            'online_public_time',
+            'catalog',
+            'references_count',
+            'references',
+            'similar_count',
+            'similar_articles',
+            'detail_url',
+
+            // 本版新增，追加到原有列后。
+            'author_details',
+            'unmatched_correspondence',
+            'author_parse_warnings'
+        ];
+
+        const rows = [
+            headers.map(csvCell).join(',')
+        ];
+
+        for (const article of data) {
+            rows.push(
+                [
+                    article.article_id,
+                    article.title,
+                    article.authors.join('；'),
+                    article.institutions.join('；'),
+                    article.journal,
+                    article.abstract,
+                    article.keywords.join('；'),
+                    article.funds.join('；'),
+                    article.album,
+                    article.subject,
+                    article.clc,
+                    article.online_public_time,
+                    article.catalog,
+                    article.references.count,
+                    article.references.items,
+                    article.similar_articles.count,
+                    article.similar_articles.items,
+                    article.detail_url,
+
+                    article.author_details,
+                    article.unmatched_correspondence || '',
+                    article.author_parse_warnings || ''
+                ]
+                    .map(csvCell)
+                    .join(',')
+            );
+        }
+
+        downloadText(
+            `cnki_metadata_clean_${timestamp()}.csv`,
+            '\uFEFF' + rows.join('\r\n'),
+            'text/csv;charset=utf-8'
+        );
+    }
+
+    // ============================================================
+    // 原有面板和按钮
+    // ============================================================
+
+    let panel = null;
+
+    function setStatus(text) {
+        if (!panel) return;
+
+        const element = panel.querySelector('#ccStatus');
+        if (element) element.textContent = text;
+    }
+
+    async function refreshCounter() {
+        if (!panel) return;
+
+        try {
+            const count = await dbCount();
+            const saved = panel.querySelector('#ccSaved');
+
+            if (saved) saved.textContent = String(count);
+
+            if (IS_SEARCH) {
+                const detected =
+                    panel.querySelector('#ccDetected');
+
+                if (detected) {
+                    detected.textContent =
+                        String(getResultLinks().length);
+                }
+            }
+        } catch (error) {
+            console.warn(error);
+        }
+    }
+
+    function refreshButtons() {
+        if (!panel) return;
+
+        const state = getRunState();
+
+        const start = panel.querySelector('#ccStart');
+        const pause = panel.querySelector('#ccPause');
+        const resume = panel.querySelector('#ccResume');
+        const stop = panel.querySelector('#ccStop');
+
+        if (start) start.disabled = state.active;
+
+        if (pause) {
+            pause.disabled = !state.active || state.paused;
+        }
+
+        if (resume) {
+            resume.disabled = !state.active || !state.paused;
+        }
+
+        if (stop) stop.disabled = !state.active;
+    }
+
+    function readSettingsFromUI() {
+        const old = loadSettings();
+        if (!panel) return old;
+
+        const get = id => panel.querySelector('#' + id);
+
+        const settings = {
+            pages: Math.max(
+                1,
+                Math.min(
+                    100,
+                    Number(get('ccPages')?.value || old.pages)
+                )
+            ),
+
+            articleDelayMs: Math.max(
+                1000,
+                Number(
+                    get('ccArticleDelay')?.value ||
+                    old.articleDelayMs / 1000
+                ) * 1000
+            ),
+
+            pageDelayMs: Math.max(
+                1000,
+                Number(
+                    get('ccPageDelay')?.value ||
+                    old.pageDelayMs / 1000
+                ) * 1000
+            ),
+
+            collectReferences:
+                get('ccReferences')?.checked ?? true,
+
+            collectSimilar:
+                get('ccSimilar')?.checked ?? true,
+
+            keywordMode:
+                get('ccKeywordMode')?.value === 'all'
+                    ? 'all'
+                    : 'cn',
+
+            skipExisting:
+                get('ccSkip')?.checked ?? true
+        };
+
+        saveSettings(settings);
+        return settings;
+    }
+
+    function buildPanel() {
+        const settings = loadSettings();
+
+        panel = document.createElement('div');
+        panel.id = 'cnkiPublicCollectorPanel';
+
+        panel.innerHTML = `
+<style>
+#cnkiPublicCollectorPanel {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 2147483647;
+    width: 355px;
+    padding: 14px;
+    box-sizing: border-box;
+    border: 1px solid #d5d8dc;
+    border-radius: 12px;
+    background: rgba(255,255,255,.97);
+    box-shadow: 0 12px 36px rgba(0,0,0,.16);
+    color: #202124;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Microsoft YaHei",
+        sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+}
+#cnkiPublicCollectorPanel * {
+    box-sizing: border-box;
+}
+#cnkiPublicCollectorPanel .cc-title {
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 700;
+}
+#cnkiPublicCollectorPanel .cc-meta {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 12px;
+}
+#cnkiPublicCollectorPanel .cc-status {
+    min-height: 40px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    background: #f4f5f6;
+    word-break: break-all;
+}
+#cnkiPublicCollectorPanel .cc-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 7px;
+}
+#cnkiPublicCollectorPanel .cc-row label {
+    flex: 1;
+}
+#cnkiPublicCollectorPanel input[type="number"],
+#cnkiPublicCollectorPanel select {
+    width: 130px;
+    padding: 4px 5px;
+    border: 1px solid #c9cdd2;
+    border-radius: 5px;
+    background: #fff;
+}
+#cnkiPublicCollectorPanel .cc-check {
+    display: block;
+    margin-top: 7px;
+}
+#cnkiPublicCollectorPanel .cc-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-top: 11px;
+}
+#cnkiPublicCollectorPanel button {
+    min-height: 32px;
+    border: 1px solid #c8ccd1;
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+}
+#cnkiPublicCollectorPanel button:hover:not(:disabled) {
+    background: #f4f5f6;
+}
+#cnkiPublicCollectorPanel button:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+#cnkiPublicCollectorPanel .cc-primary {
+    font-weight: 700;
+}
+#cnkiPublicCollectorPanel .cc-note {
+    margin-top: 9px;
+    padding-top: 8px;
+    border-top: 1px solid #e3e5e7;
+    color: #666;
+    font-size: 11px;
+    line-height: 1.6;
+}
+</style>
+
+<div class="cc-title">
+    CNKI 公开文献信息采集器 v${VERSION}
+</div>
+
+<div class="cc-meta">
+    ${
+        IS_SEARCH
+            ? `
+                <span>
+                    本页识别：
+                    <b id="ccDetected">0</b>
+                </span>
+            `
+            : `
+                <span>详情页测试</span>
+            `
+    }
+
+    <span>
+        已保存：
+        <b id="ccSaved">0</b>
+    </span>
+</div>
+
+<div id="ccStatus" class="cc-status">
+    等待操作
+</div>
+
+${
+    IS_SEARCH
+        ? `
+            <div class="cc-row">
+                <label>连续采集搜索结果页</label>
+                <input
+                    id="ccPages"
+                    type="number"
+                    min="1"
+                    max="100"
+                    value="${settings.pages}"
+                >
+            </div>
+        `
+        : ''
+}
+
+<div class="cc-row">
+    <label>每篇完成后等待（秒）</label>
+    <input
+        id="ccArticleDelay"
+        type="number"
+        min="1"
+        max="120"
+        step="1"
+        value="${settings.articleDelayMs / 1000}"
+    >
+</div>
+
+${
+    IS_SEARCH
+        ? `
+            <div class="cc-row">
+                <label>翻页前等待（秒）</label>
+                <input
+                    id="ccPageDelay"
+                    type="number"
+                    min="1"
+                    max="300"
+                    step="1"
+                    value="${settings.pageDelayMs / 1000}"
+                >
+            </div>
+        `
+        : ''
+}
+
+<div class="cc-row">
+    <label>关键词模式</label>
+
+    <select id="ccKeywordMode">
+        <option
+            value="cn"
+            ${settings.keywordMode === 'cn' ? 'selected' : ''}
+        >
+            仅中文（默认）
+        </option>
+
+        <option
+            value="all"
+            ${settings.keywordMode === 'all' ? 'selected' : ''}
+        >
+            中英文全部保留
+        </option>
+    </select>
+</div>
+
+<label class="cc-check">
+    <input
+        id="ccReferences"
+        type="checkbox"
+        ${settings.collectReferences ? 'checked' : ''}
+    >
+    参考文献（最多10条）
+</label>
+
+<label class="cc-check">
+    <input
+        id="ccSimilar"
+        type="checkbox"
+        ${settings.collectSimilar ? 'checked' : ''}
+    >
+    相似文献（最多10条）
+</label>
+
+<label class="cc-check">
+    <input
+        id="ccSkip"
+        type="checkbox"
+        ${settings.skipExisting ? 'checked' : ''}
+    >
+    跳过已经成功采集的论文
+</label>
+
+<div class="cc-buttons">
+    ${
+        IS_SEARCH
+            ? `
+                <button id="ccStart" class="cc-primary">
+                    开始采集
+                </button>
+
+                <button id="ccPause">暂停</button>
+                <button id="ccResume">继续</button>
+                <button id="ccStop">停止</button>
+            `
+            : `
+                <button id="ccSingle" class="cc-primary">
+                    测试当前论文
+                </button>
+            `
+    }
+
+    <button id="ccJSON">导出精简 JSON</button>
+    <button id="ccCSV">导出精简 CSV</button>
+    <button id="ccClear">清空数据</button>
+</div>
+
+<div class="cc-note">
+    基于你提供的 v0.1.4，保留原有采集和翻页入口。
+    <br>
+    作者姓名与机构列表仍为字符串数组；
+    对应关系和通讯邮箱放在 author_details 中。
+    <br>
+    机构关系不明确时保留标号，不猜配对。
+    <br>
+    参考文献、相似文献仍分别最多保存10条。
+</div>
+`;
+
+        document.body.appendChild(panel);
+
+        panel.querySelectorAll('input,select')
+            .forEach(element => {
+                element.addEventListener(
+                    'change',
+                    readSettingsFromUI
+                );
+            });
+
+        // --------------------------------------------------------
+        // 原有搜索页按钮
+        // --------------------------------------------------------
+
+        if (IS_SEARCH) {
+            panel.querySelector('#ccStart')
+                .addEventListener('click', () => {
+                    const settings = readSettingsFromUI();
+
+                    setRunState({
+                        active: true,
+                        paused: false,
+                        targetPages: settings.pages,
+                        pagesDone: 0,
+                        fingerprint: searchFingerprint()
+                    });
+
+                    runBatch();
+                });
+
+            panel.querySelector('#ccPause')
+                .addEventListener('click', () => {
+                    setRunState({ paused: true });
+
+                    setStatus(
+                        '当前请求完成后暂停。'
+                    );
+                });
+
+            panel.querySelector('#ccResume')
+                .addEventListener('click', () => {
+                    setRunState({ paused: false });
+
+                    setStatus('继续运行……');
+                    runBatch();
+                });
+
+            panel.querySelector('#ccStop')
+                .addEventListener('click', () => {
+                    setRunState({
+                        active: false,
+                        paused: false
+                    });
+
+                    setStatus('任务已停止。');
+                });
+        }
+
+        // --------------------------------------------------------
+        // 原有单篇按钮
+        // --------------------------------------------------------
+
+        if (IS_DETAIL) {
+            panel.querySelector('#ccSingle')
+                .addEventListener('click', async () => {
+                    try {
+                        const settings = readSettingsFromUI();
+
+                        setStatus(
+                            '正在采集并清洗当前论文……'
+                        );
+
+                        const article =
+                            await collectCurrentPage(settings);
+
+                        article.key =
+                            article.article_id ||
+                            article.detail_url;
+
+                        await dbPut(article);
+                        await refreshCounter();
+
+                        setStatus(
+                            `采集成功：${article.title}；` +
+                            describeArticle(article)
+                        );
+                    } catch (error) {
+                        console.error(
+                            '[CNKI Collector]',
+                            error
+                        );
+
+                        if (isFatalError(error)) {
+                            setStatus(
+                                '检测到验证码、403 或 429，已停止动态请求。'
+                            );
+                        } else {
+                            setStatus(
+                                '采集失败：' +
+                                String(error?.message || error)
+                            );
+                        }
+                    }
+                });
+        }
+
+        // --------------------------------------------------------
+        // 原有文件导出按钮
+        // --------------------------------------------------------
+
+        panel.querySelector('#ccJSON')
+            .addEventListener('click', exportJSON);
+
+        panel.querySelector('#ccCSV')
+            .addEventListener('click', exportCSV);
+
+        panel.querySelector('#ccClear')
+            .addEventListener('click', async () => {
+                const confirmed = confirm(
+                    '确定清空全部已采集数据吗？'
+                );
+
+                if (!confirmed) return;
+
+                await dbClear();
+                await refreshCounter();
+
+                setStatus('数据已清空。');
+            });
+
+        refreshButtons();
+        refreshCounter();
+    }
+
+    // ============================================================
+    // 原有初始化流程
+    // ============================================================
+
+    async function init() {
+        buildPanel();
+
+        if (IS_SEARCH) {
+            const results = await waitForResults(15000);
+            await refreshCounter();
+
+            if (results.length) {
+                setStatus(
+                    `已识别本页 ${results.length} 篇，可以开始采集。`
+                );
+            } else {
+                setStatus('暂未识别到搜索结果。');
+            }
+
+            const state = getRunState();
+
+            if (
+                state.active &&
+                !state.paused &&
+                state.fingerprint === searchFingerprint() &&
+                state.pagesDone < state.targetPages
+            ) {
+                setStatus(
+                    `恢复未完成任务：${state.pagesDone}/${state.targetPages} 页。`
+                );
+
+                setTimeout(() => runBatch(), 1200);
+            }
+        }
+
+        if (IS_DETAIL) {
+            setStatus(
+                '可以点击“测试当前论文”采集基本信息及作者补充信息。'
+            );
+        }
+    }
+
+    init();
+
+})();
