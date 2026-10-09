@@ -1,0 +1,3838 @@
+{
+  "Precision Lens": {
+    "zh": "精密透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Bi Convex Lens": {
+    "zh": "双凸透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Double Convex Lens": {
+    "zh": "双凸透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Bi Concave Lens": {
+    "zh": "双凹透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Double Concave Lens": {
+    "zh": "双凹透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Achromat": {
+    "zh": "消色差透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Apochromatic Lens": {
+    "zh": "复消色差透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Asphere": {
+    "zh": "非球面透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cylinder Lens": {
+    "zh": "柱面透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Microscope Objective": {
+    "zh": "显微物镜",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Infinity Corrected Objective": {
+    "zh": "无限远校正物镜",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Vision Lens": {
+    "zh": "视觉镜头",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Relay Lens": {
+    "zh": "中继镜头",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Precision Mirror": {
+    "zh": "精密反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Plane Mirror": {
+    "zh": "平面反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "First Surface Mirror": {
+    "zh": "前表面反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Front Surface Mirror": {
+    "zh": "前表面反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Second Surface Mirror": {
+    "zh": "背面反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Concave Mirror": {
+    "zh": "凹面反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Convex Mirror": {
+    "zh": "凸面反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Spherical Mirror": {
+    "zh": "球面反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Parabolic Mirror": {
+    "zh": "抛物面反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Off-Axis Parabolic Mirror": {
+    "zh": "离轴抛物面反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Off Axis Parabolic Mirror": {
+    "zh": "离轴抛物面反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "OAP Mirror": {
+    "zh": "离轴抛物面反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Toroidal Mirror": {
+    "zh": "环形面反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Elliptical Mirror": {
+    "zh": "椭球面反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Scanning Mirror": {
+    "zh": "扫描振镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Resonator Mirror": {
+    "zh": "谐振腔反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Output Coupler Mirror": {
+    "zh": "输出耦合镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Broadband Mirror": {
+    "zh": "宽带反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Ultrafast Mirror": {
+    "zh": "超快反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Chirped Mirror": {
+    "zh": "啁啾反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Enhanced Aluminum Mirror": {
+    "zh": "增强铝反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Infrared Mirror": {
+    "zh": "红外反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "UV Mirror": {
+    "zh": "紫外反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Precision Prism": {
+    "zh": "精密棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Right-Angle Prism": {
+    "zh": "直角棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Amici Prism": {
+    "zh": "阿米西棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Porro Prism": {
+    "zh": "普罗棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Porro-Abbe Prism": {
+    "zh": "普罗-阿贝棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Abbe Prism": {
+    "zh": "阿贝棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rhomb Prism": {
+    "zh": "菱形棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Corner Cube Retroreflector": {
+    "zh": "角锥后向反射器",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cube Prism": {
+    "zh": "立方棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Cube": {
+    "zh": "光学立方",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Wedge": {
+    "zh": "光学楔",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Displacer": {
+    "zh": "光束位移器",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Displacement Prism": {
+    "zh": "光束位移棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Glan-Taylor Prism": {
+    "zh": "格兰-泰勒棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Glan-Laser Prism": {
+    "zh": "格兰-激光棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Glan-Thompson Prism": {
+    "zh": "格兰-汤普森棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Nomarski Prism": {
+    "zh": "诺马斯基棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Wollaston Prism": {
+    "zh": "沃拉斯顿棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Dispersion Prism": {
+    "zh": "色散棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Direct Vision Prism": {
+    "zh": "直视棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Equilateral Prism": {
+    "zh": "等边色散棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Reflecting Prism": {
+    "zh": "反射棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Image Rotation Prism": {
+    "zh": "图像旋转棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Image Rotator": {
+    "zh": "像旋转器",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Filter": {
+    "zh": "滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Precision Filter": {
+    "zh": "精密滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Narrow Bandpass Filter": {
+    "zh": "窄带滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Broadband Filter": {
+    "zh": "宽带滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Long Pass Filter": {
+    "zh": "长波通滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Short Pass Filter": {
+    "zh": "短波通滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Line Filter": {
+    "zh": "激光线滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Infrared Filter": {
+    "zh": "红外滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ultraviolet Filter": {
+    "zh": "紫外滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Visible Filter": {
+    "zh": "可见光滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "RGB Filter": {
+    "zh": "RGB滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Dichroic Mirror Filter": {
+    "zh": "二向色镜滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Interference Bandpass Filter": {
+    "zh": "干涉带通滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fluorescence Filter": {
+    "zh": "荧光滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Emission Filter": {
+    "zh": "发射滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Excitation Filter": {
+    "zh": "激发滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Blocking Filter": {
+    "zh": "截止滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Cold Filter": {
+    "zh": "冷光滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Heat Absorbing Filter": {
+    "zh": "吸热滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Absorptive Filter": {
+    "zh": "吸收型滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Reflective Filter": {
+    "zh": "反射型滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Precision Window": {
+    "zh": "精密窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Flat Window": {
+    "zh": "光学平窗片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Round Window": {
+    "zh": "圆形窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Rectangular Window": {
+    "zh": "矩形窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "AR Window": {
+    "zh": "增透窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "AR Coated Window": {
+    "zh": "增透膜窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Broadband AR Window": {
+    "zh": "宽带增透窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Visible Window": {
+    "zh": "可见光窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "SWIR Window": {
+    "zh": "短波红外窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "MWIR Window": {
+    "zh": "中波红外窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "LWIR Window": {
+    "zh": "长波红外窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Viewing Window": {
+    "zh": "观察窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Fused Silica Window": {
+    "zh": "熔融石英窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Quartz Window": {
+    "zh": "石英窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "UV Fused Silica Window": {
+    "zh": "紫外熔融石英窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "BK7 Window": {
+    "zh": "BK7窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "B270 Window": {
+    "zh": "B270窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "ZnSe Window": {
+    "zh": "硒化锌窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "ZnS Window": {
+    "zh": "硫化锌窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "CaF2 Window": {
+    "zh": "氟化钙窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Calcium Fluoride Window": {
+    "zh": "氟化钙窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MgF2 Window": {
+    "zh": "氟化镁窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Magnesium Fluoride Window": {
+    "zh": "氟化镁窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Germanium Window": {
+    "zh": "锗窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Silicon Window": {
+    "zh": "硅窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Chalcogenide Window": {
+    "zh": "硫系玻璃窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Diamond Window": {
+    "zh": "金刚石窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "IR Crystal Window": {
+    "zh": "红外晶体窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Polarizer": {
+    "zh": "偏振片",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Polarizing Optics": {
+    "zh": "偏振光学元件",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Polarization Components": {
+    "zh": "偏振元件",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Plate Polarizer": {
+    "zh": "平板偏振片",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Sheet Polarizer": {
+    "zh": "偏振膜片",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Glass Polarizer": {
+    "zh": "玻璃偏振片",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Calcite Polarizer": {
+    "zh": "方解石偏振片",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Analyzer": {
+    "zh": "检偏器",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Polarization Analyzer": {
+    "zh": "偏振分析仪",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Polarization Rotator": {
+    "zh": "偏振旋转器",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Faraday Rotator": {
+    "zh": "法拉第旋光器",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Isolator Polarizer": {
+    "zh": "光隔离器偏振片",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Glan Polarizer": {
+    "zh": "格兰偏振棱镜",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Glan-Taylor Polarizer": {
+    "zh": "格兰-泰勒偏振棱镜",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Glan-Laser Polarizer": {
+    "zh": "格兰-激光偏振棱镜",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Glan-Thompson Polarizer": {
+    "zh": "格兰-汤普森偏振棱镜",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Wollaston Polarizer": {
+    "zh": "沃拉斯顿偏振棱镜",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Nomarski Polarizer": {
+    "zh": "诺马斯基偏振棱镜",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Brewster Polarizer": {
+    "zh": "布儒斯特偏振片",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Polarizer": {
+    "zh": "激光偏振片",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "UV Polarizer": {
+    "zh": "紫外偏振片",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "IR Polarizer": {
+    "zh": "红外偏振片",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Broadband Polarizer": {
+    "zh": "宽带偏振片",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "High Power Polarizer": {
+    "zh": "高功率偏振片",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Retarder": {
+    "zh": "波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Retarder": {
+    "zh": "光学波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Phase Retarder": {
+    "zh": "相位延迟片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Half-Wave Plate": {
+    "zh": "半波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "λ/2 Waveplate": {
+    "zh": "半波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Quarter-Wave Plate": {
+    "zh": "四分之一波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "λ/4 Waveplate": {
+    "zh": "四分之一波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "True Zero Order Waveplate": {
+    "zh": "真零级波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Low Order Waveplate": {
+    "zh": "低级波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Broadband Waveplate": {
+    "zh": "宽带波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Multi Wavelength Waveplate": {
+    "zh": "多波长波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Quartz Waveplate": {
+    "zh": "石英波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "MgF2 Waveplate": {
+    "zh": "氟化镁波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Polymer Waveplate": {
+    "zh": "聚合物波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "UV Waveplate": {
+    "zh": "紫外波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Visible Waveplate": {
+    "zh": "可见光波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "IR Waveplate": {
+    "zh": "红外波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Waveplate": {
+    "zh": "激光波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Motorized Waveplate": {
+    "zh": "电动波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Variable Waveplate": {
+    "zh": "可变波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Liquid Crystal Retarder": {
+    "zh": "液晶波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Liquid Crystal Waveplate": {
+    "zh": "液晶波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Cube Beam Splitter": {
+    "zh": "立方分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Plate Beam Splitter": {
+    "zh": "平板分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pellicle Beam Splitter": {
+    "zh": "薄膜分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PBS": {
+    "zh": "偏振分光棱镜",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Polarizing Cube": {
+    "zh": "偏振分光立方",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Polarizing Cube Beam Splitter": {
+    "zh": "偏振立方分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Non Polarizing Beam Splitter": {
+    "zh": "非偏振分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "NPBS Cube": {
+    "zh": "非偏振分光立方",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Non Polarizing Cube": {
+    "zh": "非偏振分光立方",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Dichroic Beam Splitter": {
+    "zh": "二向色分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Dichroic Beamsplitter": {
+    "zh": "二向色分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Beam Sampler": {
+    "zh": "光束取样器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Beam Sampler": {
+    "zh": "激光取样器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Partial Reflector": {
+    "zh": "部分反射镜",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Variable Beam Splitter": {
+    "zh": "可变分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Broadband Beam Splitter": {
+    "zh": "宽带分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Beam Splitter": {
+    "zh": "激光分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "UV Beam Splitter": {
+    "zh": "紫外分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "IR Beam Splitter": {
+    "zh": "红外分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Visible Beam Splitter": {
+    "zh": "可见光分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "High Power Beam Splitter": {
+    "zh": "高功率分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Beam Combiner": {
+    "zh": "合束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "Optical Beam Combiner": {
+    "zh": "光学合束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 0.96
+  },
+  "Galilean Beam Expander": {
+    "zh": "伽利略扩束器",
+    "category1": "光学元件",
+    "category2": "扩束器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Keplerian Beam Expander": {
+    "zh": "开普勒扩束器",
+    "category1": "光学元件",
+    "category2": "扩束器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Collimator": {
+    "zh": "准直器",
+    "category1": "光学元件",
+    "category2": "准直器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Micro Collimator": {
+    "zh": "微型准直器",
+    "category1": "光学元件",
+    "category2": "准直器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Adjustable Collimator": {
+    "zh": "可调准直器",
+    "category1": "光学元件",
+    "category2": "准直器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Homogenizer": {
+    "zh": "激光匀化器",
+    "category1": "光学元件",
+    "category2": "光束整形器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "DOE Beam Shaper": {
+    "zh": "衍射光束整形器",
+    "category1": "光学元件",
+    "category2": "光束整形器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Ground Glass Diffuser": {
+    "zh": "毛玻璃漫射器",
+    "category1": "光学元件",
+    "category2": "漫射器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Micro Lens Diffuser": {
+    "zh": "微透镜漫射器",
+    "category1": "光学元件",
+    "category2": "漫射器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Imaging AOTF": {
+    "zh": "成像声光可调谐滤波器",
+    "category1": "光学元件",
+    "category2": "声光可调谐滤波器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "NIR AOTF": {
+    "zh": "近红外声光可调谐滤波器",
+    "category1": "光学元件",
+    "category2": "声光可调谐滤波器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "VIS AOTF": {
+    "zh": "可见光声光可调谐滤波器",
+    "category1": "光学元件",
+    "category2": "声光可调谐滤波器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "UV AOTF": {
+    "zh": "紫外声光可调谐滤波器",
+    "category1": "光学元件",
+    "category2": "声光可调谐滤波器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Free Space AOM": {
+    "zh": "自由空间声光调制器",
+    "category1": "光学元件",
+    "category2": "声光调制器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "RF Driven AOM": {
+    "zh": "射频驱动声光调制器",
+    "category1": "光学元件",
+    "category2": "声光调制器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Acousto Optic Deflector": {
+    "zh": "声光偏转器",
+    "category1": "光学元件",
+    "category2": "声光调制器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "AOD": {
+    "zh": "声光偏转器",
+    "category1": "光学元件",
+    "category2": "声光调制器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Acousto Optic Frequency Shifter": {
+    "zh": "声光移频器",
+    "category1": "光学元件",
+    "category2": "声光调制器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber EOM": {
+    "zh": "光纤电光调制器",
+    "category1": "光学元件",
+    "category2": "电光调制器(EOM)",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Free Space EOM": {
+    "zh": "自由空间电光调制器",
+    "category1": "光学元件",
+    "category2": "电光调制器(EOM)",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Intensity Modulator": {
+    "zh": "强度调制器",
+    "category1": "光学元件",
+    "category2": "电光调制器(EOM)",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Phase EOM": {
+    "zh": "相位电光调制器",
+    "category1": "光学元件",
+    "category2": "电光调制器(EOM)",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Intensity EOM": {
+    "zh": "强度电光调制器",
+    "category1": "光学元件",
+    "category2": "电光调制器(EOM)",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Q Switch": {
+    "zh": "调Q开关",
+    "category1": "光学元件",
+    "category2": "电光调制器(EOM)",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Electro Optic Q Switch": {
+    "zh": "电光调Q开关",
+    "category1": "光学元件",
+    "category2": "电光调制器(EOM)",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Electro Optical Components": {
+    "zh": "电光元件",
+    "category1": "光学元件",
+    "category2": "电光学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "EO Crystal": {
+    "zh": "电光晶体",
+    "category1": "光学元件",
+    "category2": "电光学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Electro Optic Crystal": {
+    "zh": "电光晶体",
+    "category1": "光学元件",
+    "category2": "电光学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "KDP Pockels Cell": {
+    "zh": "KDP普克尔盒",
+    "category1": "光学元件",
+    "category2": "电光调制器(EOM)",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "BBO Pockels Cell": {
+    "zh": "BBO普克尔盒",
+    "category1": "光学元件",
+    "category2": "电光调制器(EOM)",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Gain Crystal": {
+    "zh": "激光增益晶体",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Gain Medium": {
+    "zh": "增益介质",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Nd:YAG Crystal": {
+    "zh": "掺钕钇铝石榴石晶体",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ho:YAG": {
+    "zh": "掺钬钇铝石榴石晶体",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ti:Sapphire Crystal": {
+    "zh": "钛宝石晶体",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "CLBO Crystal": {
+    "zh": "CLBO晶体",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Quartz Crystal": {
+    "zh": "石英晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Calcite Crystal": {
+    "zh": "方解石晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Sapphire Crystal": {
+    "zh": "蓝宝石晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Lithium Niobate": {
+    "zh": "铌酸锂",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LiNbO3": {
+    "zh": "铌酸锂",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Lithium Tantalate": {
+    "zh": "钽酸锂",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "LiTaO3": {
+    "zh": "钽酸锂",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Glass Components": {
+    "zh": "光学玻璃组件",
+    "category1": "光学元件",
+    "category2": "陶瓷和玻璃组件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Glass Components": {
+    "zh": "玻璃组件",
+    "category1": "光学元件",
+    "category2": "陶瓷和玻璃组件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Ceramic Components": {
+    "zh": "陶瓷组件",
+    "category1": "光学元件",
+    "category2": "陶瓷和玻璃组件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Micro Lens Array DOE": {
+    "zh": "微透镜阵列衍射元件",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fabry Perot Etalon": {
+    "zh": "法布里-珀罗标准具",
+    "category1": "光学元件",
+    "category2": "标准具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Air Spaced Etalon": {
+    "zh": "空气隙标准具",
+    "category1": "光学元件",
+    "category2": "标准具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Etalon": {
+    "zh": "光学标准具",
+    "category1": "光学元件",
+    "category2": "标准具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Interferometric Flat": {
+    "zh": "干涉平晶",
+    "category1": "光学元件",
+    "category2": "光学平晶",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Reference Flat": {
+    "zh": "光学参考平晶",
+    "category1": "光学元件",
+    "category2": "光学平晶",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Broadband AR Coating": {
+    "zh": "宽带增透膜",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Mirror Coating": {
+    "zh": "反射镜镀膜",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Dielectric Coating": {
+    "zh": "介质膜",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Protected Silver Coating": {
+    "zh": "保护银膜",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Protected Gold Coating": {
+    "zh": "保护金膜",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Protected Aluminum Coating": {
+    "zh": "保护铝膜",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "UV Coating": {
+    "zh": "紫外镀膜",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "IR Coating": {
+    "zh": "红外镀膜",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Laser Coating": {
+    "zh": "激光镀膜",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Thin Film Coating": {
+    "zh": "薄膜镀层",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Diffractive Optical Element": {
+    "zh": "衍射光学元件",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "DOE": {
+    "zh": "衍射光学元件",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Diffractive Optics": {
+    "zh": "衍射光学元件",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Diffractive Optical Component": {
+    "zh": "衍射光学元件",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Diffractive Lens": {
+    "zh": "衍射透镜",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Diffractive Lens Array": {
+    "zh": "衍射透镜阵列",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "DOE Lens": {
+    "zh": "衍射透镜",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "DOE Array": {
+    "zh": "衍射元件阵列",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Micro DOE": {
+    "zh": "微型衍射元件",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Diffractive Beam Splitter": {
+    "zh": "衍射分束器",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Splitting DOE": {
+    "zh": "分束衍射元件",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Shaping DOE": {
+    "zh": "光束整形衍射元件",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Top Hat DOE": {
+    "zh": "平顶衍射元件",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Flat Top DOE": {
+    "zh": "平顶衍射元件",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Line Generator DOE": {
+    "zh": "线光斑衍射元件",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Spot Array DOE": {
+    "zh": "点阵衍射元件",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Pattern Generator DOE": {
+    "zh": "图案衍射元件",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Multispot DOE": {
+    "zh": "多光斑衍射元件",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Diffractive Grating": {
+    "zh": "衍射光栅",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Transmission Grating": {
+    "zh": "透射光栅",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Reflection Grating": {
+    "zh": "反射光栅",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Binary Optics": {
+    "zh": "二元光学元件",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Binary Optical Element": {
+    "zh": "二元光学元件",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Phase Plate": {
+    "zh": "相位板",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Phase Mask": {
+    "zh": "相位掩模",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.97
+  },
+  "Computer Generated Hologram": {
+    "zh": "计算全息图",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "CGH": {
+    "zh": "计算全息图",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Holographic Optical Element": {
+    "zh": "全息光学元件",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "HOE": {
+    "zh": "全息光学元件",
+    "category1": "光学元件",
+    "category2": "衍射光学元件",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Material": {
+    "zh": "光学材料",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Materials": {
+    "zh": "光学材料",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Infrared Material": {
+    "zh": "红外材料",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "IR Material": {
+    "zh": "红外材料",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Glass": {
+    "zh": "光学玻璃",
+    "category1": "光学元件",
+    "category2": "陶瓷和玻璃组件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Glass Blank": {
+    "zh": "光学玻璃毛坯",
+    "category1": "光学元件",
+    "category2": "陶瓷和玻璃组件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Glass Blank": {
+    "zh": "玻璃毛坯",
+    "category1": "光学元件",
+    "category2": "陶瓷和玻璃组件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Glass Wafer": {
+    "zh": "玻璃晶圆",
+    "category1": "光学元件",
+    "category2": "陶瓷和玻璃组件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Glass Substrate": {
+    "zh": "玻璃基片",
+    "category1": "光学元件",
+    "category2": "陶瓷和玻璃组件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Ceramic": {
+    "zh": "光学陶瓷",
+    "category1": "光学元件",
+    "category2": "陶瓷和玻璃组件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Ceramic Substrate": {
+    "zh": "陶瓷基片",
+    "category1": "光学元件",
+    "category2": "陶瓷和玻璃组件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Fused Silica": {
+    "zh": "熔融石英",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "UV Fused Silica": {
+    "zh": "紫外熔融石英",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Quartz": {
+    "zh": "石英",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Crystal Quartz": {
+    "zh": "晶体石英",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "BK7": {
+    "zh": "BK7玻璃",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "B270": {
+    "zh": "B270玻璃",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "N-BK7": {
+    "zh": "N-BK7玻璃",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Sapphire": {
+    "zh": "蓝宝石",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Germanium": {
+    "zh": "锗",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Silicon": {
+    "zh": "硅",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "ZnSe": {
+    "zh": "硒化锌",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "ZnS": {
+    "zh": "硫化锌",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Calcium Fluoride": {
+    "zh": "氟化钙",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "CaF2": {
+    "zh": "氟化钙",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Magnesium Fluoride": {
+    "zh": "氟化镁",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MgF2": {
+    "zh": "氟化镁",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Lithium Fluoride": {
+    "zh": "氟化锂",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "LiF": {
+    "zh": "氟化锂",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Barium Fluoride": {
+    "zh": "氟化钡",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "BaF2": {
+    "zh": "氟化钡",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Chalcogenide Glass": {
+    "zh": "硫系玻璃",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "IR Glass": {
+    "zh": "红外玻璃",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Silicon": {
+    "zh": "光学硅",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Germanium": {
+    "zh": "光学锗",
+    "category1": "光学元件",
+    "category2": "光学材料",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Crystal": {
+    "zh": "激光晶体",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Crystals": {
+    "zh": "激光晶体",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Gain Crystal": {
+    "zh": "增益晶体",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Gain Medium": {
+    "zh": "激光增益介质",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Solid State Laser Crystal": {
+    "zh": "固体激光晶体",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Nd:YAG": {
+    "zh": "掺钕钇铝石榴石",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "YAG Crystal": {
+    "zh": "钇铝石榴石晶体",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Yb:YAG": {
+    "zh": "掺镱钇铝石榴石",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Er:YAG": {
+    "zh": "掺铒钇铝石榴石",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cr:YAG": {
+    "zh": "掺铬钇铝石榴石",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Nd:YVO4": {
+    "zh": "掺钕钒酸钇",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "YVO4 Crystal": {
+    "zh": "钒酸钇晶体",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Ti:Sapphire": {
+    "zh": "钛宝石",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Ti Sapphire Crystal": {
+    "zh": "钛宝石晶体",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Alexandrite Crystal": {
+    "zh": "变石(金绿宝石)晶体",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Ruby Crystal": {
+    "zh": "红宝石晶体",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Rod": {
+    "zh": "激光棒",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Slab": {
+    "zh": "激光板条",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Laser Disk": {
+    "zh": "激光薄片",
+    "category1": "光学元件",
+    "category2": "激光晶体",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Crystal": {
+    "zh": "光学晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Crystals": {
+    "zh": "光学晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Nonlinear Crystal": {
+    "zh": "非线性晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Nonlinear Optical Crystal": {
+    "zh": "非线性光学晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Frequency Conversion Crystal": {
+    "zh": "频率转换晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "SHG Crystal": {
+    "zh": "倍频晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "THG Crystal": {
+    "zh": "三倍频晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "OPO Crystal": {
+    "zh": "光参量振荡晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "BBO Crystal": {
+    "zh": "BBO晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LBO Crystal": {
+    "zh": "LBO晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "KTP Crystal": {
+    "zh": "KTP晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PPKTP": {
+    "zh": "周期极化KTP晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "KDP Crystal": {
+    "zh": "KDP晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "DKDP Crystal": {
+    "zh": "DKDP晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Lithium Niobate Crystal": {
+    "zh": "铌酸锂晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "LiNbO3 Crystal": {
+    "zh": "铌酸锂晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PPLN Crystal": {
+    "zh": "周期极化铌酸锂晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "MgO:PPLN": {
+    "zh": "掺镁周期极化铌酸锂",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Electro-Optic Crystal": {
+    "zh": "电光晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Acousto-Optic Crystal": {
+    "zh": "声光晶体",
+    "category1": "光学元件",
+    "category2": "晶体",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Lens": {
+    "zh": "光学透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Lenses": {
+    "zh": "光学透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Lens": {
+    "zh": "透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Plano Convex Lens": {
+    "zh": "平凸透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PCX Lens": {
+    "zh": "平凸透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Plano Concave Lens": {
+    "zh": "平凹透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "PCV Lens": {
+    "zh": "平凹透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Bi-Convex Lens": {
+    "zh": "双凸透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Bi-Concave Lens": {
+    "zh": "双凹透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Meniscus Lens": {
+    "zh": "弯月透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Positive Meniscus Lens": {
+    "zh": "正弯月透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Negative Meniscus Lens": {
+    "zh": "负弯月透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Aspheric Lens": {
+    "zh": "非球面透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Precision Asphere": {
+    "zh": "精密非球面透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Achromatic Lens": {
+    "zh": "消色差透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Achromatic Doublet": {
+    "zh": "消色差双胶合透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Achromatic Triplet": {
+    "zh": "消色差三胶合透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Doublet Lens": {
+    "zh": "双胶合透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Triplet Lens": {
+    "zh": "三胶合透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Ball Lens": {
+    "zh": "球透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Half Ball Lens": {
+    "zh": "半球透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rod Lens": {
+    "zh": "棒透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "GRIN Lens": {
+    "zh": "梯度折射率透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Gradient Index Lens": {
+    "zh": "梯度折射率透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cylindrical Lens": {
+    "zh": "柱面透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Axicon Lens": {
+    "zh": "锥透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Powell Lens": {
+    "zh": "鲍威尔棱镜透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "F-Theta Lens": {
+    "zh": "F-Theta场镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "F Theta Lens": {
+    "zh": "F-Theta场镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Scan Lens": {
+    "zh": "扫描镜头",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Scan Lens": {
+    "zh": "激光扫描镜头",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Micro Lens": {
+    "zh": "微透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Microlens": {
+    "zh": "微透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Microlens Array": {
+    "zh": "微透镜阵列",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Lens Array": {
+    "zh": "透镜阵列",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "IR Lens": {
+    "zh": "红外透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "UV Lens": {
+    "zh": "紫外透镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Beam Expander": {
+    "zh": "扩束器",
+    "category1": "光学元件",
+    "category2": "扩束器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Beam Expander": {
+    "zh": "激光扩束器",
+    "category1": "光学元件",
+    "category2": "扩束器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fixed Beam Expander": {
+    "zh": "固定倍率扩束器",
+    "category1": "光学元件",
+    "category2": "扩束器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Variable Beam Expander": {
+    "zh": "可变倍率扩束器",
+    "category1": "光学元件",
+    "category2": "扩束器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Zoom Beam Expander": {
+    "zh": "变焦扩束器",
+    "category1": "光学元件",
+    "category2": "扩束器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Motorized Beam Expander": {
+    "zh": "电动扩束器",
+    "category1": "光学元件",
+    "category2": "扩束器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fiber Collimator": {
+    "zh": "光纤准直器",
+    "category1": "光学元件",
+    "category2": "准直器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber Optic Collimator": {
+    "zh": "光纤准直器",
+    "category1": "光学元件",
+    "category2": "准直器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Collimator": {
+    "zh": "激光准直器",
+    "category1": "光学元件",
+    "category2": "准直器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Collimator": {
+    "zh": "光学准直器",
+    "category1": "光学元件",
+    "category2": "准直器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Collimating Lens": {
+    "zh": "准直透镜",
+    "category1": "光学元件",
+    "category2": "准直器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Collimator Module": {
+    "zh": "准直模块",
+    "category1": "光学元件",
+    "category2": "准直器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Shaper": {
+    "zh": "光束整形器",
+    "category1": "光学元件",
+    "category2": "光束整形器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Beam Shaper": {
+    "zh": "激光光束整形器",
+    "category1": "光学元件",
+    "category2": "光束整形器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Top Hat Beam Shaper": {
+    "zh": "平顶光束整形器",
+    "category1": "光学元件",
+    "category2": "光束整形器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Flat Top Beam Shaper": {
+    "zh": "平顶光束整形器",
+    "category1": "光学元件",
+    "category2": "光束整形器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Gaussian Beam Shaper": {
+    "zh": "高斯光束整形器",
+    "category1": "光学元件",
+    "category2": "光束整形器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Refractive Beam Shaper": {
+    "zh": "折射式光束整形器",
+    "category1": "光学元件",
+    "category2": "光束整形器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Homogenizer": {
+    "zh": "光束匀化器",
+    "category1": "光学元件",
+    "category2": "光束整形器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Homogenizer": {
+    "zh": "匀化器",
+    "category1": "光学元件",
+    "category2": "光束整形器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Beam Splitter": {
+    "zh": "分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Beamsplitter": {
+    "zh": "分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Beam Splitter Cube": {
+    "zh": "分光立方",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cube Beamsplitter": {
+    "zh": "立方分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Plate Beamsplitter": {
+    "zh": "平板分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pellicle Beamsplitter": {
+    "zh": "薄膜分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "PBS Cube": {
+    "zh": "偏振分光立方",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "NPBS": {
+    "zh": "非偏振分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Non-Polarizing Beam Splitter": {
+    "zh": "非偏振分束器",
+    "category1": "光学元件",
+    "category2": "分束器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Filter": {
+    "zh": "滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Filters": {
+    "zh": "滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Bandpass Filter": {
+    "zh": "带通滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Longpass Filter": {
+    "zh": "长波通滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Shortpass Filter": {
+    "zh": "短波通滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Edge Filter": {
+    "zh": "边缘滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Notch Filter": {
+    "zh": "陷波滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Line Filter": {
+    "zh": "激光线滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Interference Filter": {
+    "zh": "干涉滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Neutral Density Filter": {
+    "zh": "中性密度滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "ND Filter": {
+    "zh": "中性密度滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Variable ND Filter": {
+    "zh": "可变中性密度滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Dichroic Filter": {
+    "zh": "二向色滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "IR Filter": {
+    "zh": "红外滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "UV Filter": {
+    "zh": "紫外滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Color Filter": {
+    "zh": "彩色滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Hot Mirror Filter": {
+    "zh": "热反射滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Cold Mirror Filter": {
+    "zh": "冷反射滤光片",
+    "category1": "光学元件",
+    "category2": "滤光片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Polarizer": {
+    "zh": "偏振片",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Linear Polarizer": {
+    "zh": "线偏振片",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Circular Polarizer": {
+    "zh": "圆偏振片",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Wire Grid Polarizer": {
+    "zh": "金属线栅偏振片",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Thin Film Polarizer": {
+    "zh": "薄膜偏振片",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Polarizing Beam Splitter": {
+    "zh": "偏振分束器",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Glan Prism": {
+    "zh": "格兰棱镜",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Glan Laser Prism": {
+    "zh": "格兰激光棱镜",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Glan Taylor Prism": {
+    "zh": "格兰-泰勒棱镜",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Glan Thompson Prism": {
+    "zh": "格兰-汤普森棱镜",
+    "category1": "光学元件",
+    "category2": "偏振光学元件",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Waveplate": {
+    "zh": "波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Wave Plate": {
+    "zh": "波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Half Wave Plate": {
+    "zh": "半波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Half Waveplate": {
+    "zh": "半波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Quarter Wave Plate": {
+    "zh": "四分之一波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Quarter Waveplate": {
+    "zh": "四分之一波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Zero Order Waveplate": {
+    "zh": "零级波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Multiple Order Waveplate": {
+    "zh": "多级波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Achromatic Waveplate": {
+    "zh": "消色差波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Dual Wavelength Waveplate": {
+    "zh": "双波长波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Super Achromatic Waveplate": {
+    "zh": "超消色差波片",
+    "category1": "光学元件",
+    "category2": "波片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Mirror": {
+    "zh": "光学反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Mirrors": {
+    "zh": "光学反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Mirror": {
+    "zh": "激光反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Dielectric Mirror": {
+    "zh": "介质膜反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Metal Mirror": {
+    "zh": "金属膜反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Gold Mirror": {
+    "zh": "镀金反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Protected Gold Mirror": {
+    "zh": "保护膜镀金反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Silver Mirror": {
+    "zh": "镀银反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Protected Silver Mirror": {
+    "zh": "保护膜镀银反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Aluminum Mirror": {
+    "zh": "镀铝反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Protected Aluminum Mirror": {
+    "zh": "保护膜镀铝反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "HR Mirror": {
+    "zh": "高反镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "High Reflector": {
+    "zh": "高反镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Output Coupler": {
+    "zh": "输出耦合镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Cold Mirror": {
+    "zh": "冷光镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Hot Mirror": {
+    "zh": "热反射镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Scan Mirror": {
+    "zh": "扫描振镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Polygon Mirror": {
+    "zh": "多面转镜",
+    "category1": "光学元件",
+    "category2": "光学反射镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Prism": {
+    "zh": "光学棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Prism": {
+    "zh": "棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Right Angle Prism": {
+    "zh": "直角棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Roof Prism": {
+    "zh": "屋脊棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Dove Prism": {
+    "zh": "道威棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Penta Prism": {
+    "zh": "五角棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Corner Cube Prism": {
+    "zh": "角锥棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Retroreflector": {
+    "zh": "后向反射器",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Wedge Prism": {
+    "zh": "楔形棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Rhomboid Prism": {
+    "zh": "菱形棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Anamorphic Prism": {
+    "zh": "变形棱镜",
+    "category1": "光学元件",
+    "category2": "棱镜",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Optical Window": {
+    "zh": "光学窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Windows": {
+    "zh": "光学窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Laser Window": {
+    "zh": "激光窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "IR Window": {
+    "zh": "红外窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "UV Window": {
+    "zh": "紫外窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Vacuum Window": {
+    "zh": "真空窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Sapphire Window": {
+    "zh": "蓝宝石窗口片",
+    "category1": "光学元件",
+    "category2": "光学窗口片",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Etalon": {
+    "zh": "标准具",
+    "category1": "光学元件",
+    "category2": "标准具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fabry-Perot Etalon": {
+    "zh": "法布里-珀罗标准具",
+    "category1": "光学元件",
+    "category2": "标准具",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Solid Etalon": {
+    "zh": "实心标准具",
+    "category1": "光学元件",
+    "category2": "标准具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Air-Spaced Etalon": {
+    "zh": "空气隙标准具",
+    "category1": "光学元件",
+    "category2": "标准具",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Flat": {
+    "zh": "光学平晶",
+    "category1": "光学元件",
+    "category2": "光学平晶",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Reference Flat": {
+    "zh": "参考平晶",
+    "category1": "光学元件",
+    "category2": "光学平晶",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Flat Mirror": {
+    "zh": "平面反射镜",
+    "category1": "光学元件",
+    "category2": "光学平晶",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Precision Optical Flat": {
+    "zh": "精密光学平晶",
+    "category1": "光学元件",
+    "category2": "光学平晶",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Optical Coating": {
+    "zh": "光学镀膜",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Coatings": {
+    "zh": "光学镀膜",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "AR Coating": {
+    "zh": "增透膜",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Anti Reflection Coating": {
+    "zh": "增透膜",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "HR Coating": {
+    "zh": "高反膜",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "High Reflection Coating": {
+    "zh": "高反膜",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Splitter Coating": {
+    "zh": "分光膜",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Dichroic Coating": {
+    "zh": "二向色膜",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Filter Coating": {
+    "zh": "滤光膜",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Custom Coating": {
+    "zh": "定制镀膜",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Broadband Coating": {
+    "zh": "宽带镀膜",
+    "category1": "光学元件",
+    "category2": "涂层",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Electro Optics": {
+    "zh": "电光元件",
+    "category1": "光学元件",
+    "category2": "电光学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Electro-Optics": {
+    "zh": "电光元件",
+    "category1": "光学元件",
+    "category2": "电光学",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Electro Optical Device": {
+    "zh": "电光器件",
+    "category1": "光学元件",
+    "category2": "电光学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Electro Optical Component": {
+    "zh": "电光元件",
+    "category1": "光学元件",
+    "category2": "电光学",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Electro Optic Modulator": {
+    "zh": "电光调制器",
+    "category1": "光学元件",
+    "category2": "电光调制器(EOM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Electro-Optic Modulator": {
+    "zh": "电光调制器",
+    "category1": "光学元件",
+    "category2": "电光调制器(EOM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "EOM": {
+    "zh": "电光调制器",
+    "category1": "光学元件",
+    "category2": "电光调制器(EOM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Pockels Cell": {
+    "zh": "普克尔盒",
+    "category1": "光学元件",
+    "category2": "电光调制器(EOM)",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Phase Modulator": {
+    "zh": "相位调制器",
+    "category1": "光学元件",
+    "category2": "电光调制器(EOM)",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Amplitude Modulator": {
+    "zh": "幅度调制器",
+    "category1": "光学元件",
+    "category2": "电光调制器(EOM)",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Acousto Optic Modulator": {
+    "zh": "声光调制器",
+    "category1": "光学元件",
+    "category2": "声光调制器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Acousto-Optic Modulator": {
+    "zh": "声光调制器",
+    "category1": "光学元件",
+    "category2": "声光调制器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "AOM": {
+    "zh": "声光调制器",
+    "category1": "光学元件",
+    "category2": "声光调制器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Fiber AOM": {
+    "zh": "光纤声光调制器",
+    "category1": "光学元件",
+    "category2": "声光调制器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Acousto Optic Tunable Filter": {
+    "zh": "声光可调谐滤波器",
+    "category1": "光学元件",
+    "category2": "声光可调谐滤波器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Acousto-Optic Tunable Filter": {
+    "zh": "声光可调谐滤波器",
+    "category1": "光学元件",
+    "category2": "声光可调谐滤波器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "AOTF": {
+    "zh": "声光可调谐滤波器",
+    "category1": "光学元件",
+    "category2": "声光可调谐滤波器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Machine Vision Lens": {
+    "zh": "机器视觉镜头",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Industrial Lens": {
+    "zh": "工业镜头",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "FA Lens": {
+    "zh": "工业自动化镜头",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Telecentric Lens": {
+    "zh": "远心镜头",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Bi Telecentric Lens": {
+    "zh": "双远心镜头",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Object Space Telecentric Lens": {
+    "zh": "物方远心镜头",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Image Space Telecentric Lens": {
+    "zh": "像方远心镜头",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "SWIR Lens": {
+    "zh": "短波红外镜头",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "MWIR Lens": {
+    "zh": "中波红外镜头",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "LWIR Lens": {
+    "zh": "长波红外镜头",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Zoom Lens": {
+    "zh": "变焦镜头",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Fixed Focus Lens": {
+    "zh": "定焦镜头",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Objective Lens": {
+    "zh": "物镜",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Diffuser": {
+    "zh": "漫射器",
+    "category1": "光学元件",
+    "category2": "漫射器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Optical Diffuser": {
+    "zh": "光学漫射器",
+    "category1": "光学元件",
+    "category2": "漫射器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Engineered Diffuser": {
+    "zh": "工程漫射器",
+    "category1": "光学元件",
+    "category2": "漫射器",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Holographic Diffuser": {
+    "zh": "全息漫射器",
+    "category1": "光学元件",
+    "category2": "漫射器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Light Diffuser": {
+    "zh": "光漫射器",
+    "category1": "光学元件",
+    "category2": "漫射器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Beam Diffuser": {
+    "zh": "光束漫射器",
+    "category1": "光学元件",
+    "category2": "漫射器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Laser Diffuser": {
+    "zh": "激光漫射器",
+    "category1": "光学元件",
+    "category2": "漫射器",
+    "enable": true,
+    "confidence": 0.99
+  },
+  "Diffusing Plate": {
+    "zh": "漫射板",
+    "category1": "光学元件",
+    "category2": "漫射器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Diffuser Plate": {
+    "zh": "漫射板",
+    "category1": "光学元件",
+    "category2": "漫射器",
+    "enable": true,
+    "confidence": 0.98
+  },
+  "Infrared Lens MV": {
+    "zh": "红外镜头",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Line Scan Lens MV": {
+    "zh": "线扫镜头",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Area Scan Lens MV": {
+    "zh": "面阵镜头",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Reflecting Objective": {
+    "zh": "反射物镜",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Cylinder Mirror ZH": {
+    "zh": "柱面镜",
+    "category1": "光学元件",
+    "category2": "光学透镜",
+    "enable": true,
+    "confidence": 1.0
+  },
+  "Camera Lens ZH": {
+    "zh": "镜头",
+    "category1": "光学元件",
+    "category2": "高性能镜头",
+    "enable": true,
+    "confidence": 1.0
+  }
+}
