@@ -1,0 +1,1559 @@
+// ==UserScript==
+// @name         知网PDF下载助手 - 电子科大校外通道版
+// @namespace    local.cnki.pdf.uestc.webvpn.v4
+// @version      4.2.0-uestc.4
+// @author       Supernova / optimized build
+// @description  适配电子科技大学WebVPN：代理直连提示、可配置1-50篇、顺序下载、限流保护、PDF校验与默认保存
+// @match        https://webvpn.uestc.edu.cn/*
+// @exclude      http://image.cnki.net/*
+// @run-at       document-idle
+// @noframes
+// @grant        GM_download
+// @grant        GM_info
+// @grant        GM_getValue
+// @grant        GM_setValue
+// @grant        GM_setClipboard
+// @license      MIT
+// ==/UserScript==
+
+/*
+ * 只复用当前浏览器中已经登录的学校校外访问会话。
+ * 不读取账号、密码或Cookie；不绕过验证码、订购范围、访问权限或频率限制。
+ * 不自动翻页；默认每批20篇，可在界面设置1-50篇；篇间3-60秒，默认3秒。
+ * 默认每10篇额外休息10秒；遇到429、验证页或网关错误立即停止，不自动重试。
+ * Edge中的用户脚本无法单独绕过系统代理；请将两个学校校外通道域名配置为DIRECT/直连。
+ * 已移除原脚本的远程updateURL/downloadURL，避免自定义版本被旧版覆盖。
+ * PDF保存固定使用GM_download(saveAs:false)，不再自动退回网页链接下载。
+ */
+
+(() => {
+  'use strict';
+
+  const BUILD = Object.freeze({"portal": "UESTC", "version": "4.2.0-uestc.4", "label": "电子科大校外通道版"});
+  const CONFIG = Object.freeze({
+    HARD_MAX_BATCH: 50,
+    DEFAULT_BATCH_LIMIT: 50,
+    MIN_GAP_MS: 3000,
+    MAX_GAP_MS: 60000,
+    DEFAULT_GAP_MS: 3000,
+    DEFAULT_COOLDOWN_EVERY: 10,
+    DEFAULT_COOLDOWN_MS: 10000,
+    MAX_COOLDOWN_MS: 120000,
+    REQUEST_TIMEOUT_MS: 90000,
+    MAX_RESPONSE_BYTES: 150 * 1024 * 1024,
+    HTML_INSPECT_LIMIT: 8 * 1024 * 1024,
+    MAX_LINK_CANDIDATES: 16,
+  });
+
+  class HelperError extends Error {
+    constructor(code, message, details = null) {
+      super(message);
+      this.name = 'HelperError';
+      this.code = code;
+      this.details = details;
+    }
+  }
+
+  const SETTINGS_STORAGE_KEY = `cnki-pdf-settings-${BUILD.portal}-v1`;
+  const DEFAULT_SETTINGS = Object.freeze({
+    batchLimit: CONFIG.DEFAULT_BATCH_LIMIT,
+    gapMs: CONFIG.DEFAULT_GAP_MS,
+    cooldownEvery: CONFIG.DEFAULT_COOLDOWN_EVERY,
+    cooldownMs: CONFIG.DEFAULT_COOLDOWN_MS,
+  });
+
+  function clampNumber(value, minimum, maximum, fallback) {
+    const numeric = Number(value);
+    if (!Number.isFinite(numeric)) return fallback;
+    return Math.min(maximum, Math.max(minimum, numeric));
+  }
+
+  function normalizeSettings(raw = {}) {
+    return {
+      batchLimit: Math.round(clampNumber(
+        raw.batchLimit,
+        1,
+        CONFIG.HARD_MAX_BATCH,
+        DEFAULT_SETTINGS.batchLimit,
+      )),
+      gapMs: Math.round(clampNumber(
+        raw.gapMs,
+        CONFIG.MIN_GAP_MS,
+        CONFIG.MAX_GAP_MS,
+        DEFAULT_SETTINGS.gapMs,
+      )),
+      cooldownEvery: Math.round(clampNumber(
+        raw.cooldownEvery,
+        0,
+        CONFIG.HARD_MAX_BATCH,
+        DEFAULT_SETTINGS.cooldownEvery,
+      )),
+      cooldownMs: Math.round(clampNumber(
+        raw.cooldownMs,
+        0,
+        CONFIG.MAX_COOLDOWN_MS,
+        DEFAULT_SETTINGS.cooldownMs,
+      )),
+    };
+  }
+
+  function loadRuntimeSettings() {
+    try {
+      if (typeof GM_getValue === 'function') {
+        return normalizeSettings(GM_getValue(SETTINGS_STORAGE_KEY, DEFAULT_SETTINGS));
+      }
+    } catch (_) { /* fall through to localStorage */ }
+    try {
+      return normalizeSettings(JSON.parse(localStorage.getItem(SETTINGS_STORAGE_KEY) || '{}'));
+    } catch (_) {
+      return normalizeSettings(DEFAULT_SETTINGS);
+    }
+  }
+
+  function storeRuntimeSettings(next) {
+    const normalized = normalizeSettings(next);
+    try {
+      if (typeof GM_setValue === 'function') GM_setValue(SETTINGS_STORAGE_KEY, normalized);
+      else localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(normalized));
+    } catch (_) {
+      try { localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(normalized)); } catch (_) { /* storage unavailable */ }
+    }
+    return normalized;
+  }
+
+  const UESTC_ROUTE_RE = /^\/(https?)(?:-(\d{1,5}))?\/([a-f0-9]{34,538})(?=\/|$)/i;
+  const SWJTU_ROUTE_RE = /^\/(https?)\/(\d{1,5})\/net\/([a-z0-9_-]+)(?=\/|$)/i;
+
+  function uniqueStrings(values, limit = CONFIG.MAX_LINK_CANDIDATES) {
+    const output = [];
+    const seen = new Set();
+    for (const value of values) {
+      if (typeof value !== 'string') continue;
+      const trimmed = value.trim();
+      if (!trimmed || seen.has(trimmed)) continue;
+      seen.add(trimmed);
+      output.push(trimmed);
+      if (output.length >= limit) break;
+    }
+    return output;
+  }
+
+  function isHttpUrl(url) {
+    return url instanceof URL && (url.protocol === 'https:' || url.protocol === 'http:');
+  }
+
+  function isCnkiHost(hostname) {
+    const host = String(hostname || '').toLowerCase().replace(/\.$/, '');
+    return host === 'cnki.net' || host.endsWith('.cnki.net');
+  }
+
+  function sleep(milliseconds) {
+    return new Promise(resolve => window.setTimeout(resolve, milliseconds));
+  }
+
+  async function waitWithStop(milliseconds) {
+    const deadline = Date.now() + Math.max(0, Number(milliseconds) || 0);
+    while (Date.now() < deadline) {
+      checkStopped();
+      await sleep(Math.min(250, deadline - Date.now()));
+    }
+    checkStopped();
+  }
+
+  function sanitizeFilename(title, extension = '.pdf') {
+    let name = String(title || 'paper')
+      .replace(/[<>:"/\\|?*\x00-\x1f]/g, '_')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .replace(/[. ]+$/g, '')
+      .slice(0, 120);
+    if (!name) name = 'paper';
+    if (/^(CON|PRN|AUX|NUL|COM[1-9]|LPT[1-9])(?:\.|$)/i.test(name)) name = `_${name}`;
+    return `${name.replace(/\.(?:pdf|caj)$/i, '')}${extension}`;
+  }
+
+  async function blobStartsWithPdf(blob) {
+    const head = new Uint8Array(await blob.slice(0, 1024).arrayBuffer());
+    const text = new TextDecoder('latin1').decode(head);
+    return /^\s*%PDF-\d\.\d/.test(text);
+  }
+
+  function extractUrlFromJavascript(text) {
+    const value = String(text || '');
+    const patterns = [
+      /(?:window\.)?open\s*\(\s*['"]([^'"]+)['"]/i,
+      /(?:location(?:\.href)?|document\.location)\s*=\s*['"]([^'"]+)['"]/i,
+      /['"]((?:https?:)?\/\/[^'"]+)['"]/i,
+      /['"](\/[^'"]*(?:pdf|download|dflag)[^'"]*)['"]/i,
+    ];
+    for (const pattern of patterns) {
+      const match = value.match(pattern);
+      if (match?.[1]) return match[1].replace(/&amp;/gi, '&');
+    }
+    return '';
+  }
+
+  function collectLinkValues(element, includeLiveHref = true) {
+    const values = [];
+    const attributes = [
+      'href', 'data-href', 'data-url', 'data-download-url', 'data-downloadurl',
+      'data-link', 'data-src', 'formaction',
+    ];
+    for (const name of attributes) {
+      const value = element?.getAttribute?.(name);
+      if (!value) continue;
+      if (/^javascript:/i.test(value)) {
+        const extracted = extractUrlFromJavascript(value);
+        if (extracted) values.push(extracted);
+      } else {
+        values.push(value);
+      }
+    }
+    const onclickUrl = extractUrlFromJavascript(element?.getAttribute?.('onclick'));
+    if (onclickUrl) values.push(onclickUrl);
+    if (includeLiveHref) {
+      try {
+        if (typeof element?.href === 'string' && element.href) values.push(element.href);
+      } catch (_) { /* unavailable live property */ }
+    }
+    return uniqueStrings(values);
+  }
+
+  function bytesToHex(bytes) {
+    return Array.from(bytes, value => value.toString(16).padStart(2, '0')).join('');
+  }
+
+  function hexToBytes(hex) {
+    if (!/^(?:[0-9a-f]{2})+$/i.test(hex)) {
+      throw new HelperError('PROXY_CODEC_MISMATCH', 'WebVPN路由不是有效的十六进制字符串。');
+    }
+    return Uint8Array.from(hex.match(/../g), part => Number.parseInt(part, 16));
+  }
+
+  async function cfb128Transform(data, cryptoKey, iv, decrypt = false) {
+    const output = new Uint8Array(data.length);
+    let feedback = new Uint8Array(iv);
+    for (let offset = 0; offset < data.length; offset += 16) {
+      const encryptedBlock = new Uint8Array(await crypto.subtle.encrypt(
+        { name: 'AES-CBC', iv: new Uint8Array(16) },
+        cryptoKey,
+        feedback,
+      ));
+      const count = Math.min(16, data.length - offset);
+      for (let index = 0; index < count; index += 1) {
+        output[offset + index] = data[offset + index] ^ encryptedBlock[index];
+      }
+      if (count === 16) feedback = (decrypt ? data : output).slice(offset, offset + 16);
+    }
+    return output;
+  }
+
+  class UestcAdapter {
+    constructor() {
+      this.name = '电子科技大学 WebVPN';
+      this.origin = 'https://webvpn.uestc.edu.cn';
+      this.seed = 'wrdvpnisthebest!';
+      this.initializing = null;
+      this.key = null;
+      this.iv = null;
+      this.referenceHost = '';
+      this.hostTokenCache = new Map();
+    }
+
+    parseRoute(rawUrl) {
+      const url = new URL(rawUrl, this.origin);
+      if (url.origin !== this.origin) {
+        throw new HelperError('NOT_PROXY_URL', '地址不属于电子科大WebVPN。');
+      }
+      const match = url.pathname.match(UESTC_ROUTE_RE);
+      if (!match) throw new HelperError('INVALID_PROXY_ROUTE', '地址中没有可识别的电子科大WebVPN路由。');
+      const port = match[2] || '';
+      if (port && (Number(port) < 1 || Number(port) > 65535)) {
+        throw new HelperError('INVALID_PROXY_ROUTE', 'WebVPN路由中的端口无效。');
+      }
+      return {
+        url,
+        prefix: match[0],
+        protocol: `${match[1].toLowerCase()}:`,
+        port,
+        token: match[3].toLowerCase(),
+      };
+    }
+
+    async ready() {
+      if (!this.initializing) this.initializing = this.initialize();
+      return this.initializing;
+    }
+
+    async initialize() {
+      if (!globalThis.crypto?.subtle) {
+        throw new HelperError('CRYPTO_UNAVAILABLE', '当前浏览器环境不支持Web Crypto。');
+      }
+      const route = this.parseRoute(location.href);
+      this.iv = new TextEncoder().encode(this.seed);
+      const ivHex = bytesToHex(this.iv);
+      if (!route.token.startsWith(ivHex)) {
+        throw new HelperError('PROXY_CODEC_MISMATCH', '当前WebVPN路由与脚本支持的编码配置不一致。');
+      }
+      this.key = await crypto.subtle.importKey(
+        'raw', this.iv, { name: 'AES-CBC' }, false, ['encrypt'],
+      );
+      const host = await this.decodeHost(route.token);
+      if (!isCnkiHost(host)) {
+        throw new HelperError('PROXY_CODEC_MISMATCH', '当前WebVPN页面不是知网资源，无法校准转换器。');
+      }
+      const roundTrip = await this.encodeHost(host, true);
+      if (roundTrip !== route.token) {
+        throw new HelperError('PROXY_CODEC_MISMATCH', '当前WebVPN路由本地回验失败。');
+      }
+      this.referenceHost = host;
+      this.hostTokenCache.set(host, route.token);
+      return { portal: this.name, referenceHost: host };
+    }
+
+    async decodeHost(token) {
+      if (!this.iv || !this.key) throw new HelperError('PROXY_CODEC_NOT_READY', 'WebVPN转换器尚未初始化。');
+      const ivHex = bytesToHex(this.iv);
+      if (!token.startsWith(ivHex)) throw new HelperError('PROXY_CODEC_MISMATCH', 'WebVPN编码配置不匹配。');
+      const encrypted = hexToBytes(token.slice(ivHex.length));
+      const decoded = await cfb128Transform(encrypted, this.key, this.iv, true);
+      let host;
+      try {
+        host = new TextDecoder('utf-8', { fatal: true }).decode(decoded).toLowerCase();
+      } catch (_) {
+        throw new HelperError('PROXY_CODEC_MISMATCH', '无法解码WebVPN上游主机名。');
+      }
+      if (!isCnkiHost(host)) throw new HelperError('UPSTREAM_NOT_ALLOWED', '脚本只允许处理cnki.net及其子域名。');
+      return host;
+    }
+
+    async encodeHost(hostname, skipReady = false) {
+      if (!skipReady) await this.ready();
+      const host = String(hostname || '').toLowerCase().replace(/\.$/, '');
+      if (!isCnkiHost(host)) throw new HelperError('UPSTREAM_NOT_ALLOWED', '只允许转换知网域名。');
+      if (this.hostTokenCache.has(host)) return this.hostTokenCache.get(host);
+      const encrypted = await cfb128Transform(new TextEncoder().encode(host), this.key, this.iv, false);
+      const token = bytesToHex(this.iv) + bytesToHex(encrypted);
+      this.hostTokenCache.set(host, token);
+      return token;
+    }
+
+    async proxyToUpstream(rawProxyUrl) {
+      await this.ready();
+      const route = this.parseRoute(rawProxyUrl);
+      const host = await this.decodeHost(route.token);
+      this.hostTokenCache.set(host, route.token);
+      const path = route.url.pathname.slice(route.prefix.length) || '/';
+      return new URL(`${route.protocol}//${host}${route.port ? `:${route.port}` : ''}${path}${route.url.search}${route.url.hash}`);
+    }
+
+    async upstreamToProxy(rawUpstreamUrl) {
+      await this.ready();
+      const url = new URL(rawUpstreamUrl);
+      if (!isHttpUrl(url) || url.username || url.password || !isCnkiHost(url.hostname)) {
+        throw new HelperError('UPSTREAM_NOT_ALLOWED', '只允许转换不含账号信息的HTTP(S)知网地址。');
+      }
+      const token = await this.encodeHost(url.hostname);
+      const route = `/${url.protocol.slice(0, -1)}${url.port ? `-${url.port}` : ''}/${token}`;
+      return `${this.origin}${route}${url.pathname}${url.search}${url.hash}`;
+    }
+
+    async resolveCandidates(rawValue, baseUrl) {
+      await this.ready();
+      const raw = String(rawValue || '').trim();
+      if (!raw || raw.startsWith('#')) throw new HelperError('EMPTY_LINK', '没有可用的链接。');
+      if (/^(?:javascript|data|blob):/i.test(raw)) throw new HelperError('NON_HTTP_LINK', '链接不是可访问的HTTP(S)地址。');
+
+      if (/^https?:/i.test(raw)) {
+        const absolute = new URL(raw);
+        if (absolute.origin === this.origin && UESTC_ROUTE_RE.test(absolute.pathname)) return [absolute.href];
+        return [await this.upstreamToProxy(absolute.href)];
+      }
+      if (raw.startsWith('//')) {
+        if (raw.startsWith(`//${new URL(this.origin).host}/`)) {
+          const absolute = new URL(raw, this.origin);
+          this.assertPortalUrl(absolute.href);
+          return [absolute.href];
+        }
+        const baseUpstream = await this.toUpstreamBase(baseUrl);
+        return [await this.upstreamToProxy(new URL(`${baseUpstream.protocol}${raw}`).href)];
+      }
+      if (UESTC_ROUTE_RE.test(raw)) {
+        const absolute = new URL(raw, this.origin);
+        this.assertPortalUrl(absolute.href);
+        return [absolute.href];
+      }
+      const baseUpstream = await this.toUpstreamBase(baseUrl);
+      return [await this.upstreamToProxy(new URL(raw, baseUpstream).href)];
+    }
+
+    async toUpstreamBase(baseUrl) {
+      const base = new URL(baseUrl || location.href, location.href);
+      if (base.origin === this.origin && UESTC_ROUTE_RE.test(base.pathname)) return this.proxyToUpstream(base.href);
+      if (isHttpUrl(base) && isCnkiHost(base.hostname)) return base;
+      throw new HelperError('UNPROXIED_BASE', '相对链接缺少可用的知网或WebVPN基准地址。');
+    }
+
+    assertPortalUrl(rawUrl) {
+      const url = new URL(rawUrl, this.origin);
+      if (url.origin !== this.origin || !UESTC_ROUTE_RE.test(url.pathname)) {
+        throw new HelperError('REDIRECT_LEFT_PORTAL', '请求地址离开了电子科大WebVPN。');
+      }
+      return url.href;
+    }
+
+    redactPath(pathname) {
+      return pathname.replace(UESTC_ROUTE_RE, '/[proxy-route]');
+    }
+
+    environment() {
+      let route = null;
+      try {
+        const parsed = this.parseRoute(location.href);
+        route = { protocol: parsed.protocol, port: parsed.port || '(default)', pathPrefix: '/[proxy-route]' };
+      } catch (_) { /* page may not be a proxied resource */ }
+      return { portal: this.name, origin: this.origin, route, referenceHost: this.referenceHost || '(not initialized)' };
+    }
+  }
+
+  class SwjtuAdapter {
+    constructor() {
+      this.name = '西南交通大学 YITLINK 智能资源网关';
+      this.origin = 'https://era.lib.swjtu.edu.cn';
+      this.initializing = null;
+      this.route = null;
+      this.appPrefixes = [];
+    }
+
+    parseRoute(rawUrl) {
+      const url = new URL(rawUrl, this.origin);
+      if (url.origin !== this.origin) throw new HelperError('NOT_PROXY_URL', '地址不属于西南交大智能资源网关。');
+      const match = url.pathname.match(SWJTU_ROUTE_RE);
+      if (!match) throw new HelperError('INVALID_PROXY_ROUTE', '地址中没有可识别的西南交大资源代理路由。');
+      const port = match[2];
+      if (Number(port) < 1 || Number(port) > 65535) throw new HelperError('INVALID_PROXY_ROUTE', '代理路由端口无效。');
+      return {
+        url,
+        root: match[0],
+        protocol: `${match[1].toLowerCase()}:`,
+        port,
+        alias: match[3].toLowerCase(),
+        tail: url.pathname.slice(match[0].length) || '/',
+      };
+    }
+
+    detectAppPrefix(tail) {
+      const value = String(tail || '');
+      const explicit = value.match(/^(.*?\/yitlink)(?=\/|$)/i);
+      if (explicit?.[1]) return explicit[1].replace(/\/$/, '');
+      return '';
+    }
+
+    collectObservedRoutes() {
+      const urls = [location.href];
+      document.querySelectorAll('a[href], base[href], form[action]').forEach(element => {
+        const raw = element.getAttribute('href') || element.getAttribute('action');
+        if (!raw) return;
+        try { urls.push(new URL(raw, location.href).href); } catch (_) { /* invalid */ }
+      });
+      const routes = [];
+      for (const raw of uniqueStrings(urls, 80)) {
+        try {
+          const route = this.parseRoute(raw);
+          if (route.alias === 'cnki') routes.push(route);
+        } catch (_) { /* unrelated link */ }
+      }
+      return routes;
+    }
+
+    async ready() {
+      if (!this.initializing) this.initializing = this.initialize();
+      return this.initializing;
+    }
+
+    async initialize() {
+      const routes = this.collectObservedRoutes();
+      if (!routes.length) {
+        throw new HelperError('SWJTU_ROUTE_NOT_FOUND', '当前页面没有发现 /https/443/net/cnki 形式的知网代理路由。请从图书馆“智能访问”入口进入知网。');
+      }
+      const preferred = routes.find(route => route.url.href === location.href) || routes[0];
+      if (preferred.alias !== 'cnki') throw new HelperError('SWJTU_ROUTE_NOT_FOUND', '当前资源代理别名不是cnki。');
+      this.route = preferred;
+      const observedPrefixes = routes.map(route => this.detectAppPrefix(route.tail)).filter(Boolean);
+      const currentPrefix = this.detectAppPrefix(preferred.tail);
+      this.appPrefixes = uniqueStrings([
+        currentPrefix,
+        ...observedPrefixes,
+        '/kns/yitlink',
+      ], 6);
+      return {
+        portal: this.name,
+        routeRoot: preferred.root,
+        applicationPrefixes: [...this.appPrefixes],
+      };
+    }
+
+    stripObservedAppPrefix(pathname) {
+      for (const prefix of this.appPrefixes) {
+        if (pathname.toLowerCase() === prefix.toLowerCase()) return '/';
+        if (pathname.toLowerCase().startsWith(`${prefix.toLowerCase()}/`)) {
+          return pathname.slice(prefix.length) || '/';
+        }
+      }
+      return pathname || '/';
+    }
+
+    buildCandidates(upstreamUrl) {
+      if (!this.route) throw new HelperError('SWJTU_ROUTE_NOT_READY', '西南交大代理路由尚未初始化。');
+      const url = new URL(upstreamUrl);
+      if (!isHttpUrl(url) || url.username || url.password || !isCnkiHost(url.hostname)) {
+        throw new HelperError('UPSTREAM_NOT_ALLOWED', '只允许映射不含账号信息的cnki.net地址。');
+      }
+      const path = url.pathname.startsWith('/') ? url.pathname : `/${url.pathname}`;
+      const suffix = `${path}${url.search}${url.hash}`;
+      const candidates = [];
+      for (const prefix of this.appPrefixes) {
+        const lowerPath = path.toLowerCase();
+        const lowerPrefix = prefix.toLowerCase();
+        if (lowerPath === lowerPrefix || lowerPath.startsWith(`${lowerPrefix}/`)) {
+          candidates.push(`${this.origin}${this.route.root}${suffix}`);
+        } else {
+          candidates.push(`${this.origin}${this.route.root}${prefix}${suffix}`);
+        }
+      }
+      candidates.push(`${this.origin}${this.route.root}${suffix}`);
+      return uniqueStrings(candidates);
+    }
+
+    async toVirtualUpstreamBase(baseUrl) {
+      const base = new URL(baseUrl || location.href, location.href);
+      if (isHttpUrl(base) && isCnkiHost(base.hostname)) return base;
+      if (base.origin === this.origin) {
+        const route = this.parseRoute(base.href);
+        if (route.alias !== 'cnki') throw new HelperError('UPSTREAM_NOT_ALLOWED', '基准地址不是知网代理资源。');
+        const upstreamPath = this.stripObservedAppPrefix(route.tail);
+        return new URL(`${route.protocol}//kns.cnki.net${route.port && route.port !== '443' ? `:${route.port}` : ''}${upstreamPath}${base.search}${base.hash}`);
+      }
+      throw new HelperError('UNPROXIED_BASE', '相对链接缺少可用的知网或智能网关基准地址。');
+    }
+
+    async resolveCandidates(rawValue, baseUrl) {
+      await this.ready();
+      const raw = String(rawValue || '').trim();
+      if (!raw || raw.startsWith('#')) throw new HelperError('EMPTY_LINK', '没有可用的链接。');
+      if (/^(?:javascript|data|blob):/i.test(raw)) throw new HelperError('NON_HTTP_LINK', '链接不是可访问的HTTP(S)地址。');
+
+      if (/^https?:/i.test(raw)) {
+        const absolute = new URL(raw);
+        if (absolute.origin === this.origin && SWJTU_ROUTE_RE.test(absolute.pathname)) {
+          this.assertPortalUrl(absolute.href);
+          return [absolute.href];
+        }
+        return this.buildCandidates(absolute.href);
+      }
+      if (raw.startsWith('//')) {
+        if (raw.startsWith(`//${new URL(this.origin).host}/`)) {
+          const absolute = new URL(raw, this.origin);
+          this.assertPortalUrl(absolute.href);
+          return [absolute.href];
+        }
+        const baseUpstream = await this.toVirtualUpstreamBase(baseUrl);
+        return this.buildCandidates(new URL(`${baseUpstream.protocol}${raw}`).href);
+      }
+      if (SWJTU_ROUTE_RE.test(raw)) {
+        const absolute = new URL(raw, this.origin);
+        this.assertPortalUrl(absolute.href);
+        return [absolute.href];
+      }
+      const baseUpstream = await this.toVirtualUpstreamBase(baseUrl);
+      return this.buildCandidates(new URL(raw, baseUpstream).href);
+    }
+
+    assertPortalUrl(rawUrl) {
+      const url = new URL(rawUrl, this.origin);
+      const route = this.parseRoute(url.href);
+      if (route.alias !== 'cnki') throw new HelperError('REDIRECT_LEFT_PORTAL', '请求离开了西南交大知网代理应用。');
+      return url.href;
+    }
+
+    redactPath(pathname) {
+      return pathname.replace(SWJTU_ROUTE_RE, '/[era-cnki-route]');
+    }
+
+    environment() {
+      return {
+        portal: this.name,
+        origin: this.origin,
+        routeRoot: this.route?.root || '(not initialized)',
+        applicationPrefixes: [...this.appPrefixes],
+      };
+    }
+  }
+
+  if (window.top !== window.self) return;
+
+  const adapter = BUILD.portal === 'UESTC' ? new UestcAdapter() : new SwjtuAdapter();
+  if (location.origin !== adapter.origin) return;
+
+  const events = [];
+  const rowStates = new WeakMap();
+  const DIRECT_HOSTS = Object.freeze(['webvpn.uestc.edu.cn', 'era.lib.swjtu.edu.cn']);
+  let runtimeSettings = loadRuntimeSettings();
+  let busy = false;
+  let stopRequested = false;
+  let abortCurrent = null;
+  let ui = null;
+  let observerTimer = 0;
+
+  function currentPortalDirectHint() {
+    return `请在代理软件中把 ${location.hostname} 设为 DIRECT/直连；Edge用户脚本不能覆盖系统或浏览器代理。`;
+  }
+
+  function proxyRuleText() {
+    return [
+      '# Clash / Mihomo：放在 MATCH / FINAL 规则之前',
+      '- DOMAIN,webvpn.uestc.edu.cn,DIRECT',
+      '- DOMAIN,era.lib.swjtu.edu.cn,DIRECT',
+      '',
+      '# 通用代理绕过主机',
+      'webvpn.uestc.edu.cn',
+      'era.lib.swjtu.edu.cn',
+    ].join('\n');
+  }
+
+  function redactUrl(raw) {
+    try {
+      const url = new URL(raw, location.href);
+      const path = adapter.redactPath(url.pathname).replace(/[a-z0-9_=%+.-]{40,}/ig, '[long-segment]');
+      const keys = Array.from(new Set(url.searchParams.keys()));
+      const query = keys.length
+        ? `?${keys.map(key => `${encodeURIComponent(key)}=[redacted]`).join('&')}`
+        : '';
+      return `${url.origin}${path}${query}`;
+    } catch (_) {
+      return '[invalid-url]';
+    }
+  }
+
+  function describeRawUrl(raw) {
+    try {
+      const value = String(raw || '').trim();
+      const absolute = new URL(value, location.href);
+      return {
+        kind: /^https?:/i.test(value) ? 'absolute' : value.startsWith('//') ? 'protocol-relative' : 'relative',
+        origin: /^https?:/i.test(value) || value.startsWith('//') ? absolute.origin : '(depends on base)',
+        path: adapter.redactPath(absolute.pathname).replace(/[a-z0-9_=%+.-]{40,}/ig, '[long-segment]'),
+        queryKeys: Array.from(new Set(absolute.searchParams.keys())),
+      };
+    } catch (_) {
+      return { kind: 'invalid' };
+    }
+  }
+
+  function log(code, message, data = {}) {
+    const item = { time: new Date().toISOString(), code, message, ...data };
+    events.push(item);
+    if (events.length > 400) events.shift();
+    console.info(`[CNKI PDF ${BUILD.portal}]`, item);
+    updateLogView();
+  }
+
+  function setStatus(message, kind = 'info') {
+    if (!ui) return;
+    ui.status.textContent = message;
+    ui.status.dataset.kind = kind;
+  }
+
+  function updateLogView() {
+    if (!ui?.log) return;
+    ui.log.textContent = events.slice(-14).map(event => `[${event.code}] ${event.message}`).join('\n');
+    ui.log.scrollTop = ui.log.scrollHeight;
+  }
+
+  function checkStopped() {
+    if (stopRequested) throw new HelperError('STOPPED', '任务已由用户停止。');
+  }
+
+  async function resolveElementCandidates(element, baseUrl, context, includeLiveHref = true) {
+    const observed = collectLinkValues(element, includeLiveHref);
+    log('LINK_INPUT', '正在检查页面中的链接表示。', {
+      context,
+      base: redactUrl(baseUrl || location.href),
+      observed: observed.map(describeRawUrl),
+    });
+    const output = [];
+    const errors = [];
+    for (const raw of observed) {
+      try {
+        output.push(...await adapter.resolveCandidates(raw, baseUrl || location.href));
+      } catch (error) {
+        errors.push(error);
+      }
+    }
+    const candidates = uniqueStrings(output);
+    if (!candidates.length) {
+      const error = errors[0] || new HelperError('EMPTY_LINK', '没有找到可处理的链接。');
+      log(error.code || 'LINK_RESOLVE_ERROR', error.message || '链接解析失败。', { context });
+      throw error;
+    }
+    log('LINK_CANDIDATES', `已生成${candidates.length}个同源代理候选地址。`, {
+      context,
+      candidates: candidates.map(redactUrl),
+    });
+    return candidates;
+  }
+
+  function parseContentLength(headers) {
+    const value = Number(headers.get('content-length') || 0);
+    return Number.isFinite(value) && value > 0 ? value : 0;
+  }
+
+  async function responseToBlob(response) {
+    const declared = parseContentLength(response.headers);
+    if (declared > CONFIG.MAX_RESPONSE_BYTES) throw new HelperError('SIZE_LIMIT', '响应文件超过150 MiB，已停止。');
+    if (!response.body?.getReader) {
+      const blob = await response.blob();
+      if (blob.size > CONFIG.MAX_RESPONSE_BYTES) throw new HelperError('SIZE_LIMIT', '响应文件超过150 MiB，已停止。');
+      return blob;
+    }
+    const reader = response.body.getReader();
+    const chunks = [];
+    let size = 0;
+    while (true) {
+      checkStopped();
+      const part = await reader.read();
+      if (part.done) break;
+      size += part.value.byteLength;
+      if (size > CONFIG.MAX_RESPONSE_BYTES) {
+        await reader.cancel();
+        throw new HelperError('SIZE_LIMIT', '响应文件超过150 MiB，已停止。');
+      }
+      chunks.push(part.value);
+    }
+    return new Blob(chunks, { type: response.headers.get('content-type') || '' });
+  }
+
+  async function fetchPortalResource(url, referrerUrl) {
+    checkStopped();
+    adapter.assertPortalUrl(url);
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), CONFIG.REQUEST_TIMEOUT_MS);
+    abortCurrent = () => controller.abort();
+    const options = {
+      method: 'GET',
+      credentials: 'include',
+      redirect: 'follow',
+      cache: 'no-store',
+      mode: 'same-origin',
+      signal: controller.signal,
+    };
+    try {
+      if (referrerUrl && new URL(referrerUrl, location.href).origin === location.origin) {
+        options.referrer = new URL(referrerUrl, location.href).href;
+      }
+    } catch (_) { /* use browser default referrer */ }
+
+    log('REQUEST', '正在通过当前校外通道请求资源。', { url: redactUrl(url) });
+    try {
+      const response = await fetch(url, options);
+      const finalUrl = adapter.assertPortalUrl(response.url || url);
+      if (!response.ok) {
+        const retryAfter = response.headers.get('retry-after') || '';
+        let message = `服务器返回HTTP ${response.status}。`;
+        if (response.status === 429 && retryAfter) message += ` Retry-After：${retryAfter}。`;
+        if ([407, 502, 503, 504].includes(response.status)) message += ` ${currentPortalDirectHint()}`;
+        throw new HelperError(`HTTP_${response.status}`, message, {
+          portalHost: location.hostname,
+          retryAfter: retryAfter || null,
+        });
+      }
+      const blob = await responseToBlob(response);
+      const resource = {
+        url: finalUrl,
+        status: response.status,
+        contentType: response.headers.get('content-type') || '',
+        blob,
+      };
+      log('RESPONSE', `资源响应完成：HTTP ${response.status}。`, {
+        url: redactUrl(finalUrl), contentType: resource.contentType, bytes: blob.size,
+      });
+      return resource;
+    } catch (error) {
+      if (error instanceof HelperError) throw error;
+      if (error?.name === 'AbortError') {
+        throw new HelperError(stopRequested ? 'STOPPED' : 'TIMEOUT', stopRequested ? '任务已停止。' : '请求超过90秒。');
+      }
+      throw new HelperError(
+        'NETWORK_ERROR',
+        `同源请求失败：${error?.message || 'unknown error'}。${currentPortalDirectHint()}`,
+        { portalHost: location.hostname },
+      );
+    } finally {
+      window.clearTimeout(timeout);
+      abortCurrent = null;
+    }
+  }
+
+  async function decodeBlobText(blob, contentType = '') {
+    if (blob.size > CONFIG.HTML_INSPECT_LIMIT) throw new HelperError('UNEXPECTED_RESPONSE', '返回内容不是PDF且HTML体积异常。');
+    const buffer = await blob.arrayBuffer();
+    const charset = String(contentType).match(/charset\s*=\s*['"]?([^;'"\s]+)/i)?.[1] || 'utf-8';
+    try {
+      return new TextDecoder(charset).decode(buffer);
+    } catch (_) {
+      return new TextDecoder('utf-8').decode(buffer);
+    }
+  }
+
+  async function parseHtmlResource(resource) {
+    const html = await decodeBlobText(resource.blob, resource.contentType);
+    return new DOMParser().parseFromString(html, 'text/html');
+  }
+
+  function classifyHtmlDocument(doc, finalUrl) {
+    const title = String(doc.title || '').replace(/\s+/g, ' ').trim().slice(0, 180);
+    const bodyText = String(doc.body?.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 5000);
+    const combined = `${title} ${bodyText}`;
+    const url = new URL(finalUrl, location.href);
+
+    if (/来源应用不正确|source\s*application\s*(?:is\s*)?incorrect/i.test(combined)) {
+      return new HelperError('SOURCE_APP_INVALID', `网关或知网返回“来源应用不正确”：${title || '错误页'}`);
+    }
+    if (/验证码|安全验证|访问过于频繁|请求过于频繁|异常访问|captcha|slider/i.test(combined)) {
+      return new HelperError('VERIFICATION_REQUIRED', `返回了验证或限流页面：${title || '未命名页面'}`);
+    }
+    const hasPassword = Boolean(doc.querySelector('input[type="password"]'));
+    if (hasPassword || (/登录|统一身份认证|读者登录/i.test(title) && /账号|用户名|密码|验证码|交大ID/i.test(combined))) {
+      return new HelperError('LOGIN_REQUIRED', `校外通道或知网会话可能失效：${title || '登录页面'}`);
+    }
+    if (BUILD.portal === 'SWJTU' && (/^\/next\//i.test(url.pathname) || /西南交通大学图书馆智能资源网关/.test(title))) {
+      return new HelperError('WRONG_DESTINATION', `请求回到了西南交大资源导航页：${title || '智能资源网关'}`);
+    }
+    const hasArticleSignals = Boolean(doc.querySelector(
+      '#pdfDown, .btn-dlpdf, [name="citation_title"], #ChDivSummary, .wx-tit, .brief, .doc-top, .detailtitle'
+    ));
+    if (!hasArticleSignals && /个性化首页|中国知网首页|为您服务/.test(combined)) {
+      return new HelperError('WRONG_DESTINATION', `详情请求被重定向到知网其他页面：${title || '知网页面'}`);
+    }
+    if (/页面不存在|资源不存在|访问出错|系统错误|internal server error|bad gateway|not found/i.test(title) && !hasArticleSignals) {
+      return new HelperError('GATEWAY_ERROR', `代理或目标站返回错误页面：${title || '错误页'}`);
+    }
+    return null;
+  }
+
+  function isFatalError(error) {
+    const code = error?.code || '';
+    return [
+      'STOPPED', 'TIMEOUT', 'SIZE_LIMIT', 'LOGIN_REQUIRED', 'VERIFICATION_REQUIRED',
+      'HTTP_401', 'HTTP_403', 'HTTP_407', 'HTTP_429', 'HTTP_502', 'HTTP_503', 'HTTP_504',
+      'NETWORK_ERROR', 'GATEWAY_ERROR', 'REDIRECT_LEFT_PORTAL',
+      'PROXY_CODEC_MISMATCH', 'CRYPTO_UNAVAILABLE', 'SWJTU_ROUTE_NOT_FOUND',
+    ].includes(code);
+  }
+
+  function chooseBestError(errors, fallbackMessage) {
+    const priority = [
+      'SOURCE_APP_INVALID', 'WRONG_DESTINATION', 'LOGIN_REQUIRED', 'VERIFICATION_REQUIRED',
+      'NO_PDF_LINK', 'NOT_PDF', 'HTTP_403', 'HTTP_404', 'NETWORK_ERROR',
+    ];
+    for (const code of priority) {
+      const found = errors.find(error => error?.code === code);
+      if (found) return found;
+    }
+    return errors[errors.length - 1] || new HelperError('NO_USABLE_CANDIDATE', fallbackMessage);
+  }
+
+  async function fetchDetailCandidates(candidates, referrerUrl) {
+    const errors = [];
+    for (let index = 0; index < candidates.length; index += 1) {
+      checkStopped();
+      const candidate = candidates[index];
+      try {
+        log('CANDIDATE_TRY', `正在尝试详情候选地址 ${index + 1}/${candidates.length}。`, { url: redactUrl(candidate) });
+        const resource = await fetchPortalResource(candidate, referrerUrl);
+        if (await blobStartsWithPdf(resource.blob)) return { resource, doc: null };
+        const doc = await parseHtmlResource(resource);
+        const pageError = classifyHtmlDocument(doc, resource.url);
+        if (pageError) {
+          errors.push(pageError);
+          log('CANDIDATE_REJECTED', pageError.message, { code: pageError.code, url: redactUrl(candidate) });
+          if (isFatalError(pageError)) throw pageError;
+          continue;
+        }
+        return { resource, doc };
+      } catch (error) {
+        errors.push(error);
+        log('CANDIDATE_FAILED', error?.message || '候选地址请求失败。', {
+          code: error?.code || 'UNEXPECTED_ERROR', url: redactUrl(candidate),
+        });
+        if (isFatalError(error)) throw error;
+      }
+    }
+    throw chooseBestError(errors, '所有详情候选地址都未返回可用页面。');
+  }
+
+  function scorePdfCandidate(raw, element) {
+    const context = `${raw} ${element?.id || ''} ${element?.className || ''} ${element?.getAttribute?.('title') || ''} ${element?.textContent || ''}`.toLowerCase();
+    let score = 0;
+    if (/pdfdown|pdf_down|pdfdownload/.test(context)) score += 120;
+    if (/dflag\s*=\s*pdf/.test(context)) score += 110;
+    if (/\bpdf\b/.test(context)) score += 90;
+    if (/download|下载/.test(context)) score += 35;
+    if (/caj/.test(context) && !/pdf/.test(context)) score -= 140;
+    return score;
+  }
+
+  function collectPdfRawCandidates(doc) {
+    const selectors = [
+      '#pdfDown[href]', '#pdfDown a[href]', 'a#pdfDown[href]',
+      '.btn-dlpdf[href]', '.btn-dlpdf a[href]',
+      'a[href*="dflag=pdf" i]', 'a[href*="pdfdown" i]',
+      'a[href*="download.aspx" i]', 'a[href*="/KCMS/download" i]',
+      '[data-href*="pdf" i]', '[data-url*="pdf" i]', '[data-download-url]',
+      'a[title*="PDF" i]', 'a[data-format="pdf" i]',
+    ];
+    const scored = [];
+    const seen = new Set();
+    for (const selector of selectors) {
+      for (const element of doc.querySelectorAll(selector)) {
+        for (const raw of collectLinkValues(element, false)) {
+          if (seen.has(raw)) continue;
+          seen.add(raw);
+          scored.push({ raw, score: scorePdfCandidate(raw, element) });
+        }
+      }
+    }
+
+    const refresh = doc.querySelector('meta[http-equiv="refresh" i][content]')?.getAttribute('content') || '';
+    const refreshUrl = refresh.match(/url\s*=\s*([^;]+)$/i)?.[1]?.trim().replace(/^['"]|['"]$/g, '');
+    if (refreshUrl && !seen.has(refreshUrl)) {
+      seen.add(refreshUrl);
+      scored.push({ raw: refreshUrl, score: 30 });
+    }
+
+    let scriptBudget = 2 * 1024 * 1024;
+    for (const script of doc.scripts) {
+      if (scriptBudget <= 0) break;
+      const text = String(script.textContent || '').slice(0, scriptBudget);
+      scriptBudget -= text.length;
+      const patterns = [
+        /['"]((?:https?:)?\/\/[^'"\s\\]+(?:pdf|download|dflag)[^'"\s\\]*)['"]/ig,
+        /['"](\/[^'"\s\\]*(?:pdf|download|dflag)[^'"\s\\]*)['"]/ig,
+      ];
+      for (const pattern of patterns) {
+        let match;
+        while ((match = pattern.exec(text)) !== null) {
+          const raw = match[1].replace(/\\\//g, '/').replace(/&amp;/gi, '&');
+          if (seen.has(raw)) continue;
+          seen.add(raw);
+          scored.push({ raw, score: scorePdfCandidate(raw, null) - 10 });
+          if (scored.length >= 60) break;
+        }
+      }
+      if (scored.length >= 60) break;
+    }
+
+    return scored
+      .filter(item => item.score > -50)
+      .sort((a, b) => b.score - a.score)
+      .map(item => item.raw);
+  }
+
+  async function extractPdfCandidates(resource, doc) {
+    const rawCandidates = collectPdfRawCandidates(doc);
+    if (!rawCandidates.length) {
+      const pageError = classifyHtmlDocument(doc, resource.url);
+      if (pageError) throw pageError;
+      throw new HelperError('NO_PDF_LINK', `详情页中没有找到PDF入口：${doc.title || redactUrl(resource.url)}`);
+    }
+
+    const bases = [resource.url];
+    const baseRaw = doc.querySelector('base[href]')?.getAttribute('href');
+    if (baseRaw) {
+      try { bases.unshift(...await adapter.resolveCandidates(baseRaw, resource.url)); }
+      catch (error) { log('BASE_IGNORED', error.message || '详情页base地址不可用。'); }
+    }
+
+    const resolved = [];
+    const errors = [];
+    for (const raw of rawCandidates) {
+      for (const base of uniqueStrings(bases, 6)) {
+        try {
+          resolved.push(...await adapter.resolveCandidates(raw, base));
+        } catch (error) {
+          errors.push(error);
+        }
+      }
+    }
+    const candidates = uniqueStrings(resolved);
+    if (!candidates.length) {
+      throw errors[0] || new HelperError('NO_PDF_LINK', 'PDF入口存在，但没有生成可用的校外通道地址。');
+    }
+    log('PDF_CANDIDATES', `已解析出${candidates.length}个PDF候选地址。`, {
+      candidates: candidates.map(redactUrl),
+    });
+    return candidates;
+  }
+
+  async function fetchPdfCandidates(candidates, referrerUrl, depth = 0) {
+    const errors = [];
+    for (let index = 0; index < candidates.length; index += 1) {
+      checkStopped();
+      const candidate = candidates[index];
+      try {
+        log('PDF_TRY', `正在尝试PDF候选地址 ${index + 1}/${candidates.length}。`, { url: redactUrl(candidate) });
+        const resource = await fetchPortalResource(candidate, referrerUrl);
+        if (await blobStartsWithPdf(resource.blob)) return resource;
+        const doc = await parseHtmlResource(resource);
+        const pageError = classifyHtmlDocument(doc, resource.url);
+        if (pageError) {
+          errors.push(pageError);
+          log('PDF_CANDIDATE_REJECTED', pageError.message, { code: pageError.code, url: redactUrl(candidate) });
+          if (isFatalError(pageError)) throw pageError;
+          continue;
+        }
+        if (depth < 1) {
+          try {
+            const nested = await extractPdfCandidates(resource, doc);
+            const filtered = nested.filter(url => !candidates.includes(url));
+            if (filtered.length) return await fetchPdfCandidates(filtered, resource.url, depth + 1);
+          } catch (nestedError) {
+            errors.push(nestedError);
+          }
+        }
+        const notPdf = new HelperError('NOT_PDF', `下载候选返回的不是PDF：${doc.title || 'HTML页面'}`);
+        errors.push(notPdf);
+        log('PDF_CANDIDATE_REJECTED', notPdf.message, { code: notPdf.code, url: redactUrl(candidate) });
+      } catch (error) {
+        errors.push(error);
+        log('PDF_CANDIDATE_FAILED', error?.message || 'PDF候选请求失败。', {
+          code: error?.code || 'UNEXPECTED_ERROR', url: redactUrl(candidate),
+        });
+        if (isFatalError(error)) throw error;
+      }
+    }
+    throw chooseBestError(errors, '所有PDF候选地址都未返回PDF文件。');
+  }
+
+  function getSelectedRows() {
+    const rows = [];
+    const seen = new Set();
+    document.querySelectorAll('input.cbItem:checked').forEach(checkbox => {
+      const row = checkbox.closest('tr');
+      if (row && row.getClientRects().length && !seen.has(row)) {
+        seen.add(row);
+        rows.push(row);
+      }
+    });
+    return rows;
+  }
+
+  function findTitleLink(row) {
+    return row.querySelector('a.fz14[href], a[href*="/article/abstract"], a[href*="/detail/detail"]');
+  }
+
+  function getOrCreateRowState(row) {
+    let state = rowStates.get(row);
+    if (state) return state;
+    const titleLink = findTitleLink(row);
+    state = {
+      row,
+      titleLink,
+      title: String(titleLink?.textContent || '知网论文').replace(/\s+/g, ' ').trim(),
+      detailCandidates: [],
+      detailUrl: '',
+      pdfCandidates: [],
+      pdfResource: null,
+      resolving: null,
+      button: null,
+      downloaded: false,
+    };
+    rowStates.set(row, state);
+    return state;
+  }
+
+  function paintRowButton(state, mode, title) {
+    if (!state.button) return;
+    const colors = {
+      idle: '#fff6bf', working: '#ffe092', ready: '#c9f7c9', error: '#ffcaca', saved: '#cfe7ff',
+    };
+    state.button.style.backgroundColor = colors[mode] || colors.idle;
+    state.button.title = title;
+    state.button.dataset.cnkiPdfState = mode;
+  }
+
+  async function resolveRow(state) {
+    if (state.pdfCandidates.length || state.pdfResource) return state;
+    if (state.resolving) return state.resolving;
+    if (!state.titleLink) throw new HelperError('DETAIL_SELECTOR', '当前结果行没有找到论文标题链接。');
+
+    state.resolving = (async () => {
+      paintRowButton(state, 'working', '正在解析论文详情与PDF入口…');
+      state.detailCandidates = await resolveElementCandidates(
+        state.titleLink,
+        document.baseURI || location.href,
+        { stage: 'DETAIL_LINK' },
+        true,
+      );
+      const detail = await fetchDetailCandidates(state.detailCandidates, location.href);
+      state.detailUrl = detail.resource.url;
+      if (await blobStartsWithPdf(detail.resource.blob)) {
+        state.pdfResource = detail.resource;
+      } else {
+        state.pdfCandidates = await extractPdfCandidates(detail.resource, detail.doc);
+      }
+      paintRowButton(state, 'ready', 'PDF已解析，点击下载');
+      return state;
+    })().catch(error => {
+      paintRowButton(state, 'error', `PDF解析失败 [${error?.code || 'ERROR'}]：${error?.message || '未知错误'}`);
+      throw error;
+    }).finally(() => {
+      state.resolving = null;
+    });
+    return state.resolving;
+  }
+
+  function saveBlobWithAnchor(blob, filename) {
+    const objectUrl = URL.createObjectURL(blob);
+    const anchor = document.createElement('a');
+    anchor.href = objectUrl;
+    anchor.download = filename;
+    anchor.style.display = 'none';
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    window.setTimeout(() => URL.revokeObjectURL(objectUrl), 60000);
+  }
+
+  function tampermonkeyDownloadMode() {
+    try {
+      return typeof GM_info === 'object' && GM_info ? (GM_info.downloadMode || 'unknown') : 'unknown';
+    } catch (_) {
+      return 'unknown';
+    }
+  }
+
+  function saveBlob(blob, filename) {
+    return new Promise((resolve, reject) => {
+      if (typeof GM_download !== 'function') {
+        reject(new HelperError(
+          'DOWNLOAD_API',
+          'GM_download不可用。请在篡改猴设置中启用“下载”功能并授予下载权限。为避免浏览器逐篇弹出“打开/另存为/保存”，本版本不会自动退回网页链接下载。',
+        ));
+        return;
+      }
+
+      let settled = false;
+      let watchdog = 0;
+      let task = null;
+      const mode = tampermonkeyDownloadMode();
+
+      const finish = (error, result) => {
+        if (settled) return;
+        settled = true;
+        window.clearTimeout(watchdog);
+        abortCurrent = null;
+        error ? reject(error) : resolve(result);
+      };
+
+      try {
+        task = GM_download({
+          url: blob,
+          name: filename,
+          // 明确请求使用浏览器默认下载目录，不主动显示“另存为”窗口。
+          // Edge自身的“每次下载时询问”设置仍具有更高优先级，用户脚本无法绕过。
+          saveAs: false,
+          conflictAction: 'uniquify',
+          onload: () => finish(null, { method: 'GM_download', downloadMode: mode }),
+          ontimeout: () => finish(new HelperError('DOWNLOAD_TIMEOUT', '文件保存超过120秒仍未完成。')),
+          onabort: () => finish(new HelperError('STOPPED', '下载保存已停止。')),
+          onerror: error => {
+            const reason = error?.error || 'unknown';
+            const details = error?.details ? `；${String(error.details).slice(0, 240)}` : '';
+            finish(new HelperError(
+              'DOWNLOAD_ERROR',
+              `篡改猴下载失败：${reason}${details}。请检查篡改猴下载权限、PDF扩展名白名单和版本；本版本未退回网页链接下载，以免再次弹出逐篇确认。`,
+            ));
+          },
+        });
+
+        watchdog = window.setTimeout(() => {
+          finish(new HelperError('DOWNLOAD_TIMEOUT', '没有收到篡改猴的下载完成回调；为避免重复下载，未自动重试。'));
+        }, 120000);
+
+        abortCurrent = () => {
+          try { task?.abort?.(); } catch (_) { /* already completed */ }
+          finish(new HelperError('STOPPED', '下载保存已停止。'));
+        };
+      } catch (error) {
+        finish(new HelperError(
+          'DOWNLOAD_ERROR',
+          `GM_download未能启动：${error?.message || '未知错误'}。请将篡改猴升级到支持Blob下载的版本，并检查下载权限。`,
+        ));
+      }
+    });
+  }
+
+  async function downloadState(state) {
+    await resolveRow(state);
+    checkStopped();
+    paintRowButton(state, 'working', '正在下载并验证PDF…');
+    let resource = state.pdfResource;
+    if (!resource) resource = await fetchPdfCandidates(state.pdfCandidates, state.detailUrl || location.href);
+    if (!(await blobStartsWithPdf(resource.blob))) throw new HelperError('NOT_PDF', '下载响应没有PDF文件头，未保存。');
+    const filename = sanitizeFilename(state.title, '.pdf');
+    const saveResult = await saveBlob(resource.blob, filename);
+    state.downloaded = true;
+    state.pdfResource = null;
+    paintRowButton(state, 'saved', 'PDF下载完成');
+    log('SAVED', 'PDF保存完成。', { bytes: resource.blob.size, method: saveResult.method, downloadMode: saveResult.downloadMode });
+  }
+
+  async function runSingle(state) {
+    if (busy) {
+      setStatus('已有任务正在运行，请等待或点击“停止”。', 'warn');
+      return;
+    }
+    busy = true;
+    stopRequested = false;
+    updateControls();
+    try {
+      await adapter.ready();
+      setStatus(`正在处理：${state.title}`, 'working');
+      await downloadState(state);
+      setStatus('单篇PDF下载完成。', 'success');
+    } catch (error) {
+      const code = error?.code || 'UNEXPECTED_ERROR';
+      log(code, error?.message || '未知错误。');
+      setStatus(`失败 [${code}]：${error?.message || '未知错误'}`, 'error');
+    } finally {
+      busy = false;
+      abortCurrent = null;
+      updateControls();
+    }
+  }
+
+  async function runBatch() {
+    if (busy) return;
+    const rows = getSelectedRows();
+    const taskSettings = { ...runtimeSettings };
+    if (!rows.length) {
+      setStatus('请先勾选至少一篇论文。', 'warn');
+      return;
+    }
+    if (rows.length > taskSettings.batchLimit) {
+      setStatus(`当前设置一次最多处理${taskSettings.batchLimit}篇；请减少勾选数量或在“批量设置”中调整。`, 'error');
+      return;
+    }
+
+    busy = true;
+    stopRequested = false;
+    updateControls();
+    let success = 0;
+    let failed = 0;
+    try {
+      const portalInfo = await adapter.ready();
+      log('PORTAL_READY', '校外通道适配器初始化完成。', portalInfo);
+      log('BATCH_START', `开始顺序处理${rows.length}篇论文。`, { settings: taskSettings });
+      for (let index = 0; index < rows.length; index += 1) {
+        checkStopped();
+        const state = getOrCreateRowState(rows[index]);
+        setStatus(`正在处理 ${index + 1}/${rows.length}：${state.title}`, 'working');
+        try {
+          await downloadState(state);
+          success += 1;
+        } catch (error) {
+          failed += 1;
+          const code = error?.code || 'UNEXPECTED_ERROR';
+          log(code, error?.message || '未知错误。', { row: index + 1 });
+          paintRowButton(state, 'error', `失败 [${code}]：${error?.message || '未知错误'}`);
+          if (isFatalError(error)) throw error;
+        }
+        if (index + 1 < rows.length) {
+          const processed = index + 1;
+          const cooldown = taskSettings.cooldownEvery > 0 &&
+            processed % taskSettings.cooldownEvery === 0 ? taskSettings.cooldownMs : 0;
+          const waitMs = taskSettings.gapMs + cooldown;
+          log('BATCH_WAIT', `等待${(waitMs / 1000).toFixed(waitMs % 1000 ? 1 : 0)}秒后处理下一篇。`, {
+            baseGapMs: taskSettings.gapMs,
+            cooldownMs: cooldown,
+            processed,
+          });
+          setStatus(`已完成${processed}/${rows.length}，等待${Math.ceil(waitMs / 1000)}秒后继续…`, 'working');
+          await waitWithStop(waitMs);
+        }
+      }
+      setStatus(`批量任务结束：成功${success}篇，失败${failed}篇。`, failed ? 'warn' : 'success');
+      log('BATCH_DONE', `批量任务结束：成功${success}篇，失败${failed}篇。`);
+    } catch (error) {
+      const code = error?.code || 'UNEXPECTED_ERROR';
+      log(code, error?.message || '未知错误。');
+      setStatus(`任务已停止 [${code}]：${error?.message || '未知错误'}`, code === 'STOPPED' ? 'warn' : 'error');
+    } finally {
+      busy = false;
+      abortCurrent = null;
+      updateControls();
+    }
+  }
+
+  function stopTask() {
+    if (!busy) return;
+    stopRequested = true;
+    try { abortCurrent?.(); } catch (_) { /* ignored */ }
+    setStatus('正在停止当前任务…', 'warn');
+    log('STOP_REQUESTED', '用户请求停止任务。');
+  }
+
+  function exportDiagnostics() {
+    const report = {
+      version: BUILD.version,
+      portal: BUILD.portal,
+      createdAt: new Date().toISOString(),
+      page: redactUrl(location.href),
+      environment: {
+        ...adapter.environment(),
+        selectedRows: getSelectedRows().length,
+        userAgentFamily: navigator.userAgentData?.brands?.map(item => item.brand).join(', ') || '(not exposed)',
+        runtimeSettings: { ...runtimeSettings },
+        portalHost: location.hostname,
+        suggestedDirectHosts: [...DIRECT_HOSTS],
+      },
+      privacy: '不包含Cookie、账号、Authorization、原始HTML和查询参数值；日志不主动记录论文标题。',
+      events,
+    };
+    const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json;charset=utf-8' });
+    saveBlobWithAnchor(blob, `cnki-pdf-diagnostics-${BUILD.portal.toLowerCase()}.json`);
+  }
+
+  function createRowButton(state, originalDownload) {
+    const button = originalDownload.cloneNode(true);
+    button.removeAttribute('id');
+    button.removeAttribute('href');
+    button.removeAttribute('target');
+    button.removeAttribute('onclick');
+    button.querySelectorAll?.('[href], [target], [onclick], [id]').forEach(child => {
+      child.removeAttribute('href');
+      child.removeAttribute('target');
+      child.removeAttribute('onclick');
+      child.removeAttribute('id');
+    });
+    button.classList.add('cnki-pdf-helper-link');
+    button.setAttribute('role', 'button');
+    button.setAttribute('tabindex', '0');
+    button.setAttribute('aria-label', '下载PDF');
+    button.dataset.cnkiPdfHelper = BUILD.portal;
+    button.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      runSingle(state);
+    }, true);
+    button.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        runSingle(state);
+      }
+    });
+    originalDownload.insertAdjacentElement('afterend', button);
+    state.button = button;
+    paintRowButton(state, 'idle', '点击解析并下载PDF');
+  }
+
+  function enhanceRows() {
+    document.querySelectorAll('input.cbItem').forEach(checkbox => {
+      const row = checkbox.closest('tr');
+      if (!row || row.dataset[`cnkiPdf${BUILD.portal}Ready`] === '1') return;
+      const state = getOrCreateRowState(row);
+      if (!state.titleLink) return;
+      const originalDownload = row.querySelector('a.downloadlink, .downloadlink');
+      if (!originalDownload) return;
+      row.dataset[`cnkiPdf${BUILD.portal}Ready`] = '1';
+      createRowButton(state, originalDownload);
+    });
+  }
+
+  function settingsSummaryText(value = runtimeSettings) {
+    const cooldown = value.cooldownEvery > 0 && value.cooldownMs > 0
+      ? `；每${value.cooldownEvery}篇额外休息${value.cooldownMs / 1000}秒`
+      : '；不设置额外休息';
+    return `当前：最多${value.batchLimit}篇，篇间${value.gapMs / 1000}秒${cooldown}`;
+  }
+
+  function syncSettingsUi() {
+    if (!ui?.batchLimit) return;
+    ui.batchLimit.value = String(runtimeSettings.batchLimit);
+    ui.gapSeconds.value = String(runtimeSettings.gapMs / 1000);
+    ui.cooldownEvery.value = String(runtimeSettings.cooldownEvery);
+    ui.cooldownSeconds.value = String(runtimeSettings.cooldownMs / 1000);
+    ui.settingsSummary.textContent = settingsSummaryText();
+  }
+
+  function saveSettingsFromUi() {
+    if (!ui || busy) return;
+    runtimeSettings = storeRuntimeSettings({
+      batchLimit: ui.batchLimit.value,
+      gapMs: Number(ui.gapSeconds.value) * 1000,
+      cooldownEvery: ui.cooldownEvery.value,
+      cooldownMs: Number(ui.cooldownSeconds.value) * 1000,
+    });
+    syncSettingsUi();
+    setStatus(`批量设置已保存。${settingsSummaryText()}`, 'success');
+    log('SETTINGS_SAVED', '批量设置已保存。', { settings: { ...runtimeSettings } });
+  }
+
+  async function copyProxyRules() {
+    const text = proxyRuleText();
+    try {
+      if (typeof GM_setClipboard === 'function') {
+        GM_setClipboard(text, 'text');
+      } else if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        const area = document.createElement('textarea');
+        area.value = text;
+        area.style.position = 'fixed';
+        area.style.opacity = '0';
+        document.body.appendChild(area);
+        area.select();
+        if (!document.execCommand('copy')) throw new Error('copy command failed');
+        area.remove();
+      }
+      setStatus('已复制两个学校校外通道的DIRECT/直连规则；请粘贴到代理软件的规则或绕过列表。', 'success');
+      log('PROXY_RULES_COPIED', '已复制代理直连规则。', { hosts: [...DIRECT_HOSTS] });
+    } catch (error) {
+      setStatus(`复制失败：${error?.message || '浏览器未授权剪贴板'}。可从说明文件手动复制。`, 'error');
+    }
+  }
+
+  function createToolbarUi() {
+    if (ui?.container?.isConnected) return;
+    const container = document.createElement('span');
+    container.id = `cnki-pdf-helper-toolbar-${BUILD.portal.toLowerCase()}`;
+    container.className = 'cnki-pdf-helper-toolbar';
+    container.innerHTML = `
+      <button type="button" data-action="batch">批量下载PDF</button>
+      <button type="button" data-action="stop" disabled>停止</button>
+      <details class="cnki-pdf-settings"><summary>批量设置</summary><div class="cnki-pdf-settings-panel">
+        <label>每批上限 <input type="number" data-setting="batch-limit" min="1" max="${CONFIG.HARD_MAX_BATCH}" step="1"></label>
+        <label>篇间秒数 <input type="number" data-setting="gap-seconds" min="${CONFIG.MIN_GAP_MS / 1000}" max="${CONFIG.MAX_GAP_MS / 1000}" step="0.5"></label>
+        <label>每几篇额外休息 <input type="number" data-setting="cooldown-every" min="0" max="${CONFIG.HARD_MAX_BATCH}" step="1"></label>
+        <label>额外休息秒数 <input type="number" data-setting="cooldown-seconds" min="0" max="${CONFIG.MAX_COOLDOWN_MS / 1000}" step="1"></label>
+        <button type="button" data-action="save-settings">保存设置</button>
+        <small data-setting="summary"></small>
+      </div></details>
+      <button type="button" data-action="proxy-rules">复制代理直连规则</button>
+      <button type="button" data-action="diagnostics">导出诊断</button>
+      <span class="cnki-pdf-status" data-kind="info">${BUILD.label} ${BUILD.version}：等待操作</span>
+      <details><summary>日志</summary><pre></pre></details>
+    `;
+
+    const anchor = document.querySelector('.bulkdownload.export');
+    if (anchor?.parentElement) {
+      anchor.insertAdjacentElement('afterend', container);
+    } else {
+      container.classList.add('cnki-pdf-helper-floating');
+      document.body.appendChild(container);
+    }
+    ui = {
+      container,
+      batch: container.querySelector('[data-action="batch"]'),
+      stop: container.querySelector('[data-action="stop"]'),
+      saveSettings: container.querySelector('[data-action="save-settings"]'),
+      proxyRules: container.querySelector('[data-action="proxy-rules"]'),
+      diagnostics: container.querySelector('[data-action="diagnostics"]'),
+      batchLimit: container.querySelector('[data-setting="batch-limit"]'),
+      gapSeconds: container.querySelector('[data-setting="gap-seconds"]'),
+      cooldownEvery: container.querySelector('[data-setting="cooldown-every"]'),
+      cooldownSeconds: container.querySelector('[data-setting="cooldown-seconds"]'),
+      settingsSummary: container.querySelector('[data-setting="summary"]'),
+      status: container.querySelector('.cnki-pdf-status'),
+      log: container.querySelector('pre'),
+    };
+    ui.batch.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      runBatch();
+    }, true);
+    ui.stop.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      stopTask();
+    }, true);
+    ui.saveSettings.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      saveSettingsFromUi();
+    }, true);
+    ui.proxyRules.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      copyProxyRules();
+    }, true);
+    ui.diagnostics.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      exportDiagnostics();
+    }, true);
+    syncSettingsUi();
+    updateControls();
+    updateLogView();
+  }
+
+  function updateControls() {
+    if (!ui) return;
+    ui.batch.disabled = busy;
+    ui.stop.disabled = !busy;
+    ui.diagnostics.disabled = busy;
+    ui.saveSettings.disabled = busy;
+    [ui.batchLimit, ui.gapSeconds, ui.cooldownEvery, ui.cooldownSeconds].forEach(input => {
+      if (input) input.disabled = busy;
+    });
+  }
+
+  function installStyle() {
+    const id = `cnki-pdf-helper-style-${BUILD.portal.toLowerCase()}`;
+    if (document.getElementById(id)) return;
+    const style = document.createElement('style');
+    style.id = id;
+    style.textContent = `
+      .cnki-pdf-helper-link { cursor: pointer !important; margin-left: 2px !important; outline: 1px solid rgba(36,104,174,.28); border-radius: 2px; }
+      .cnki-pdf-helper-toolbar { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 5px; margin-left: 7px; vertical-align: middle; font: 12px/1.4 system-ui, sans-serif; }
+      .cnki-pdf-helper-toolbar button { border: 1px solid #9fb6cc; border-radius: 4px; background: #eef5fb; color: #174d7a; padding: 5px 9px; cursor: pointer; }
+      .cnki-pdf-helper-toolbar button:first-child { background: #e8f7e8; color: #236b2a; border-color: #9bc79f; }
+      .cnki-pdf-helper-toolbar button:disabled { opacity: .5; cursor: not-allowed; }
+      .cnki-pdf-helper-toolbar .cnki-pdf-status { max-width: 500px; overflow-wrap: anywhere; padding: 3px 7px; border-radius: 4px; background: #f5f7f9; color: #334455; }
+      .cnki-pdf-helper-toolbar .cnki-pdf-status[data-kind="success"] { background: #e8f7e8; color: #236b2a; }
+      .cnki-pdf-helper-toolbar .cnki-pdf-status[data-kind="warn"] { background: #fff6db; color: #7a5a00; }
+      .cnki-pdf-helper-toolbar .cnki-pdf-status[data-kind="error"] { background: #ffe9e9; color: #8a2424; }
+      .cnki-pdf-helper-toolbar .cnki-pdf-status[data-kind="working"] { background: #e9f2ff; color: #174d7a; }
+      .cnki-pdf-helper-toolbar details { position: relative; }
+      .cnki-pdf-helper-toolbar summary { cursor: pointer; color: #174d7a; }
+      .cnki-pdf-helper-toolbar .cnki-pdf-settings-panel { position: absolute; left: 0; top: 22px; z-index: 2147483647; width: 310px; max-width: 82vw; display: grid; gap: 7px; padding: 10px; border: 1px solid #b7c4d0; border-radius: 5px; background: white; box-shadow: 0 5px 18px rgba(0,0,0,.18); color: #334455; }
+      .cnki-pdf-helper-toolbar .cnki-pdf-settings-panel label { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+      .cnki-pdf-helper-toolbar .cnki-pdf-settings-panel input { width: 88px; box-sizing: border-box; padding: 4px 5px; border: 1px solid #b7c4d0; border-radius: 4px; }
+      .cnki-pdf-helper-toolbar .cnki-pdf-settings-panel small { display: block; color: #5f6f7f; line-height: 1.45; }
+      .cnki-pdf-helper-toolbar details:not(.cnki-pdf-settings) pre { position: absolute; right: 0; top: 22px; z-index: 2147483647; width: 400px; max-width: 82vw; max-height: 240px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; padding: 10px; border: 1px solid #b7c4d0; border-radius: 5px; background: white; box-shadow: 0 5px 18px rgba(0,0,0,.18); font: 11px/1.5 ui-monospace, Consolas, monospace; }
+      .cnki-pdf-helper-toolbar.cnki-pdf-helper-floating { position: fixed; right: 16px; bottom: 16px; z-index: 2147483647; max-width: min(760px, calc(100vw - 32px)); padding: 10px; border: 1px solid #b7c4d0; border-radius: 8px; background: white; box-shadow: 0 5px 20px rgba(0,0,0,.18); }
+    `;
+    document.head.appendChild(style);
+  }
+
+  function enhancePage() {
+    installStyle();
+    if (document.querySelector('input.cbItem')) {
+      enhanceRows();
+      createToolbarUi();
+    }
+  }
+
+  function scheduleEnhance() {
+    window.clearTimeout(observerTimer);
+    observerTimer = window.setTimeout(enhancePage, 250);
+  }
+
+  log('READY', `${BUILD.label} ${BUILD.version}已启用；PDF使用GM_download(saveAs:false)请求默认保存。`);
+  log('SETTINGS_READY', settingsSummaryText(), { settings: { ...runtimeSettings } });
+  log('PROXY_NOTICE', `若开启代理时下载失败，${currentPortalDirectHint()}`, { suggestedDirectHosts: [...DIRECT_HOSTS] });
+  log('DEFAULT_SAVE', '若Edge仍逐篇显示“打开/另存为/保存”，请关闭Edge下载设置中的询问开关；浏览器级设置不能由用户脚本覆盖。', { downloadMode: tampermonkeyDownloadMode() });
+  enhancePage();
+  new MutationObserver(scheduleEnhance).observe(document.documentElement, { childList: true, subtree: true });
+})();
