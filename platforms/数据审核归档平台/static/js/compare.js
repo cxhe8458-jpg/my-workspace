@@ -206,7 +206,7 @@ function watchSevered(host) {
 let _raiseTimer = null;
 function cancelWinRaise() { clearTimeout(_raiseTimer); _raiseTimer = null; }
 const NO_RAISE = "input,textarea,select,[contenteditable=true],button,a,label,"
-  + ".img-grid,.upload-zone,.tree-item,.tree-cat,.company-card,.model-name,#mark-dock,#modal";
+  + ".img-grid,.upload-zone,.tree-item,.tree-cat,.company-card,table.kv,.model-name,#mark-dock,#modal";
 document.addEventListener("pointerdown", e => {
   if (!cmpWinOpen || !$("#cmp-float").classList.contains("show")) return;
   if (modalOpen()) return;
