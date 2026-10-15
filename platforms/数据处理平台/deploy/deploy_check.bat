@@ -1,13 +1,13 @@
 @echo off
 echo ============ Data Platform deploy check ============
 echo [1] Service status  (401 = running with auth / 200 = no auth / 000 = down):
-curl -s -o nul -w "     HTTP %{http_code}\n" http://127.0.0.1:8688/api/queue
+curl -s -o nul -w "     HTTP %%{http_code}\n" http://127.0.0.1:8688/api/queue
 echo.
 echo [2] Login test - enter the credentials from deploy/start.sh:
 set /p U=  username (default admin): 
 if "%U%"=="" set U=admin
 set /p P=  password: 
-curl -s -u %U%:%P% -o nul -w "     HTTP %{http_code}\n" http://127.0.0.1:8688/api/queue
+curl -s -u %U%:%P% -o nul -w "     HTTP %%{http_code}\n" http://127.0.0.1:8688/api/queue
 echo     (200 = login OK / 401 = wrong username or password)
 echo.
 echo [3] LAN test - open this URL in another PC's browser:
