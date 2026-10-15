@@ -423,7 +423,7 @@ function render() {
     const hit = inr.has(c.company);
     const st = c.unmatched === 0 ? ["ok", "全部命中"]
       : (c.unmatched / c.total > .1 ? ["warn", "未匹配偏高"] : ["", "有未匹配"]);
-    return `<tr class="${hit ? "" : "out"}>
+    return `<tr class="${hit ? "" : "out"}">
       <td class="co">${c.company}</td>
       <td class="n">${fmt(c.total)}<span class="microbar"><i style="width:${(c.total / DATA.companies[0].total * 100).toFixed(1)}%"></i></span></td>
       <td class="n">${fmt(c.mapped)}</td><td class="n">${fmt(c.ai)}</td>
