@@ -126,7 +126,7 @@ function bindImAlias() {
         tr.classList.toggle("hot", !v);
         cacheIdmap.drop();          // 自己改过盘，缓存作废
         toast(v ? `已为「${inp.dataset.name}」指定 id` : "已清除该别名", "ok");
-      } catch (e) { toast(e.message, "err"); }
+      } catch (e) { toast(e.message, "err"); sync(); }
     };
     sync();
   });
