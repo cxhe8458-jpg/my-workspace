@@ -37,6 +37,18 @@ python3 -m pip install fastapi "uvicorn[standard]" python-multipart \
     pypdf img2pdf Pillow pikepdf cairosvg requests openpyxl
 ```
 
+### 第 1 步：确认 WSL 环境与依赖
+
+在 WSL（Ubuntu）终端执行：
+
+```bash
+python3 --version                                  # 需 3.10+
+python3 -c "import fastapi, uvicorn" && echo OK     # 依赖已装则 OK；否则：
+# 缺依赖时安装：
+python3 -m pip install fastapi "uvicorn[standard]" python-multipart \
+    pypdf img2pdf Pillow pikepdf cairosvg requests openpyxl
+```
+
 ### 第 2 步：重启后端服务（让认证与监听改动生效）
 
 **小白模式**：双击 `deploy/restart_deploy.bat` 即可（自动停旧服务 → 用 `deploy/start.sh` 带认证重启 → 打印启动日志）。
@@ -149,7 +161,7 @@ bash deploy/start.sh        # 自动停旧服务 → 带认证启动（凭据固
 
 ```bash
 PID=$(ps -eo pid,cmd | awk '$2=="python3" && $3=="run.py" {print $1}')
-[ -n "$PID" ] && kill "$PID" && echo "已停止 $PID" || echo "未在运行"
+[ -n "$PID" ] && kill $PID && echo "已停止 $PID" || echo "未在运行"
 ```
 
 ### 查看状态 / 日志
