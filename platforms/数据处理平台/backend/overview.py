@@ -397,8 +397,7 @@ def _row(n, c, i, r, unmatched_n, map_reg, audit_reg, variant_of, in_rec=None, s
         "in_input": bool(in_rec),
         # 存下来供下次增量刷新复用，免得为了一行去 walk 整个输入目录（97 秒）
         "input_products": int((in_rec or {}).get("products") or 0),
-        "map": _map_state(n, c, map_reg, (in_rec or {}).get("status"))
-        ,
+        "map": _map_state(n, c, map_reg, (in_rec or {}).get("status")),
         "map_time": (map_reg.get(n) or {}).get("time", ""),
         "clean": clean_st,
         "clean_time": (c or {}).get("last_time", ""),
