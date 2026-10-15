@@ -48,8 +48,7 @@ function fillCat1(sel, blank) {
 function fillCat2(selId, c1, blank) {
   const c = CATS.find(x => x.name === c1);
   document.getElementById(selId).innerHTML = `<option value="">${blank}</option>` +
-    (c ? c.children.map(k => `<option value="${esc(k.name)}" title="${esc(k.def)}">${esc(k.name)}${k.new ? "（新增）" : ""}</option>`).join("")
-     : "");
+    (c ? c.children.map(k => `<option value="${esc(k.name)}" title="${esc(k.def)}">${esc(k.name)}${k.new ? "（新增）" : ""}</option>`).join("") : "");
 }
 
 document.getElementById("cat-search").oninput = drawTree;
