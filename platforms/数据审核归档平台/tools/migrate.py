@@ -63,7 +63,7 @@ def _reason_text(rec: dict) -> str:
     if not bits:
         for e in reversed(rec.get("error_log") or []):
             if e.get("reasons"):
-                bits.append(";".join(e["reasons"]))
+                bits.append("；".join(e["reasons"]))
                 break
     return "、".join(b for b in bits if b)
 
