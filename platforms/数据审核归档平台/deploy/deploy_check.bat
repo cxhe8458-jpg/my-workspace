@@ -18,14 +18,14 @@ rem ============================================================
 echo ============ Audit ^& Archive Platform deploy check ============
 echo.
 echo [1] Service status:
-curl -s --noproxy "*" -o nul -w "     HTTP %{http_code}   (401 = up with auth, 200 = NO AUTH, 000 = down)\n" http://127.0.0.1:8010/api/version
+curl -s --noproxy "*" -o nul -w "     HTTP %%{http_code}   (401 = up with auth, 200 = NO AUTH, 000 = down)\n" http://127.0.0.1:8010/api/version
 echo.
 echo [2] Login test:
 set /p U=  username (default admin):
 if "%U%"=="" set U=admin
 set /p P=  password:
-curl -s --noproxy "*" -c "%TEMP%\aa_cookie.txt" -o nul -w "     login  HTTP %{http_code}   (200 = OK / 401 = wrong user or password)\n" -X POST http://127.0.0.1:8010/api/login -H "Content-Type: application/json" -d "{\"user\":\"%U%\",\"password\":\"%P%\"}"
-curl -s --noproxy "*" -b "%TEMP%\aa_cookie.txt" -o nul -w "     authed HTTP %{http_code}   (200 = session works)\n" http://127.0.0.1:8010/api/companies
+curl -s --noproxy "*" -c "%TEMP%\aa_cookie.txt" -o nul -w "     login  HTTP %%{http_code}   (200 = OK / 401 = wrong user or password)\n" -X POST http://127.0.0.1:8010/api/login -H "Content-Type: application/json" -d "{\"user\":\"%U%\",\"password\":\"%P%\"}"
+curl -s --noproxy "*" -b "%TEMP%\aa_cookie.txt" -o nul -w "     authed HTTP %%{http_code}   (200 = session works)\n" http://127.0.0.1:8010/api/companies
 del "%TEMP%\aa_cookie.txt" >nul 2>&1
 echo.
 echo [3] Portproxy target vs current WSL IP - these MUST match:
@@ -34,8 +34,8 @@ echo      current WSL IP : %WSLIP%
 echo      portproxy rule :
 netsh interface portproxy show v4tov4 | findstr /C:"8010"
 echo      If they differ, LAN users cannot connect. Fix by running
-rem      deploy_setup.bat as administrator (or just log out and back
-rem      in, if install_autostart.bat is installed).
+echo      deploy_setup.bat as administrator (or just log out and back
+echo      in, if install_autostart.bat is installed).
 echo.
 echo [4] LAN test - open this URL from another PC:
 rem Detect the CURRENT LAN IP - never hardcode it. DHCP moves it (2026-10-08:
